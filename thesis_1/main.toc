@@ -4,37 +4,33 @@
 \contentsline {chapter}{Declaration of Authorship}{i}{section*.1}
 \contentsline {chapter}{Abstract}{iii}{section*.2}
 \contentsline {chapter}{Acknowledgements}{iv}{section*.3}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.12}
-\contentsline {section}{\numberline {1.1}Basic concepts}{2}{section.14}
-\contentsline {section}{\numberline {1.2}Challenges}{5}{section.17}
-\contentsline {section}{\numberline {1.3}Proposed work}{5}{section.18}
-\contentsline {section}{\numberline {1.4}Performance measuring}{5}{section.19}
-\contentsline {section}{\numberline {1.5}Contribution}{6}{section.21}
-\contentsline {section}{\numberline {1.6}Thesis organization}{7}{section.22}
-\contentsline {chapter}{\numberline {2}Related work}{8}{chapter.23}
-\contentsline {section}{\numberline {2.1}Appearance descriptors}{8}{section.24}
-\contentsline {section}{\numberline {2.2}Metric learning}{16}{section.25}
-\contentsline {chapter}{\numberline {3}Descriptors extraction}{20}{chapter.29}
-\contentsline {section}{\numberline {3.1}Some popular descriptors}{20}{section.30}
-\contentsline {subsection}{\numberline {3.1.1}HSV histogram descriptors}{20}{subsection.31}
-\contentsline {subsection}{\numberline {3.1.2}Local binary patterns}{20}{subsection.32}
-\contentsline {subsection}{\numberline {3.1.3}Histogram of gradients}{20}{subsection.33}
-\contentsline {section}{\numberline {3.2}The hierarchical gaussian descriptor}{20}{section.34}
-\contentsline {subsection}{\numberline {3.2.1}Single pixel modelling}{21}{subsection.35}
-\contentsline {subsection}{\numberline {3.2.2}Riemannian manifold based SPD transformation}{22}{subsection.39}
-\contentsline {chapter}{\numberline {4}Metric learning on subspace}{24}{chapter.42}
-\contentsline {section}{\numberline {4.1}Mahalanobis distance}{24}{section.43}
-\contentsline {section}{\numberline {4.2}Gradient descent iteration}{24}{section.46}
-\contentsline {section}{\numberline {4.3}Metric learning based on sample pairs distance comparison}{24}{section.47}
-\contentsline {chapter}{\numberline {5}Experiment Settings}{27}{chapter.56}
-\contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{27}{section.57}
-\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{29}{section.59}
-\contentsline {section}{\numberline {5.3}Parameters setting of gradient descent iteration}{30}{section.65}
-\contentsline {section}{\numberline {5.4}Performance analysis}{32}{section.69}
-\contentsline {chapter}{\numberline {6}Conclusion}{38}{chapter.80}
-\contentsline {section}{\numberline {6.1}Main Section 1}{38}{section.81}
-\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{38}{subsection.82}
-\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{38}{subsection.83}
-\contentsline {section}{\numberline {6.2}Main Section 2}{39}{section.84}
-\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{40}{appendix.85}
-\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{40}{section.86}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.9}
+\contentsline {section}{\numberline {1.1}Basic concepts}{3}{section.12}
+\contentsline {section}{\numberline {1.2}Challenges}{5}{section.15}
+\contentsline {section}{\numberline {1.3}Proposed work}{8}{section.17}
+\contentsline {section}{\numberline {1.4}Performance measuring}{9}{section.18}
+\contentsline {section}{\numberline {1.5}Contribution}{9}{section.20}
+\contentsline {section}{\numberline {1.6}Thesis organization}{10}{section.21}
+\contentsline {chapter}{\numberline {2}Related work}{11}{chapter.22}
+\contentsline {section}{\numberline {2.1}Appearance descriptors}{11}{section.23}
+\contentsline {section}{\numberline {2.2}Metric learning}{19}{section.24}
+\contentsline {chapter}{\numberline {3}Descriptors extraction}{23}{chapter.28}
+\contentsline {section}{\numberline {3.1}Some popular descriptors}{23}{section.29}
+\contentsline {subsection}{\numberline {3.1.1}HSV histogram descriptors}{23}{subsection.30}
+\contentsline {subsection}{\numberline {3.1.2}Local binary patterns}{23}{subsection.31}
+\contentsline {subsection}{\numberline {3.1.3}Histogram of gradients}{23}{subsection.32}
+\contentsline {section}{\numberline {3.2}The hierarchical gaussian descriptor}{23}{section.33}
+\contentsline {subsection}{\numberline {3.2.1}Single pixel modelling}{24}{subsection.34}
+\contentsline {subsection}{\numberline {3.2.2}Riemannian manifold based SPD transformation}{25}{subsection.38}
+\contentsline {chapter}{\numberline {4}Metric learning on subspace}{27}{chapter.42}
+\contentsline {section}{\numberline {4.1}Mahalanobis distance}{27}{section.43}
+\contentsline {section}{\numberline {4.2}Gradient descent iteration}{27}{section.46}
+\contentsline {section}{\numberline {4.3}Metric learning based on sample pairs distance comparison}{27}{section.47}
+\contentsline {chapter}{\numberline {5}Experiment Settings}{31}{chapter.56}
+\contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{31}{section.57}
+\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{33}{section.59}
+\contentsline {section}{\numberline {5.3}Parameters setting of gradient descent iteration}{34}{section.65}
+\contentsline {section}{\numberline {5.4}Performance analysis}{36}{section.69}
+\contentsline {chapter}{\numberline {6}Conclusion}{43}{chapter.80}
+\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{44}{appendix.81}
+\contentsline {section}{\numberline {A.1}How do I change the colors of links?}{44}{section.82}

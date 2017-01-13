@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 JAN 2017 01:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 JAN 2017 12:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1788,17 +1788,6 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
 ]
 1: section
-[10
-
-]
---------------------
- Dedicatory
---------------------
-1: section
-[11
-
-]
-1: section
 \openout2 = `Chapters/Chapter1.aux'.
 
 (./Chapters/Chapter1.tex
@@ -1806,14 +1795,24 @@ Chapter 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 1.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.pdf, id=315, 601
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf, id=284, 49
+8.86375pt x 104.39pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf Graphi
+c file (type pdf)
+
+<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDf
+ramework.pdf used on input line 11.
+(pdftex.def)             Requested size: 399.09154pt x 83.51208pt.
+
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.pdf, id=285, 601
 .24625pt x 400.49625pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.pdf Graphic
  file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDw
-orkflow.pdf used on input line 9.
+orkflow.pdf used on input line 21.
 (pdftex.def)             Requested size: 300.62238pt x 200.24763pt.
 
 1: section
@@ -1821,10 +1820,11 @@ orkflow.pdf used on input line 9.
 
 
 
-]
+] [2 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf> </Use
+rs/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 24.
- [2 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.pdf>]
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 37.
+ [3]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/singleREID.eps>
 (epstopdf)                    date: 2017-01-13 00:44:17
@@ -1836,20 +1836,19 @@ igures/singleREID-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/singleREID-eps-converted-to.pdf /Users/JohnsonJohnson/Do
 wnloads/thesis_1/Figures/singleREID.eps>
-(epstopdf)             \includegraphics on input line 36.
+(epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID-eps-converted-to.p
-df, id=391, 424.58624pt x 157.58875pt>
+df, id=377, 424.58624pt x 157.58875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID-eps-converted
 -to.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID-eps-converted-
 to.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/singl
-eREID-eps-converted-to.pdf used on input line 36.
+eREID-eps-converted-to.pdf used on input line 49.
 (pdftex.def)             Requested size: 404.02908pt x 149.96573pt.
- [3]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/Multishots.eps>
 (epstopdf)                    date: 2017-01-13 00:43:11
@@ -1861,40 +1860,51 @@ igures/Multishots-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/Multishots-eps-converted-to.pdf /Users/JohnsonJohnson/Do
 wnloads/thesis_1/Figures/Multishots.eps>
-(epstopdf)             \includegraphics on input line 45.
+(epstopdf)             \includegraphics on input line 58.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-converted-to.p
-df, id=396, 774.895pt x 524.96124pt>
+df, id=378, 774.895pt x 524.96124pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-converted
 -to.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-converted-
 to.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multi
-shots-eps-converted-to.pdf used on input line 45.
+shots-eps-converted-to.pdf used on input line 58.
 (pdftex.def)             Requested size: 404.02908pt x 273.71835pt.
  [4 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID-eps-converted-
-to.pdf> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-conver
-ted-to.pdf>] [5] [6]) [7]
+to.pdf>]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.pdf, id=386, 614.295pt
+ x 794.97pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.pdf Graphic file 
+(type pdf)
+ <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.pdf>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdem
+o.pdf used on input line 75.
+(pdftex.def)             Requested size: 404.02908pt x 522.86229pt.
+
+[5 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-converted-t
+o.pdf>] [6] [7 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.pdf>]
+[8] [9]) [10]
 \openout2 = `Chapters/Chapter2.aux'.
 
  (./Chapters/Chapter2.tex
 Chapter 2.
 1: section
-[8
+[11
 
 
 
-] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+] [12] [13] [14] [15] [16] [17] [18] [19] [20]
 Overfull \hbox (24.24965pt too wide) detected at line 126
 []\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D\OT1/cmr/m/n/12 ) = (1 \
 OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 \OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 D\O
-T1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) + [] \OML/cmm/m/it/12
-  [] []\OMS/cmsy/m/n/12 f[]g
+T1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12  
+[] []\OMS/cmsy/m/n/12 f[]g
  []
 
-) [18] [19]
+) [21] [22]
 \openout2 = `Chapters/Chapter3.aux'.
 
  (./Chapters/Chapter3.tex
@@ -1902,74 +1912,64 @@ Chapter 3.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
 
-LaTeX Warning: Citation 'GOGpaper' on page 20 undefined on input line 14.
+LaTeX Warning: Citation 'GOGpaper' on page 23 undefined on input line 14.
 
 1: section
-[20
+[23
 
 
 
-] [21] [22]
-Overfull \hbox (40.22108pt too wide) detected at line 69
-[]\OML/cmm/b/it/12 p[] \OT1/cmr/m/n/12 = [\OML/cmm/b/it/12 Q[]\OML/cmm/m/it/12 
-; []\OML/cmm/b/it/12 Q[]\OML/cmm/m/it/12 ; []\OML/cmm/b/it/12 Q[]\OML/cmm/m/it/
-12 ; []  ; []\OML/cmm/b/it/12 Q[]\OML/cmm/m/it/12 ; [] \OML/cmm/b/it/12 Q[]\OML
-/cmm/m/it/12 ; []\OML/cmm/b/it/12 Q[]\OML/cmm/m/it/12 ; []  ; []\OML/cmm/b/it/1
-2 Q[]\OML/cmm/m/it/12 ; []  ; \OML/cmm/b/it/12 Q[]\OT1/cmr/m/n/12 ]
- []
-
-) [23]
+] [24] [25]) [26]
 \openout2 = `Chapters/Chapter4.aux'.
 
  (./Chapters/Chapter4.tex
 Chapter 4.
 1: section
-[24
+[27
 
 
 
 ]
-Overfull \hbox (39.90234pt too wide) detected at line 41
+Overfull \hbox (39.90234pt too wide) detected at line 40
 []\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 M\OT1/cmr/m/n/12 ) = (1 \
 OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 \OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 D\O
 T1/cmr/m/n/12 (\OML/cmm/b/it/12 x[]\OML/cmm/m/it/12 ; \OML/cmm/b/it/12 x[]\OT1/
-cmr/m/n/12 ) + [] \OML/cmm/m/it/12  [] []\OMS/cmsy/m/n/12 f[]g
+cmr/m/n/12 ) + \OML/cmm/m/it/12  [] []\OMS/cmsy/m/n/12 f[]g
  []
 
-[25]
-Overfull \hbox (81.0309pt too wide) detected at line 52
-[]\OML/cmm/b/it/12 G \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/
-cmm/b/it/12 M\OT1/cmr/m/n/12 ) = (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 \OT1
-/cmr/m/n/12 ) [] \OML/cmm/m/it/12 trace\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 MX[]\O
-T1/cmr/m/n/12 )[]  + \OML/cmm/m/it/12  [] []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12
- trace\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 MX[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
-^^@ \OML/cmm/m/it/12 trace\OT1/cmr/m/n/12 (\OML/cmm/b/it/12 MX[]\OT1/cmr/m/n/12
- ) + \OML/cmm/m/it/12 ^^Z; \OT1/cmr/m/n/12 0\OMS/cmsy/m/n/12 g
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--90
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 61--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--90
+Underfull \hbox (badness 10000) in paragraph at lines 61--89
 
  []
 
-) [26]
+) [29] [30]
 \openout2 = `Chapters/Chapter5.aux'.
 
  (./Chapters/Chapter5.tex
 Chapter 5.
 
-Overfull \hbox (5.5147pt too wide) in paragraph at lines 6--33
+Underfull \hbox (badness 10000) in paragraph at lines 16--31
+
+ []
+
+
+Overfull \hbox (5.5147pt too wide) in paragraph at lines 6--31
 \T1/ptm/b/n/12 Prid_450s \T1/ptm/m/n/12 dataset con-tains 450 im-age pairs reco
 rded from two dif-fer-ent, static surveil-
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--31
+
+ []
+
 1: section
-[27
+[31
 
 
 
@@ -1986,7 +1986,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 33.
 
-[28] [29]
+[32] [33]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/Rank1scoresAlpha.eps>
 (epstopdf)                    date: 2017-01-10 22:09:26
@@ -2002,7 +2002,7 @@ son/Downloads/thesis_1/Figures/Rank1scoresAlpha.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-converte
-d-to.pdf, id=540, 1267.73625pt x 655.44875pt>
+d-to.pdf, id=546, 1267.73625pt x 655.44875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-con
 verted-to.pdf Graphic file (type pdf)
 
@@ -2011,6 +2011,7 @@ erted-to.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1
 scoresAlpha-eps-converted-to.pdf used on input line 149.
 (pdftex.def)             Requested size: 404.02908pt x 208.88777pt.
+ [34]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/Rank5scoresAlpha.eps>
 (epstopdf)                    date: 2017-01-10 22:08:57
@@ -2026,7 +2027,7 @@ son/Downloads/thesis_1/Figures/Rank5scoresAlpha.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-converte
-d-to.pdf, id=541, 1267.73625pt x 655.44875pt>
+d-to.pdf, id=551, 1267.73625pt x 655.44875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-con
 verted-to.pdf Graphic file (type pdf)
 
@@ -2035,14 +2036,14 @@ erted-to.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5
 scoresAlpha-eps-converted-to.pdf used on input line 157.
 (pdftex.def)             Requested size: 404.02908pt x 208.88777pt.
- [30] [31 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-ep
-s-converted-to.pdf> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scor
-esAlpha-eps-converted-to.pdf>]
+ [35 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-con
+verted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 180--213
 
  []
 
-[32]
+[36 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-conv
+erted-to.pdf>]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/VIPeR.eps>
 (epstopdf)                    date: 2017-01-11 12:27:11
@@ -2058,7 +2059,7 @@ ds/thesis_1/Figures/VIPeR.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.pdf, i
-d=581, 1251.67625pt x 654.445pt>
+d=586, 1251.67625pt x 654.445pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.p
 df Graphic file (type pdf)
 
@@ -2067,8 +2068,7 @@ f>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
 -eps-converted-to.pdf used on input line 218.
 (pdftex.def)             Requested size: 404.02908pt x 211.24413pt.
- [33 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.p
-df>]
+ [37]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/CUHK1.eps>
 (epstopdf)                    date: 2017-01-11 12:27:11
@@ -2084,7 +2084,7 @@ ds/thesis_1/Figures/CUHK1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.pdf, i
-d=594, 1251.67625pt x 654.445pt>
+d=591, 1251.67625pt x 654.445pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.p
 df Graphic file (type pdf)
 
@@ -2093,7 +2093,7 @@ f>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1
 -eps-converted-to.pdf used on input line 259.
 (pdftex.def)             Requested size: 404.02908pt x 211.24413pt.
- [34 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.p
+ [38 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.p
 df>]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/prid2011.eps>
@@ -2106,19 +2106,21 @@ igures/prid2011-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid2011-eps-converted-to.pdf /Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid2011.eps>
-(epstopdf)             \includegraphics on input line 301.
+(epstopdf)             \includegraphics on input line 302.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-to.pdf
-, id=607, 1251.67625pt x 650.43pt>
+, id=605, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-t
 o.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-to
 .pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2
-011-eps-converted-to.pdf used on input line 301.
+011-eps-converted-to.pdf used on input line 302.
 (pdftex.def)             Requested size: 404.02908pt x 209.94815pt.
+ [39 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.p
+df>]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/prid450s.eps>
 (epstopdf)                    date: 2017-01-11 12:27:11
@@ -2130,20 +2132,20 @@ igures/prid450s-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid450s-eps-converted-to.pdf /Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid450s.eps>
-(epstopdf)             \includegraphics on input line 341.
+(epstopdf)             \includegraphics on input line 342.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-to.pdf
-, id=608, 1251.67625pt x 650.43pt>
+, id=618, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-t
 o.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-to
 .pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid4
-50s-eps-converted-to.pdf used on input line 341.
+50s-eps-converted-to.pdf used on input line 342.
 (pdftex.def)             Requested size: 404.02908pt x 209.94815pt.
- [35 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-t
+ [40 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-t
 o.pdf>]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/GRID.eps>
@@ -2156,32 +2158,33 @@ igures/GRID-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/GRID-eps-converted-to.pdf /Users/JohnsonJohnson/Download
 s/thesis_1/Figures/GRID.eps>
-(epstopdf)             \includegraphics on input line 380.
+(epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pdf, id
-=621, 1251.67625pt x 650.43pt>
+=631, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pd
 f Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pdf
 >
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-
-eps-converted-to.pdf used on input line 380.
+eps-converted-to.pdf used on input line 381.
 (pdftex.def)             Requested size: 404.02908pt x 209.94815pt.
-) [36 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-
-to.pdf>] [37 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-convert
+ [41 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-t
+o.pdf>]) [42 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-convert
 ed-to.pdf>]
 \openout2 = `Chapters/Chapter6.aux'.
 
  (./Chapters/Chapter6.tex
 Chapter 6.
+)
 1: section
-[38
+[43
 
 
 
-]) [39]
+]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
@@ -2191,7 +2194,7 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 11.
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
 1: section
-[40
+[44
 
 
 
@@ -2207,7 +2210,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3716211ADD741E80704ADB63BFDD7724;6355.
+(rerunfilecheck)             Checksum: BF29E62663EF48C0BC271E9EEDDB5164;5844.
 
 
 LaTeX Warning: There were undefined references.
@@ -2222,11 +2225,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30369 strings out of 493089
- 614541 string characters out of 6134842
+ 30361 strings out of 493089
+ 614904 string characters out of 6134842
  742008 words of memory out of 5000000
- 33338 multiletter control sequences out of 15000+600000
- 96835 words of font info for 118 fonts, out of 8000000 for 9000
+ 33334 multiletter control sequences out of 15000+600000
+ 92437 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,20n,78p,10377b,2246s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -2251,10 +2254,10 @@ s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
 mr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on main.pdf (53 pages, 992574 bytes).
+Output written on main.pdf (55 pages, 1452050 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 621 compressed objects within 7 object streams
- 140 named destinations out of 1000 (max. 500000)
- 347 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 767 PDF objects out of 1000 (max. 8388607)
+ 618 compressed objects within 7 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 

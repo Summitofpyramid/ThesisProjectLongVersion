@@ -10,9 +10,9 @@
 \textbf{Prid\_450s} dataset contains 450 image pairs recorded from two different, static surveillance cameras. Additionally, the dataset also provides an automatically generated, motion based foreground/background segmentation as well as a manual segmentation of parts of a person. The images are stored in two folders that represent the two camera views. Besides the original images , the folders also contain binary masks obtained from motion segmentation, and manually segmented masks. In this test, we randomly select 225 persons from each of two camera views as the training set, and the remaining persons are left as gallery and probe images. \\
 \textbf{GRID} There are two camera views in this dataset. Folder probe contains 250 probe images captured in one view (file names starts from 0001  to 0250). Folder gallery contains 250 true match images of the probes (file names starts from 0001  to 0250). Besides, in gallery folder there are a total of 775 additional images that do not belong to any of the probes (file name starts with 0000). These extra images should be treated as a fixed portion in the testing set during cross validation. In this paper, we randomly select 125 persons from those 250 persons appeared in both camera views as training pairs, and the remaining persons in probe folder is used as probe images while  the remaining 125 persons and those 775 additional persons from gallery folder are used as gallery images. \\
 %-------------------------------------------------
-\begin{table}
+\begin{table}[H]
 \caption{Testing setting for different datasets}
-\centering
+%\centering
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
 Dataset&training&probe&gallery&cam\_a&cam\_b\\
@@ -144,7 +144,7 @@ Preprocessed GOGfusion &23.84& 44.64& 55.04& 62.24& 66.24\\
 \section{Parameters setting of gradient descent iteration}
 In this experiment, there are a few parameters for the iteration computing including slack variable $\rho$, maximal iteration $T$, gradient step $\lambda$, the inter and intra class limitation factor $\alpha$ and the updating ratio $\beta$. Firstly the slack variable $\rho$ is initialized as 1 to ensure the minimum inter class distance is 1 larger than intra class distance at least. The step size of gradient updating $\lambda$ is initialized as 0.01. When target value $f$ increases,  $\lambda$ is scaled by a factor 0.5, and  $\lambda$ is scaled by 1.01 when target value $f$ decreases. To judge if target value converges, the thresh $\beta$ is defined as the ratio target value change versus previous target value, that is, $\beta = \frac{(f_{t+1}-f_t)}{f_t}$. According many experiment trials, when it satisfies $\beta = 10^{-5}$, the target value converges and the iteration is stopped. The maximal iteration times is set to 100 since the target value $f$ will converge in around 15 iterations.  The last parameter for the iteration is $\alpha$, to know the best value for $\alpha$, we tried 11 different values ranges from 0 to 1 with a step of 0.1, and the rank-1 and rank-5 scores of responding $\alpha$ is shown in figure []. The best $\alpha$ value should have as large top rank scores as possible. By comparison, $\alpha$ is set as 0.7. A form of all parameters are shown in Form 7.
 %-------------------------------------------------
-\begin{figure}
+\begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha.eps}
 \vspace{-3em}
@@ -152,7 +152,7 @@ In this experiment, there are a few parameters for the iteration computing inclu
 \end{raggedleft}
 \end{figure}
 %-------------------------------------------------
-\begin{figure}
+\begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha.eps}
 \vspace{-3em}
@@ -213,7 +213,7 @@ GOGfusion+Proposed&48.16& 76.65&87.66&91.90&94.37\\ %48.16%, 76.65%, 87.66%, 91.
 \end{table}
 \textbf{CUHK1} We can find that the rank 1, rank5, rank 10, rank 15, rank 20 score of GOGrgb combined with proposed metric are 5.35\%, 4.22\%,3.35\%,2.1\%,1.44\% higher than XQDA, and 0.26\%,1.26\%,1.38\%,1.11\%, 1.09\% than NFST.  Also the  rank 1, rank5, rank 10, rank 15, rank 20 score of GOGfusion combined with proposed metric are 4.59\%, 2.55\%, 0.72\%, 1.29\%, 0.89\% higher than GOGfusion combined with XQDA, and 0.4\%, 0.74\%, 0.6\%, 1.05\%, 1.2\% than GOGfusion combined with NFST. 
 
-\begin{figure}
+\begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR.eps}
 \vspace{-3em}
@@ -254,7 +254,7 @@ GOGfusion+Proposed&56.69&84.40&90.53& 93.27&94.90\\
 \end{table}
 \centering
 
-\begin{figure}
+\begin{figure}[H]
 %\begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1.eps}
 \vspace{-3em}
@@ -294,9 +294,10 @@ GOGfusion+Proposed&32.20&57.50&66.40&73.50&78.00\\ %32.20%, 57.50%, 66.40%, 73.5
 
 \end{tabular}\newline
 \end{table}
+
 \textbf{Prid\_2011}  The  rank 1, rank5, rank 10, rank 15, rank 20 score of GOGfusion  combined with proposed metric are 6.2\%, 3.8\%, 4.4\%, 2.1\% and 1.3\% lower than GOGfusion combined with XQDA. The performance of NFST is slightly better than proposed metric. Also in terms of GOGrgb XQDA and NFST has better performance than the proposed one. So in this dataset the proposed metric has worse performance than XQDA and NFST.
 
-\begin{figure}
+\begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011.eps}
 \vspace{-3em}
@@ -336,7 +337,7 @@ GOGfusion+Proposed&62.62&86.44&92.36&95.20& 96.93\\ % 62.62%, 86.44%, 92.36%, 95
 \end{table}
 \textbf{Prid\_450s} In this dataset, we can find the rank 1 score of XQDA and NFST is higher than proposed metric, but they have almost the same rank 5, rank 10, rank 15, and rank 20 scores with respect to both descriptors. 
 
-\begin{figure}
+\begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s.eps}
 \vspace{-3em}
@@ -375,7 +376,7 @@ GOGfusion+Proposed&23.84&44.64&55.04&62.24&66.24\\ %23.84%, 44.64%, 55.04%, 62.2
 \end{tabular}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID.eps}
 \vspace{-3em}
