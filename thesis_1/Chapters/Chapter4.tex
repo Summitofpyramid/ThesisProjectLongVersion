@@ -1,0 +1,96 @@
+\chapter{Metric learning on subspace}
+
+
+
+\section{Mahalanobis distance}
+The Mahalanobis distance based metric learning has received much attention in similarity computing. The Mahanalobis distance of two observations $\bm{x} $ and $\bm{y}$ is defined as
+\begin{equation}
+D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y}), 
+\end{equation}
+where $\bm{x}$ and $\bm{y} $ are $d\times1$ observation vectors, $\bm{M}$ is a positive-semidefinite matrix. Since $\bm{M}$ is positive-semidefinite, $\bm{M}$ can be decomposed as $\bm{M} = \bm{W}^T\bm{W}$, and Mahanalobis distance can also be written as 
+\begin{equation}
+D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{W}^T\bm{W}(\bm{x} - \bm{y})= ||\bm{W}(\bm{x} - \bm{y})||
+\end{equation}
+ Therefore, Mahanalobis distance can be regarded as a variant of Euclidean distance. There are many methods proposed for metric learning[ ]. 
+ 
+ \section{Gradient descent iteration}
+ 
+ 
+ 
+ \section{Metric learning based on sample pairs distance comparison}
+ Inspired by [], in this paper, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similar with [PRDC], this method is also based on similarity comparison. The difference is in [PRDC], for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare possible positive and negative pairs, computation complexity will be quite huge.  To decrease complexity, a simplified version is proposed as the top-push distance metric learning[ ].  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahanalobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, $n$ is the number of all samples, the requirement is distance between positive pair should be smaller than the minimum of all negative distance. This can be denoted as 
+ \begin{equation}
+ D(\bm{x}_i,\bm{x}_j) + \rho < \min D(\bm{x}_i,\bm{x}_k), y_i = y_j, y_i\ne y_k.
+ \end{equation}
+ $\rho$ is a slack variable and $\rho \in [0,1]$. This equation can be transformed into a optimization problem with respect to descriptor $\bm{x}_i$ as
+ \begin{equation}
+ \min \sum_{y_i = y_j} \max \{D(\bm{x}_i,\bm{x}_j) -  \min_{ y_i\ne y_k} D(\bm{x}_i,\bm{x}_k)  + \rho \}.
+ \end{equation}
+ 
+ However, the equation above only penalize the interclass distance. Another term is needed to penalize intra class distance. That is, to make the sum of intraclass distance as small as possible. This term is denoted as 
+ \begin{equation}
+ \min \sum D(\bm{x}_i,\bm{x}_j),y_i = y_j.
+ \end{equation}
+ 
+ To combine equations above, a ratio factor $\alpha$ is assigned to equation [] so that the target function can be denote as 
+  \begin{equation}
+  %\begin{aligned}
+ f(\bm{M}) = (1-\alpha)\sum_{\bm{x}_i,x_j,\bm{y}_i=y_j} D(\bm{x}_i,\bm{x}_j) + \\ 
+ \alpha \sum_{\bm{x}_i,\bm{x}_j,y_i=y_j}\max\{{D(\bm{x}_i,\bm{x}_j)-\min_{y_i\ne y_k}{D(\bm{x}_i,\bm{x}_k)}+\rho,0}\}
+ %\end{aligned}
+ \end{equation}
+ In this way the problem is transformed to an optimization problem. Notice that equation 16 can be denoted as 
+ \begin{equation}
+ D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y})\\ = trace(\bm{M}\bm{X}_{i,j})
+ \end{equation}
+ where $\bm{X}_{i,j} = \bm{x}_i*\bm{x}_j^T$, and $trace$ is to compute matrix trace. Therefore, equation 21 can be transformed as follow,
+ \begin{equation}
+ %\begin{aligned}
+ \bm{G} = f(\bm{M}) = (1-\alpha)\sum_{y_i = y_j}trace(\bm{M}\bm{X}_{i,j}) \\
+  + \alpha \sum_{y_i = y_j,y_i\ne y_k}\max\{trace(\bm{M}\bm{X}_{i,j}) - trace(\bm{M}\bm{X}_{i,k} )+ \rho,0\}
+ %\end{aligned}
+ \end{equation}
+ 
+ To minimize equation 23, the gradient descent method is used. The gradient respect to $\bm{M}$ is computed as
+ \begin{equation}
+% \begin{aligned}
+ \frac{\partial f}{\partial \bm{M}} = (1-\alpha) \sum_{y_i = y_j} \bm{X}_{i,j} 
+ + \alpha \sum_{y_i = y_j, y_i \ne y_k}(\bm{X}_{i,j} - \bm{X}_{i,k})
+% \end{aligned}
+ \end{equation}
+ 
+ The iteration process can be summarized as following \newline \newline 
+ \begin{table}
+ \centering
+ \begin{tabular}{l}
+ \hline 
+ \multicolumn{1}{l}{\textbf{Gradient optimization algorithm for target function}} \\
+ \hline
+ \textbf{Input} Descriptors of training person pairs \\
+ \textbf{Output} A SPD matrix\\
+ \textbf{Initialization} \\
+ Initialize $\bm{M}$ with eye matrix $\bm{I}$; \\
+ Compute the initial target function value $f_0$ with $\bm{M}_0$;\\
+ Iteration count  $t = 0$;\\
+
+ \textbf{while}(not converge)\\
+ \indent Update $t =  t + 1$;\\
+ \indent Update gradient $\bm{G}_{t+1}$ with equation 24;\\
+ \indent Update $\bm{M}$ with equation : $\bm{M}_{t+1} = \bm{M}_{t} - \lambda\bm{G}_t$\\
+ \indent Project $\bm{M}_{t+1}$ to the positive semi-definite space \\ 
+ \indent \indent by $\bm{M}_{t+1}= \bm{V}_{t+1}\bm{S}_{t+1}\bm{V}^T_{t+1}$;\\
+ \indent Update the target value $f|_{\bm{M} = \bm{M}_{t+1}}$;\\
+ \textbf{end while}  \\
+ return $\bm{M}$\\
+ \hline
+
+ \end{tabular} 
+ \end{table}
+ \newline 
+ 
+ In 
+ 
+ 
+ 
+ 
+ 
