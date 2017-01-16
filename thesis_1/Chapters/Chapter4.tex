@@ -23,13 +23,38 @@ D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{W}^T\bm{W}(\bm{x} - \bm{y})= ||\bm{W}(
   \begin{equation}
  F(\bm{x}_{t+1}) \ge F(\bm{x}_t).
   \end{equation}
+This process is repeated until certain condition is met, generally when gradient $||\bm{G}|| \le \eta$, $\eta$ is a very small positive integer. 
+\begin{figure}
+\centering
+\includegraphics[width=0.4\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png}
+\caption{Steepest gradient descent}
+\vspace{0em}
+\end{figure} 
+
+\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are the it's always downhill and it can avoid the saddle points. Besides, it's very efficient when initial value of $F(\bm{x})$ is further from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic. In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in figure []. The third shortcoming is linear search in gradient descent might cause some problem[].
+
+\begin{figure}[H]
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png}
+\caption{Function with multi local minimums}
+\label{fig:side:a}
+\end{minipage}%
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg}
+\caption{Zigzagging downhill valley}
+\label{fig:side:b}
+\end{minipage}
+\end{figure}
+  
  
  \section{Metric learning based on sample pairs distance comparison}
- Inspired by [], in this paper, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similar with [PRDC], this method is also based on similarity comparison. The difference is in [PRDC], for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare possible positive and negative pairs, computation complexity will be quite huge.  To decrease complexity, a simplified version is proposed as the top-push distance metric learning[ ].  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahanalobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, $n$ is the number of all samples, the requirement is distance between positive pair should be smaller than the minimum of all negative distance. This can be denoted as 
+ Inspired by \cite{TDL}, in this paper, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similar with [PRDC], this method is also based on similarity comparison. The difference is in \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare possible positive and negative pairs, computation complexity will be quite huge.  To decrease complexity, a simplified version is proposed as the top-push distance metric learning[ ].  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahanalobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, $n$ is the number of all samples, the requirement is distance between positive pair should be smaller than the minimum of all negative distance. This can be denoted as 
  \begin{equation}
  D(\bm{x}_i,\bm{x}_j) + \rho < \min D(\bm{x}_i,\bm{x}_k), y_i = y_j, y_i\ne y_k.
  \end{equation}
- $\rho$ is a slack variable and $\rho \in [0,1]$. This equation can be transformed into a optimization problem with respect to descriptor $\bm{x}_i$ as
+ $\rho$ is a slack variable and $\rho \in [0,1]$. This equation can be transformed into a optimization problem as
  \begin{equation}
  \min \sum_{y_i = y_j} \max \{D(\bm{x}_i,\bm{x}_j) -  \min_{ y_i\ne y_k} D(\bm{x}_i,\bm{x}_k)  + \rho \}.
  \end{equation}
@@ -61,13 +86,13 @@ D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{W}^T\bm{W}(\bm{x} - \bm{y})= ||\bm{W}(
  To minimize equation 23, the gradient descent method is used. The gradient respect to $\bm{M}$ is computed as
  \begin{equation}
  \begin{aligned}
-\bm{G} =  \frac{\partial f}{\partial \bm{M}} = (1-\alpha) \sum_{y_i = y_j} \bm{X}_{i,j} \\
+\bm{G} =  \frac{\partial f}{\partial \bm{M}} = (1-\alpha) \sum_{y_i = y_j} \bm{X}_{i,j} 
  + \alpha \sum_{y_i = y_j, y_i \ne y_k}(\bm{X}_{i,j} - \bm{X}_{i,k})
  \end{aligned}
  \end{equation}
  
- The iteration process can be summarized as following \\
- \begin{table}
+ The iteration process can be summarized as in table [] \\
+ \begin{table}[H]
  \centering
  \begin{tabular}{l}
  \hline 

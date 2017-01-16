@@ -1,0 +1,84 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{TDL}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {You}{Y.}%
+     {Jinjie}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wu}{W.}%
+     {Ancong}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Xiang}{X.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zheng}{Z.}%
+     {Wei-Shi}{W.-S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YJ+1}
+  \strng{fullhash}{YJWALXZWS1}
+  \field{labelyear}{2015}
+  \field{sortinit}{Y}
+  \field{pages}{1\bibrangedash 9}
+  \field{title}{{Top-push Video-based Person Re-identification}}
+  \field{month}{01}
+  \field{year}{2015}
+\endentry
+
+\entry{PRDC}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Zheng}{Z.}%
+     {WeiShi}{W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gong}{G.}%
+     {Shaogang}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Xiang}{X.}%
+     {Tao}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ZWGSXT1}
+  \strng{fullhash}{ZWGSXT1}
+  \field{labelyear}{2016}
+  \field{sortinit}{Z}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{{Person Re-identification by Probabilistic Relative Distance
+  Comparison}}
+  \field{month}{11}
+  \field{year}{2016}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

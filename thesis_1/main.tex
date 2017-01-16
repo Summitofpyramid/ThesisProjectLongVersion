@@ -45,7 +45,7 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
-\addbibresource{example.bib} % The filename of the bibliography
+\bibliography{citation.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 %----------------------------------------------------------------------------------------
@@ -54,10 +54,15 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{float}
 
 \usepackage{graphicx}
+\usepackage{subfigure}
 \graphicspath{/Users/JohnsonJohnson/Downloads/thesis_1/Figures}
 \usepackage{amsmath}
 
 \renewcommand{\baselinestretch}{1.4} % control the line margin
+
+%\usepackage[backend=bibtex,style=numeric]{biblatex} 
+\addbibresource{citation}
+%\usepackage{cite}
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------------------------------
 \usepackage{etoolbox}
@@ -290,16 +295,17 @@ The acknowledgments and the people to thank go here, don't forget to include you
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
-%----------------------------------------------------------------------------------------
-
-\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
-
-% Include the appendices of the thesis as separate files from the Appendices folder
-% Uncomment the lines as you write the Appendices
-
-\include{Appendices/AppendixA}
-%\include{Appendices/AppendixB}
-%\include{Appendices/AppendixC}
+%%----------------------------------------------------------------------------------------
+%
+%
+%\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+%
+%% Include the appendices of the thesis as separate files from the Appendices folder
+%% Uncomment the lines as you write the Appendices
+%
+%\include{Appendices/AppendixA}
+%%\include{Appendices/AppendixB}
+%%\include{Appendices/AppendixC}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
