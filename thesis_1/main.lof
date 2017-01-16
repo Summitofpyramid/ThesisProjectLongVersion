@@ -13,20 +13,21 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces RGB and HSV visual comparison, the first row is RGB and second row is HSV for same views \relax }}{21}{figure.caption.31}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces A comparison of two patches with same entropy but different color distribution\relax }}{22}{figure.caption.33}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces An LBP example, by thresholding the neighbour pixels the pixels are transformed into a binary number \relax }}{22}{figure.caption.35}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Foreground segmentation of individuals from VIPeR \relax }}{23}{figure.caption.38}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces A CMC comparison of foreground segmentation on LBP tested on VIPeR \relax }}{24}{figure.caption.39}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR\relax }}{25}{figure.caption.40}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Integral image\relax }}{27}{figure.caption.51}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces One LBP example\relax }}{22}{figure.caption.36}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Foreground segmentation of individuals from VIPeR \relax }}{24}{figure.caption.42}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces A CMC comparison of foreground segmentation on LBP tested on VIPeR \relax }}{24}{figure.caption.43}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR\relax }}{25}{figure.caption.44}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Integral image\relax }}{27}{figure.caption.55}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Steepest gradient descent\relax }}{31}{figure.caption.64}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Function with multi local minimums\relax }}{31}{figure.caption.65}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Zigzagging downhill valley\relax }}{31}{figure.caption.65}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Steepest gradient descent\relax }}{31}{figure.caption.68}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Function with multi local minimums\relax }}{31}{figure.caption.69}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Zigzagging downhill valley\relax }}{31}{figure.caption.69}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{39}{figure.caption.85}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{39}{figure.caption.86}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces CMC curves on VIPeR comparing different metric learning\relax }}{41}{figure.caption.90}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces CMC curves on CUHK1 comparing different metric learning\relax }}{42}{figure.caption.92}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces CMC curves on prid\_2011 comparing different metric learning\relax }}{43}{figure.caption.94}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces CMC curves on prid\_450s comparing different metric learning\relax }}{44}{figure.caption.96}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces CMC curves on GRID comparing different metric learning\relax }}{45}{figure.caption.98}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{39}{figure.caption.89}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{39}{figure.caption.90}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces CMC curves on VIPeR comparing different metric learning\relax }}{41}{figure.caption.94}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces CMC curves on CUHK1 comparing different metric learning\relax }}{42}{figure.caption.96}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces CMC curves on prid\_2011 comparing different metric learning\relax }}{43}{figure.caption.98}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces CMC curves on prid\_450s comparing different metric learning\relax }}{44}{figure.caption.100}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces CMC curves on GRID comparing different metric learning\relax }}{45}{figure.caption.102}
 \addvspace {10\p@ }

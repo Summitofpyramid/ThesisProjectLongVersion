@@ -170,13 +170,16 @@ In this experiment, there are a few parameters for the iteration computing inclu
 \hline
 Paramters &$\alpha$&thresh&step&Max iteration& slack variable\\
 \hline
-Values &0.7&$10^{-5}$&0.01&100&1\\
+Values &0.76&$10^{-5}$&0.01&100&1\\
 \hline
 \end{tabular}
 \end{table}
 
 
 \textbf{Performance measuring} The cumulative matching curve is used to measure the descriptor performance. The score means the probability that the right match is within the top $n$ samples. A perfect CMC curve is expected to have a high rank-1 value and reaches 1 as fast as possible.
+%\section{XQDA and NFST}
+
+
 \section{Performance analysis}
 In this paper, we compare proposed metric with other state-of-the-art metrics including NFST[], XQDA[]. NFST is a metric which learn a null space for descriptors so that the the same class descriptors will be projected to  
 a single point to minimize within class scatter matrix while different classes are projected to different points. This metric is a good solution to small sample problems in person re-identification. XQDA is quite similar with many other metrics, which learns a projection matrix $W$ and then a Mahanalobis SPD matrix $M$ is learned in the subspace. Those two metric are proved to have state-of-the-art performance with many other methods. The GOGrgb in all forms stands for the hierarchical gaussian descriptor in RGB color space while GOGfusion stands for the one in four different color spaces \{RGB,Lab,HSV,nRnR\}.\\

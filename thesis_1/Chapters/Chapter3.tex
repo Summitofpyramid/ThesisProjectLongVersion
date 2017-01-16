@@ -42,8 +42,7 @@ Histogram descriptor extracts color statistics information of input images. A po
 \end{figure}
 
 \subsection{Local binary pattern(LBP)}
-Local binary pattern[] extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure [] is an example of LBP example. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many variants of LBP like circular LBP, 
-LBP is well known for its robustness to monotonic illumination variation.
+Local binary pattern[] extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure [] is an example of LBP example. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many extended LBP like tLBP[], VLBP[], OCLBP[], and LBP is well known for its robustness to monotonic illumination variation.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png}
@@ -51,10 +50,53 @@ LBP is well known for its robustness to monotonic illumination variation.
 \vspace{0em}
 \end{figure}
 
+\begin{figure}[H]
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg}
+
+\label{fig:side:a}
+\end{minipage}%
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg}
+
+\label{fig:side:b}
+\end{minipage}
+\caption{One LBP example}
+\end{figure}
+
+
 \subsection{Histogram of oriented gradients(HOG)}
-The HOG descriptor extracts textural information of input. 
+The HOG [] descriptor also extracts textural information of images by gradient computing. Like many other descriptors, it computes the gradient of input images $I(x, y)$ first by equations
 
-
+\begin{equation}
+I_x = \frac{\partial I}{\partial x},\\
+I_y = \frac{\partial I}{\partial y},
+\end{equation}
+the gradient can be computed fast by some discrete derivative maskd below, like 1-D Sobel masks:
+\begin{equation}
+\begin{aligned}
+Centered: M_{c} = [-1, 0, 1]\\
+Uncentered: M_{uc} = [-1, 1]
+\end{aligned}
+\end{equation}
+or 2-D Sobel masks:
+\begin{equation}
+\begin{aligned}
+D_x = \left[ \begin{matrix}
+0 & 1 \\
+-1& 0
+\end{matrix}
+\right]\\
+D_y = \left[ \begin{matrix}
+-1 & 0 \\
+0& 1
+\end{matrix}
+\right]
+\end{aligned}
+\end{equation}
+Then 
 
 \section{Influence of background segmentation on different descriptors}
 Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from sequential videos than a single frame. In [SDALF] the author provides foreground mask for all images.  Some of those segmented foreground are shown in figure [] and it's obvious that certain bogy parts like head and feet are lost. To compare those loss's impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors and local binary pattern(LBP) is given in figure [] and figure []. 
