@@ -1,5 +1,5 @@
 \chapter{Metric learning on subspace}
-
+Euclidean is the most used metric, however, it can't measure the similarity of 
 
 
 \section{Mahalanobis distance}
@@ -56,15 +56,15 @@ This process is repeated until certain condition is met, generally when gradient
  \end{equation}
  $\rho$ is a slack variable and $\rho \in [0,1]$. This equation can be transformed into a optimization problem as
  \begin{equation}
- \min \sum_{y_i = y_j} \max \{D(\bm{x}_i,\bm{x}_j) -  \min_{ y_i\ne y_k} D(\bm{x}_i,\bm{x}_k)  + \rho \}.
+ \min \sum_{y_i = y_j} \max \{D(\bm{x}_i,\bm{x}_j) -  \min_{ y_i\ne y_k} D(\bm{x}_i,\bm{x}_k)  + \rho , 0\}.
  \end{equation}
  
  However, the equation above only penalize the interclass distance. Another term is needed to penalize intra class distance. That is, to make the sum of intraclass distance as small as possible. This term is denoted as 
  \begin{equation}
- \min \sum D(\bm{x}_i,\bm{x}_j),y_i = y_j.
+ \min \sum_{y_i = y_j} D(\bm{x}_i,\bm{x}_j).
  \end{equation}
  
- To combine equations above, a ratio factor $\alpha$ is assigned to equation [] so that the target function can be denote as 
+ To combine equations above, a ratio factor $\alpha$ is assigned to equation [] so that the target function can be denoted as 
   \begin{equation}
   \begin{aligned}
  f(\bm{M}) = (1-\alpha)\sum_{\bm{x}_i,x_j,\bm{y}_i=y_j} D(\bm{x}_i,\bm{x}_j) + \\
