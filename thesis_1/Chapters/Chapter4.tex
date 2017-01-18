@@ -3,7 +3,7 @@ Euclidean is the most used metric, however, it can't measure the similarity of
 
 
 \section{Mahalanobis distance}
-The Mahalanobis distance based metric learning has received much attention in similarity computing. The Mahanalobis distance of two observations $\bm{x} $ and $\bm{y}$ is defined as
+The Mahalanobis distance \cite{Mahadist} based metric learning has received much attention in similarity computing. The Mahanalobis distance of two observations $\bm{x} $ and $\bm{y}$ is defined as
 \begin{equation}
 D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y}), 
 \end{equation}
@@ -31,7 +31,7 @@ This process is repeated until certain condition is met, generally when gradient
 \vspace{0em}
 \end{figure} 
 
-\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are the it's always downhill and it can avoid the saddle points. Besides, it's very efficient when initial value of $F(\bm{x})$ is further from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic. In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in figure []. The third shortcoming is linear search in gradient descent might cause some problem[].
+\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are the it's always downhill and it can avoid the saddle points. Besides, it's very efficient when initial value of $F(\bm{x})$ is further from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic. In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in figure \ref{zigzagdemo}. The third shortcoming is linear search in gradient descent might cause some problem.
 
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
@@ -47,6 +47,7 @@ This process is repeated until certain condition is met, generally when gradient
 \label{fig:side:b}
 \end{minipage}
 \end{figure}
+\label{zigzagdemo}
   
  
  \section{Metric learning based on sample pairs distance comparison}
@@ -91,7 +92,7 @@ This process is repeated until certain condition is met, generally when gradient
  \end{aligned}
  \end{equation}
  
- The iteration process can be summarized as in table [] \\
+ The iteration process can be summarized as in table \ref{Gradientdemo} \\
  \begin{table}[H]
  \centering
  \begin{tabular}{l}
@@ -118,6 +119,7 @@ This process is repeated until certain condition is met, generally when gradient
 
  \end{tabular} 
  \end{table}
+ \label{Gradientdemo}
 
 
  

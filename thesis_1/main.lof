@@ -18,16 +18,19 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces A CMC comparison of foreground segmentation on LBP tested on VIPeR \relax }}{25}{figure.caption.43}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR\relax }}{26}{figure.caption.44}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Integral image\relax }}{29}{figure.caption.55}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Example of five clusters belong to three classes\relax }}{38}{figure.caption.99}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces 1-D distribution of dimension reduced data with gaussian kernel\relax }}{38}{figure.caption.100}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces 1-D distribution of dimension reduced data with linear kernel\relax }}{39}{figure.caption.101}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Steepest gradient descent\relax }}{39}{figure.caption.106}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Function with multi local minimums\relax }}{39}{figure.caption.107}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Zigzagging downhill valley\relax }}{39}{figure.caption.107}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Steepest gradient descent\relax }}{41}{figure.caption.109}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Function with multi local minimums\relax }}{41}{figure.caption.110}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Zigzagging downhill valley\relax }}{41}{figure.caption.110}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{47}{figure.caption.127}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{47}{figure.caption.128}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces CMC curves on VIPeR comparing different metric learning\relax }}{49}{figure.caption.132}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces CMC curves on CUHK1 comparing different metric learning\relax }}{50}{figure.caption.134}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces CMC curves on prid\_2011 comparing different metric learning\relax }}{51}{figure.caption.136}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces CMC curves on prid\_450s comparing different metric learning\relax }}{52}{figure.caption.138}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces CMC curves on GRID comparing different metric learning\relax }}{53}{figure.caption.140}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{49}{figure.caption.130}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{49}{figure.caption.131}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces CMC curves on VIPeR comparing different metric learning\relax }}{51}{figure.caption.135}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces CMC curves on CUHK1 comparing different metric learning\relax }}{52}{figure.caption.137}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces CMC curves on prid\_2011 comparing different metric learning\relax }}{53}{figure.caption.139}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces CMC curves on prid\_450s comparing different metric learning\relax }}{54}{figure.caption.141}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces CMC curves on GRID comparing different metric learning\relax }}{55}{figure.caption.143}
 \addvspace {10\p@ }

@@ -16,6 +16,522 @@
   {}
 \endgroup
 
+\entry{REIDsurvey}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Bedagkar-Gala}{B.-G.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Apurva}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shah}{S.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {K}{K}%
+     {Shishir}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BG+1}
+  \strng{fullhash}{BGASKS1}
+  \field{sortinit}{B}
+  \field{pages}{1\bibrangedash 72}
+  \field{title}{{A Survey of Approaches and Trends in Person
+  Re-identification}}
+  \field{journaltitle}{IMAVIS}
+  \field{month}{03}
+  \field{year}{2014}
+\endentry
+
+\entry{MultiCNN}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Cheng}{C.}%
+     {De}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gong}{G.}%
+     {Yihong}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhou}{Z.}%
+     {Sanping}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Jinjun}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zheng}{Z.}%
+     {Nanning}{N.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CD+1}
+  \strng{fullhash}{CDGYZSWJZN1}
+  \field{sortinit}{C}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Person Re-Identification by Multi-Channel Parts-Based CNN With
+  Improved Triplet Loss Function}}
+  \field{month}{07}
+  \field{year}{2016}
+\endentry
+
+\entry{HOG}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Dalal}{D.}%
+     {Navneet}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Triggs}{T.}%
+     {Bill}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DNTB1}
+  \strng{fullhash}{DNTB1}
+  \field{sortinit}{D}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{{Histograms of Oriented Gradients for Human Detection}}
+  \field{month}{01}
+  \field{year}{2017}
+\endentry
+
+\entry{SDALF}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Farenzena}{F.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bazzani}{B.}%
+     {L.}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Perina}{P.}%
+     {A.}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Murino}{M.}%
+     {V.}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cristani}{C.}%
+     {M.}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {CVPR}%
+  }
+  \strng{namehash}{FM+1}
+  \strng{fullhash}{FMBLPAMVCM1}
+  \field{sortinit}{F}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{{Person Re-Identification by Symmetry-Driven Accumulation of
+  Local Features}}
+  \field{month}{03}
+  \field{year}{2016}
+\endentry
+
+\entry{LPP}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {He}{H.}%
+     {Xiaofei}{X.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Niyogi}{N.}%
+     {Partha}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HXNP1}
+  \strng{fullhash}{HXNP1}
+  \field{sortinit}{H}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{{Locality Preserving Projections}}
+  \field{month}{11}
+  \field{year}{2016}
+\endentry
+
+\entry{LOMO}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Liao}{L.}%
+     {Shengcai}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hu}{H.}%
+     {Yang}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhu}{Z.}%
+     {Xiangyu}{X.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Stan~Z.}{S.~Z.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {CVPR}%
+  }
+  \strng{namehash}{LS+1}
+  \strng{fullhash}{LSHYZXLSZ1}
+  \field{sortinit}{L}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Person Re-identification by Local Maximal Occurrence
+  Representation and Metric Learning}}
+  \field{month}{04}
+  \field{year}{2015}
+\endentry
+
+\entry{LFDAdr}{proceedings}{}
+  \field{sortinit}{L}
+  \field{title}{{Local Fisher Discriminant Analysis for Supervised
+  Dimensionality Reduction}}
+  \field{month}{12}
+  \field{year}{2016}
+\endentry
+
+\entry{MultiVarGau}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Lovric}{L.}%
+     {Miroslav}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Min-Oo}{M.-O.}%
+     {Maung}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ruh}{R.}%
+     {Ernst~A}{E.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LMMOMREA1}
+  \strng{fullhash}{LMMOMREA1}
+  \field{sortinit}{L}
+  \field{pages}{1\bibrangedash 15}
+  \field{title}{{Multivariate Normal Distributions Parametrized as a Riemannian
+  Symmetric Space}}
+  \field{month}{06}
+  \field{year}{2002}
+\endentry
+
+\entry{GOG}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Matsukawa}{M.}%
+     {Tetsu}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Okabe}{O.}%
+     {Takahiro}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Suzuki}{S.}%
+     {Einoshin}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sato}{S.}%
+     {Yoichi}{Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MT+1}
+  \strng{fullhash}{MTOTSESY1}
+  \field{sortinit}{M}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Hierarchical Gaussian Descriptor for Person
+  Re-Identification}}
+  \field{month}{12}
+  \field{year}{2016}
+\endentry
+
+\entry{RecurrentCNN}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {McLaughlin}{M.}%
+     {Niall}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Rincon}{R.}%
+     {Jesus~Martinez}{J.~M.}%
+     {del}{d.}%
+     {}{}}%
+    {{}%
+     {Miller}{M.}%
+     {Paul}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MNRJMdMP1}
+  \strng{fullhash}{MNRJMdMP1}
+  \field{sortinit}{M}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Recurrent Convolutional Network for Video-Based Person
+  Re-Identification}}
+  \field{month}{07}
+  \field{year}{2016}
+\endentry
+
+\entry{Bayeface}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Moghaddam}{M.}%
+     {Baback}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jebara}{J.}%
+     {Tony}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pentland}{P.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MBJTPA1}
+  \strng{fullhash}{MBJTPA1}
+  \field{sortinit}{M}
+  \field{pages}{1\bibrangedash 16}
+  \field{title}{{Bayesian Face Recognition}}
+  \field{month}{01}
+  \field{year}{2017}
+\endentry
+
+\entry{AutoRela}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Otsu}{O.}%
+     {Takumi~Kobayashi}{T.~K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Nobuyuki}{N.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{OTKN1}
+  \strng{fullhash}{OTKN1}
+  \field{sortinit}{O}
+  \field{pages}{1\bibrangedash 13}
+  \field{title}{{LNCS 5302 - Image Feature Extraction Using Gradient Local
+  Auto-Correlations}}
+  \field{month}{08}
+  \field{year}{2008}
+\endentry
+
+\entry{LFDA}{inproceedings}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Pedagadi}{P.}%
+     {Sateesh}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Orwell}{O.}%
+     {James}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Velastin}{V.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sergio}{S.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Boghos}{B.}%
+     {Boghossian}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{PS+1}
+  \strng{fullhash}{PSOJVSBB1}
+  \field{sortinit}{P}
+  \field{booktitle}{2013 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+  \field{pages}{3318\bibrangedash 3325}
+  \field{title}{Local Fisher Discriminant Analysis for Pedestrian
+  Re-identification}
+  \field{month}{01}
+  \field{year}{2013}
+\endentry
+
+\entry{Mahadist}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Roth}{R.}%
+     {Peter~M}{P.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hirzer}{H.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kostinger}{K.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Beleznai}{B.}%
+     {Csaba}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bischof}{B.}%
+     {Horst}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RPM+1}
+  \strng{fullhash}{RPMHMKMBCBH1}
+  \field{sortinit}{R}
+  \field{pages}{1\bibrangedash 21}
+  \field{title}{{Mahalanobis Distance Learning for Person Re-Identification}}
+  \field{month}{07}
+  \field{year}{2014}
+\endentry
+
+\entry{AppearanceDesc}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Satta}{S.}%
+     {Riccardo}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SR1}
+  \strng{fullhash}{SR1}
+  \field{sortinit}{S}
+  \field{pages}{1\bibrangedash 18}
+  \field{title}{{Appearance Descriptors for Person Re-identification: a
+  Comprehensive Review}}
+  \field{month}{07}
+  \field{year}{2016}
+\endentry
+
+\entry{KLFDA}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sugiyama}{S.}%
+     {Masashi}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SM1}
+  \strng{fullhash}{SM1}
+  \field{sortinit}{S}
+  \field{title}{{Local Fisher Discriminant Analysis for Supervised
+  Dimensionality Reduction}}
+  \field{month}{12}
+  \field{year}{2016}
+\endentry
+
+\entry{RegionCovariance}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Tuzel}{T.}%
+     {Oncel}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Porikli}{P.}%
+     {Fatih}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Meer}{M.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TOPFMP1}
+  \strng{fullhash}{TOPFMP1}
+  \field{sortinit}{T}
+  \field{pages}{1\bibrangedash 14}
+  \field{title}{{Region Covariance: A Fast Descriptor for Detection and
+  Classification}}
+  \field{month}{12}
+  \field{year}{2016}
+\endentry
+
+\entry{DeepfeatureCNN}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Xiao}{X.}%
+     {Tong}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Hongsheng, Li}}{H.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {{Wanli, Ouyang}}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Xiaogang}{X.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{XT+1}
+  \strng{fullhash}{XTHWWX1}
+  \field{sortinit}{X}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Learning Deep Feature Representations with Domain Guided
+  Dropout for Person Re-identification }}
+  \field{month}{04}
+  \field{year}{2016}
+\endentry
+
 \entry{TDL}{article}{}
   \name{author}{4}{}{%
     {{}%
@@ -41,12 +557,39 @@
   }
   \strng{namehash}{YJ+1}
   \strng{fullhash}{YJWALXZWS1}
-  \field{labelyear}{2015}
   \field{sortinit}{Y}
   \field{pages}{1\bibrangedash 9}
   \field{title}{{Top-push Video-based Person Re-identification}}
   \field{month}{01}
   \field{year}{2015}
+\endentry
+
+\entry{NFST}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Zhang}{Z.}%
+     {Li}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Xiang}{X.}%
+     {Tao}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gong}{G.}%
+     {Shaogang}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{ZLXTGS1}
+  \strng{fullhash}{ZLXTGS1}
+  \field{sortinit}{Z}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Learning a Discriminative Null Space for Person
+  Re-identification}}
+  \field{month}{03}
+  \field{year}{2016}
 \endentry
 
 \entry{PRDC}{article}{}
@@ -69,7 +612,6 @@
   }
   \strng{namehash}{ZWGSXT1}
   \strng{fullhash}{ZWGSXT1}
-  \field{labelyear}{2016}
   \field{sortinit}{Z}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Person Re-identification by Probabilistic Relative Distance

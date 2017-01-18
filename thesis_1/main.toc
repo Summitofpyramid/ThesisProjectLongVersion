@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {1.1}Basic concepts}{3}{section.12}
 \contentsline {section}{\numberline {1.2}Challenges}{4}{section.15}
 \contentsline {section}{\numberline {1.3}Proposed work}{6}{section.17}
-\contentsline {section}{\numberline {1.4}Performance measuring}{7}{section.18}
+\contentsline {section}{\numberline {1.4}Performance measuring}{6}{section.18}
 \contentsline {section}{\numberline {1.5}Contribution}{7}{section.20}
 \contentsline {section}{\numberline {1.6}Thesis organization}{8}{section.21}
 \contentsline {chapter}{\numberline {2}Related work}{9}{chapter.22}
@@ -29,14 +29,14 @@
 \contentsline {subsection}{\numberline {3.4.2}Locality preserving projection (LPP)}{33}{subsection.74}
 \contentsline {subsection}{\numberline {3.4.3}Local fisher discriminant analysis}{34}{subsection.78}
 \contentsline {subsection}{\numberline {3.4.4}Kernel local fisher discriminant analysis}{35}{subsection.82}
-\contentsline {chapter}{\numberline {4}Metric learning on subspace}{38}{chapter.99}
-\contentsline {section}{\numberline {4.1}Mahalanobis distance}{38}{section.100}
-\contentsline {section}{\numberline {4.2}Gradient descent optimization}{38}{section.103}
-\contentsline {section}{\numberline {4.3}Metric learning based on sample pairs distance comparison}{40}{section.108}
-\contentsline {chapter}{\numberline {5}Experiment Settings}{43}{chapter.117}
-\contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{43}{section.118}
-\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{45}{section.120}
-\contentsline {section}{\numberline {5.3}Parameters setting of gradient descent iteration}{46}{section.126}
-\contentsline {section}{\numberline {5.4}Performance analysis}{48}{section.130}
-\contentsline {chapter}{\numberline {6}Conclusion}{54}{chapter.141}
-\contentsline {chapter}{Bibliography}{55}{chapter*.142}
+\contentsline {chapter}{\numberline {4}Metric learning on subspace}{40}{chapter.102}
+\contentsline {section}{\numberline {4.1}Mahalanobis distance}{40}{section.103}
+\contentsline {section}{\numberline {4.2}Gradient descent optimization}{40}{section.106}
+\contentsline {section}{\numberline {4.3}Metric learning based on sample pairs distance comparison}{42}{section.111}
+\contentsline {chapter}{\numberline {5}Experiment Settings}{45}{chapter.120}
+\contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{45}{section.121}
+\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{47}{section.123}
+\contentsline {section}{\numberline {5.3}Parameters setting of gradient descent iteration}{48}{section.129}
+\contentsline {section}{\numberline {5.4}Performance analysis}{50}{section.133}
+\contentsline {chapter}{\numberline {6}Conclusion}{56}{chapter.144}
+\contentsline {chapter}{Bibliography}{57}{chapter*.145}

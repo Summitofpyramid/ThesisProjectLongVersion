@@ -43,10 +43,6 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage{times} % Use the Palatino font by default
 
-\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-
-\bibliography{citation.bib} % The filename of the bibliography
-
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 %----------------------------------------------------------------------------------------
 %packages I ADDED  myself By Qiangsen
@@ -59,9 +55,14 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{amsmath}
 
 \renewcommand{\baselinestretch}{1.4} % control the line margin
+%---------------------------------------------
+%\addbibresource{citation}
+\usepackage[backend=bibtex,style=numeric]{biblatex} 
 
-%\usepackage[backend=bibtex,style=numeric]{biblatex} 
-\addbibresource{citation}
+%\bibliographystyle{ieeetr}
+%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+
+\bibliography{citation.bib} % The filename of the bibliography
 %\usepackage{cite}
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------------------------------
@@ -207,7 +208,7 @@ headsepline, % Uncomment to get a line under the header
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 
-Person re-identificaiton has become an intense research area in recent years. The main goal of this topic is to check if the individual appeared in other cameras is the same as the one in current cameras. This task is challenging for the variation of illumination, camera angles, the pedestrians' clothes and object sheltering. It's very important to choose robust descriptors and metric learning to improve accuracy. Mahanalobis based metric learning is a popular method to measure similarity. However, since directly extracted descriptors usually have high dimension, it's intractable to learn a high dimensional Mahanalobis matrix. Dimension reduction are used to project high dimensional descriptors to lower dimension space while preserving those discriminative information as much as possible. In this paper the kernel LFDA is used to reduce dimen- sion given that kernelization method can greatly improve re-identification performance for nonlinearity. Then a metric matrix is learned on lower dimensional descriptors based on the limitation that the within class distance is at least 1 unit smaller than the minimum inter class distance. This method turns to have excellent performance compared with other adcanced metric learning.
+Person re-identificaiton has become an intense research area in recent years. The main goal of this topic is to check if the individual appeared in other cameras is the same as the one in current cameras. This task is challenging for the variation of illumination, camera angles, the pedestrians' clothes and object sheltering. It's very important to choose robust descriptors and metric learning to improve accuracy. Mahanalobis based metric learning is a popular method to measure similarity. However, since directly extracted descriptors usually have high dimension, it's intractable to learn a high dimensional Mahanalobis matrix. Dimension reduction are used to project high dimensional descriptors to lower dimension space while preserving those discriminative information as much as possible. In this paper the kernel LFDA \cite{KLFDA} is used to reduce dimen- sion given that kernelization method can greatly improve re-identification performance for nonlinearity. Then a metric matrix is learned on lower dimensional descriptors based on the limitation that the within class distance is at least 1 unit smaller than the minimum inter class distance. This method turns to have excellent performance compared with other adcanced metric learning.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------

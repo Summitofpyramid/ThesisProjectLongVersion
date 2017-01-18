@@ -4,7 +4,7 @@ In person re-identification, it's very important to choose robust descriptor to 
 
 \section{Color and textural features}
 \subsection{Color histogram descriptors on different color space}
-Histogram descriptor extracts color statistics information of input images. A popular histogram extracting method is to divide input image into a few horizontal stripes and extract color histogram of each stripe, then they are concatenated to consist of histogram descriptor of the whole image. Color space selection has much influence on descriptor performance. HSV color space is very common in computer vision and image processing area for target detection and tracking. The HSV descriptor has better performance than RGB histogram descriptor[] since HSV color separates image intensity from color information. Thus HSV color space is more robust to illumination variation. An unsupervised CMC performance comparison among different color spaces on VIPeR dataset is given in figure []. In this comparison camera a views are used as probe set and camera B views are used for gallery set. We can find that those color spaces separating intensity information outperform RGB color space and HSV outperforms all other color spaces.
+Histogram descriptor extracts color statistics information of input images. A popular histogram extracting method is to divide input image into a few horizontal stripes and extract color histogram of each stripe, then they are concatenated to consist of histogram descriptor of the whole image. Color space selection has much influence on descriptor performance. HSV color space is very common in computer vision and image processing area for target detection and tracking. The HSV descriptor has better performance than RGB histogram descriptor since HSV color separates image intensity from color information. Thus HSV color space is more robust to illumination variation. An unsupervised CMC performance comparison among different color spaces on VIPeR dataset is given in figure \ref{CMCcolorspaces}. In this comparison camera a views are used as probe set and camera B views are used for gallery set. We can find that those color spaces separating intensity information outperform RGB color space and HSV outperforms all other color spaces.
 %-----------------------------------------------------------------------------
 
 \begin{figure}[H]
@@ -21,9 +21,10 @@ Histogram descriptor extracts color statistics information of input images. A po
 \caption{A CMC comparison of color histogram on different color spaces }
 \vspace{0em}
 \end{figure} 
+\label{CMCcolorspaces}
 %-----------------------------------------------------------------------------
 
-\textbf{Analysis of histogram based descriptor} The performance of histogram descriptors suffers from ignoring the spatial information. Since it doesn't consider the relative distribution of color, images with same kind color patches but different distribution may have the same histogram descriptor. One example is shown in figure [].
+\textbf{Analysis of histogram based descriptor} The performance of histogram descriptors suffers from ignoring the spatial information. Since it doesn't consider the relative distribution of color, images with same kind color patches but different distribution may have the same histogram descriptor. One example is shown in figure \ref{RGBbgr}.
 
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
@@ -40,15 +41,17 @@ Histogram descriptor extracts color statistics information of input images. A po
 \end{minipage}
 \caption{A comparison of two patches with same entropy but different color distribution}
 \end{figure}
+\label{RGBbgr}
 
 \subsection{Local binary pattern(LBP)}
-Local binary pattern[] extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure [] is an example of LBP example. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many extended LBP like tLBP[], VLBP[], OCLBP[], and LBP is well known for its robustness to monotonic illumination variation.
+Local binary pattern \cite{} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \cite{LBPtheory} is an example of LBP example. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many extended LBP like tLBP[], VLBP[], OCLBP[], and LBP is well known for its robustness to monotonic illumination variation.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png}
 \caption{An LBP example, by thresholding the neighbour pixels the pixels are transformed into a binary number }
 \vspace{0em}
 \end{figure}
+\label{LBPtheory}
 
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
@@ -68,7 +71,7 @@ Local binary pattern[] extracts the texture information with efficient computing
 
 
 \subsection{Histogram of oriented gradients(HOG)}
-The HOG [] descriptor also extracts textural information of images by gradient computing. Like many other descriptors, it computes the gradient of input intensity  image $I(x, y)$ first by equations
+The HOG \cite{HOG} descriptor also extracts textural information of images by gradient computing. Like many other descriptors, it computes the gradient of input intensity  image $I(x, y)$ first by equations
 
 \begin{equation}
 I_x = \frac{\partial I}{\partial x},\\
@@ -99,7 +102,7 @@ D_y = \left[ \begin{matrix}
 Then 
 
 \section{Influence of background segmentation on different descriptors}
-Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from sequential videos than a single frame. In [SDALF] the author provides foreground mask for all images.  Some of those segmented foreground are shown in figure [] and it's obvious that certain bogy parts like head and feet are lost. To compare those loss's impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors and local binary pattern(LBP) is given in figure [] and figure []. 
+Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from sequential videos than a single frame. In \cite{SDALF} the author provides foreground mask for all images.  Some of those segmented foreground are shown in figure [] and it's obvious that certain bogy parts like head and feet are lost. To compare those loss's impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors and local binary pattern(LBP) is given in figure \ref{SegHSV} and figure \ref{SegLBP}. 
 
 
 \begin{figure}[H]
@@ -118,6 +121,7 @@ We can find that foreground segmentation decreases LBP's performance onVIPer dat
 \caption{A CMC comparison of foreground segmentation on LBP tested on VIPeR }
 \vspace{0em}
 \end{figure} 
+\label{SegLBP}
 
 \begin{figure}[H]
 \centering
@@ -125,11 +129,11 @@ We can find that foreground segmentation decreases LBP's performance onVIPer dat
 \caption{A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR}
 \vspace{0em}
 \end{figure} 
-
+\label{SegHSV}
 
 \section{The hierarchical gaussian descriptor}
 
-The hierarchical gaussian descriptor is proposed by in  \cite{GOGpaper}, this descriptor uses a two-level gaussian distribution to model an individual. This descriptor densely sample the image and model each hierarchical structure with gaussian distribution and has outperformed many other works. Firstly it divides the image into a few overlapping horizontal slides, and in each slide, dense sampling patches are made with certain size. So there is a  two-level structure in this image, small patches and slides. Then by model each level with gaussian model we can get a robust representation of the individual.
+The hierarchical gaussian descriptor is proposed by in  \cite{GOG}, this descriptor uses a two-level gaussian distribution to model an individual. This descriptor densely sample the image and model each hierarchical structure with gaussian distribution and has outperformed many other works. Firstly it divides the image into a few overlapping horizontal slides, and in each slide, dense sampling patches are made with certain size. So there is a  two-level structure in this image, small patches and slides. Then by model each level with gaussian model we can get a robust representation of the individual.
 \subsection{Single pixel modelling}
 
 In this hierarchical model, it is very important to have a full representation for every single pixel. To fully characterize single pixel, a $d$ dimensional vector is used to represent it. In this vector, there could be any predefined properties like coordinates, color values, texture and filter response. Suppose the original image is in RGB color space, the gaussian of gaussian descriptor uses a 8-dimensional vector $\bm{f}_i$, and 
@@ -155,7 +159,7 @@ M(i,j) = \sqrt{(I_x(i,j)^2 + I_y(i,j))^2}
 \end{aligned}
 \end{equation}
 
-The orientation are quantized into four bins by a soft voting algorithm[ GOG15]. For each pixel its corresponding gradient orientation is decided by its nearest bin's direction. To make the descriptor focus on the gradient components with high values, the gradient and orientation are multiplied as follow,
+The orientation are quantized into four bins by a soft voting algorithm \cite{AutoRela}. For each pixel its corresponding gradient orientation is decided by its nearest bin's direction. To make the descriptor focus on the gradient components with high values, the gradient and orientation are multiplied as follow,
 \begin{equation}
 M_{\theta} = MO_{\theta},
 \end{equation}
@@ -186,7 +190,7 @@ where $n$ is the number of pixels in current patch. When the gaussian model is c
 %%Integral image for fast computing
 \subsection{Integral image for fast region covariance computation}
 
-To compute estimated parameters for all those overlapping small patches, the time complexity of computing one by one patch is gigantic because there are many repeating computations. To compute the estimated covariance matrix \bm{$\Sigma}$ for every small patch with size of $W\times H$, the integral image is used to reduce time complexity. The integral image[ ] is a intermediate representation to fast compute rectangle area sum in an image. Each pixel value in integral image is the sum of all the pixels inside the rectangle bounded by current pixel and the upper left pixel. That is, the integral image S(x, y) for image I(x, y) is 
+To compute estimated parameters for all those overlapping small patches, the time complexity of computing one by one patch is gigantic because there are many repeating computations. To compute the estimated covariance matrix \bm{$\Sigma}$ for every small patch with size of $W\times H$, the integral image is used to reduce time complexity. The integral image \cite{RegionCovariance} is a intermediate representation to fast compute rectangle area sum in an image. Each pixel value in integral image is the sum of all the pixels inside the rectangle bounded by current pixel and the upper left pixel. That is, the integral image S(x, y) for image I(x, y) is 
 \begin{equation}
 S(x', y') = \sum_{x<x', y <y'} I(x, y),
 \end{equation}
@@ -235,7 +239,7 @@ When all patches in a region are computed, the same process is repeated to compu
 \subsection{Riemannian manifold based SPD transformation}
 
 As described before this hierarchical gaussian descriptor is a stochastic feature, so operations like computing mean and covariance need to be operated on previous summarized gaussian distributions. Mean and covariance operation in Euclidean space can not be directly finished on previous estimated gaussian functions. A transformation is needed to make stochastic summarization feasible on patch gaussian function.
-In fact, the multivariate gaussian model is a Riemannian manifold and can be embedded into a semi positive definite matrix(SPD) space. The gaussian function is mapped into a vector space with two steps mapping. A $d$ dimensional multivariate gaussian function can be mapped into a $d+1$ dimensional $SPD_+$ space. According to [GOG25], the mapping can be denoted as 
+In fact, the multivariate gaussian model is a Riemannian manifold and can be embedded into a semi positive definite matrix(SPD) space. The gaussian function is mapped into a vector space with two steps mapping. A $d$ dimensional multivariate gaussian function can be mapped into a $d+1$ dimensional $SPD_+$ space. According to \cite{MultiVarGau}, the mapping can be denoted as 
 \begin{equation}
 G(\bm{x}_i;\bm{\mu}_i,\bm{\Sigma}_i) \sim \bm{P}_i  = |\bm{\Sigma}_i|^{1/(d+1)} \left[ \begin{matrix}
 \bm{\Sigma}_i + \bm{\mu}_i\bm{\mu}^T & \bm{\mu}_i \\
@@ -259,7 +263,7 @@ In this thesis,
 
 With the Gaussian parameters extracted in each region, the same transformation is operated on them. Then all horizontal slides' descriptor are concatenated to get the whole descriptor for the whole image.
 
-\textbf{Dimension analysis} It has been shown in [ ]  combination of descriptors of different color space can greatly improve re-ID performance. In this project, the hierarchical gaussian descriptor in RGB color space is the base descriptor. Descriptors in three more color space \{HSV, Lab, nRGB\} are extracted. The nRGB color space is calculated as 
+\textbf{Dimension analysis} It has been known that combination of descriptors of different color space can greatly improve re-ID performance. In this project, the hierarchical gaussian descriptor in RGB color space is the base descriptor. Descriptors in three more color space \{HSV, Lab, nRGB\} are extracted. The nRGB color space is calculated as 
 \begin{equation}
 \begin{aligned}
 nR = \frac{R}{R+G+B},\\
@@ -346,7 +350,7 @@ And each $\bm{\phi}$ in $T$ is the eigenvector of following fomula,
 where $\gamma$ is corresponding eigenvalue of $\bm{\phi}$, and $L = D - A$.\\
 %But the LPP dimension reduction is still not discriminant enough, 
 \subsection{Local fisher discriminant analysis}
-\indent LFDA combines FDA and LPP and have better performance. The key in LFDA is it assigns weights to elements in $\bm{A}^{(w)}$ and $\bm{A}^{(b)}$, so that,
+\indent LFDA \cite{LFDA} combines FDA and LPP and have better performance. The key in LFDA is it assigns weights to elements in $\bm{A}^{(w)}$ and $\bm{A}^{(b)}$, so that,
 \begin{equation}
 \begin{aligned}
 \bm{S}^{(w)} = \frac{1}{2}\sum _{i=1}^l\sum_{j:l_j = i} \bm{A}_{i,j}^w (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
@@ -382,7 +386,7 @@ Again this problem can be solved by eigenvalue decomposition by equation \ref{ei
 
 When applying the LFDA to original high dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, LFDA has to solve the eigenvalue a matrix with dimension $d\times d$. In some descriptors the $d$ could be more than 20000 and thus the computation cost is intractable. 
  
-\subsection{Kernel local fisher discriminant analysis}
+\subsection{Kernel local fisher discriminant analysis} \cite{KLFDA}
 
 Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $T$ can be computed by equation
 \begin{equation}
@@ -411,7 +415,7 @@ and we have
 \bm{K}_{i,j} =  k(\bm{x}_i,\bm{x}_j) = <\phi(\bm{x}_i),\phi(\bm{x}_j)> =  \exp^{(-\gamma||\bm{x}_i-\bm{x}_j||^2)}
 \end{equation}
 
-In [] the authors proposed fast computation of LFDA by replacing $\bm{S}^{(b)}$ with the local scatter mixture matrix $\bm{S}^{(m)}$defined by 
+In \cite{LFDAdr} the authors proposed fast computation of LFDA by replacing $\bm{S}^{(b)}$ with the local scatter mixture matrix $\bm{S}^{(m)}$defined by 
 \begin{equation}
 \begin{aligned}
 \bm{S}^{(m)} = \bm{S}^{(b)} + \bm{S}^{(w)}\\
@@ -438,7 +442,7 @@ and it can be transformed into a eigenvalue decomposition problem
 \bm{S}^{(m)}\bm{t}_i  = \lambda \bm{S}^{(w)}\bm{t}_i
 \end{equation}
 \label{eigen2}
-Also with the replacement of $\bm{S}^{(m)}$, in [] the author summarized that 
+Also with the replacement of $\bm{S}^{(m)}$, in \cite{LFDAdr} the author summarized that 
 \begin{equation}
 \bm{S}^{(m)} = \bm{X}\bm{L}^{(m)}\bm{X}^T
 \end{equation}
@@ -460,7 +464,46 @@ and by the kernel trick, its represented as
 \begin{equation}
 \bm{K}\bm{L}^{(m)}\bm{K}\gamma_i  = \lambda \bm{K}\bm{L}^{(w)}\bm{K}\gamma_i
 \end{equation}
-One example of using KLFDA to discriminate to classify the nonlinear data clusters can be shown in figure []. 
+One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in figure \ref{KLFDAdemo1,KLFDAdemo2,KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in figure \ref{KLFDAdemo2} and figure \ref{KLFDAdemo3}. It shows that for those clusters the gaussian kernel are better than linear kernel because the dimensional reduced data are more separate when using gaussian kernel function.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg}
+\caption{Example of five clusters belong to three classes}
+\vspace{0em}
+\end{figure} 
+\label{KLFDAdemo1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg}
+\caption{1-D distribution of dimension reduced data  with gaussian kernel}
+\vspace{0em}
+\end{figure} 
+\label{KLFDAdemo2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg}
+\caption{1-D distribution of dimension reduced data  with linear kernel}
+\vspace{0em}
+\end{figure} 
+\label{KLFDAdemo3}
+%\begin{figure}[H]
+%\centering
+%\begin{minipage}[t]{0.5\linewidth}
+%\includegraphics[width=2.7in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg}
+%%\caption{RGB patch}
+%\label{fig:side:a}
+%\end{minipage}%
+%\begin{minipage}[t]{0.5\linewidth}
+%\centering
+%\includegraphics[width=2.7in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg}
+%%\caption{GBR patch}
+%\label{fig:side:b}
+%\end{minipage}
+%\caption{A comparison of two patches with same entropy but different color distribution}
+%\end{figure}
 
 
 
