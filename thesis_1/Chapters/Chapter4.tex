@@ -89,7 +89,7 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \end{aligned}
  \end{equation}
  
- The iteration process can be summarized as in table \ref{Gradientdemo} \\
+ The iteration process can be summarized as in table \ref{Gradientdemo} 
 % \begin{table}[H]
 % \caption{The optimization algorithm for metric learning}
 % \centering
@@ -141,11 +141,14 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \textbf{end while}  \\
  return $\bm{M}$\\
  \hline
-
  \end{tabular} 
  \end{table}
  \label{Gradientdemo}
-
+In each iteration, to make sure the updated $\bm{M}$ is a SPD matrix, first a eigenvalue decomposition is performed on $\bm{M}$, and we have
+\begin{equation}\label{SPDproject}
+\bm{M} = \bm{V}\bm{\Lambda}\bm{V}^T
+\end{equation}
+Then the negative eigenvalues in $\bm{V}$ are removed and the corresponding eigenvectors in $\bm{V}$ are also removed. Then $\bm{M}$ is restored by equation \eqref{SPDproject}.
 
  
  
