@@ -30,45 +30,45 @@ Warning--I didn't find a database entry for "compMN5"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 22 entries,
+You've used 28 entries,
             6047 wiz_defined-function locations,
-            1251 strings with 11171 characters,
-and the built_in function-call counts, 67655 in all, are:
-= -- 2161
-> -- 2583
-< -- 675
-+ -- 809
-- -- 993
-* -- 5611
-:= -- 4340
+            1282 strings with 11974 characters,
+and the built_in function-call counts, 86386 in all, are:
+= -- 2766
+> -- 3260
+< -- 848
++ -- 1007
+- -- 1240
+* -- 7173
+:= -- 5485
 add.period$ -- 0
-call.type$ -- 22
-change.case$ -- 200
-chr.to.int$ -- 160
-cite$ -- 42
-duplicate$ -- 7752
-empty$ -- 7051
-format.name$ -- 1650
-if$ -- 15003
+call.type$ -- 28
+change.case$ -- 254
+chr.to.int$ -- 196
+cite$ -- 54
+duplicate$ -- 9997
+empty$ -- 9060
+format.name$ -- 2127
+if$ -- 19116
 int.to.chr$ -- 0
-int.to.str$ -- 44
+int.to.str$ -- 56
 missing$ -- 0
-newline$ -- 609
-num.names$ -- 841
-pop$ -- 7010
+newline$ -- 786
+num.names$ -- 1087
+pop$ -- 9008
 preamble$ -- 1
-purify$ -- 280
+purify$ -- 356
 quote$ -- 0
-skip$ -- 3770
+skip$ -- 4791
 stack$ -- 0
-substring$ -- 893
-swap$ -- 2527
-text.length$ -- 682
-text.prefix$ -- 22
+substring$ -- 1094
+swap$ -- 3245
+text.length$ -- 860
+text.prefix$ -- 30
 top$ -- 1
-type$ -- 819
+type$ -- 1047
 warning$ -- 0
-while$ -- 518
+while$ -- 656
 width$ -- 0
-write$ -- 586
+write$ -- 757
 (There were 6 warnings)

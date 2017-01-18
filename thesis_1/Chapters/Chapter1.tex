@@ -5,7 +5,7 @@ People re-identification has been an intense research topic in recent years, who
 Given a sequence or video of individuals, there are three steps to match person. A simple work flow is shown in figure \ref{workflow}. However, since most of used re-id datasets are well copped manually or by a automatic detector, so most re-ID work will only focus on robust descriptors designing and efficient matching algorithm designing aimed at those well cropped images. 
 
 
-\begin{figure}
+\begin{figure}[]
 \centering
 \begin{raggedleft}
 \includegraphics[scale = 0.8]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf}
@@ -16,10 +16,10 @@ Given a sequence or video of individuals, there are three steps to match person.
 \end{figure}
 \label{workflow}
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 %\begin{raggedleft}
-\includegraphics[scale = 0.5]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.pdf}
+\includegraphics[scale = 0.5]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.png}
 %\includegraphics[width=1\linewidth]{REIDworkflow.pdf}
 \vspace{1em}
 \caption{A typical single shot Re-ID work flow}
@@ -32,17 +32,17 @@ Given a sequence or video of individuals, there are three steps to match person.
 The first task in re-ID is to design a robust descriptor to represent images. The descriptor is supposed to contain the key information for each captured person. Basically, the descriptors are supposed to be robust and discriminative. One straightforward way is to extract the color, textural information of images, then the descriptors are used to compute the similarity score. But this method turns out to be not robust caused by illumination variation  and camera color response difference and camera angle settings.  Therefore, many other advanced descriptors takes into account the correlation of color, texture and position together to improve performance.
 
 
-The second one is to design the similarity computing methodology. That is, the way to compare how similar two descriptors are. Previous methods use Euclidean distance, Bhattacharyya distance and Mahalanobis distance. The Euclidean distance are mostly used to match descriptors like color and texture descriptors. However, though it's straightforward and easy, it's hard to used Euclidean distance to discriminate images. 
-Many creative metric learning methods have been proposed to compute descriptor similarity. Among them the Mahanalobis distance based metric is very popular. In this method a semi-positive defined matrix $\bm{M}$ is learned while meeting certain limitations. Besides, linear discriminant analysis \cite{LFDA} learns a subspace to minimize the within class scatter matrix while maximized inter class scatter matrix. In \cite{NFST} the null space is proposed that make descriptors of same class collapse into a single point while descriptors of different classes are projected to different points. 
+The second one is to design the similarity computing methodology. That is, the way to compare how similar two descriptors are. Previous methods use Euclidean distance, Bhattacharyya distance and Mahalanobis distance. The Euclidean distance is the easiest to match descriptors like color and texture descriptors. However, though it's straightforward and easy, it's hard to use Euclidean distance to discriminate images. 
+Many creative metric learning methods have been proposed to compute descriptor similarity. Among them the Mahanalobis distance based metric is most popular. In this method a semi-positive defined matrix $\bm{M}$ is learned while meeting certain intraclass and interclass distance limitations. Besides, linear discriminant analysis \cite{LFDA} learns a subspace to minimize the within class scatter matrix while maximized inter class scatter matrix. In \cite{NFST} the null space is proposed that make descriptors of same class collapse into a single point while descriptors of different classes are projected to different points. 
 	
 \section{Basic concepts}
-People re-identification can be divided into a few categories according to different conditions. Some general concepts are listed below.\\
+	People re-identification can be divided into a few categories according to different conditions. Some general concepts are listed below.\\
 \textbf{Open set and close set re-ID} \cite{REIDsurvey} According gallery size and if the gallery size evolves, re-ID can be divided in to open set re-ID and close set re-ID. In close set re-ID, no new identities will be added to gallery set and gallery size remains the same as time goes by. Besides, the probe set will be a subset of gallery set, that means, the number of unique identities in gallery set will be equal or greater than probe set. In open set re-ID, the gallery set will evolve as time goes by. Each time a probe image is inputed to the recognition system, the system will judge if it has a corresponding match in the gallery set. If the probe image doesn't match any of the gallery images, it will be regarded as a new identity and will be added to the gallery set. Besides, the probe set is not necessarily the subset of gallery set. 
 
 \textbf{Long term and short term re-ID} According to the time interval between gallery and probe images, re-ID can be divided into long term and short term re-ID.  In short term means the time interval between gallery and probe images are small, say a few minutes or several hours. In contrary, the long term re-ID refers to the case that the time interval between gallery and probe images are a few days or even longer. The difference brought by long time interval between gallery and probe images is the variation of individuals' clothes and appearance. If the gallery images are shot a few days ago, the same individual may have changes his suits or take off his bag, then the appearance may change a lot. In this case, it will be much more difficult to recognize the same identity in long term re-ID. Generally, in most cases we use the short term re-ID, which guarantees the appearance of same person will remain the same and we only need to consider the difference brought by other factors like viewpoint variation and occlusions.
 
 
-\textbf{Single shot and multi shot re-ID} According to the size of sample set for each person, re-ID can be divided into single shot and multi shots approaches. In single shot case, only one image is provided for a person in a camera view. Single shot re-ID is challenging because only limited information can be extracted. One example is the VIPeR dataset figure[ ], in this dataset, for each person only one image is provides in each camera view. In multi shots re-ID a sequence of images are provided for a person in a camera view. Compared with single shot case, more extra information, like temporal-spatial can be extracted from the sample set. One case of multi-shot dataset is the prid\-2011 dataset which provides a long sequence for each person in a single camera view.
+\textbf{Single shot and multi shot re-ID} According to the size of sample set for each person, re-ID can be divided into single shot and multi shots approaches. In single shot case, only one image is provided for a person in a camera view. Single shot re-ID is challenging because only limited information can be extracted. One example is the VIPeR dataset figure \ref{VIPeRimages}, in this dataset, for each person only one image is provides in each camera view. In multi shots re-ID a sequence of images are provided for a person in a camera view. Compared with single shot case, more extra information, like temporal-spatial can be extracted from the sample set. One case of multi-shot dataset is the prid\_2011 dataset which provides a long sequence for each person in a single camera view.
 
 %-------------------------------------------------
 \begin{figure}[H]
@@ -50,8 +50,8 @@ People re-identification can be divided into a few categories according to diffe
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID.eps}
 \vspace{-2em}
 \caption{The VIPeR dataset}
-
 \end{figure}
+\label{VIPeRimages}
 %-------------------------------------------------
 
 \begin{figure}[H]
@@ -86,8 +86,25 @@ The intra distance means the distance of two samples with the same class label, 
 \textbf{FeasibilIty, Complexity and Scalability} When applying those descriptors and matching algorithms, we have to consider the its real-time performance.   The re-ID datasets usually has small sample size but in surveillance network much more pedestrians in different cameras can be presented simultaneously. A system like this has plenty of individuals to re-identify, which requires the process time for single probe should be short for low latency. Besides, the since the gallery in this system evolves, it's crucial to design a evolution algorithm for gallery images, that is, how to judge if a person appeared in current camera is a new person to all those gallery images.
 
 \section{Proposed work}
-In many previous work, the kernel local fisher discriminant analysis is used as a subspace learning method, and Euclidean distance is usually used in the subspace to measure similarity. In this thesis, the KLFDA \cite{KLFDA} method is used a dimension reducing method to project high dimensional descriptors to a lower dimension space. Compared with other dimension reduction methods, KLFDA is a supervised method and it take consideration of those intra and inter class information, therefore, much less information are lost after dimension reduction. Then a Mahanalobis distance based matrix $M$ is learned based on the limitation that the distance of people from same class should be at least 1 unit smaller than the distance of people from different classes. A target function that penalizes large intra-class distance and small inter-class distance is created, by iterative computation, when the target function converges the matrix $M$ is thought to meet the requirement. It turns out that this metric learning have advance performance when compared with other metric learning methods.
+In many previous work, the kernel local fisher discriminant analysis is used as a subspace learning method, and Euclidean distance is usually used in the subspace to measure similarity. In this thesis, the KLFDA \cite{KLFDA} method is used a dimension reducing method to project high dimensional descriptors to a lower dimension space. Compared with other dimension reduction methods, KLFDA is a supervised method and it take consideration of those intra and inter class information, therefore, much less information are lost after dimension reduction. Then a Mahanalobis distance based matrix $M$ is learned based on the limitation that the distance of people from same class should be at least 1 unit smaller than the distance of people from different classes. A target function that penalizes large intra-class distance and small inter-class distance is created, by iterative computation, when the target function converges the matrix $M$ is thought to be optimal. It turns out that this metric learning have advance performance when compared with other metric learning methods. A workflow of proposed work is in figure \ref{ProposedWorkflow}.
 
+%------------------------------------------------------------
+\begin{figure}[H]
+
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/ProposedWorkFlow.png}
+\vspace{-2em}
+\caption{The workflow of proposed work}
+\label{ProposedWorkflow}
+
+\end{figure}
+%------------------------------------------------------------
+\begin{figure}[H]
+
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots.eps}
+\vspace{-2em}
+\caption{Samples from prid\_2011 dataset}
+
+\end{figure}
 
 
 \section{Performance measuring}

@@ -44,7 +44,7 @@ Histogram descriptor extracts color statistics information of input images. A po
 \label{RGBbgr}
 
 \subsection{Local binary pattern(LBP)}
-Local binary pattern \cite{} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \cite{LBPtheory} is an example of LBP example. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many extended LBP like tLBP[], VLBP[], OCLBP[], and LBP is well known for its robustness to monotonic illumination variation.
+Local binary pattern \cite{} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \ref{LBPtheory} is an example of LBP example. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many extended LBP like tLBP[], VLBP[], OCLBP[], and LBP is well known for its robustness to monotonic illumination variation.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png}
@@ -80,8 +80,8 @@ I_y = \frac{\partial I}{\partial y},
 the gradient can be computed fast by some discrete derivative masks below, like 1-D Sobel masks:
 \begin{equation}
 \begin{aligned}
-Centered: M_{c} = [-1, 0, 1]\\
-Uncentered: M_{uc} = [-1, 1]
+Centered: M_{c} &= [-1, 0, 1]\\
+Uncentered: M_{uc}& = [-1, 1]
 \end{aligned}
 \end{equation}
 or 2-D Sobel masks:
@@ -113,13 +113,11 @@ Many works try to minimize impact of background noise of pedestrians' image. It'
 \end{figure} 
 
 We can find that foreground segmentation decreases LBP's performance onVIPer dataset but increases HSV color histogram greatly. The reason for this is imperfect foreground segmentation causes body parts(like head and feet) loss and small black patches in torso and legs, and for some individuals a part of background scene is regarded as foreground. Since HSV color histogram doesn't handle spatial distribution but only color entropy, foreground segmentation improves its performance greatly. But since LBP handles texture for each sample patch, its performance suffers from those body parts loss and those little black patches. 
-
 \begin{figure}[H]
 \centering
-
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png}
 \caption{A CMC comparison of foreground segmentation on LBP tested on VIPeR }
-\vspace{0em}
+\vspace{-1em}
 \end{figure} 
 \label{SegLBP}
 
@@ -127,7 +125,7 @@ We can find that foreground segmentation decreases LBP's performance onVIPer dat
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png}
 \caption{A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR}
-\vspace{0em}
+\vspace{-1em}
 \end{figure} 
 \label{SegHSV}
 
@@ -146,16 +144,16 @@ Then the $M$ is to characterize the texture with the gradient histogram. Differe
 Firstly the gradient in x and y direction are computed by two gradient filters $\rm{h}_x$ and $\rm{h}_y$, and we have 
 \begin{equation}
 \begin{aligned}
-h_x = [-1, 0, 1]\\
-h_y = -h_x'
+h_x &= [-1, 0, 1]\\
+h_y &= -h_x'
 \end{aligned}
 \end{equation}
 
 Then by convolve those two filters with the intensity image $I$, the horizontal and vertical gradient $I_x, I_y$ can be computed, so the orientation and magnitude can be computed by following equations:
 \begin{equation}
 \begin{aligned}
-O(i,j) = (\arctan(I_y(i,j)/I_x(i,j))+\pi)*180 /{\pi} \\
-M(i,j) = \sqrt{(I_x(i,j)^2 + I_y(i,j))^2}
+O(i,j) &= (\arctan(I_y(i,j)/I_x(i,j))+\pi)*180 /{\pi} \\
+M(i,j) &= \sqrt{(I_x(i,j)^2 + I_y(i,j))^2}
 \end{aligned}
 \end{equation}
 
@@ -285,15 +283,15 @@ FDA is a supervised dimension reduction and its input contains the class labels.
 $\bm{S}^{(b)}$, 
 \begin{equation}
 \begin{aligned}
-\bm{S}^{(w)} = \mathop{\sum} _{i=1}^l\mathop{\sum}_{j:l_j = i} (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
-\bm{S}^{(b)} = \mathop{\sum} _{i=1}^l n_i(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
+\bm{S}^{(w)} &= \mathop{\sum} _{i=1}^l\mathop{\sum}_{j:l_j = i} (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
+\bm{S}^{(b)}  &= \mathop{\sum} _{i=1}^l n_i(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
 \end{aligned}
 \end{equation}
 where the $\bm{\mu}_i$ is the mean of samples whose label is $i$, and $\bm{\mu}$ is the mean of all samples,
 \begin{equation}
 \begin{aligned}
-\bm{\mu}_i = \frac{1}{n_i} \sum \bm{x}_i, \\
-\bm{\mu} = \frac{1}{n} \sum \bm{x}_i
+\bm{\mu}_i &= \frac{1}{n_i} \sum \bm{x}_i, \\
+\bm{\mu} &= \frac{1}{n} \sum \bm{x}_i
 \end{aligned}
 \end{equation}
 
@@ -353,8 +351,8 @@ where $\gamma$ is corresponding eigenvalue of $\bm{\phi}$, and $L = D - A$.\\
 \indent LFDA \cite{LFDA} combines FDA and LPP and have better performance. The key in LFDA is it assigns weights to elements in $\bm{A}^{(w)}$ and $\bm{A}^{(b)}$, so that,
 \begin{equation}
 \begin{aligned}
-\bm{S}^{(w)} = \frac{1}{2}\sum _{i=1}^l\sum_{j:l_j = i} \bm{A}_{i,j}^w (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
-\bm{S}^{(b)} =  \frac{1}{2}\sum _{i=1}^l \bm{A}_{i,j}^b(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
+\bm{S}^{(w)} &= \frac{1}{2}\sum _{i=1}^l\sum_{j:l_j = i} \bm{A}_{i,j}^w (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
+\bm{S}^{(b)} &=  \frac{1}{2}\sum _{i=1}^l \bm{A}_{i,j}^b(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
 \end{aligned}
 \end{equation}
 where 
@@ -386,9 +384,9 @@ Again this problem can be solved by eigenvalue decomposition by equation \ref{ei
 
 When applying the LFDA to original high dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, LFDA has to solve the eigenvalue a matrix with dimension $d\times d$. In some descriptors the $d$ could be more than 20000 and thus the computation cost is intractable. 
  
-\subsection{Kernel local fisher discriminant analysis} \cite{KLFDA}
+\subsection{Kernel local fisher discriminant analysis(KLFDA)}
 
-Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $T$ can be computed by equation
+KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $T$ can be computed by equation
 \begin{equation}
 \bm{T} = \arg \min \frac{\bm{T}^T\bm{S}^{(b)}_{\phi}\bm{T}}{\bm{T}^T\bm{S}^{(w)}_{\phi}\bm{T}}
 \end{equation}
@@ -418,8 +416,8 @@ and we have
 In \cite{LFDAdr} the authors proposed fast computation of LFDA by replacing $\bm{S}^{(b)}$ with the local scatter mixture matrix $\bm{S}^{(m)}$defined by 
 \begin{equation}
 \begin{aligned}
-\bm{S}^{(m)} = \bm{S}^{(b)} + \bm{S}^{(w)}\\
-\bm{S}^{(m)} = \frac{1}{2} \sum_{i,j = 1} \bm{A}_{i,j}^{(m)} (\bm{x}_i - (\bm{x}_j)(\bm{x}_i - (\bm{x}_j)^T
+\bm{S}^{(m)} &= \bm{S}^{(b)} + \bm{S}^{(w)}\\
+\bm{S}^{(m)} &= \frac{1}{2} \sum_{i,j = 1} \bm{A}_{i,j}^{(m)} (\bm{x}_i - (\bm{x}_j)(\bm{x}_i - (\bm{x}_j)^T
 \end{aligned}
 \end{equation}
 and 
@@ -464,9 +462,9 @@ and by the kernel trick, its represented as
 \begin{equation}
 \bm{K}\bm{L}^{(m)}\bm{K}\gamma_i  = \lambda \bm{K}\bm{L}^{(w)}\bm{K}\gamma_i
 \end{equation}
-One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in figure \ref{KLFDAdemo1,KLFDAdemo2,KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in figure \ref{KLFDAdemo2} and figure \ref{KLFDAdemo3}. It shows that for those clusters the gaussian kernel are better than linear kernel because the dimensional reduced data are more separate when using gaussian kernel function.
+One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in figure \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in figure \ref{KLFDAdemo2} and figure \ref{KLFDAdemo3}. It shows that for those clusters the gaussian kernel are better than linear kernel because the dimensional reduced data are more separate when using gaussian kernel function.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg}
 \caption{Example of five clusters belong to three classes}
@@ -478,7 +476,7 @@ One example of using KLFDA to reduce dimension and classify the nonlinear data c
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg}
 \caption{1-D distribution of dimension reduced data  with gaussian kernel}
-\vspace{0em}
+\vspace{-1em}
 \end{figure} 
 \label{KLFDAdemo2}
 
@@ -486,7 +484,7 @@ One example of using KLFDA to reduce dimension and classify the nonlinear data c
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg}
 \caption{1-D distribution of dimension reduced data  with linear kernel}
-\vspace{0em}
+\vspace{-1em}
 \end{figure} 
 \label{KLFDAdemo3}
 %\begin{figure}[H]

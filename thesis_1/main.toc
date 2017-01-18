@@ -4,39 +4,41 @@
 \contentsline {chapter}{Declaration of Authorship}{i}{section*.1}
 \contentsline {chapter}{Abstract}{iii}{section*.2}
 \contentsline {chapter}{Acknowledgements}{iv}{section*.3}
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.9}
-\contentsline {section}{\numberline {1.1}Basic concepts}{3}{section.12}
-\contentsline {section}{\numberline {1.2}Challenges}{4}{section.15}
-\contentsline {section}{\numberline {1.3}Proposed work}{6}{section.17}
-\contentsline {section}{\numberline {1.4}Performance measuring}{6}{section.18}
-\contentsline {section}{\numberline {1.5}Contribution}{7}{section.20}
-\contentsline {section}{\numberline {1.6}Thesis organization}{8}{section.21}
-\contentsline {chapter}{\numberline {2}Related work}{9}{chapter.22}
-\contentsline {section}{\numberline {2.1}Appearance descriptors}{9}{section.23}
-\contentsline {section}{\numberline {2.2}Metric learning}{17}{section.24}
-\contentsline {chapter}{\numberline {3}Descriptors extraction and dimension reduction}{20}{chapter.28}
-\contentsline {section}{\numberline {3.1}Color and textural features}{20}{section.29}
-\contentsline {subsection}{\numberline {3.1.1}Color histogram descriptors on different color space}{20}{subsection.30}
-\contentsline {subsection}{\numberline {3.1.2}Local binary pattern(LBP)}{22}{subsection.34}
-\contentsline {subsection}{\numberline {3.1.3}Histogram of oriented gradients(HOG)}{23}{subsection.37}
-\contentsline {section}{\numberline {3.2}Influence of background segmentation on different descriptors}{24}{section.41}
-\contentsline {section}{\numberline {3.3}The hierarchical gaussian descriptor}{26}{section.45}
-\contentsline {subsection}{\numberline {3.3.1}Single pixel modelling}{26}{subsection.46}
-\contentsline {subsection}{\numberline {3.3.2}Integral image for fast region covariance computation}{28}{subsection.53}
-\contentsline {subsection}{\numberline {3.3.3}Riemannian manifold based SPD transformation}{30}{subsection.60}
-\contentsline {section}{\numberline {3.4}Kernel fisher discriminant analysis}{31}{section.65}
-\contentsline {subsection}{\numberline {3.4.1}Fisher discriminant analysis (FDA)}{32}{subsection.66}
-\contentsline {subsection}{\numberline {3.4.2}Locality preserving projection (LPP)}{33}{subsection.74}
-\contentsline {subsection}{\numberline {3.4.3}Local fisher discriminant analysis}{34}{subsection.78}
-\contentsline {subsection}{\numberline {3.4.4}Kernel local fisher discriminant analysis}{35}{subsection.82}
-\contentsline {chapter}{\numberline {4}Metric learning on subspace}{40}{chapter.102}
-\contentsline {section}{\numberline {4.1}Mahalanobis distance}{40}{section.103}
-\contentsline {section}{\numberline {4.2}Gradient descent optimization}{40}{section.106}
-\contentsline {section}{\numberline {4.3}Metric learning based on sample pairs distance comparison}{42}{section.111}
-\contentsline {chapter}{\numberline {5}Experiment Settings}{45}{chapter.120}
-\contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{45}{section.121}
-\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{47}{section.123}
-\contentsline {section}{\numberline {5.3}Parameters setting of gradient descent iteration}{48}{section.129}
-\contentsline {section}{\numberline {5.4}Performance analysis}{50}{section.133}
-\contentsline {chapter}{\numberline {6}Conclusion}{56}{chapter.144}
-\contentsline {chapter}{Bibliography}{57}{chapter*.145}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.7}
+\contentsline {section}{\numberline {1.1}Basic concepts}{3}{section.10}
+\contentsline {section}{\numberline {1.2}Challenges}{5}{section.13}
+\contentsline {section}{\numberline {1.3}Proposed work}{7}{section.15}
+\contentsline {section}{\numberline {1.4}Performance measuring}{9}{section.18}
+\contentsline {section}{\numberline {1.5}Contribution}{9}{section.20}
+\contentsline {section}{\numberline {1.6}Thesis organization}{10}{section.21}
+\contentsline {chapter}{\numberline {2}Related work}{11}{chapter.22}
+\contentsline {section}{\numberline {2.1}Appearance descriptors}{11}{section.23}
+\contentsline {section}{\numberline {2.2}Metric learning}{16}{section.28}
+\contentsline {section}{\numberline {2.3}Other methods for Re-ID}{18}{section.32}
+\contentsline {section}{\numberline {2.4}Some state-of-the-art works}{18}{section.33}
+\contentsline {chapter}{\numberline {3}Descriptors extraction and dimension reduction}{19}{chapter.34}
+\contentsline {section}{\numberline {3.1}Color and textural features}{19}{section.35}
+\contentsline {subsection}{\numberline {3.1.1}Color histogram descriptors on different color space}{19}{subsection.36}
+\contentsline {subsection}{\numberline {3.1.2}Local binary pattern(LBP)}{21}{subsection.40}
+\contentsline {subsection}{\numberline {3.1.3}Histogram of oriented gradients(HOG)}{22}{subsection.43}
+\contentsline {section}{\numberline {3.2}Influence of background segmentation on different descriptors}{23}{section.47}
+\contentsline {section}{\numberline {3.3}The hierarchical gaussian descriptor}{25}{section.51}
+\contentsline {subsection}{\numberline {3.3.1}Single pixel modelling}{25}{subsection.52}
+\contentsline {subsection}{\numberline {3.3.2}Integral image for fast region covariance computation}{26}{subsection.59}
+\contentsline {subsection}{\numberline {3.3.3}Riemannian manifold based SPD transformation}{28}{subsection.66}
+\contentsline {section}{\numberline {3.4}Kernel fisher discriminant analysis}{30}{section.71}
+\contentsline {subsection}{\numberline {3.4.1}Fisher discriminant analysis (FDA)}{30}{subsection.72}
+\contentsline {subsection}{\numberline {3.4.2}Locality preserving projection (LPP)}{32}{subsection.80}
+\contentsline {subsection}{\numberline {3.4.3}Local fisher discriminant analysis}{33}{subsection.84}
+\contentsline {subsection}{\numberline {3.4.4}Kernel local fisher discriminant analysis(KLFDA)}{33}{subsection.88}
+\contentsline {chapter}{\numberline {4}Metric learning on subspace}{38}{chapter.108}
+\contentsline {section}{\numberline {4.1}Mahalanobis distance}{38}{section.109}
+\contentsline {section}{\numberline {4.2}Gradient descent optimization}{38}{section.112}
+\contentsline {section}{\numberline {4.3}Metric learning based on sample pairs distance comparison}{40}{section.117}
+\contentsline {chapter}{\numberline {5}Experiment Settings}{43}{chapter.126}
+\contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{43}{section.127}
+\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{45}{section.129}
+\contentsline {section}{\numberline {5.3}Parameters setting}{46}{section.135}
+\contentsline {section}{\numberline {5.4}Results and experiment analysis}{48}{section.139}
+\contentsline {chapter}{\numberline {6}Conclusion}{55}{chapter.150}
+\contentsline {chapter}{Bibliography}{56}{chapter*.151}

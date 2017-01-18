@@ -110,6 +110,43 @@
   \field{year}{2017}
 \endentry
 
+\entry{ITML}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Davis}{D.}%
+     {Jason~V}{J.~V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kulis}{K.}%
+     {Brian}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jain}{J.}%
+     {Prateek}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sra}{S.}%
+     {Suvrit}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Dhillon}{D.}%
+     {Inderjit~S}{I.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DJV+1}
+  \strng{fullhash}{DJVKBJPSSDIS1}
+  \field{sortinit}{D}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{Information-Theoretic Metric Learning}
+  \field{month}{06}
+  \field{year}{2007}
+\endentry
+
 \entry{SDALF}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
@@ -171,6 +208,43 @@
   \field{title}{{Locality Preserving Projections}}
   \field{month}{11}
   \field{year}{2016}
+\endentry
+
+\entry{KISSME}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Kostinger}{K.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hirzer}{H.}%
+     {Martin}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wohlhart}{W.}%
+     {Paul}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Roth}{R.}%
+     {Peter~M}{P.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bischof}{B.}%
+     {Horst}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KM+1}
+  \strng{fullhash}{KMHMWPRPMBH1}
+  \field{sortinit}{K}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{{Large Scale Metric Learning from Equivalence Constraints}}
+  \field{month}{04}
+  \field{year}{2012}
 \endentry
 
 \entry{LOMO}{inproceedings}{}
@@ -306,6 +380,29 @@
   \field{year}{2016}
 \endentry
 
+\entry{PCCA}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Mignon}{M.}%
+     {Alexis}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jurie}{J.}%
+     {Frederic}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MAJF1}
+  \strng{fullhash}{MAJF1}
+  \field{sortinit}{M}
+  \field{pages}{1\bibrangedash 7}
+  \field{title}{{PCCA: A New Approach for Distance Learning from Sparse
+  Pairwise Constraints}}
+  \field{month}{04}
+  \field{year}{2012}
+\endentry
+
 \entry{Bayeface}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -436,7 +533,7 @@
   \field{year}{2014}
 \endentry
 
-\entry{AppearanceDesc}{article}{}
+\entry{Appearancedesc}{article}{}
   \name{author}{1}{}{%
     {{}%
      {Satta}{S.}%
@@ -499,6 +596,56 @@
   \field{year}{2016}
 \endentry
 
+\entry{LMNN}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Weinberger}{W.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Q}{Q}%
+     {Kilian}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Saul}{S.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {K}{K}%
+     {Lawrence}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{W+1}
+  \strng{fullhash}{WQKSKL1}
+  \field{sortinit}{W}
+  \field{pages}{1\bibrangedash 38}
+  \field{title}{{Distance Metric Learning for Large Margin Nearest Neighbor
+  Classification}}
+  \field{month}{02}
+  \field{year}{2009}
+\endentry
+
+\entry{KCCA}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Welling}{W.}%
+     {Max}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WM1}
+  \strng{fullhash}{WM1}
+  \field{sortinit}{W}
+  \field{pages}{1\bibrangedash 3}
+  \field{title}{{Kernel Canonical Correlation Analysis}}
+  \field{month}{03}
+  \field{year}{2005}
+\endentry
+
 \entry{DeepfeatureCNN}{article}{}
   \name{author}{4}{}{%
     {{}%
@@ -530,6 +677,39 @@
   Dropout for Person Re-identification }}
   \field{month}{04}
   \field{year}{2016}
+\endentry
+
+\entry{KernelVersionMetrics}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Xiong}{X.}%
+     {Fei}{F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gou}{G.}%
+     {Mengran}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Camps}{C.}%
+     {Octavia}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mario}{M.}%
+     {Sznaier}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{XF+1}
+  \strng{fullhash}{XFGMCOMS1}
+  \field{sortinit}{X}
+  \field{pages}{1\bibrangedash 16}
+  \field{title}{{Person Re-Identification using Kernel-based Metric Learning
+  Methods}}
+  \field{month}{07}
+  \field{year}{2014}
 \endentry
 
 \entry{TDL}{article}{}
