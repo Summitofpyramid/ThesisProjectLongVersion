@@ -28,7 +28,7 @@ y_{HT} = \mathop{\arg\min}(-S(y,\sigma))
 the axis divides the left and right torso is
 \begin{equation}
 \begin{aligned}
-j_{LR} = \mathop{\arg\min}(C(y,\sigma)+S(Y,\sigma))
+j_{LR} = \mathop{\arg\min}(C(y,\sigma)+S(y,\sigma))
 \end{aligned}
 \end{equation}
 This method has a relatively high performance. But one shortcoming of this model is imperfect background segmentation causes noise and errors to the axis' position. \\
@@ -92,7 +92,44 @@ Beside descriptors and metrics mentioned above, there are some other methods for
 %By learning from multiple datasets this method gives a solution to the problem that most CNNs are not trained enough caused by datasets with small number of images.
 
 \section{Some state-of-the-art works}
-Recently many works have been proposed and improved Re-ID performance by much margin. In this section those advanced descriptors and metrics are introduced. Cross view quadratic discriminant analysis(XQDA) is proposed in \cite{LOMO}. In \cite{Bayeface} the authors propse to model each of two classes with a multivariate Gaussian  distribution. Suppose the sample difference $\Delta = x_i - x_j$, where $x_i$ and $x_j$ are two feature vectors. $\Delta$ is called intrapersonal difference when their label $y_i = y_j$ and extrapersonal difference when $y_i \ne y_j$. Respectively two the intrapersonal and interpersonal variation can be defined as $\Omega_I$ and $\Omega_E$,
+Recently many works have been proposed and improved Re-ID performance by much margin. In this section those advanced descriptors and metrics are introduced. 
+\textbf{Cross view quadratic discriminant analysis}(XQDA) is proposed in \cite{LOMO}. Suppose the sample difference $\Delta = \bm{x}_i - \bm{x}_j$, where $\bm{x}_i $ and $\bm{x}_j$ are two feature vectors. $\Delta$ is called intrapersonal difference when their label satisfy $y_i = y_j$ and extrapersonal difference when $y_i \ne y_j$. Respectively two the intrapersonal and interpersonal variation can be defined as $\Omega_I$ and $\Omega_E$, the authors convert Re-ID problem to distinguish $\Omega_I$ and $\Omega_E$. In \cite{Bayeface}  each one of intrapersonal and interpersonal class is modelled with a multivariate gaussian distribution, and in \cite{Bayeface} it has been proved that both $\Omega_I$ and $\Omega_E$ have zero mean. Under the zero-mean distribution, the probability of observing $\Delta$ in $\Omega_I$ and the probability of observing $\Delta$ in $\Omega_E$ can be denoted as
+\begin{equation}
+\begin{aligned}
+P(\Delta|\Omega_I) &= \frac{1}{(2\pi)^{d/2}|\Sigma_I|^{1/2}}\exp^{\frac{-1}{2}\Delta^T\Sigma_I^{-1}\Delta}\\
+P(\Delta|\Omega_E) &= \frac{1}{(2\pi)^{d/2}|\Sigma_E|^{1/2}}\exp^{\frac{-1}{2}\Delta^T\Sigma_E^{-1}\Delta}
+\end{aligned}
+\end{equation}
+where $\Sigma_I$ and $\Sigma_E$ are the covariance matrix of $\Omega_I$ and $\Omega_E$, then the probability ratio between the interpersonal pairs and intrapersonal pairs can be denoted as
+\begin{equation}
+\begin{aligned}
+r(\Delta) = \frac{P(\Delta|\Omega_E)}{P(\Delta|\Omega_I)}
+	   &=\frac{\frac{1}{(2\pi)^{d/2}|\Sigma_E|^{1/2}}\exp^{\frac{-1}{2}\Delta^T\Sigma_E^{-1}\Delta}}{\frac{1}{(2\pi)^{d/2}|\Sigma_I|^{1/2}}\exp^{\frac{-1}{2}\Delta^T\Sigma_I^{-1}\Delta}}\\
+r(\Delta)& =  C\exp^{\frac{-1}{2}\Delta^T(\Sigma_E^{-1} - \Sigma_I^{-1})\Delta}
+\end{aligned}
+\end{equation}
+C is the constant term, by taking log and deserting the constant term, we have 
+\begin{equation}
+\begin{aligned}
+r(\Delta) = \Delta^T(\Sigma_I^{-1} - \Sigma_E^{-1})\Delta 
+	   & = (\bm{x}_i - \bm{x}_j)^T(\Sigma_I^{-1} - \Sigma_E^{-1})(\bm{x}_i - \bm{x}_j)
+\end{aligned}
+\end{equation}
+In \cite{LOMO} a subspace $W$ is learned so that 
+\begin{equation}
+r(\Delta) = (\bm{x}_i - \bm{x}_j)^TW({\Sigma_I}'^{-1} - {\Sigma_E}'^{-1})W^T(\bm{x}_i - \bm{x}_j)
+\end{equation}
+and ${\Sigma_I}' = W^T\Sigma_IW, {\Sigma_E}' = W^T\Sigma_EW$. Therefore, a subspace $M(W) = W({\Sigma_I}'^{-1} - {\Sigma_E}'^{-1})W^T$ is learned in this work.\\
+\indent \textbf{Null Foley-Sammon transform} In \cite{NFST} a null space is proposed so that with this space the intraclass points collapse to a same point in the null space while interclass points are projected to different points. Given the within class scatter $\bm{S}^w$ and between class scatter $\bm{S}^b$, an optimal projection matrix $\bm{W}$ is computed so that 
+\begin{equation}
+\begin{aligned}
+\bm{w}_i^T\bm{S}^w\bm{w}_i = 0\\
+\bm{w}_i^T\bm{S}^b\bm{w}_i > 0
+\end{aligned}
+\end{equation}
+$\bm{w}_i$ is the $i_{th}$ column in $\bm{W}$.
+
+It can be noticed that like many other metric learnings, XQDA and NFST are transformed into matrix decomposition and eigenvalue selection problem. In this paper, those two metrics are used to compare with proposed metric. In \cite{GOG} it has been shown GOG + XQDA outperforms many other combinations including MetricEnsemble \cite{MetricEnsembles}, SCNCD \cite{SCNCD}, SemanticMethod \cite{SemanticMethod}, etc. In \cite{ NFST} it has been shown LOMO + NFST outperforms metrics including LMNN \cite{LMNN}, KCCA \cite{KCCA}, ITML \cite{ITML}, KLFDA\cite{KLFDA}, MFA \cite{KernelVersionMetrics}, KISSME \cite{KISSME}, SimilarityLearning \cite{SimilarityLearning}, SCNCD \cite{SCNCD}, Mid-level Filters \cite{MidlevelFilters} and Improved Deep \cite{ImprovedCNN}. Based on the result that XQDA and NFST outperform other metrics, in this thesis, XQDA and NFST are used to compare with proposed metric learning. 
 
 
 

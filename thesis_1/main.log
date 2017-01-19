@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  18 JAN 2017 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JAN 2017 01:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1290,62 +1290,62 @@ File: biblatex.cfg
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \supname with sig. ' ' on line 100.
+. Defining command \supname with sig. ' ' on line 101.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \examname with sig. ' ' on line 101.
+. Defining command \examname with sig. ' ' on line 102.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \degreename with sig. ' ' on line 102.
+. Defining command \degreename with sig. ' ' on line 103.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \authorname with sig. ' ' on line 103.
+. Defining command \authorname with sig. ' ' on line 105.
 .................................................
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \@author with sig. ' ' on line 103.
+. Redefining command \@author with sig. ' ' on line 105.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addressname with sig. ' ' on line 104.
+. Defining command \addressname with sig. ' ' on line 106.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \subjectname with sig. ' ' on line 106.
+. Defining command \subjectname with sig. ' ' on line 108.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \keywordnames with sig. ' ' on line 107.
+. Defining command \keywordnames with sig. ' ' on line 109.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \univname with sig. ' ' on line 108.
+. Defining command \univname with sig. ' ' on line 110.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \deptname with sig. ' ' on line 109.
+. Defining command \deptname with sig. ' ' on line 111.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \groupname with sig. ' ' on line 110.
+. Defining command \groupname with sig. ' ' on line 112.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \facname with sig. ' ' on line 111.
+. Defining command \facname with sig. ' ' on line 113.
 .................................................
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -1441,7 +1441,7 @@ LaTeX Info: Redefining \pageref on input line 6369.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 119.
+(scrhack)             need that hack, on input line 121.
 
 
 Package hyperref Message: Driver (autodetected): hpdftex.
@@ -1458,17 +1458,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip78
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 119.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 119.
-Package hyperref Info: Option `colorlinks' set `true' on input line 119.
-Package hyperref Info: Option `unicode' set `true' on input line 119.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 121.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 121.
+Package hyperref Info: Option `colorlinks' set `true' on input line 121.
+Package hyperref Info: Option `unicode' set `true' on input line 121.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 119.
+Package hyperref Info: Option `breaklinks' set `true' on input line 121.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package biblatex Info: Trying to load language 'english'...
@@ -1495,23 +1495,23 @@ LaTeX Warning: Label `fig:side:b' multiply defined.
 ) (./Chapters/Chapter5.aux) (./Chapters/Chapter6.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 119.
-LaTeX Font Info:    ... okay on input line 119.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 119.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 121.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1667,14 +1667,14 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 119.
-Package scrbase Info: activating english \abbrevname on input line 119.
-Package scrbase Info: activating english \byname on input line 119.
-Package scrbase Info: activating english \acknowledgementname on input line 119
+(scrlayer)             \begin{document} on input line 121.
+Package scrbase Info: activating english \abbrevname on input line 121.
+Package scrbase Info: activating english \byname on input line 121.
+Package scrbase Info: activating english \acknowledgementname on input line 121
 .
-Package scrbase Info: activating english \authorshipname on input line 119.
-Package scrbase Info: activating english \constantsname on input line 119.
-Package scrbase Info: activating english \symbolsname on input line 119.
+Package scrbase Info: activating english \authorshipname on input line 121.
+Package scrbase Info: activating english \constantsname on input line 121.
+Package scrbase Info: activating english \symbolsname on input line 121.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1687,23 +1687,23 @@ Package biblatex Warning: Data encoding is 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 119.
-Package biblatex Info: Reference segment=0 on input line 119.
+Package biblatex Info: Reference section=0 on input line 121.
+Package biblatex Info: Reference segment=0 on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ttitle' on input line 119.
+(hyperref)                removing `\ttitle' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\authorname' on input line 119.
+(hyperref)                removing `\authorname' on input line 121.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\keywordnames' on input line 119.
+(hyperref)                removing `\keywordnames' on input line 121.
 
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring ON on input line 119.
+Package hyperref Info: Link coloring ON on input line 121.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1712,9 +1712,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count334
 )
-LaTeX Info: Redefining \ref on input line 119.
-LaTeX Info: Redefining \pageref on input line 119.
-LaTeX Info: Redefining \nameref on input line 119.
+LaTeX Info: Redefining \ref on input line 121.
+LaTeX Info: Redefining \pageref on input line 121.
+LaTeX Info: Redefining \nameref on input line 121.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1725,7 +1725,7 @@ LaTeX Info: Redefining \nameref on input line 119.
 
 1: section
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 137.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 139.
 [1
 
 
@@ -1735,62 +1735,66 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 --------------------
  Declaration of Authorship
 --------------------
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 177.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 179.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 177.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 179.
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 1: section
 [1
 
-] [2
-
 ]
 --------------------
  Abstract
 --------------------
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 208.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 210.
 1: section
-[3
+[2
+
 
 ]
 --------------------
  Acknowledgements
 --------------------
 1: section
-[4
+[3
 
 ] (./main.toc
 1: section
-[5
+[4
 
 ])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [6] (./main.lof
+ [5] (./main.lof
+Overfull \hbox (6.2822pt too wide) in paragraph at lines 21--21
+ [][] [][][]\T1/ptm/m/n/12 A CMC com-par-i-son of fore-ground seg-men-ta-tion o
+n LBP fea-ture tested 
+ []
+
 1: section
-[7
+[6
 
 ])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [8] (./main.lot)
+ [7] (./main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
 
 1: section
-[9
+[8
 
 ]
 1: section
@@ -1805,7 +1809,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 8.
 
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf, id=366, 49
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf, id=377, 49
 8.86375pt x 104.39pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDframework.pdf Graphi
 c file (type pdf)
@@ -1815,7 +1819,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDf
 ramework.pdf used on input line 11.
 (pdftex.def)             Requested size: 399.09154pt x 83.51208pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.png, id=367, 819
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.png, id=378, 819
 .06pt x 594.22pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/REIDworkflow.png Graphic
  file (type png)
@@ -1855,7 +1859,7 @@ wnloads/thesis_1/Figures/singleREID.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID-eps-converted-to.p
-df, id=402, 424.58624pt x 157.58875pt>
+df, id=413, 424.58624pt x 157.58875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID-eps-converted
 -to.pdf Graphic file (type pdf)
 
@@ -1879,7 +1883,7 @@ wnloads/thesis_1/Figures/Multishots.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-converted-to.p
-df, id=403, 774.895pt x 524.96124pt>
+df, id=414, 774.895pt x 524.96124pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-converted
 -to.pdf Graphic file (type pdf)
 
@@ -1891,7 +1895,7 @@ shots-eps-converted-to.pdf used on input line 59.
  [4 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/singleREID-eps-converted-
 to.pdf> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots-eps-conver
 ted-to.pdf>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.jpg, id=416, 1614.03pt
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.jpg, id=427, 1614.03pt
  x 672.5125pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.jpg Graphic file 
 (type jpg)
@@ -1901,7 +1905,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdem
 o.jpg used on input line 76.
 (pdftex.def)             Requested size: 404.02908pt x 168.3432pt.
  [5] [6 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/ProposedWorkFlow.png, id=430,
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/ProposedWorkFlow.png, id=441,
  922.44624pt x 646.415pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/ProposedWorkFlow.png Gra
 phic file (type png)
@@ -1942,7 +1946,7 @@ Chapter 2.
 
 
 
-] [12] [13] [14] [15] [16] [17]) [18]
+] [12] [13] [14] [15] [16] [17] [18]) [19]
 \openout2 = `Chapters/Chapter3.aux'.
 
  (./Chapters/Chapter3.tex
@@ -1950,7 +1954,7 @@ Chapter 3.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg, id=557, 2009.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg, id=603, 2009.
 5075pt x 983.675pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg Graphic f
 ile (type jpg)
@@ -1961,13 +1965,13 @@ GBHSV.jpg used on input line 12.
 (pdftex.def)             Requested size: 404.02908pt x 197.76718pt.
 
 1: section
-[19
+[20
 
 
 
 ]
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVIPeR.p
-ng, id=562, 709.6914pt x 518.8986pt>
+ng, id=608, 709.6914pt x 518.8986pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVI
 PeR.png Graphic file (type png)
 
@@ -1976,9 +1980,9 @@ eR.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Diffe
 rentColorspaceCMCVIPeR.png used on input line 20.
 (pdftex.def)             Requested size: 404.02908pt x 295.41106pt.
- [20 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVI
+ [21 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVI
 PeR.png> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg, id=570, 1124.2pt x 8
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg, id=617, 1124.2pt x 8
 43.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg Graphic file (ty
 pe jpg)
@@ -1987,7 +1991,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.j
 pg used on input line 32.
 (pdftex.def)             Requested size: 158.99377pt x 119.23668pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg, id=571, 1124.2pt x 8
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg, id=618, 1124.2pt x 8
 43.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg Graphic file (ty
 pe jpg)
@@ -1996,7 +2000,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.j
 pg used on input line 38.
 (pdftex.def)             Requested size: 158.99377pt x 119.23668pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png, id=575, 193.1023
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png, id=622, 193.1023
 9pt x 44.35619pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png Graphic file
  (type png)
@@ -2006,7 +2010,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPde
 mo.png used on input line 50.
 (pdftex.def)             Requested size: 323.22449pt x 74.24847pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg, id=576, 602.25p
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg, id=623, 602.25p
 t x 602.25pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg Graphic fil
 e (type jpg)
@@ -2016,7 +2020,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Thesh
 ot1.jpg used on input line 59.
 (pdftex.def)             Requested size: 158.99377pt x 158.98897pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg, id=577, 600.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg, id=624, 600.
 2425pt x 600.2425pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg Graphic 
 file (type jpg)
@@ -2025,178 +2029,227 @@ file (type jpg)
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Thesh
 otLBP1.jpg used on input line 65.
 (pdftex.def)             Requested size: 158.99377pt x 158.99023pt.
- [21 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg> </Users/Johnson
+ [22 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg> </Users/Johnson
 Johnson/Downloads/thesis_1/Figures/GBR.jpg> </Users/JohnsonJohnson/Downloads/th
-esis_1/Figures/LBPdemo.png>] [22 </Users/JohnsonJohnson/Downloads/thesis_1/Figu
+esis_1/Figures/LBPdemo.png>] [23 </Users/JohnsonJohnson/Downloads/thesis_1/Figu
 res/Theshot1.jpg> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1
 .jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg, id=597, 109
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg, id=642, 1
+541.76pt x 1140.26pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg Graph
+ic file (type jpg)
+
+<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfe
+atureDemo.jpg used on input line 125.
+(pdftex.def)             Requested size: 404.02908pt x 298.80946pt.
+
+Overfull \hbox (6.06322pt too wide) in paragraph at lines 122--128
+[]\T1/ptm/m/n/12 Using dif-fer-ent masks will re-sult dif-fer-ent per-for-mance
+. Be-sides, gaus-sian smooth-
+ []
+
+[24 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg>]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg, id=653, 109
 0.0725pt x 315.1775pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg Graphic
  file (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdem
-o2VIPeR.jpg used on input line 110.
+o2VIPeR.jpg used on input line 137.
 (pdftex.def)             Requested size: 404.02908pt x 116.81583pt.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png
-, id=598, 578.16pt x 433.62pt>
+, id=654, 578.16pt x 433.62pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
 n.png Graphic file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison
 .png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
-_LBP_FGSegComparison.png used on input line 118.
+_LBP_FGSegComparison.png used on input line 145.
 (pdftex.def)             Requested size: 404.02908pt x 303.02246pt.
- [23 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg>]
+ [25 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg>]
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png, 
-id=603, 622.9674pt x 482.7636pt>
+id=660, 578.16pt x 433.62pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.
 png Graphic file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.p
 ng>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
-_FG_HSV_comparison.png used on input line 126.
-(pdftex.def)             Requested size: 404.02908pt x 313.10754pt.
- [24 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
+_FG_HSV_comparison.png used on input line 153.
+(pdftex.def)             Requested size: 404.02908pt x 303.02246pt.
+
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.jpg, i
+d=661, 1425.325pt x 1126.2075pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.j
+pg Graphic file (type jpg)
+
+<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.jp
+g>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
+_HOG_FGcomparison.jpg used on input line 162.
+(pdftex.def)             Requested size: 404.02908pt x 319.23685pt.
+ [26 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
 n.png> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_compariso
-n.png>] [25] [26]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png, id=636, 40
+n.png>] [27 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcompa
+rison.jpg>] [28] [29]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png, id=696, 40
 1.24907pt x 137.01187pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png Graphi
 c file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Integ
-ralImage.png used on input line 198.
+ralImage.png used on input line 241.
 (pdftex.def)             Requested size: 404.02908pt x 137.97113pt.
 
-[27 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png>]
-[28] [29] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 347--350
+[30 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png>]
+[31]) [32] [33]
+\openout2 = `Chapters/Chapter4.aux'.
 
- []
+ (./Chapters/Chapter4.tex
+Chapter 4.
+1: section
+[34
 
-[32] [33] [34] [35]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg, id=731, 2374.
+
+
+] [35] [36] [37] [38] [39]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg, id=799, 2374.
 8725pt x 1411.2725pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg Graphic f
 ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo1.jpg used on input line 469.
+demo1.jpg used on input line 202.
 (pdftex.def)             Requested size: 404.02908pt x 240.08542pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg, id=732, 1124.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg, id=800, 1124.
 2pt x 843.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg Graphic f
 ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo2.jpg used on input line 477.
+demo2.jpg used on input line 210.
 (pdftex.def)             Requested size: 404.02908pt x 303.01915pt.
- [36 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg, id=739, 1124.
+ [40 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg>]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg, id=807, 1124.
 2pt x 843.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg Graphic f
 ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo3.jpg used on input line 485.
+demo3.jpg used on input line 218.
 (pdftex.def)             Requested size: 404.02908pt x 303.01915pt.
-) [37 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg> </Users
-/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg>]
-\openout2 = `Chapters/Chapter4.aux'.
-
- (./Chapters/Chapter4.tex
-Chapter 4.
-1: section
-[38
-
-
-
-]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png, id=754, 
+ [41 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg> </Users/
+JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg>]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png, id=813, 
 483.8075pt x 530.98375pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png Grap
 hic file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradi
-entdescent.png used on input line 28.
+entdescent.png used on input line 262.
 (pdftex.def)             Requested size: 161.60916pt x 177.36414pt.
 
-Overfull \hbox (5.0517pt too wide) in paragraph at lines 24--32
+Overfull \hbox (5.0517pt too wide) in paragraph at lines 258--266
 \T1/ptm/m/n/12 This pro-cess is re-peated un-til cer-tain con-di-tion is met, g
 en-er-ally when gra-di-ent $\OMS/cmsy/m/n/12 jj\OML/cmm/b/it/12 G\OMS/cmsy/m/n/
 12 jj ^^T
  []
 
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png, id=757, 333.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png, id=816, 333.
 6465pt x 219.219pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png Graphic 
 file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/multi
-Minima.png used on input line 37.
+Minima.png used on input line 271.
 (pdftex.def)             Requested size: 158.99377pt x 104.4646pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg, id=758, 746.01291
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg, id=817, 746.01291
 pt x 559.50967pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg Graphic file 
 (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigza
-g.jpg used on input line 43.
+g.jpg used on input line 277.
 (pdftex.def)             Requested size: 158.99377pt x 119.24213pt.
- [39 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png (PNG
- copy)>]
-[40 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png> </Users/
-JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg>] [41]) [42]
+ [42] [43 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png
+ (PNG copy)> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png>
+ </Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg>] [44] [45]) [46]
 \openout2 = `Chapters/Chapter5.aux'.
 
 
 (./Chapters/Chapter5.tex
 Chapter 5.
 
-Overfull \hbox (5.5147pt too wide) in paragraph at lines 6--32
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg, id=861, 1
+614.03pt x 349.305pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg Graph
+ic file (type jpg)
+
+<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKi
+magesdemo.jpg used on input line 11.
+(pdftex.def)             Requested size: 404.02908pt x 87.43796pt.
+
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg, id=862, 1
+557.82pt x 463.7325pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg Graph
+ic file (type jpg)
+
+<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid4
+50sImages.jpg used on input line 28.
+(pdftex.def)             Requested size: 404.02908pt x 120.2704pt.
+
+Overfull \hbox (5.5147pt too wide) in paragraph at lines 16--32
 \T1/ptm/b/n/12 Prid_450s \T1/ptm/m/n/12 dataset con-tains 450 im-age pairs reco
 rded from two dif-fer-ent, static surveil-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--32
-
- []
-
 1: section
-[43
+[47
 
 
 
-]
+ </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg>]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg, id=867, 1
+411.2725pt x 315.1775pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg Graph
+ic file (type jpg)
+
+<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDi
+magesdemo.jpg used on input line 37.
+(pdftex.def)             Requested size: 404.02908pt x 90.23048pt.
+
+[48 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 34.
+(hyperref)                removing `math shift' on input line 64.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 34.
+(hyperref)                removing `subscript' on input line 64.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 34.
+(hyperref)                removing `math shift' on input line 64.
 
-[44] [45]
+[49 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg>]
+[50]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/Rank1scoresAlpha.eps>
 (epstopdf)                    date: 2017-01-10 22:09:26
@@ -2208,20 +2261,19 @@ igures/Rank1scoresAlpha-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/Rank1scoresAlpha-eps-converted-to.pdf /Users/JohnsonJohn
 son/Downloads/thesis_1/Figures/Rank1scoresAlpha.eps>
-(epstopdf)             \includegraphics on input line 154.
+(epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-converte
-d-to.pdf, id=811, 1267.73625pt x 655.44875pt>
+d-to.pdf, id=886, 1267.73625pt x 655.44875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-con
 verted-to.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-conv
 erted-to.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1
-scoresAlpha-eps-converted-to.pdf used on input line 154.
+scoresAlpha-eps-converted-to.pdf used on input line 184.
 (pdftex.def)             Requested size: 404.02908pt x 208.88777pt.
- [46]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/Rank5scoresAlpha.eps>
 (epstopdf)                    date: 2017-01-10 22:08:57
@@ -2233,27 +2285,27 @@ igures/Rank5scoresAlpha-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/Rank5scoresAlpha-eps-converted-to.pdf /Users/JohnsonJohn
 son/Downloads/thesis_1/Figures/Rank5scoresAlpha.eps>
-(epstopdf)             \includegraphics on input line 162.
+(epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-converte
-d-to.pdf, id=816, 1267.73625pt x 655.44875pt>
+d-to.pdf, id=887, 1267.73625pt x 655.44875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-con
 verted-to.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-conv
 erted-to.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5
-scoresAlpha-eps-converted-to.pdf used on input line 162.
+scoresAlpha-eps-converted-to.pdf used on input line 192.
 (pdftex.def)             Requested size: 404.02908pt x 208.88777pt.
- [47 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-con
-verted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 188--221
+ [51]
+Underfull \hbox (badness 10000) in paragraph at lines 218--251
 
  []
 
-[48 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-conv
-erted-to.pdf>]
+[52 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-conv
+erted-to.pdf> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlph
+a-eps-converted-to.pdf>] [53]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/VIPeR.eps>
 (epstopdf)                    date: 2017-01-11 12:27:11
@@ -2265,20 +2317,19 @@ igures/VIPeR-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/VIPeR-eps-converted-to.pdf /Users/JohnsonJohnson/Downloa
 ds/thesis_1/Figures/VIPeR.eps>
-(epstopdf)             \includegraphics on input line 226.
+(epstopdf)             \includegraphics on input line 256.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.pdf, i
-d=853, 1251.67625pt x 654.445pt>
+d=928, 1251.67625pt x 654.445pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.p
 df Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.pd
 f>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
--eps-converted-to.pdf used on input line 226.
+-eps-converted-to.pdf used on input line 256.
 (pdftex.def)             Requested size: 404.02908pt x 211.24413pt.
- [49]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/CUHK1.eps>
 (epstopdf)                    date: 2017-01-11 12:27:11
@@ -2290,20 +2341,20 @@ igures/CUHK1-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/CUHK1-eps-converted-to.pdf /Users/JohnsonJohnson/Downloa
 ds/thesis_1/Figures/CUHK1.eps>
-(epstopdf)             \includegraphics on input line 269.
+(epstopdf)             \includegraphics on input line 299.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.pdf, i
-d=858, 1251.67625pt x 654.445pt>
+d=929, 1251.67625pt x 654.445pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.p
 df Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.pd
 f>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1
--eps-converted-to.pdf used on input line 269.
+-eps-converted-to.pdf used on input line 299.
 (pdftex.def)             Requested size: 404.02908pt x 211.24413pt.
- [50 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.p
+ [54 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.p
 df>]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/prid2011.eps>
@@ -2316,20 +2367,20 @@ igures/prid2011-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid2011-eps-converted-to.pdf /Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid2011.eps>
-(epstopdf)             \includegraphics on input line 312.
+(epstopdf)             \includegraphics on input line 342.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-to.pdf
-, id=872, 1251.67625pt x 650.43pt>
+, id=942, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-t
 o.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-to
 .pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2
-011-eps-converted-to.pdf used on input line 312.
+011-eps-converted-to.pdf used on input line 342.
 (pdftex.def)             Requested size: 404.02908pt x 209.94815pt.
- [51 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.p
+ [55 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.p
 df>]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/prid450s.eps>
@@ -2342,20 +2393,20 @@ igures/prid450s-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid450s-eps-converted-to.pdf /Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/prid450s.eps>
-(epstopdf)             \includegraphics on input line 352.
+(epstopdf)             \includegraphics on input line 382.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-to.pdf
-, id=885, 1251.67625pt x 650.43pt>
+, id=956, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-t
 o.pdf Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-to
 .pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid4
-50s-eps-converted-to.pdf used on input line 352.
+50s-eps-converted-to.pdf used on input line 382.
 (pdftex.def)             Requested size: 404.02908pt x 209.94815pt.
- [52 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-t
+ [56 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-t
 o.pdf>]
 Package epstopdf Info: Source file: </Users/JohnsonJohnson/Downloads/thesis_1/F
 igures/GRID.eps>
@@ -2368,21 +2419,21 @@ igures/GRID-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=/Users/JohnsonJohnson/Down
 loads/thesis_1/Figures/GRID-eps-converted-to.pdf /Users/JohnsonJohnson/Download
 s/thesis_1/Figures/GRID.eps>
-(epstopdf)             \includegraphics on input line 391.
+(epstopdf)             \includegraphics on input line 421.
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pdf, id
-=898, 1251.67625pt x 650.43pt>
+=969, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pd
 f Graphic file (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pdf
 >
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-
-eps-converted-to.pdf used on input line 391.
+eps-converted-to.pdf used on input line 421.
 (pdftex.def)             Requested size: 404.02908pt x 209.94815pt.
- [53 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-t
-o.pdf>]) [54 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-convert
+ [57 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-t
+o.pdf>]) [58 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-convert
 ed-to.pdf>]
 \openout2 = `Chapters/Chapter6.aux'.
 
@@ -2390,66 +2441,66 @@ ed-to.pdf>]
 Chapter 6.
 )
 1: section
-[55
+[59
 
 
 
 ]
-Overfull \hbox (0.33524pt too wide) in paragraph at lines 315--315
+Overfull \hbox (0.33524pt too wide) in paragraph at lines 317--317
 \T1/ptm/m/n/12 body model for Peo-ple Track-ing and Re-identification^^Q. In: (
 Mar. 2011), pp. 1^^U
  []
 
 
-Overfull \hbox (1.03345pt too wide) in paragraph at lines 315--315
+Overfull \hbox (1.03345pt too wide) in paragraph at lines 317--317
 []\T1/ptm/m/n/12 Apurva Bedagkar-Gala and Shishir K Shah. ^^P  Mul-ti-ple Per-s
 on Re-identification
  []
 
 
-Overfull \hbox (0.5255pt too wide) in paragraph at lines 315--315
+Overfull \hbox (0.5255pt too wide) in paragraph at lines 317--317
 []\T1/ptm/m/n/12 Jason V Davis et al. ^^P  Information-Theoretic Met-ric Learn-
 ing^^Q. In: (June 2007),
  []
 
 1: section
-[56
+[60
 
 
 ]
-Overfull \hbox (44.98842pt too wide) in paragraph at lines 315--315
+Overfull \hbox (44.98842pt too wide) in paragraph at lines 317--317
 []\T1/ptm/m/n/12 Tetsu Mat-sukawa et al. ^^P  Hi-er-ar-chi-cal Gaus-sian De-scr
 ip-tor for Per-son Re-Identification^^Q.
  []
 
-[57]
-Overfull \hbox (18.4449pt too wide) in paragraph at lines 315--315
+[61]
+Overfull \hbox (18.4449pt too wide) in paragraph at lines 317--317
 []\T1/ptm/m/n/12 Peter M Roth et al. ^^P  Ma-ha-lanobis Dis-tance Learn-ing for
  Per-son Re-Identification^^Q.
  []
 
 
-Overfull \hbox (2.21083pt too wide) in paragraph at lines 315--315
+Overfull \hbox (2.21083pt too wide) in paragraph at lines 317--317
 []\T1/ptm/m/n/12 Max Welling. ^^P  Ker-nel Canon-i-cal Cor-re-la-tion Anal-y-si
 s^^Q. In: (Mar. 2005), pp. 1^^U
  []
 
-
-Overfull \hbox (0.48172pt too wide) in paragraph at lines 315--315
+[62]
+Overfull \hbox (0.48172pt too wide) in paragraph at lines 317--317
 []\T1/ptm/m/n/12 Tong Xiao et al. ^^P  Learn-ing Deep Fea-ture Rep-re-sen-ta-ti
 ons with Do-main Guided
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 319.
-[58]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 319.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 321.
+[63]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 321.
  (./main.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
 (./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux)
 (./Chapters/Chapter6.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 319.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 319.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 321.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 321.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B4C364FA9EF682AE2E6F04D8D20FA927;8224.
+(rerunfilecheck)             Checksum: 9181B9F119C29B98E3609B12908C3F39;8635.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2459,13 +2510,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30725 strings out of 493089
- 623874 string characters out of 6134842
- 742150 words of memory out of 5000000
- 33563 multiletter control sequences out of 15000+600000
- 85136 words of font info for 104 fonts, out of 8000000 for 9000
+ 30781 strings out of 493089
+ 625953 string characters out of 6134842
+ 745765 words of memory out of 5000000
+ 33592 multiletter control sequences out of 15000+600000
+ 78842 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,20n,83p,10377b,2553s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,20n,83p,10377b,2549s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/te
@@ -2487,10 +2538,10 @@ ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/
 times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on main.pdf (69 pages, 2880074 bytes).
+Output written on main.pdf (73 pages, 3422781 bytes).
 PDF statistics:
- 1066 PDF objects out of 1200 (max. 8388607)
- 907 compressed objects within 10 object streams
- 261 named destinations out of 1000 (max. 500000)
- 479 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1146 PDF objects out of 1200 (max. 8388607)
+ 978 compressed objects within 10 object streams
+ 285 named destinations out of 1000 (max. 500000)
+ 512 words of extra memory for PDF output out of 10000 (max. 10000000)
 

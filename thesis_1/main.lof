@@ -11,28 +11,33 @@
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Samples from prid\_2011 dataset\relax }}{8}{figure.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A CMC comparison of color histogram on different color spaces \relax }}{20}{figure.caption.39}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces RGB and HSV visual comparison, the first row is RGB and second row is HSV for same views \relax }}{20}{figure.caption.38}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces A comparison of two patches with same entropy but different color distribution\relax }}{21}{figure.caption.40}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces An LBP example, by thresholding the neighbour pixels the pixels are transformed into a binary number \relax }}{21}{figure.caption.42}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces One LBP example\relax }}{22}{figure.caption.43}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Foreground segmentation of individuals from VIPeR \relax }}{23}{figure.caption.49}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces A CMC comparison of foreground segmentation on LBP tested on VIPeR \relax }}{24}{figure.caption.50}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR\relax }}{24}{figure.caption.51}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Integral image\relax }}{27}{figure.caption.62}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Example of five clusters belong to three classes\relax }}{36}{figure.caption.106}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces 1-D distribution of dimension reduced data with gaussian kernel\relax }}{37}{figure.caption.107}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces 1-D distribution of dimension reduced data with linear kernel\relax }}{37}{figure.caption.108}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A CMC comparison of color histogram on different color spaces \relax }}{21}{figure.caption.44}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces RGB and HSV visual comparison, the first row is RGB and second row is HSV for same views \relax }}{21}{figure.caption.43}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A comparison of two patches with same entropy but different color distribution\relax }}{22}{figure.caption.45}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces An LBP example, by thresholding the neighbour pixels the pixels are transformed into a binary number \relax }}{22}{figure.caption.47}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces One LBP example\relax }}{23}{figure.caption.48}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces A demo of HOG feature with a cell size of six pixels\relax }}{24}{figure.caption.54}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Foreground segmentation of individuals from VIPeR \relax }}{25}{figure.caption.56}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces A CMC comparison of foreground segmentation on LBP feature tested on VIPeR \relax }}{26}{figure.caption.57}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR\relax }}{26}{figure.caption.58}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces A CMC comparison of foreground segmentation on HOG feature tested on VIPeR\relax }}{27}{figure.caption.59}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Integral image\relax }}{30}{figure.caption.72}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Steepest gradient descent\relax }}{39}{figure.caption.116}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Function with multi local minimums\relax }}{40}{figure.caption.117}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Zigzagging downhill valley\relax }}{40}{figure.caption.117}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Example of five clusters belong to three classes\relax }}{40}{figure.caption.117}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 1-D distribution of dimension reduced data with gaussian kernel\relax }}{41}{figure.caption.118}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 1-D distribution of dimension reduced data with linear kernel\relax }}{41}{figure.caption.119}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Steepest gradient descent\relax }}{43}{figure.caption.126}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Function with multi local minimums\relax }}{43}{figure.caption.127}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Zigzagging downhill valley\relax }}{43}{figure.caption.127}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{47}{figure.caption.138}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{48}{figure.caption.139}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces CMC curves on VIPeR comparing different metric learning\relax }}{50}{figure.caption.143}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces CMC curves on CUHK1 comparing different metric learning\relax }}{51}{figure.caption.145}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces CMC curves on prid\_2011 comparing different metric learning\relax }}{52}{figure.caption.147}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces CMC curves on prid\_450s comparing different metric learning\relax }}{53}{figure.caption.149}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces CMC curves on GRID comparing different metric learning\relax }}{54}{figure.caption.151}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pedestrians in prid\_450 dataset\relax }}{47}{figure.caption.140}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Pedestrians in prid\_450s dataset\relax }}{48}{figure.caption.141}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Pedestrians in GRID dataset\relax }}{49}{figure.caption.142}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{52}{figure.caption.151}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{52}{figure.caption.152}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces CMC curves on VIPeR comparing different metric learning\relax }}{54}{figure.caption.156}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces CMC curves on CUHK1 comparing different metric learning\relax }}{55}{figure.caption.158}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces CMC curves on prid\_2011 comparing different metric learning\relax }}{56}{figure.caption.160}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces CMC curves on prid\_450s comparing different metric learning\relax }}{57}{figure.caption.162}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces CMC curves on GRID comparing different metric learning\relax }}{58}{figure.caption.164}
 \addvspace {10\p@ }

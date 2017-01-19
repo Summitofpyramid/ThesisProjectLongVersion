@@ -155,6 +155,39 @@
   \field{year}{2011}
 \endentry
 
+\entry{SimilarityLearning}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Chen}{C.}%
+     {Dapeng}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yuan}{Y.}%
+     {Zejian}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hua}{H.}%
+     {Gang}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Nanning Zheng~andJingdong}{N.~Z.~a.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CD+1}
+  \strng{fullhash}{CDYZHGWNZa1}
+  \field{sortinit}{C}
+  \field{pages}{1\bibrangedash 9}
+  \field{title}{{Similarity Learning on an Explicit Polynomial Kernel Feature
+  Map for Person Re-Identification}}
+  \field{month}{04}
+  \field{year}{2015}
+\endentry
+
 \entry{MultiCNN}{article}{}
   \name{author}{5}{}{%
     {{}%
@@ -183,7 +216,7 @@
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{CD+1}
+  \strng{namehash}{CD+2}
   \strng{fullhash}{CDGYZSWJZN1}
   \field{sortinit}{C}
   \field{pages}{1\bibrangedash 10}
@@ -274,6 +307,29 @@
   \field{year}{2007}
 \endentry
 
+\entry{ImprovedCNN}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Ejaz~Ahmed}{E.~A.}%
+     {Michael~Jones}{M.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Marks}{M.}%
+     {Tim~K}{T.~K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{EAMJMTK1}
+  \strng{fullhash}{EAMJMTK1}
+  \field{sortinit}{E}
+  \field{pages}{1\bibrangedash 9}
+  \field{title}{{An Improved Deep Learning Architecture for Person
+  Re-Identification}}
+  \field{month}{04}
+  \field{year}{2015}
+\endentry
+
 \entry{SDALF}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
@@ -357,6 +413,44 @@
   \field{title}{{Locality Preserving Projections}}
   \field{month}{11}
   \field{year}{2016}
+\endentry
+
+\entry{STEL}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Jojic}{J.}%
+     {Nebojsa}{N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Perina}{P.}%
+     {Alessandro}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cristani}{C.}%
+     {Marco}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Murino}{M.}%
+     {Vittorio}{V.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Frey}{F.}%
+     {Brendan}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JN+1}
+  \strng{fullhash}{JNPACMMVFB1}
+  \field{sortinit}{J}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{{Stel component analysis: Modeling spatial correlations in
+  image class structure}}
+  \field{month}{04}
+  \field{year}{2009}
 \endentry
 
 \entry{AppBasedREID}{inproceedings}{}
@@ -705,6 +799,34 @@
   \field{year}{2008}
 \endentry
 
+\entry{MetricEnsembles}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Paisitkriangkrai}{P.}%
+     {Sakrapee}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shen}{S.}%
+     {Chunhua}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hengel}{H.}%
+     {Anton}{A.}%
+     {van~den}{v.~d.}%
+     {}{}}%
+  }
+  \strng{namehash}{PSSCHAvd1}
+  \strng{fullhash}{PSSCHAvd1}
+  \field{sortinit}{P}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Learning to Rank in Person Re-Identification With Metric
+  Ensembles}}
+  \field{month}{01}
+  \field{year}{2015}
+\endentry
+
 \entry{LFDA}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
@@ -837,6 +959,34 @@
   Comprehensive Review}}
   \field{month}{07}
   \field{year}{2016}
+\endentry
+
+\entry{SemanticMethod}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Shi}{S.}%
+     {Zhiyuan}{Z.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hospedales}{H.}%
+     {Timothy~M}{T.~M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Xiang}{X.}%
+     {Tao}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SZHTMXT1}
+  \strng{fullhash}{SZHTMXT1}
+  \field{sortinit}{S}
+  \field{pages}{1\bibrangedash 10}
+  \field{title}{{Transferring a Semantic Representation for Person
+  Re-Identification and Search}}
+  \field{month}{04}
+  \field{year}{2015}
 \endentry
 
 \entry{KLFDA}{inproceedings}{}
@@ -1000,6 +1150,47 @@
   \field{year}{2014}
 \endentry
 
+\entry{SCNCD}{inproceedings}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Yang}{Y.}%
+     {Yang}{Y.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yang}{Y.}%
+     {Jimei}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yan}{Y.}%
+     {Junjie}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Liao}{L.}%
+     {Shengcai}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Yi}{Y.}%
+     {Dong}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Li}{L.}%
+     {Stan~Z.}{S.~Z.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YY+1}
+  \strng{fullhash}{YYYJYJLSYDLSZ1}
+  \field{sortinit}{Y}
+  \field{booktitle}{European Con- ference on Computer Vision (ECCV)}
+  \field{title}{Salient color names for person re-identification}
+  \field{year}{2014}
+\endentry
+
 \entry{TDL}{article}{}
   \name{author}{4}{}{%
     {{}%
@@ -1058,6 +1249,38 @@
   Re-identification}}
   \field{month}{03}
   \field{year}{2016}
+\endentry
+
+\entry{MidlevelFilters}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Zhao}{Z.}%
+     {Rui}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ouyang}{O.}%
+     {Wanli}{W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Xiaogang}{X.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{ZROWWX1}
+  \strng{fullhash}{ZROWWX1}
+  \field{sortinit}{Z}
+  \field{booktitle}{2014 IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}
+  \field{pages}{144\bibrangedash 151}
+  \field{title}{{Learning Mid-level Filters for Person Re-identification}}
+  \field{month}{05}
+  \field{year}{2014}
 \endentry
 
 \entry{PRDC}{article}{}

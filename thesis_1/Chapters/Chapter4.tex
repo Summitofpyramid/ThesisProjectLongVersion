@@ -1,6 +1,240 @@
-\chapter{Metric learning on subspace}
-Euclidean is the most used metric, however, it can't measure the similarity of 
+\chapter{Dimension reduction and Mahanalobis distance learning}
+To deal with high dimensional descriptors, dimension reduction are firstly performed by kernel local fisher discriminant analysis (KLFDA). Then Mahanalobis distance metric learning based on limitations between interclass and intraclass distance are operated on dimension reduced data.
+\section{Kernel local fisher discriminant analysis}
+The extracted hierarchical gaussian descriptors have high dimension, it's intractable to learn a SPD matrix with such a high dimension. Dimension reduction is required to learn a subspace.
+Among those methods to reduce dimension, principal component analysis (PCA) is often used. However, PCA is an unsupervised dimension reduction and may have a low performance for those reasons, $(1)$, PCA is to maximize the variance of dimension reduced data, and as a unsupervised method it doesn't has a full consideration of the the relation of between and within classes, it is very likely that the descriptors of different classes can be mixed up after the dimension reduction; $(2)$ PCA may suffer from the small sample size problem. In some Re-ID datasets, there may be two or less images for each pedestrian in each viewpoint (like VIPeR), if the dimension of descriptor is much bigger than sample size, much information can be lost with PCA. In this thesis, the kernel local fisher discriminant analysis (KLFDA) is used to reduce dimension. 
 
+KLFDA is the kernel version of LFDA, and LFDA is a combination of Fisher discriminant analysis \cite{LFDA} and and the locality preserving projection \cite{LPP} and kernel method. A brief introduction of FDA, LPP and kernel method is introduced below.
+\subsection{Fisher discriminant analysis (FDA)}
+
+FDA is a supervised dimension reduction and its input contains the class labels. For a set of $d$-dimensional observations $\bm{x}_i$, where $i\in\{1,2,\cdots,n\}$, the label $l_i\in\{1,2,\cdots,l\}$. Two matrix are defined as the intraclass scatter matrix $\bm{S}^{(w)}$ and between class scatter matrix
+$\bm{S}^{(b)}$, 
+\begin{equation}
+\begin{aligned}
+\bm{S}^{(w)} &= \mathop{\sum} _{i=1}^l\mathop{\sum}_{j:l_j = i} (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
+\bm{S}^{(b)}  &= \mathop{\sum} _{i=1}^l n_i(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
+\end{aligned}
+\end{equation}
+where the $\bm{\mu}_i$ is the mean of samples whose label is $i$, and $\bm{\mu}$ is the mean of all samples,
+\begin{equation}
+\begin{aligned}
+\bm{\mu}_i &= \frac{1}{n_i} \sum \bm{x}_i, \\
+\bm{\mu} &= \frac{1}{n} \sum \bm{x}_i
+\end{aligned}
+\end{equation}
+
+The Fisher Discriminant Analysis transform matrix $\bm{T}$ can be represented as 
+\begin{equation}
+\bm{T} = \arg\max \frac{\bm{T}^T\bm{S}^{(b)}\bm{T}}{\bm{T}^T\bm{S}^{(w)}\bm{T}}
+\end{equation}
+This equation can be solved by Lagrange multiplier method, we define a Lagrange function 
+\begin{equation}
+L(\bm{t}) = \bm{t}^T\bm{S}^{(b)}\bm{t} - \lambda(\bm{t}^T\bm{S}^{(w)}\bm{t} - 1)
+\end{equation}
+Then the differential respect to $\bm{t}$ is 
+\begin{equation}
+\frac{\partial L(\bm{t})}{\partial \bm{t}} = 2\bm{S}^{(b)}\bm{t} - 2\lambda \bm{S}^{(w)}\bm{t}
+\end{equation}
+
+let 
+\begin{equation}
+\frac{\partial L(\bm{t})}{\partial \bm{t}} = 0
+\end{equation}
+
+we can get 
+\begin{equation}
+\bm{S}^{(b)}\bm{t}_i  = \lambda \bm{S}^{(w)}\bm{t}_i
+\end{equation}
+\label{eigen1}
+
+here $\bm{t}_i$ is the $i_{th}$ column of $\bm{T}$, and the optimization problem is converted to a eigenvalue decomposition problem. 
+
+Fisher discriminant analysis tries to minimize the intraclass scatter matrix while maximize the interclass scatter matrix, and $\bm{T}$ is computed by the eigenvalue decomposition. $\bm{T}$ can be represented as the set of all the corresponding eigenvectors, as $ \bm{T} = (\bm{t}_1,\bm{t}_2,\cdots,\bm{t}_k)$.
+
+FDA has a form similar with signal and noise ratio, however, the FDA dimension reduction may have poor performance for it doesn't consider the locality of data. An example of this is the multimodality \cite{LFDA}. Multimodality is the case many clusters are formed in the same class. 
+\subsection{Locality preserving projection (LPP)}
+
+In \cite{LPP} locality preserving projection (LPP) is proposed to exploit data locality. An affinity matrix is created to record the affinity of sample $\bm{x}_i$ and $\bm{x}_j$,  typically the range of elements in $\bm{A}_{i,j}$ is $[0,1]$. There are many manners to define a $n \times n$ affinity matrix $\bm{A}$, usually two sample points with a smaller distance has a higher affinity value than those with bigger distance value. One of them is if  $\bm{x}_i$ is within k-nearest neighbours of $\bm{x}_j$ then $\bm{A}_{i,j} = 1$ otherwise  $\bm{A}_{i,j} = 0$.  
+
+Another diagonal matrix $\bm{D}$ can be defined that each diagonal element is the sum of corresponding column in $\bm{A}$,
+\begin{equation}
+\bm{D}_{i,i} = \mathop{\sum}_{j=1}^n \bm{A}_{i, j} 
+\end{equation}
+then the LPP transform matrix is defined as follow,
+\begin{equation}
+\bm{T}_{LPP} = \mathop{\arg\min}_{\bm{T}\in\bm{R}^{d\times m}} \frac{1}{2}\mathop{\sum}_{i, j= 1}^n \bm{A}_{i,j} ||\bm{T}^T\bm{x}_i - \bm{T}^T\bm{x}_j||
+\end{equation}
+so that $ \bm{T}^T\bm{X}\bm{D}\bm{X}^T\bm{T} = \bm{I} $.
+Suppose the subspace has a dimension of $m$, then LPP transform matrix $T$ can be represented as 
+
+$$\bm{T}_{LPP} = \{ \bm{\phi}_{d-m+1} | \bm{\phi}_{d-m+2} | \cdots \bm{\phi}_{d}\} $$
+
+And each $\bm{\phi}$ in $T$ is the eigenvector of following fomula,
+ \begin{equation}
+\bm{X}\bm{L}\bm{X}^T\bm{\phi} = \gamma\bm{X}\bm{D}\bm{X}^T
+\end{equation}
+where $\gamma$ is corresponding eigenvalue of $\bm{\phi}$, and $\bm{L} = \bm{D} - \bm{A}$.
+%where $\bm{D}$ is the $n$-dimensional diagonal matrix with $i_{th}$ diagonal element 
+%\begin{equation}
+%\bm{D}_{i,i} = \sum_{j = 1}^n\bm{A}_{i,j}
+%\end{equation}
+
+%But the LPP dimension reduction is still not discriminant enough, 
+\subsection{Local fisher discriminant analysis}
+\indent LFDA \cite{LFDA} combines FDA and LPP and have better performance. The key in LFDA is it assigns weights to elements in $\bm{A}^{(w)}$ and $\bm{A}^{(b)}$, so that,
+\begin{equation}
+\begin{aligned}
+\bm{S}^{(w)} &= \frac{1}{2}\sum _{i=1}^l\sum_{j:l_j = i} \bm{A}_{i,j}^w (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
+\bm{S}^{(b)} &=  \frac{1}{2}\sum _{i=1}^l \bm{A}_{i,j}^b(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
+\end{aligned}
+\end{equation}
+where 
+
+\begin{equation}
+\begin{aligned}
+\bm{A}_{i,j}^{(w)} = \left \{ 
+\begin{array}{rcl}
+\bm{A}_{i,j}/n_c &  &y_i = y_j \\
+0 & & {y_i \ne y_j }
+\end{array}
+  \right.  \\
+  \bm{A}_{i,j}^{(b)} = \left \{ 
+\begin{array}{rcl}
+(\frac{1}{n} - \frac{1}{n_c})  \bm{A}_{i,j} &  &{y_i = y_j }\\
+\frac{1}{n} & & {y_i \ne y_j }
+\end{array}
+  \right. 
+ \end{aligned}
+\end{equation}
+where $y_i$ is the class label of sample point $\bm{x}_i$. So the transformation matrix $T_LFDA$ can be computed by equation
+\begin{equation}
+\bm{T}_{LFDA}  = \arg\min_{\bm{T}} (\frac{\bm{T}^T\bm{S}^{(b)}\bm{T}}{\bm{T}^T\bm{S}^{(w)}\bm{T}})
+\end{equation}
+\label{eigencompute1} 
+Again this problem can be solved by eigenvalue decomposition by equation \ref{eigen1}. 
+
+
+
+When applying the LFDA to original high dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, LFDA has to solve the eigenvalue a matrix with dimension $d\times d$. In some descriptors the $d$ could be more than 20000 and thus the computation cost is intractable. 
+ 
+\subsection{Kernel local fisher discriminant analysis(KLFDA)}
+
+KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $T$ can be computed by equation
+\begin{equation}
+\bm{T} = \arg \min \frac{\bm{T}^T\bm{S}^{(b)}_{\phi}\bm{T}}{\bm{T}^T\bm{S}^{(w)}_{\phi}\bm{T}}
+\end{equation}
+where $\bm{S}^{(b)}_{\phi}$ and $\bm{S}^{(w)}_{\phi}$ is the between class scatter and within class scatter in mapped feature space $\Phi$.
+
+Note that the transformation matrix $\bm{T} \in \Phi$, it's computationally expensive to explicitly compute the mapping function $\phi$ and perform LFDA in feature space $\Phi$ because the dimension of $\Phi$ may be infinite. Rather than explicitly computing, the mapping function $\phi$ can be implicit and the feature space $\Phi$ can be defined by the inner product of features in $\Phi$. Kernel trick [] is used here and a kernel function can be defined as the inner product of mapped vectors $\phi(\bm{x}_i)$ and $\phi(\bm{x}_j)$ by equation
+ \begin{equation}
+ k(\bm{x}_i,\bm{x}_j) = <\phi(\bm{x}_i),\phi(\bm{x}_j)>,
+ \end{equation}
+ the $< \cdot >$ is the inner product. There are many kinds of kernel like linear kernel, polynomial kernel and radial basis function (RBF) kernel. In this paper the RBF kernel is adopted. A RBF kernel is defined as 
+ \begin{equation}
+ k_{RBF}(\bm{x}_i,\bm{x}_j) = \exp^{(-\gamma||\bm{x}_i-\bm{x}_j||^2)}. 
+ \end{equation}
+Suppose $\bm{X}$ is the sample descriptors matrix, and we have
+\begin{equation}
+\bm{X} = (\bm{x}_1, \bm{x}_2,\cdots, \bm{x}_n), 
+\end{equation}
+and the label vector is $\bm{l} = (l_1, l_2, \cdots, l_n)$. Then the kernel matrix of $\bm{X}$ can be computed as following equation:
+\begin{equation}
+\bm{K} =  \phi(\bm{X})^T \phi(\bm{X})
+\end{equation}
+and we have 
+\begin{equation}
+\bm{K}_{i,j} =  k(\bm{x}_i,\bm{x}_j) = <\phi(\bm{x}_i),\phi(\bm{x}_j)> =  \exp^{(-\gamma||\bm{x}_i-\bm{x}_j||^2)}
+\end{equation}
+
+In \cite{LFDAdr} the authors proposed fast computation of LFDA by replacing $\bm{S}^{(b)}$ with the local scatter mixture matrix $\bm{S}^{(m)}$defined by 
+\begin{equation}
+\begin{aligned}
+\bm{S}^{(m)} &= \bm{S}^{(b)} + \bm{S}^{(w)}\\
+\bm{S}^{(m)} &= \frac{1}{2} \sum_{i,j = 1} \bm{A}_{i,j}^{(m)} (\bm{x}_i - (\bm{x}_j)(\bm{x}_i - (\bm{x}_j)^T
+\end{aligned}
+\end{equation}
+and 
+
+\begin{equation}
+\bm{A}_{i,j}^{(m)} = \bm{A}_{i,j}^{(w)}  + \bm{A}_{i,j}^{(w)}
+\end{equation}
+
+\noindent according to indentify(Fukunaga, 1990)
+\begin{equation}
+tr((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = tr((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m
+\end{equation}
+equation \ref{eigencompute1} is equal to 
+
+\begin{equation}
+\bm{T}_{LFDA}  = \arg\min_{\bm{T}} (\frac{\bm{T}^T\bm{S}^{(m)}\bm{T}}{\bm{T}^T\bm{S}^{(w)}\bm{T}})
+\end{equation}
+and it can be transformed into a eigenvalue decomposition problem 
+\begin{equation}
+\bm{S}^{(m)}\bm{t}_i  = \lambda \bm{S}^{(w)}\bm{t}_i
+\end{equation}
+\label{eigen2}
+Also with the replacement of $\bm{S}^{(m)}$, in \cite{LFDAdr} the author summarized that 
+\begin{equation}
+\bm{S}^{(m)} = \bm{X}\bm{L}^{(m)}\bm{X}^T
+\end{equation}
+where $\bm{L}^{(m)}  = \bm{D}^{(m)} - \bm{A}^{(m)}$, and $ \bm{D}^{i,i} = \sum_{j=1}^n  \bm{A}^{(m)}$. Also $\bm{S}^{(w)}$ can be represented as 
+\begin{equation}
+\bm{S}^{(w)} = \bm{X}\bm{L}^{(w)}\bm{X}^T
+\end{equation}
+where $\bm{L}^{(w)}  = \bm{D}^{(w)} - \bm{A}^{(m)}$, and $ \bm{D}^{i,i} = \sum_{j=1}^n  \bm{A}^{(w)}$. 
+Therefore, equation \ref{eigen2} can be represented as
+\begin{equation}
+\bm{X}\bm{L}^{(m)}\bm{X}^T \bm{t}_i= \lambda\bm{X}\bm{L}^{(w)}\bm{X}^T \bm{t}_i
+\end{equation}
+\label{equationS}
+the eigen vector $\bm{t}_i$  can be represented as $\bm{t}_i = \bm{X}\gamma, vector \gamma_i \in R^n$, with this replacement, we left multiply $\bm{X}^T$ to equation \ref{equationS} to get 
+\begin{equation}
+\bm{X}^T\bm{X}\bm{L}^{(m)}\bm{X}^T\bm{X}\gamma_i = \lambda\bm{X}^T\bm{X}\bm{L}^{(w)}\bm{X}^T \bm{X}\gamma_i
+\end{equation}
+and by the kernel trick, its represented as
+\begin{equation}
+\bm{K}\bm{L}^{(m)}\bm{K}\gamma_i  = \lambda \bm{K}\bm{L}^{(w)}\bm{K}\gamma_i
+\end{equation}
+One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in figure \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in figure \ref{KLFDAdemo2} and figure \ref{KLFDAdemo3}. It shows that for those clusters the gaussian kernel are better than linear kernel because the dimensional reduced data are more separate when using gaussian kernel function.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg}
+\caption{Example of five clusters belong to three classes}
+\vspace{0em}
+\end{figure} 
+\label{KLFDAdemo1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg}
+\caption{1-D distribution of dimension reduced data  with gaussian kernel}
+\vspace{-1em}
+\end{figure} 
+\label{KLFDAdemo2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg}
+\caption{1-D distribution of dimension reduced data  with linear kernel}
+\vspace{-1em}
+\end{figure} 
+\label{KLFDAdemo3}
+%\begin{figure}[H]
+%\centering
+%\begin{minipage}[t]{0.5\linewidth}
+%\includegraphics[width=2.7in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg}
+%%\caption{RGB patch}
+%\label{fig:side:a}
+%\end{minipage}%
+%\begin{minipage}[t]{0.5\linewidth}
+%\centering
+%\includegraphics[width=2.7in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg}
+%%\caption{GBR patch}
+%\label{fig:side:b}
+%\end{minipage}
+%\caption{A comparison of two patches with same entropy but different color distribution}
+%\end{figure}
 
 \section{Mahalanobis distance}
 The Mahalanobis distance \cite{Mahadist} based metric learning has received much attention in similarity computing. The Mahanalobis distance of two observations $\bm{x} $ and $\bm{y}$ is defined as
@@ -148,7 +382,7 @@ In each iteration, to make sure the updated $\bm{M}$ is a SPD matrix, first a ei
 \begin{equation}\label{SPDproject}
 \bm{M} = \bm{V}\bm{\Lambda}\bm{V}^T
 \end{equation}
-Then the negative eigenvalues in $\bm{V}$ are removed and the corresponding eigenvectors in $\bm{V}$ are also removed. Then $\bm{M}$ is restored by equation \eqref{SPDproject}.
+here $\Lambda$ is a diagonal matrix with diagonal elements are eigenvalues. Then the negative eigenvalues in $\bm{V}$ are removed and the corresponding eigenvectors in $\bm{V}$ are also removed. Then $\bm{M}$ is restored by equation \eqref{SPDproject}.
 
  
  
