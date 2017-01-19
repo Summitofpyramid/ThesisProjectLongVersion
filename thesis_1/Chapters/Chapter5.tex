@@ -75,11 +75,11 @@ Terms  &1 &5 & 10 &15& 20\\
 \hline
 Original GOG &43.01&74.91& 84.87& 89.81& 93.32 \\
 \hline
-Preprocessed GOGrgb &43.77&74.84&85.25& 90.32&93.89\\
+Preprocessed GOG$_\text{rgb}$ &43.77&74.84&85.25& 90.32&93.89\\
  \hline
-Original GOGfusion &48.77&77.47&87.41&91.52&94.27\\
+Original GOG$_\text{fusion}$ &48.77&77.47&87.41&91.52&94.27\\
 \hline
-Preprocessed GOGfusion &48.32&76.90&87.78&91.93& 94.49\\
+Preprocessed GOG$_\text{fusion}$ &48.32&76.90&87.78&91.93& 94.49\\
  \hline
 
 \end{tabular}
@@ -96,13 +96,13 @@ Preprocessed GOGfusion &48.32&76.90&87.78&91.93& 94.49\\
  \hline
 Terms  &1 &5 & 10 &15& 20\\
 \hline
-Original GOGrgb&56.11&83.77&90.10& 92.65&94.28 \\
+Original GOG$_\text{rgb}$&56.11&83.77&90.10& 92.65&94.28 \\
 \hline
-Preprocessed GOGrgb &55.91&84.24&90.41& 93.15&94.67\\
+Preprocessed GOG$_\text{rgb}$ &55.91&84.24&90.41& 93.15&94.67\\
  \hline
-Original GOGfusion &57.10&84.65& 90.35& 92.88&94.65\\
+Original GOG$_\text{fusion}$ &57.10&84.65& 90.35& 92.88&94.65\\
 \hline
-Preprocessed GOGfusion &56.67&84.49& 90.51& 93.31&94.84\\
+Preprocessed GOG$_\text{fusion}$ &56.67&84.49& 90.51& 93.31&94.84\\
  \hline
  
 \end{tabular}
@@ -118,13 +118,13 @@ Preprocessed GOGfusion &56.67&84.49& 90.51& 93.31&94.84\\
  \hline
 Terms  &1 &5 & 10 &15& 20\\
 \hline
-Original GOGrgb&24.80& 52.10& 63.20& 69.90& 72.90\\
+Original GOG$_\text{rgb}$&24.80& 52.10& 63.20& 69.90& 72.90\\
 \hline
-Preprocessed GOGrgb &23.80& 52.20& 63.50& 70.20& 73.50\\
+Preprocessed GOG$_\text{rgb}$ &23.80& 52.20& 63.50& 70.20& 73.50\\
 \hline
-Original GOGfusion &32.20& 56.60& 67.00& 73.10& 77.70\\
+Original GOG$_\text{fusion}$ &32.20& 56.60& 67.00& 73.10& 77.70\\
 \hline
-Preprocessed GOGfusion &32.30& 57.40& 66.30& 73.40& 78.00\\
+Preprocessed GOG$_\text{fusion}$ &32.30& 57.40& 66.30& 73.40& 78.00\\
  \hline
  
 \end{tabular}
@@ -140,13 +140,13 @@ Preprocessed GOGfusion &32.30& 57.40& 66.30& 73.40& 78.00\\
  \hline
 Terms  &1 &5 & 10 &15& 20\\
 \hline
-Original GOGrgb&60.93& 84.31& 91.29& 94.00& 96.18\\
+Original GOG$_\text{rgb}$&60.93& 84.31& 91.29& 94.00& 96.18\\
 \hline
-Preprocessed GOGrgb &60.71& 84.53& 91.29& 94.13& 96.27\\
+Preprocessed GOG$_\text{rgb}$ &60.71& 84.53& 91.29& 94.13& 96.27\\
 \hline
-Original GOGfusion &63.07& 86.67& 92.53& 95.20& 96.98\\
+Original GOG$_\text{fusion}$ &63.07& 86.67& 92.53& 95.20& 96.98\\
 \hline
-Preprocessed GOGfusion &62.80& 86.58& 92.36& 95.29& 96.89\\
+Preprocessed GOG$_\text{fusion}$ &62.80& 86.58& 92.36& 95.29& 96.89\\
  \hline
  
 \end{tabular}
@@ -162,13 +162,13 @@ Preprocessed GOGfusion &62.80& 86.58& 92.36& 95.29& 96.89\\
  \hline
 Terms  &1 &5 & 10 &15& 20\\
 \hline
-Original GOGrgb&22.96& 41.92& 51.68& 58.72& 64.64\\
+Original GOG$_\text{rgb}$&22.96& 41.92& 51.68& 58.72& 64.64\\
 \hline
-Preprocessed GOGrgb &22.64& 43.68& 52.00& 59.04& 65.04\\
+Preprocessed GOG$_\text{rgb}$ &22.64& 43.68& 52.00& 59.04& 65.04\\
 \hline
-Original GOGfusion &24.32& 44.56& 54.80& 62.40& 66.64\\
+Original GOG$_\text{fusion}$ &24.32& 44.56& 54.80& 62.40& 66.64\\
 \hline
-Preprocessed GOGfusion &23.92& 44.64& 54.88& 62.32& 66.40\\
+Preprocessed GOG$_\text{fusion}$ &23.92& 44.64& 54.88& 62.32& 66.40\\
  \hline
  
 \end{tabular}
@@ -177,7 +177,7 @@ Preprocessed GOGfusion &23.92& 44.64& 54.88& 62.32& 66.40\\
 
 %--------------------------------------------------
 \section{Parameters setting}
-In this experiment, there are a few parameters for the iteration computing including slack variable $\rho$, maximal iteration $T$, gradient step $\lambda$, the interclass and intraclass limitation factor $\alpha$ and the updating ratio $\beta$. Firstly the slack variable $\rho$ is initialized as 1 to ensure the minimum interclass distance is 1 larger than intraclass distance at least. The step size of gradient updating $\lambda$ is initialized as 0.01. When target value $f$ increases,  $\lambda$ is scaled by a factor 0.5, and  $\lambda$ is scaled by 1.01 when target value $f$ decreases. To judge if target value converges, the thresh $\beta$ is defined as the ratio target value change versus previous target value, that is, $\beta = \frac{(f_{t+1}-f_t)}{f_t}$. According many experiment trials, when it satisfies $\beta = 10^{-5}$, the target value converges and the iteration is stopped. The maximal iteration times is set to 100 since the target value $f$ will converge in around 15 iterations.  The last parameter for the iteration is $\alpha$, to know the best value for $\alpha$, we tried 11 different values ranges from 0 to 1 with a step of 0.1, and find that the rank 1 and rank 5 scores reach maxima at interval $[0.7,0.8]$. Then another ten trials with alpha ranging from $[0.7,0.8]$ with a step of 0.01. The best $\alpha$ value should have as large top rank scores as possible and at last we find that the optimal value for $\alpha$ is 0.76. A form of all parameters are shown in Form 7.
+In this experiment, there are a few parameters for the iteration computing including slack variable $\rho$, maximal iteration $T$, gradient step $\lambda$, the interclass and intraclass limitation factor $\alpha$ and the updating ratio $\beta$. Firstly the slack variable $\rho$ is initialized as 1 to ensure the minimum interclass distance is 1 larger than intraclass distance at least. The step size of gradient updating $\lambda$ is initialized as 0.01. When target value $f$ increases,  $\lambda$ is scaled by a factor 0.5, and  $\lambda$ is scaled by 1.01 when target value $f$ decreases. To judge if target value converges, the threshold $\beta$ is defined as the ratio target value change versus previous target value, that is, $\beta = \frac{(f_{t+1}-f_t)}{f_t}$. According many experiment trials, when it satisfies $\beta = 10^{-5}$, the target value converges and the iteration is stopped. The maximal iteration times $t$ is set to 100 since the target value $f$ will converge in around 15 iterations.  The last parameter for the iteration is $\alpha$, to know the best value for $\alpha$, we tried 11 different values ranges from 0 to 1 with a step of 0.1, and find that the rank 1 and rank 5 scores reach maxima at interval $[0.7,0.8]$. Then another ten trials with alpha ranging from $[0.7,0.8]$ with a step of 0.01. The best $\alpha$ value should have as large top rank scores as possible and at last we find that the optimal value for $\alpha$ is 0.76. A form of all parameters are shown in Form 7.
 %-------------------------------------------------
 \begin{figure}[H]
 \begin{raggedleft}
@@ -202,7 +202,7 @@ In this experiment, there are a few parameters for the iteration computing inclu
 \caption{Parameters setting}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
-Paramters &$\alpha$&Thresh&Step&Max iteration& Slack variable\\
+Paramters &$\alpha$&$\beta$&$\lambda$&$t$& $\rho$\\
 \hline
 Values &0.76&$10^{-5}$&0.01&100&1\\
 \hline
@@ -216,8 +216,8 @@ Values &0.76&$10^{-5}$&0.01&100&1\\
 
 \section{Results and experiment analysis}
 In this paper, we compare proposed metric with other state-of-the-art metrics including NFST \cite{NFST}, XQDA \cite{LOMO}. NFST is a metric which learn a null space for descriptors so that the the same class descriptors will be projected to  
-a single point to minimize within class scatter matrix while different classes are projected to different points. This metric is a good solution to small sample problems in person re-identification. XQDA is quite similar with many other metrics, which learns a projection matrix $W$ and then a Mahanalobis SPD matrix $\bm{M}$ is learned in the subspace. Those two metric are proved to have state-of-the-art performance with many other methods. The GOGrgb in all forms stands for the hierarchical gaussian descriptor in RGB color space while GOGfusion stands for the one in four different color spaces \{RGB, Lab, HSV, nRnR\}.\\
-\textbf{VIPeR} A comparison form is given in Table 3. Some of recent results are also included in this form. We can find that the rank scores are better than those of NFST and XQDA in terms of both GOGrgb and GOGfusion. More specifically, the rank 1, rank 5, rank 10, rank 15 and rank 20 scores of proposed metric learning are 0.76\%, 0.92\%, 1.39\%, 1.08\%, 1.52\% higher than those of GOGrgb + XQDA, and the rank 1, rank 5, rank 10, rank 15 and rank 20 GOGfusion scores of proposed metric learning are 0.35\%, -0.54\%, 0.98\%, 0.66\%, 0.79\% higher than GOGfusion + XQDA respectively. Also we can see that the proposed metric learning has a better performance than NFST. \newline 
+a single point to minimize within class scatter matrix while different classes are projected to different points. This metric is a good solution to small sample problems in person re-identification. XQDA is quite similar with many other metrics, which learns a projection matrix $W$ and then a Mahanalobis SPD matrix $\bm{M}$ is learned in the subspace. Those two metric are proved to have state-of-the-art performance with many other methods. The GOG$_\text{rgb}$ in all forms stands for the hierarchical gaussian descriptor in RGB color space while GOG$_\text{fusion}$ stands for the descriptor concatenated by four different color spaces \{RGB, Lab, HSV, nRnR\}.\\
+\textbf{VIPeR} A comparison form is given in Table 3. Some of recent results are also included in this form. We can find that the rank scores are better than those of NFST and XQDA in terms of both GOG$_\text{rgb}$ and GOG$_\text{fusion}$. More specifically, the rank 1, rank 5, rank 10, rank 15 and rank 20 scores of proposed metric learning are 0.76\%, 0.92\%, 1.39\%, 1.08\%, 1.52\% higher than those of GOG$_\text{rgb}$ + XQDA, and the rank 1, rank 5, rank 10, rank 15 and rank 20 GOG$_\text{fusion}$ scores of proposed metric learning are 0.35\%, -0.54\%, 0.98\%, 0.66\%, 0.79\% higher than GOG$_\text{fusion}$ + XQDA respectively. Also we can see that the proposed metric learning has a better performance than NFST. \newline 
 %-----------------------------------------------------------------------VIPeR
 \begin{table}[H]
 \caption{Performance of different metrics on VIPeR}
@@ -228,28 +228,28 @@ a single point to minimize within class scatter matrix while different classes a
 \hline
 Methods& 1 & 5 &10& 15&20\\
 \hline
-GOGrgb+NFST& 43.23&73.16 &83.64 & 89.59&92.88\\  
+GOG$_\text{rgb}$+NFST& 43.23&73.16 &83.64 & 89.59&92.88\\  
 \hline
-GOGrgb+XQDA& 43.01&73.92&83.86& 89.24& 92.37\\
+GOG$_\text{rgb}$+XQDA& 43.01&73.92&83.86& 89.24& 92.37\\
 \hline
-%GOGrgb+KLFDA&43.45 &74.68 &85.13 &90.54&93.70\\ 
+%GOG$_\text{rgb}$+KLFDA&43.45 &74.68 &85.13 &90.54&93.70\\ 
 %\hline
-GOGrgb+Proposed&43.77 &74.84&85.25&90.32&93.89\\   %43.48%, 74.59%, 85.35%, 90.47%, 93.67%
+GOG$_\text{rgb}$+Proposed&43.77 &74.84&85.25&90.32&93.89\\   %43.48%, 74.59%, 85.35%, 90.47%, 93.67%
 \hline
-GOGfusion+NFST&47.15& 76.39&87.31&91.74&94.49\\
+GOG$_\text{fusion}$+NFST&47.15& 76.39&87.31&91.74&94.49\\
 \hline
-GOGfusion+XQDA& 47.97& 77.44& 86.80& 91.27&93.70\\  
+GOG$_\text{fusion}$+XQDA& 47.97& 77.44& 86.80& 91.27&93.70\\  
 \hline
-%GOGfusion+KLFDA & 47.97&77.06& 87.56&91.80&94.18\\
+%GOG$_\text{fusion}$+KLFDA & 47.97&77.06& 87.56&91.80&94.18\\
 %\hline
-GOGfusion+Proposed&48.32&76.90&87.78&91.93&94.49\\ %48.16%, 76.65%, 87.66%, 91.90%, 94.37% 
+GOG$_\text{fusion}$+Proposed&48.32&76.90&87.78&91.93&94.49\\ %48.16%, 76.65%, 87.66%, 91.90%, 94.37% 
 
 \hline
 
 %--------------------------------------------------------------
 \end{tabular}
 \end{table}
-\textbf{CUHK1} We can find that the rank 1, rank5, rank 10, rank 15, rank 20 score of GOGrgb combined with proposed metric are 5.4\%, 4.18\%,3.31\%,2.16\%,1.46\% higher than XQDA, and 0.31\%,1.22\%,1.34\%,1.17\%, 1.11\% than NFST.  Also the  rank 1, rank5, rank 10, rank 15, rank 20 score of GOGfusion combined with proposed metric are 4.57\%, 2.64\%, 0.70\%, 1.33\%, 0.83\% higher than GOGfusion combined with XQDA, and 0.41\%, 0.83\%, 0.88\%, 1.09\%, 1.14\% than GOGfusion combined with NFST.  
+\textbf{CUHK1} We can find that the rank 1, rank5, rank 10, rank 15, rank 20 score of GOG$_\text{rgb}$ combined with proposed metric are 5.4\%, 4.18\%,3.31\%,2.16\%,1.46\% higher than XQDA, and 0.31\%,1.22\%,1.34\%,1.17\%, 1.11\% than NFST.  Also the  rank 1, rank5, rank 10, rank 15, rank 20 score of GOG$_\text{fusion}$ combined with proposed metric are 4.57\%, 2.64\%, 0.70\%, 1.33\%, 0.83\% higher than GOG$_\text{fusion}$ combined with XQDA, and 0.41\%, 0.83\%, 0.88\%, 1.09\%, 1.14\% than GOG$_\text{fusion}$ combined with NFST.  
 
 \begin{figure}[H]
 \begin{raggedleft}
@@ -270,21 +270,21 @@ GOGfusion+Proposed&48.32&76.90&87.78&91.93&94.49\\ %48.16%, 76.65%, 87.66%, 91.9
 \hline
 Methods& 1 & 5 &10&15& 20\\
 \hline
-GOGrgb+NFST&55.60 &83.02 &89.07 &91.98&93.56 \\ 
+GOG$_\text{rgb}$+NFST&55.60 &83.02 &89.07 &91.98&93.56 \\ 
 \hline
-GOGrgb+XQDA&50.51 &80.06 &87.10 &90.99&93.21 \\ 
+GOG$_\text{rgb}$+XQDA&50.51 &80.06 &87.10 &90.99&93.21 \\ 
 \hline
-%GOGrgb+KLFDA&55.66&84.32&90.66&93.07& 94.63\\
+%GOG$_\text{rgb}$+KLFDA&55.66&84.32&90.66&93.07& 94.63\\
 %\hline
-GOGrgb+Proposed&55.91&84.24&90.41& 93.15&94.67\\  %55.86%, 84.28%, 90.45%, 93.09%, 94.65% 
+GOG$_\text{rgb}$+Proposed&55.91&84.24&90.41& 93.15&94.67\\  %55.86%, 84.28%, 90.45%, 93.09%, 94.65% 
 \hline
-GOGfusion+NFST&56.26 &83.66 &89.63 &92.22&93.70 \\ 
+GOG$_\text{fusion}$+NFST&56.26 &83.66 &89.63 &92.22&93.70 \\ 
 \hline
-GOGfusion+XQDA&52.10 &81.85&88.81 &91.98&94.01\\ 
+GOG$_\text{fusion}$+XQDA&52.10 &81.85&88.81 &91.98&94.01\\ 
 \hline
-%GOGfusion+KLFDA & 56.60&84.67&90.41&93.13&94.81\\
+%GOG$_\text{fusion}$+KLFDA & 56.60&84.67&90.41&93.13&94.81\\
 %\hline
-GOGfusion+Proposed&56.67&84.49& 90.51& 93.31&94.84\\
+GOG$_\text{fusion}$+Proposed&56.67&84.49& 90.51& 93.31&94.84\\
 \hline
 \end{tabular}\newline
 \end{table}
@@ -311,28 +311,28 @@ GOGfusion+Proposed&56.67&84.49& 90.51& 93.31&94.84\\
 \hline
 Methods& 1 & 5 &10& 15&20\\
 \hline
-GOGrgb+NFST&26.60 &53.80& 62.90&71.30&75.40 \\ 
+GOG$_\text{rgb}$+NFST&26.60 &53.80& 62.90&71.30&75.40 \\ 
 \hline
-GOGrgb+XQDA&31.10 & 55.70& 66.10 & 72.40&76.10\\  
+GOG$_\text{rgb}$+XQDA&31.10 & 55.70& 66.10 & 72.40&76.10\\  
 \hline
-%GOGrgb+KLFDA&23.70&51.70&63.10&69.90&73.60\\ 
+%GOG$_\text{rgb}$+KLFDA&23.70&51.70&63.10&69.90&73.60\\ 
 %\hline
-GOGrgb+Proposed&23.80&52.20&63.50&70.20&73.50\\  %23.80%, 52.10%, 63.50%, 70.20%, 73.50%
+GOG$_\text{rgb}$+Proposed&23.80&52.20&63.50&70.20&73.50\\  %23.80%, 52.10%, 63.50%, 70.20%, 73.50%
 \hline
-GOGfusion+NFST&34.10 &58.30& 67.60&73.80&78.30 \\  
+GOG$_\text{fusion}$+NFST&34.10 &58.30& 67.60&73.80&78.30 \\  
 \hline
-GOGfusion+XQDA&38.40& 61.30&70.80&75.60&79.30\\
+GOG$_\text{fusion}$+XQDA&38.40& 61.30&70.80&75.60&79.30\\
 \hline
-%GOGfusion+KLFDA & 31.90&56.90&66.60&72.60&77.50\\
+%GOG$_\text{fusion}$+KLFDA & 31.90&56.90&66.60&72.60&77.50\\
 %\hline
-GOGfusion+Proposed&32.30&57.40&66.30&73.40&78.00\\ %32.20%, 57.50%, 66.40%, 73.50%, 78.00(alpha = 0.7)   ()% 32.20%, 57.50%, 66.40%, 73.50%, 78.00%(alpha = 0.8)
+GOG$_\text{fusion}$+Proposed&32.30&57.40&66.30&73.40&78.00\\ %32.20%, 57.50%, 66.40%, 73.50%, 78.00(alpha = 0.7)   ()% 32.20%, 57.50%, 66.40%, 73.50%, 78.00%(alpha = 0.8)
 
 \hline
 
 \end{tabular}\newline
 \end{table}
 
-\textbf{Prid\_2011}  The  rank 1, rank5, rank 10, rank 15, rank 20 score of GOGfusion  combined with proposed metric are 6.1\%, 3.9\%, 4.5\%, 2.2\% and 1.3\% lower than GOGfusion combined with XQDA. The performance of NFST is slightly better than proposed metric. Also in terms of GOGrgb XQDA and NFST has better performance than the proposed one. So in this dataset the proposed metric has worse performance than XQDA and NFST.
+\textbf{Prid\_2011}  The  rank 1, rank5, rank 10, rank 15, rank 20 score of GOG$_\text{fusion}$  combined with proposed metric are 6.1\%, 3.9\%, 4.5\%, 2.2\% and 1.3\% lower than GOG$_\text{fusion}$ combined with XQDA. The performance of NFST is slightly better than proposed metric. Also in terms of GOG$_\text{rgb}$ XQDA and NFST has better performance than the proposed one. So in this dataset the proposed metric has worse performance than XQDA and NFST.
 
 \begin{figure}[H]
 \begin{raggedleft}
@@ -352,21 +352,21 @@ GOGfusion+Proposed&32.30&57.40&66.30&73.40&78.00\\ %32.20%, 57.50%, 66.40%, 73.5
 \hline
 Methods& 1 & 5 &10& 15&20\\
 \hline
-GOGrgb+NFST& 61.96&84.98 &90.53& 94.09&96.09 \\  %61.96%, 84.98%, 90.53%, 94.09%, 96.09%
+GOG$_\text{rgb}$+NFST& 61.96&84.98 &90.53& 94.09&96.09 \\  %61.96%, 84.98%, 90.53%, 94.09%, 96.09%
 \hline
-GOGrgb+XQDA&65.29 &85.02 & 91.13&94.76& 96.49\\ 
+GOG$_\text{rgb}$+XQDA&65.29 &85.02 & 91.13&94.76& 96.49\\ 
 \hline
-%GOGrgb+KLFDA&60.04&84.09&90.93&94.04&96.00 \\ 
+%GOG$_\text{rgb}$+KLFDA&60.04&84.09&90.93&94.04&96.00 \\ 
 %\hline
-GOGrgb+Proposed&60.71&84.53&91.29&94.13&96.27\\  %60.44%, 84.44%, 91.33%, 94.00%, 96.13%
+GOG$_\text{rgb}$+Proposed&60.71&84.53&91.29&94.13&96.27\\  %60.44%, 84.44%, 91.33%, 94.00%, 96.13%
 \hline
-GOGfusion+NFST& 64.53&86.62 & 92.93&95.78&97.42 \\ 
+GOG$_\text{fusion}$+NFST& 64.53&86.62 & 92.93&95.78&97.42 \\ 
 \hline
-GOGfusion+XQDA&68.40 & 87.42&93.47 &95.69& 97.02\\ 
+GOG$_\text{fusion}$+XQDA&68.40 & 87.42&93.47 &95.69& 97.02\\ 
 \hline
-%GOGfusion+KLFDA & 62.58&86.18&92.18&95.11&96.84\\
+%GOG$_\text{fusion}$+KLFDA & 62.58&86.18&92.18&95.11&96.84\\
 %\hline
-GOGfusion+Proposed&62.80&86.58&92.36&95.29& 96.89\\ % 62.62%, 86.44%, 92.36%, 95.20%, 96.93%(alpha = 0.7) 62.89%, 86.49%, 92.49%, 95.29%, 97.07%(alpha = 0.8)
+GOG$_\text{fusion}$+Proposed&62.80&86.58&92.36&95.29& 96.89\\ % 62.62%, 86.44%, 92.36%, 95.20%, 96.93%(alpha = 0.7) 62.89%, 86.49%, 92.49%, 95.29%, 97.07%(alpha = 0.8)
 
 \hline
 
@@ -392,21 +392,21 @@ GOGfusion+Proposed&62.80&86.58&92.36&95.29& 96.89\\ % 62.62%, 86.44%, 92.36%, 95
 \hline
 Methods& 1 & 5 &10& 15&20\\
 \hline
-GOGrgb+NFST& 21.84&41.28 &50.96& 57.44&62.88 \\ 
+GOG$_\text{rgb}$+NFST& 21.84&41.28 &50.96& 57.44&62.88 \\ 
 \hline
-GOGrgb+XQDA& 22.64&43.92 &55.12 &61.12&66.56\\ 
+GOG$_\text{rgb}$+XQDA& 22.64&43.92 &55.12 &61.12&66.56\\ 
 \hline
-%GOGrgb+KLFDA&23.44&43.04&52.16&59.12&64.88 \\ 
+%GOG$_\text{rgb}$+KLFDA&23.44&43.04&52.16&59.12&64.88 \\ 
 %\hline
-GOGrgb+Proposed&22.64&43.68&52.00&59.04&65.04\\  %22.80%, 43.76%, 52.08%, 59.04%, 65.12%
+GOG$_\text{rgb}$+Proposed&22.64&43.68&52.00&59.04&65.04\\  %22.80%, 43.76%, 52.08%, 59.04%, 65.12%
 \hline
-GOGfusion+NFST& 23.04&44.40 &54.40 &61.84&66.56\\ 
+GOG$_\text{fusion}$+NFST& 23.04&44.40 &54.40 &61.84&66.56\\ 
 \hline
-GOGfusion+XQDA& 23.68&47.28 &58.40 &65.84&69.68 \\ 
+GOG$_\text{fusion}$+XQDA& 23.68&47.28 &58.40 &65.84&69.68 \\ 
 \hline
-%GOGfusion+KLFDA &23.76&44.40& 55.36&61.76& 66.48\\
+%GOG$_\text{fusion}$+KLFDA &23.76&44.40& 55.36&61.76& 66.48\\
 %\hline
-GOGfusion+Proposed&23.92&44.64&54.88&62.32&66.40\\ %23.84%, 44.64%, 55.04%, 62.24%, 66.24%
+GOG$_\text{fusion}$+Proposed&23.92&44.64&54.88&62.32&66.40\\ %23.84%, 44.64%, 55.04%, 62.24%, 66.24%
 
 \hline
 
@@ -421,7 +421,7 @@ GOGfusion+Proposed&23.92&44.64&54.88&62.32&66.40\\ %23.84%, 44.64%, 55.04%, 62.2
 \end{raggedleft}
 \end{figure}
 
-\textbf{GRID} We can see that the rank 1 score of proposed metric are 0.24\% higher than XQDA and 0.88\% higher than NFST in terms of GOGfusion, but XQDA outperforms proposed metric on rank 5, rank 10, rank 15 and rank 20 scores. Besides, proposed metric outperforms NFST on rank 5, rank 10, rank 15 scores.\\
+\textbf{GRID} We can see that the rank 1 score of proposed metric are 0.24\% higher than XQDA and 0.88\% higher than NFST in terms of GOG$_\text{fusion}$, but XQDA outperforms proposed metric on rank 5, rank 10, rank 15 and rank 20 scores. Besides, proposed metric outperforms NFST on rank 5, rank 10, rank 15 scores.\\
 \indent In summary, the Re-ID performance is improved in VIPeR, CUHK01 dataset, and has almost the same performance with NFST and XQDA on prid\_450s dataset. Specifically, proposed metric learning has the best rank 1 score in GRID dataset and its performance is only second to XQDA. The proposed metric has superior performance for following reasons: (1) dimension reduction by KLFDA exploits the nonlinearity and the loss of discriminant information between classes are minimized. (2) the simplified relative distance limitation optimization helps to confine the Mahanalobis distance matrix $M$ to discriminate different classes.  
 %------------------------------------------------------------------------
 

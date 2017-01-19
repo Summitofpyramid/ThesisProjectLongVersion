@@ -19,9 +19,10 @@ Histogram descriptor extracts color statistics information of input images. A po
 
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVIPeR.png}
 \caption{A CMC comparison of color histogram on different color spaces }
+\label{CMCcolorspaces}
 \vspace{0em}
 \end{figure} 
-\label{CMCcolorspaces}
+
 %-----------------------------------------------------------------------------
 
 \textbf{Analysis of histogram based descriptor} The performance of histogram descriptors suffers from ignoring the spatial information. Since it doesn't consider the relative distribution of color, images with same kind color patches but different distribution may have the same histogram descriptor. One example is shown in figure \ref{RGBbgr}.
@@ -31,42 +32,39 @@ Histogram descriptor extracts color statistics information of input images. A po
 \centering
 \includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg}
 %\caption{RGB patch}
-\label{fig:side:a}
 \end{minipage}%
 \begin{minipage}[t]{0.5\linewidth}
 \centering
 \includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg}
 %\caption{GBR patch}
-\label{fig:side:b}
 \end{minipage}
 \caption{A comparison of two patches with same entropy but different color distribution}
-\end{figure}
 \label{RGBbgr}
+\end{figure}
+
 
 \subsection{Local binary pattern(LBP)}
-Local binary pattern \cite{LBP1, LBP2} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \ref{LBPtheory} is an example of LBP example. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many extended LBP like tLBP[], VLBP[], OCLBP[], and LBP is well known for its robustness to monotonic illumination variation.
+Local binary pattern \cite{LBP1, LBP2} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \ref{{LBPdemoshot}} is an example of LBP. by thresholding neighbour pixel of center pixel, the pixels are transformed into a binary integer. There are many extended LBP like tLBP, VLBP, OCLBP, and LBP is well known for its robustness to monotonic illumination variation.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png}
-\caption{An LBP example, by thresholding the neighbour pixels the pixels are transformed into a binary number }
+\caption{LBP: by thresholding the neighbour pixels the pixels are transformed into a binary number }
+\label{LBPtheory}
 \vspace{0em}
 \end{figure}
-\label{LBPtheory}
+
 
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
 \centering
 \includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg}
-
-\label{fig:side:a}
 \end{minipage}%
 \begin{minipage}[t]{0.5\linewidth}
 \centering
 \includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg}
-
-\label{fig:side:b}
 \end{minipage}
 \caption{One LBP example}
+\label{LBPdemoshot}
 \end{figure}
 
 
@@ -119,17 +117,18 @@ S_y &= \left[ \begin{matrix}
 \end{aligned}
 \end{equation}
 
-Using different masks will result different performance. Besides, gaussian smoothing is often performed before gradient computing. It has been shown that using 1-D Sobel without gaussian smoothing has the best performance. A HOG feature demo is shown below.
+Using different masks will result different performance. Besides, gaussian smoothing is often performed before gradient computing. It has been shown that using 1-D Sobel without gaussian smoothing has the best performance. A HOG feature demo is shown in figure \ref{fig:HOGdemo}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg}
 \caption{A demo of HOG feature with a cell size of six pixels}
+\label{fig:HOGdemo} 
 \vspace{0em}
 \end{figure}
-\label{fig:HOGdemo} 
+
 
 \section{Influence of background segmentation on different basic descriptors}
-Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from sequential videos than a single frame. In \cite{SDALF} the author provides foreground mask for all images following the algorithm in \cite{STEL}.  Some of those segmented foreground are shown in figure [] and it's obvious that certain bogy parts like head and feet are lost. To compare those loss's impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors and local binary pattern(LBP) is given in figure \ref{fig:SegHSV}, figure \ref{fig:SegLBP} and figure \ref{fig:SegHOG}. 
+Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from sequential videos than a single frame. In \cite{SDALF} the author provides foreground mask for all images following the algorithm in \cite{STEL}.  Some of those segmented foreground are shown in figure [] and it's obvious that certain bogy parts like head and feet are lost. To compare those loss's impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in figure \ref{fig:SegHSV}, figure \ref{fig:SegLBP} and figure \ref{fig:SegHOG}. 
 
 
 \begin{figure}[H]
@@ -142,28 +141,28 @@ Many works try to minimize impact of background noise of pedestrians' image. It'
 We can find that foreground segmentation decreases LBP and HOG's performance but increases HSV color histogram's performance on VIPeR dataset greatly. The reason for this is imperfect foreground segmentation causes body parts(like head and feet) loss and small black patches in torso and legs, and for some individuals a part of background scene is regarded as foreground. Since HSV color histogram doesn't handle spatial distribution but only color entropy, foreground segmentation improves its performance greatly. But since LBP and HOG handle texture for each sample patch, its performance suffers from those body parts loss and little black patches. What's more, we can infer that imperfect foreground segmentation will also decrease other textural feature's performance.
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png}
-\caption{A CMC comparison of foreground segmentation on LBP feature tested on VIPeR }
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png}
+\caption{A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR}
+\label{fig:SegHSV}
 \vspace{-1em}
 \end{figure} 
-\label{fig:SegLBP}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png}
-\caption{A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR}
+\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png}
+\caption{A CMC comparison of foreground segmentation on LBP feature tested on VIPeR }
+\label{fig:SegLBP}
 \vspace{-1em}
 \end{figure} 
-\label{fig:SegHSV}
-
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.jpg}
 \caption{A CMC comparison of foreground segmentation on HOG feature tested on VIPeR}
+\label{fig:SegHOG}
 \vspace{-1em}
 \end{figure} 
-\label{fig:SegHOG}
+
 
 
 \section{The hierarchical gaussian descriptor}
@@ -246,7 +245,7 @@ G(\bm{x}_i;\bm{\mu}_i,\bm{\Sigma}_i) \sim \bm{P}_i  = |\bm{\Sigma}_i|^{1/(d+1)} 
 The covariance matrix $\bm{\Sigma}_i$ can be singular for small number of pixels within the patch, to avoid this problem a regular factor $\lambda$ is added to $\bm{\Sigma}_i$ so that $\bm{\Sigma}_i = \bm{\Sigma}_i + \lambda\bm{I}$. 
 
 After this mapping, the $n+1$ dimensional SPD matrix needs to be transformed into a vector. The matrix logarithm is used to transform it to tangent space. A $d+1$ dimensional SPD matrix can be mapped as a $d*(d+3)/2+1$ vector, which can be denoted as $SPD_i^+ \sim \bm{p}_i = vec(log(\bm{P}_i))$. Since $\bm{P}_i$ is a positive symmetric matrix, it can be compressed by half that only the upper triangular elements are preserved. To ensure its norm-1 remain the same after compression, the magnitude of off-diagonal elements in $\bm{P}_i$ are timed by $\sqrt2$.  Let $\bm{Q}=\log{\bm{P}_i}$, we have
-\begin{equation}
+\begin{equation}\label{vectorize}
 %\begin{aligned}
  \bm{p}_i = [\bm{Q}_{1,1},\sqrt2\bm{Q}_{1,2},\sqrt2\bm{Q}_{1,3},\cdots,\sqrt2\bm{Q}_{1,d+1},
  \end{equation}
@@ -254,7 +253,7 @@ After this mapping, the $n+1$ dimensional SPD matrix needs to be transformed int
  \bm{Q}_{2,2},\sqrt2\bm{Q}_{2,3,},\cdots,\sqrt2\bm{Q}_{2,d+1,},\cdots,\bm{Q}_{d+1,d+1,}]
 %\end{aligned}
 \end{equation}
-\label{vectorize}
+
 
 To model the slide with a multivariate gaussian distribution $\bm{G}_r$, we have known that all patches inside this slide been represented as vector $\bm{p}_j$, thus the mean $\bm{\mu}_r$ and covariance matrix ${\Sigma}_r$ of $\bm{G}_r$ can be computed by MLE with equations
 \begin{equation}

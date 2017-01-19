@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JAN 2017 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JAN 2017 13:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1478,21 +1478,8 @@ Package biblatex Info: ... file 'english.lbx' found.
 File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 )
 (./main.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
-(./Chapters/Chapter3.aux
-
-LaTeX Warning: Label `fig:side:a' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
-) (./Chapters/Chapter4.aux
-
-LaTeX Warning: Label `fig:side:a' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
-) (./Chapters/Chapter5.aux) (./Chapters/Chapter6.aux))
+(./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux)
+(./Chapters/Chapter6.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
@@ -1776,7 +1763,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 \openout5 = `main.toc'.
 
  [5] (./main.lof
-Overfull \hbox (6.2822pt too wide) in paragraph at lines 21--21
+Overfull \hbox (6.2822pt too wide) in paragraph at lines 22--22
  [][] [][][]\T1/ptm/m/n/12 A CMC com-par-i-son of fore-ground seg-men-ta-tion o
 n LBP fea-ture tested 
  []
@@ -1988,7 +1975,7 @@ File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg Graphic file (ty
 pe jpg)
  <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.j
-pg used on input line 32.
+pg used on input line 33.
 (pdftex.def)             Requested size: 158.99377pt x 119.23668pt.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg, id=628, 1124.2pt x 8
@@ -2000,7 +1987,12 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.j
 pg used on input line 38.
 (pdftex.def)             Requested size: 158.99377pt x 119.23668pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png, id=632, 193.1023
+
+LaTeX Warning: Reference `{LBPdemoshot}' on page 23 undefined on input line 47.
+
+
+
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png, id=631, 193.1023
 9pt x 44.35619pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png Graphic file
  (type png)
@@ -2010,24 +2002,24 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPde
 mo.png used on input line 50.
 (pdftex.def)             Requested size: 323.22449pt x 74.24847pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg, id=633, 602.25p
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg, id=632, 602.25p
 t x 602.25pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg Graphic fil
 e (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Thesh
-ot1.jpg used on input line 59.
+ot1.jpg used on input line 60.
 (pdftex.def)             Requested size: 158.99377pt x 158.98897pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg, id=634, 600.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg, id=633, 600.
 2425pt x 600.2425pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg Graphic 
 file (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Thesh
-otLBP1.jpg used on input line 65.
+otLBP1.jpg used on input line 64.
 (pdftex.def)             Requested size: 158.99377pt x 158.99023pt.
  [23 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg> </Users/Johnson
 Johnson/Downloads/thesis_1/Figures/GBR.jpg> </Users/JohnsonJohnson/Downloads/th
@@ -2041,10 +2033,10 @@ ic file (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfe
-atureDemo.jpg used on input line 125.
+atureDemo.jpg used on input line 123.
 (pdftex.def)             Requested size: 404.02908pt x 298.80946pt.
 
-Overfull \hbox (6.06322pt too wide) in paragraph at lines 122--128
+Overfull \hbox (6.06322pt too wide) in paragraph at lines 120--127
 []\T1/ptm/m/n/12 Using dif-fer-ent masks will re-sult dif-fer-ent per-for-mance
 . Be-sides, gaus-sian smooth-
  []
@@ -2057,29 +2049,29 @@ File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg Graphic
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdem
-o2VIPeR.jpg used on input line 137.
+o2VIPeR.jpg used on input line 136.
 (pdftex.def)             Requested size: 404.02908pt x 116.81583pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png
-, id=664, 578.16pt x 433.62pt>
-File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
-n.png Graphic file (type png)
-
-<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison
-.png>
-Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
-_LBP_FGSegComparison.png used on input line 145.
-(pdftex.def)             Requested size: 404.02908pt x 303.02246pt.
- [26 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg>]
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png, 
-id=670, 578.16pt x 433.62pt>
+id=664, 578.16pt x 433.62pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.
 png Graphic file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.p
 ng>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
-_FG_HSV_comparison.png used on input line 153.
+_FG_HSV_comparison.png used on input line 144.
+(pdftex.def)             Requested size: 404.02908pt x 303.02246pt.
+ [26 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg>]
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png
+, id=670, 578.16pt x 433.62pt>
+File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
+n.png Graphic file (type png)
+
+<use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison
+.png>
+Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
+_LBP_FGSegComparison.png used on input line 152.
 (pdftex.def)             Requested size: 404.02908pt x 303.02246pt.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.jpg, i
@@ -2090,10 +2082,10 @@ pg Graphic file (type jpg)
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.jp
 g>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR
-_HOG_FGcomparison.jpg used on input line 162.
+_HOG_FGcomparison.jpg used on input line 160.
 (pdftex.def)             Requested size: 404.02908pt x 319.23685pt.
- [27 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
-n.png> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_compariso
+ [27 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.
+png> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
 n.png>] [28 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcompa
 rison.jpg>] [29] [30] [31]
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png, id=716, 40
@@ -2103,7 +2095,7 @@ c file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Integ
-ralImage.png used on input line 294.
+ralImage.png used on input line 293.
 (pdftex.def)             Requested size: 404.02908pt x 137.97113pt.
 
 [32] [33 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png>])
@@ -2135,7 +2127,7 @@ ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo2.jpg used on input line 210.
+demo2.jpg used on input line 211.
 (pdftex.def)             Requested size: 404.02908pt x 303.01915pt.
  [41 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg>]
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg, id=821, 1124.
@@ -2145,7 +2137,7 @@ ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo3.jpg used on input line 218.
+demo3.jpg used on input line 220.
 (pdftex.def)             Requested size: 404.02908pt x 303.01915pt.
  [42 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg> </Users/
 JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg>]
@@ -2156,10 +2148,10 @@ hic file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradi
-entdescent.png used on input line 262.
+entdescent.png used on input line 265.
 (pdftex.def)             Requested size: 161.60916pt x 177.36414pt.
 
-Overfull \hbox (5.0517pt too wide) in paragraph at lines 258--266
+Overfull \hbox (5.0517pt too wide) in paragraph at lines 261--269
 \T1/ptm/m/n/12 This pro-cess is re-peated un-til cer-tain con-di-tion is met, g
 en-er-ally when gra-di-ent $\OMS/cmsy/m/n/12 jj\OML/cmm/b/it/12 G\OMS/cmsy/m/n/
 12 jj ^^T
@@ -2173,7 +2165,7 @@ file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/multi
-Minima.png used on input line 271.
+Minima.png used on input line 274.
 (pdftex.def)             Requested size: 158.99377pt x 104.4646pt.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg, id=831, 746.01291
@@ -2183,7 +2175,7 @@ File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg Graphic file
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigza
-g.jpg used on input line 277.
+g.jpg used on input line 280.
 (pdftex.def)             Requested size: 158.99377pt x 119.24213pt.
  [43] [44 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png
  (PNG copy)> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png>
@@ -2439,6 +2431,12 @@ ed-to.pdf>]
 
  (./Chapters/Chapter6.tex
 Chapter 6.
+
+Overfull \hbox (7.42241pt too wide) in paragraph at lines 7--11
+\T1/ptm/m/n/12 datasets, but XQDA and NFST out-per-forms the pro-posed met-ric 
+learn-ing on Prid_2011
+ []
+
 )
 1: section
 [60
@@ -2503,18 +2501,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1E437DF6D468CBF3FB0883642A3F9E60;8635.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30786 strings out of 493089
- 626019 string characters out of 6134842
- 745840 words of memory out of 5000000
- 33593 multiletter control sequences out of 15000+600000
- 78842 words of font info for 101 fonts, out of 8000000 for 9000
+ 30791 strings out of 493089
+ 626077 string characters out of 6134842
+ 746028 words of memory out of 5000000
+ 33597 multiletter control sequences out of 15000+600000
+ 83208 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,20n,83p,10377b,2549s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -2539,7 +2537,7 @@ mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on main.pdf (74 pages, 3435957 bytes).
+Output written on main.pdf (74 pages, 3436913 bytes).
 PDF statistics:
  1165 PDF objects out of 1200 (max. 8388607)
  995 compressed objects within 10 object streams
