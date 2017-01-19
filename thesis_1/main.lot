@@ -5,18 +5,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Optimization algorithm of Mahanalobis distance matrix learning\relax }}{45}{table.caption.136}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Optimization algorithm of Mahanalobis distance matrix learning\relax }}{46}{table.caption.139}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Testing setting for different datasets\relax }}{49}{table.caption.143}
-\contentsline {table}{\numberline {5.2}{\ignorespaces The influence of data preprocessing on VIPeR\relax }}{50}{table.caption.145}
-\contentsline {table}{\numberline {5.3}{\ignorespaces The influence of data preprocessing on CUHK1\relax }}{50}{table.caption.146}
-\contentsline {table}{\numberline {5.4}{\ignorespaces The influence of data preprocessing on prid\_2011\relax }}{50}{table.caption.147}
-\contentsline {table}{\numberline {5.5}{\ignorespaces The influence of data preprocessing on prid\_450s\relax }}{50}{table.caption.148}
-\contentsline {table}{\numberline {5.6}{\ignorespaces The influence of data preprocessing on GRID\relax }}{51}{table.caption.149}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Parameters setting\relax }}{52}{table.caption.153}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Performance of different metrics on VIPeR\relax }}{53}{table.caption.155}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of different metrics on CUHK1\relax }}{54}{table.caption.157}
-\contentsline {table}{\numberline {5.10}{\ignorespaces Performance of different metrics on prid\_2011\relax }}{55}{table.caption.159}
-\contentsline {table}{\numberline {5.11}{\ignorespaces Performance of different metrics on prid\_450s\relax }}{56}{table.caption.161}
-\contentsline {table}{\numberline {5.12}{\ignorespaces Performance of different metrics on GRID\relax }}{57}{table.caption.163}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Testing setting for different datasets\relax }}{50}{table.caption.146}
+\contentsline {table}{\numberline {5.2}{\ignorespaces The influence of data preprocessing on VIPeR\relax }}{51}{table.caption.148}
+\contentsline {table}{\numberline {5.3}{\ignorespaces The influence of data preprocessing on CUHK1\relax }}{51}{table.caption.149}
+\contentsline {table}{\numberline {5.4}{\ignorespaces The influence of data preprocessing on prid\_2011\relax }}{51}{table.caption.150}
+\contentsline {table}{\numberline {5.5}{\ignorespaces The influence of data preprocessing on prid\_450s\relax }}{51}{table.caption.151}
+\contentsline {table}{\numberline {5.6}{\ignorespaces The influence of data preprocessing on GRID\relax }}{52}{table.caption.152}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Parameters setting\relax }}{53}{table.caption.156}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Performance of different metrics on VIPeR\relax }}{54}{table.caption.158}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of different metrics on CUHK1\relax }}{55}{table.caption.160}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Performance of different metrics on prid\_2011\relax }}{56}{table.caption.162}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Performance of different metrics on prid\_450s\relax }}{57}{table.caption.164}
+\contentsline {table}{\numberline {5.12}{\ignorespaces Performance of different metrics on GRID\relax }}{58}{table.caption.166}
 \addvspace {10\p@ }
