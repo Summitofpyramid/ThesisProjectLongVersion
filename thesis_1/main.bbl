@@ -16,7 +16,7 @@
   {}
 \endgroup
 
-\entry{PSmodelRevisit}{article}{}
+\entry{PSmodelRevisit}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {Andriluka}{A.}%
@@ -34,9 +34,14 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{AMRSSB1}
   \strng{fullhash}{AMRSSB1}
   \field{sortinit}{A}
+  \field{booktitle}{Computer Vision and Pattern Recognition, 2009. CVPR 2009.
+  IEEE Conference on}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Pictorial Structures Revisited: People Detection and
   Articulated Pose Estimation}}
@@ -44,7 +49,7 @@
   \field{year}{2009}
 \endentry
 
-\entry{SARC3D}{article}{}
+\entry{SARC3D}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {Baltieri}{B.}%
@@ -62,9 +67,13 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {Springer}%
+  }
   \strng{namehash}{BDVRCR1}
   \strng{fullhash}{BDVRCR1}
   \field{sortinit}{B}
+  \field{booktitle}{International Conference on Image Analysis and Processing}
   \field{pages}{1\bibrangedash 10}
   \field{title}{{SARC3D: a new 3D body model for People Tracking and
   Re-identification}}
@@ -98,10 +107,12 @@
   \strng{namehash}{BG+1}
   \strng{fullhash}{BGASKS1}
   \field{sortinit}{B}
-  \field{pages}{1\bibrangedash 72}
+  \field{number}{4}
+  \field{pages}{270\bibrangedash 286}
   \field{title}{{A Survey of Approaches and Trends in Person
   Re-identification}}
-  \field{journaltitle}{IMAVIS}
+  \field{volume}{32}
+  \field{journaltitle}{Image and Vision Computing}
   \field{month}{03}
   \field{year}{2014}
 \endentry
@@ -132,7 +143,7 @@
   \field{year}{2012}
 \endentry
 
-\entry{MultiPersonREID}{article}{}
+\entry{MultiPersonREID}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Bedagkar-Gala}{B.-G.}%
@@ -145,9 +156,14 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{BGASSK2}
   \strng{fullhash}{BGASSK2}
   \field{sortinit}{B}
+  \field{booktitle}{Computer Vision Workshops (ICCV Workshops), 2011 IEEE
+  International Conference on}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Multiple Person Re-identification using Part based
   Spatio-Temporal Color Appearance Model}}
@@ -155,7 +171,7 @@
   \field{year}{2011}
 \endentry
 
-\entry{SimilarityLearning}{article}{}
+\entry{SimilarityLearning}{inproceedings}{}
   \name{author}{4}{}{%
     {{}%
      {Chen}{C.}%
@@ -181,6 +197,8 @@
   \strng{namehash}{CD+1}
   \strng{fullhash}{CDYZHGWNZa1}
   \field{sortinit}{C}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 9}
   \field{title}{{Similarity Learning on an Explicit Polynomial Kernel Feature
   Map for Person Re-Identification}}
@@ -188,7 +206,7 @@
   \field{year}{2015}
 \endentry
 
-\entry{MultiCNN}{article}{}
+\entry{MultiCNN}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
      {Cheng}{C.}%
@@ -219,6 +237,8 @@
   \strng{namehash}{CD+2}
   \strng{fullhash}{CDGYZSWJZN1}
   \field{sortinit}{C}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 10}
   \field{title}{{Person Re-Identification by Multi-Channel Parts-Based CNN With
   Improved Triplet Loss Function}}
@@ -226,7 +246,7 @@
   \field{year}{2016}
 \endentry
 
-\entry{ImportantFeatures}{article}{}
+\entry{ImportantFeatures}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Chunxiao~Liu}{C.~L.}%
@@ -239,16 +259,20 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{CLSGCCLLX1}
   \strng{fullhash}{CLSGCCLLX1}
   \field{sortinit}{C}
+  \field{booktitle}{European Conference on Computer Vision}
   \field{pages}{1\bibrangedash 11}
   \field{title}{{Person Re-identification: What Features Are Important?}}
   \field{month}{11}
   \field{year}{2015}
 \endentry
 
-\entry{HOG}{article}{}
+\entry{HOG}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Dalal}{D.}%
@@ -264,13 +288,15 @@
   \strng{namehash}{DNTB1}
   \strng{fullhash}{DNTB1}
   \field{sortinit}{D}
-  \field{pages}{1\bibrangedash 8}
+  \field{booktitle}{Computer Vision and Pattern Recognition, 2005. CVPR 2005.
+  IEEE Computer Society Conference on}
+  \field{pages}{886\bibrangedash 893}
   \field{title}{{Histograms of Oriented Gradients for Human Detection}}
   \field{month}{01}
-  \field{year}{2017}
+  \field{year}{2005}
 \endentry
 
-\entry{ITML}{article}{}
+\entry{ITML}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
      {Davis}{D.}%
@@ -298,16 +324,21 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {ACM}%
+  }
   \strng{namehash}{DJV+1}
   \strng{fullhash}{DJVKBJPSSDIS1}
   \field{sortinit}{D}
-  \field{pages}{1\bibrangedash 8}
+  \field{booktitle}{Proceedings of the 24th international conference on Machine
+  learning}
+  \field{pages}{209\bibrangedash 216}
   \field{title}{Information-Theoretic Metric Learning}
   \field{month}{06}
   \field{year}{2007}
 \endentry
 
-\entry{ImprovedCNN}{article}{}
+\entry{ImprovedCNN}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Ejaz~Ahmed}{E.~A.}%
@@ -323,10 +354,11 @@
   \strng{namehash}{EAMJMTK1}
   \strng{fullhash}{EAMJMTK1}
   \field{sortinit}{E}
+  \field{booktitle}{{The IEEE Conference on Computer Vision and Pattern
+  Recognition (CVPR)}}
   \field{pages}{1\bibrangedash 9}
   \field{title}{{An Improved Deep Learning Architecture for Person
   Re-Identification}}
-  \field{month}{04}
   \field{year}{2015}
 \endentry
 
@@ -359,11 +391,13 @@
      {}{}}%
   }
   \list{organization}{1}{%
-    {CVPR}%
+    {IEEE}%
   }
   \strng{namehash}{FM+1}
   \strng{fullhash}{FMBLPAMVCM1}
   \field{sortinit}{F}
+  \field{booktitle}{Computer Vision and Pattern Recognition (CVPR), 2010 IEEE
+  Conference on}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Person Re-Identification by Symmetry-Driven Accumulation of
   Local Features}}
@@ -387,13 +421,16 @@
   \strng{namehash}{FPFHDP1}
   \strng{fullhash}{FPFHDP1}
   \field{sortinit}{F}
+  \field{number}{1}
   \field{pages}{1\bibrangedash 42}
   \field{title}{{Pictorial Structures for Object Recognition}}
+  \field{volume}{61}
+  \field{journaltitle}{International Journal of Computer Vision}
   \field{month}{01}
-  \field{year}{2013}
+  \field{year}{2005}
 \endentry
 
-\entry{LPP}{article}{}
+\entry{LPP}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {He}{H.}%
@@ -409,13 +446,14 @@
   \strng{namehash}{HXNP1}
   \strng{fullhash}{HXNP1}
   \field{sortinit}{H}
+  \field{booktitle}{NIPS}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Locality Preserving Projections}}
   \field{month}{11}
-  \field{year}{2016}
+  \field{year}{2003}
 \endentry
 
-\entry{STEL}{article}{}
+\entry{STEL}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
      {Jojic}{J.}%
@@ -446,6 +484,7 @@
   \strng{namehash}{JN+1}
   \strng{fullhash}{JNPACMMVFB1}
   \field{sortinit}{J}
+  \field{booktitle}{Computer Vision and Pattern Recognition}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Stel component analysis: Modeling spatial correlations in
   image class structure}}
@@ -485,7 +524,7 @@
   \field{year}{2010}
 \endentry
 
-\entry{KISSME}{article}{}
+\entry{KISSME}{inproceedings}{}
   \name{author}{5}{}{%
     {{}%
      {Kostinger}{K.}%
@@ -513,10 +552,15 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{KM+1}
   \strng{fullhash}{KMHMWPRPMBH1}
   \field{sortinit}{K}
-  \field{pages}{1\bibrangedash 8}
+  \field{booktitle}{Computer Vision and Pattern Recognition (CVPR), 2012 IEEE
+  Conference on}
+  \field{pages}{2288\bibrangedash 2295}
   \field{title}{{Large Scale Metric Learning from Equivalence Constraints}}
   \field{month}{04}
   \field{year}{2012}
@@ -545,25 +589,16 @@
      {}{}%
      {}{}}%
   }
-  \list{organization}{1}{%
-    {CVPR}%
-  }
   \strng{namehash}{LS+1}
   \strng{fullhash}{LSHYZXLSZ1}
   \field{sortinit}{L}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 10}
   \field{title}{{Person Re-identification by Local Maximal Occurrence
   Representation and Metric Learning}}
   \field{month}{04}
   \field{year}{2015}
-\endentry
-
-\entry{LFDAdr}{proceedings}{}
-  \field{sortinit}{L}
-  \field{title}{{Local Fisher Discriminant Analysis for Supervised
-  Dimensionality Reduction}}
-  \field{month}{12}
-  \field{year}{2016}
 \endentry
 
 \entry{MultiVarGau}{article}{}
@@ -587,14 +622,17 @@
   \strng{namehash}{LMMOMREA1}
   \strng{fullhash}{LMMOMREA1}
   \field{sortinit}{L}
+  \field{number}{1}
   \field{pages}{1\bibrangedash 15}
   \field{title}{{Multivariate Normal Distributions Parametrized as a Riemannian
   Symmetric Space}}
+  \field{volume}{74}
+  \field{journaltitle}{Journal of Multivariate Analysis}
   \field{month}{06}
-  \field{year}{2002}
+  \field{year}{2000}
 \endentry
 
-\entry{SIFT}{article}{}
+\entry{SIFT}{inproceedings}{}
   \name{author}{1}{}{%
     {{}%
      {Lowe}{L.}%
@@ -602,9 +640,14 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{LDG1}
   \strng{fullhash}{LDG1}
   \field{sortinit}{L}
+  \field{booktitle}{Computer vision, 1999. The proceedings of the seventh IEEE
+  international conference on}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Object Recognition from Local Scale-Invariant Features}}
   \field{month}{06}
@@ -637,14 +680,16 @@
   \strng{namehash}{MT+1}
   \strng{fullhash}{MTOTSESY1}
   \field{sortinit}{M}
-  \field{pages}{1\bibrangedash 10}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
+  \field{pages}{1363\bibrangedash 1372}
   \field{title}{{Hierarchical Gaussian Descriptor for Person
   Re-Identification}}
   \field{month}{12}
   \field{year}{2016}
 \endentry
 
-\entry{RecurrentCNN}{article}{}
+\entry{RecurrentCNN}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {McLaughlin}{M.}%
@@ -665,6 +710,8 @@
   \strng{namehash}{MNRJMdMP1}
   \strng{fullhash}{MNRJMdMP1}
   \field{sortinit}{M}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 10}
   \field{title}{{Recurrent Convolutional Network for Video-Based Person
   Re-Identification}}
@@ -672,7 +719,7 @@
   \field{year}{2016}
 \endentry
 
-\entry{PCCA}{article}{}
+\entry{PCCA}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Mignon}{M.}%
@@ -685,9 +732,14 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{MAJF1}
   \strng{fullhash}{MAJF1}
   \field{sortinit}{M}
+  \field{booktitle}{Computer Vision and Pattern Recognition (CVPR), 2012 IEEE
+  Conference on}
   \field{pages}{1\bibrangedash 7}
   \field{title}{{PCCA: A New Approach for Distance Learning from Sparse
   Pairwise Constraints}}
@@ -716,13 +768,16 @@
   \strng{namehash}{MBJTPA1}
   \strng{fullhash}{MBJTPA1}
   \field{sortinit}{M}
-  \field{pages}{1\bibrangedash 16}
+  \field{number}{11}
+  \field{pages}{1771\bibrangedash 1782}
   \field{title}{{Bayesian Face Recognition}}
+  \field{volume}{33}
+  \field{journaltitle}{Pattern Recognition}
   \field{month}{01}
-  \field{year}{2017}
+  \field{year}{2000}
 \endentry
 
-\entry{LBP2}{inproceedings}{}
+\entry{LBP2}{article}{}
   \name{author}{3}{}{%
     {{}%
      {Ojala}{O.}%
@@ -744,8 +799,10 @@
   \strng{fullhash}{OTPMHD1}
   \field{sortinit}{O}
   \field{booktitle}{Pattern Recognition}
+  \field{pages}{51\bibrangedash 59}
   \field{title}{A Comparative Study of Texture Measures with Classification
   Based on Feature Distributions}
+  \field{journaltitle}{Pattern recognition}
   \field{year}{1996}
 \endentry
 
@@ -767,16 +824,20 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{OTPMHD1}
   \strng{fullhash}{OTPMHD1}
   \field{sortinit}{O}
   \field{booktitle}{ICPR}
+  \field{pages}{582\bibrangedash 585}
   \field{title}{Performance evaluation of texture measures with classification
   based on Kullback discrimination of distributions}
   \field{year}{1994}
 \endentry
 
-\entry{AutoRela}{article}{}
+\entry{AutoRela}{inproceedings}{}
   \name{author}{2}{}{%
     {{}%
      {Otsu}{O.}%
@@ -792,14 +853,15 @@
   \strng{namehash}{OTKN1}
   \strng{fullhash}{OTKN1}
   \field{sortinit}{O}
+  \field{booktitle}{European conference on computer vision}
   \field{pages}{1\bibrangedash 13}
-  \field{title}{{LNCS 5302 - Image Feature Extraction Using Gradient Local
+  \field{title}{{Image Feature Extraction Using Gradient Local
   Auto-Correlations}}
   \field{month}{08}
   \field{year}{2008}
 \endentry
 
-\entry{MetricEnsembles}{article}{}
+\entry{MetricEnsembles}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {Paisitkriangkrai}{P.}%
@@ -820,6 +882,8 @@
   \strng{namehash}{PSSCHAvd1}
   \strng{fullhash}{PSSCHAvd1}
   \field{sortinit}{P}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 10}
   \field{title}{{Learning to Rank in Person Re-Identification With Metric
   Ensembles}}
@@ -906,7 +970,7 @@
   \field{year}{2010}
 \endentry
 
-\entry{Mahadist}{article}{}
+\entry{Mahadist}{incollection}{}
   \name{author}{5}{}{%
     {{}%
      {Roth}{R.}%
@@ -934,9 +998,13 @@
      {}{}%
      {}{}}%
   }
+  \list{publisher}{1}{%
+    {Springer}%
+  }
   \strng{namehash}{RPM+1}
   \strng{fullhash}{RPMHMKMBCBH1}
   \field{sortinit}{R}
+  \field{booktitle}{Person Re-Identification}
   \field{pages}{1\bibrangedash 21}
   \field{title}{{Mahalanobis Distance Learning for Person Re-Identification}}
   \field{month}{07}
@@ -957,11 +1025,12 @@
   \field{pages}{1\bibrangedash 18}
   \field{title}{{Appearance Descriptors for Person Re-identification: a
   Comprehensive Review}}
+  \field{journaltitle}{arXiv preprint arXiv:1307.5748}
   \field{month}{07}
-  \field{year}{2016}
+  \field{year}{2013}
 \endentry
 
-\entry{SemanticMethod}{article}{}
+\entry{SemanticMethod}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {Shi}{S.}%
@@ -982,28 +1051,13 @@
   \strng{namehash}{SZHTMXT1}
   \strng{fullhash}{SZHTMXT1}
   \field{sortinit}{S}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 10}
   \field{title}{{Transferring a Semantic Representation for Person
   Re-Identification and Search}}
   \field{month}{04}
   \field{year}{2015}
-\endentry
-
-\entry{KLFDA}{inproceedings}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Sugiyama}{S.}%
-     {Masashi}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SM1}
-  \strng{fullhash}{SM1}
-  \field{sortinit}{S}
-  \field{title}{{Local Fisher Discriminant Analysis for Supervised
-  Dimensionality Reduction}}
-  \field{month}{12}
-  \field{year}{2016}
 \endentry
 
 \entry{RegionCovariance}{inproceedings}{}
@@ -1024,9 +1078,13 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {Springer}%
+  }
   \strng{namehash}{TOPFMP1}
   \strng{fullhash}{TOPFMP1}
   \field{sortinit}{T}
+  \field{booktitle}{European conference on computer vision}
   \field{pages}{1\bibrangedash 14}
   \field{title}{{Region Covariance: A Fast Descriptor for Detection and
   Classification}}
@@ -1060,9 +1118,11 @@
   \strng{namehash}{W+1}
   \strng{fullhash}{WQKSKL1}
   \field{sortinit}{W}
-  \field{pages}{1\bibrangedash 38}
+  \field{pages}{207\bibrangedash 244}
   \field{title}{{Distance Metric Learning for Large Margin Nearest Neighbor
   Classification}}
+  \field{volume}{10}
+  \field{journaltitle}{Journal of Machine Learning Research}
   \field{month}{02}
   \field{year}{2009}
 \endentry
@@ -1084,7 +1144,7 @@
   \field{year}{2005}
 \endentry
 
-\entry{DeepfeatureCNN}{article}{}
+\entry{DeepfeatureCNN}{inproceedings}{}
   \name{author}{4}{}{%
     {{}%
      {Xiao}{X.}%
@@ -1110,6 +1170,8 @@
   \strng{namehash}{XT+1}
   \strng{fullhash}{XTHWWX1}
   \field{sortinit}{X}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 10}
   \field{title}{{Learning Deep Feature Representations with Domain Guided
   Dropout for Person Re-identification }}
@@ -1117,7 +1179,7 @@
   \field{year}{2016}
 \endentry
 
-\entry{KernelVersionMetrics}{article}{}
+\entry{KernelVersionMetrics}{inproceedings}{}
   \name{author}{4}{}{%
     {{}%
      {Xiong}{X.}%
@@ -1140,9 +1202,13 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {Springer}%
+  }
   \strng{namehash}{XF+1}
   \strng{fullhash}{XFGMCOMS1}
   \field{sortinit}{X}
+  \field{booktitle}{European conference on computer vision}
   \field{pages}{1\bibrangedash 16}
   \field{title}{{Person Re-Identification using Kernel-based Metric Learning
   Methods}}
@@ -1186,12 +1252,12 @@
   \strng{namehash}{YY+1}
   \strng{fullhash}{YYYJYJLSYDLSZ1}
   \field{sortinit}{Y}
-  \field{booktitle}{European Con- ference on Computer Vision (ECCV)}
+  \field{booktitle}{European Conference on Computer Vision}
   \field{title}{Salient color names for person re-identification}
   \field{year}{2014}
 \endentry
 
-\entry{TDL}{article}{}
+\entry{TDL}{inproceedings}{}
   \name{author}{4}{}{%
     {{}%
      {You}{Y.}%
@@ -1217,13 +1283,15 @@
   \strng{namehash}{YJ+1}
   \strng{fullhash}{YJWALXZWS1}
   \field{sortinit}{Y}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
   \field{pages}{1\bibrangedash 9}
   \field{title}{{Top-push Video-based Person Re-identification}}
   \field{month}{01}
-  \field{year}{2015}
+  \field{year}{2016}
 \endentry
 
-\entry{NFST}{article}{}
+\entry{NFST}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {Zhang}{Z.}%
@@ -1244,7 +1312,9 @@
   \strng{namehash}{ZLXTGS1}
   \strng{fullhash}{ZLXTGS1}
   \field{sortinit}{Z}
-  \field{pages}{1\bibrangedash 10}
+  \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}
+  \field{pages}{1239\bibrangedash 1248}
   \field{title}{{Learning a Discriminative Null Space for Person
   Re-identification}}
   \field{month}{03}
@@ -1283,7 +1353,7 @@
   \field{year}{2014}
 \endentry
 
-\entry{PRDC}{article}{}
+\entry{PRDC}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
      {Zheng}{Z.}%
@@ -1301,9 +1371,14 @@
      {}{}%
      {}{}}%
   }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
   \strng{namehash}{ZWGSXT1}
   \strng{fullhash}{ZWGSXT1}
   \field{sortinit}{Z}
+  \field{booktitle}{Computer vision and pattern recognition (CVPR), 2011 IEEE
+  conference on}
   \field{pages}{1\bibrangedash 8}
   \field{title}{{Person Re-identification by Probabilistic Relative Distance
   Comparison}}

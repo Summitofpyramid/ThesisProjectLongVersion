@@ -13,7 +13,7 @@
 \caption{Pedestrians in prid\_450 dataset}
 \end{raggedleft}
 \end{figure}
-\textbf{Prid\_2011} dataset consists of images extracted from multiple person trajectories recorded from two different, static surveillance cameras. Images from these cameras contain a viewpoint change and a stark difference in illumination, background and camera characteristics.Camera view A shows 385 persons, camera view B shows 749 persons. The first 200 persons appear in both camera views, The remaining persons in each camera view complete the gallery set of the corresponding view. Hence, a typical evaluation consists of searching the 200 first persons of one camera view in all persons of the other view. This means that there are two possible evaluation procedures, either the probe set is drawn from view A and the gallery set is drawn from view B. In this paper, we randomly select 100 persons that appeared in both camera views as training pairs, and the remaining 100 persons of the 200 person pairs from camera a is used as probe set while the 649 remaining persons from camera B are used for gallery images.\\
+\textbf{Prid\_2011} dataset consists of images extracted from multiple person trajectories recorded from two different, static surveillance cameras. Images from these cameras contain a viewpoint change and a stark difference in illumination, background and camera characteristics. Camera view A shows 385 persons, camera view B shows 749 persons. The first 200 persons appear in both camera views, The remaining persons in each camera view complete the gallery set of the corresponding view. Hence, a typical evaluation consists of searching the 200 first persons of one camera view in all persons of the other view. This means that there are two possible evaluation procedures, either the probe set is drawn from view A and the gallery set is drawn from view B. In this paper, we randomly select 100 persons that appeared in both camera views as training pairs, and the remaining 100 persons of the 200 person pairs from camera a is used as probe set while the 649 remaining persons from camera B are used for gallery images.\\
 %\begin{figure}[H]
 %\begin{raggedleft}
 %\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots.eps}
@@ -31,7 +31,8 @@
 \end{raggedleft}
 \end{figure}
 
-\textbf{GRID} There are two camera views in this dataset. Folder probe contains 250 probe images captured in one view (file names starts from 0001  to 0250). Folder gallery contains 250 true match images of the probes (file names starts from 0001  to 0250). Besides, in gallery folder there are a total of 775 additional images that do not belong to any of the probes (file name starts with 0000). These extra images should be treated as a fixed portion in the testing set during cross validation. In this paper, we randomly select 125 persons from those 250 persons appeared in both camera views as training pairs, and the remaining persons in probe folder is used as probe images while  the remaining 125 persons and those 775 additional persons from gallery folder are used as gallery images. 
+\textbf{GRID} There are two camera views in this dataset. Folder probe contains 250 probe images captured in one view (file names starts from 0001  to 0250). Folder gallery contains 250 true match images of the probes (file names starts from 0001  to 0250). Besides, in gallery folder there are a total of 775 additional images that do not belong to any of the probes (file name starts with 0000). These extra images should be treated as a fixed portion in the testing set during cross validation. In this paper, we randomly select 125 persons from those 250 persons appeared in both camera views as training pairs, and the remaining persons in probe folder is used as probe images while  the remaining 125 persons and those 775 additional persons from gallery folder are used as gallery images. A brief summarization of test settings is in table \ref{Settings}.
+
 \begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg}
@@ -43,6 +44,7 @@
 \begin{table}[H]
 \centering
 \caption{Testing setting for different datasets}
+\label{Settings}
 %\centering
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
@@ -52,9 +54,9 @@ VIPeR&316&316&316&632&632\\
 \hline
 CUHK1&485&486&486&971&971\\
 \hline
-PRID\_2011&100&100&649&385&749\\
+Prid\_2011&100&100&649&385&749\\
 \hline
-PRID\_450s&225&225&225&450&450\\
+Prid\_450s&225&225&225&450&450\\
 \hline
 GRID&125&125&900&250&1025\\
 \hline
@@ -67,6 +69,7 @@ In \cite{GOG}, mean removal and $L_2$  normalization is found to improve perform
 \begin{table}[H]
 \centering
 \caption{The influence of data preprocessing on VIPeR}
+\label{table:compMN1}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
  & \multicolumn{5}{|c|}{Rank(\%)} \\
@@ -84,12 +87,13 @@ Preprocessed GOG$_\text{fusion}$ &48.32&76.90&87.78&91.93& 94.49\\
 
 \end{tabular}
 \end{table}
-\label{table:compMN1}
+
 
 %---------------------------------------------
 \begin{table}[H]
 \centering
 \caption{The influence of data preprocessing on CUHK1}
+\label{table:compMN2}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
  & \multicolumn{5}{|c|}{Rank(\%)} \\
@@ -107,11 +111,12 @@ Preprocessed GOG$_\text{fusion}$ &56.67&84.49& 90.51& 93.31&94.84\\
  
 \end{tabular}
 \end{table}
-\label{table:compMN2}
+
 %---------------------------------------------
 \begin{table}[H]
 \centering
 \caption{The influence of data preprocessing on prid\_2011}
+\label{compMN3}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
  & \multicolumn{5}{|c|}{Rank(\%)} \\
@@ -129,11 +134,12 @@ Preprocessed GOG$_\text{fusion}$ &32.30& 57.40& 66.30& 73.40& 78.00\\
  
 \end{tabular}
 \end{table}
-\label{compMN3}
+
 %---------------------------------------------
 \begin{table}[H]
 \centering
 \caption{The influence of data preprocessing on prid\_450s}
+\label{compMN4}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
  & \multicolumn{5}{|c|}{Rank(\%)} \\
@@ -151,11 +157,12 @@ Preprocessed GOG$_\text{fusion}$ &62.80& 86.58& 92.36& 95.29& 96.89\\
  
 \end{tabular}
 \end{table}
-\label{compMN4}
+
 %---------------------------------------------
 \begin{table}[H]
 \centering
 \caption{The influence of data preprocessing on GRID}
+\label{compMN5}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
  & \multicolumn{5}{|c|}{Rank(\%)} \\
@@ -173,17 +180,18 @@ Preprocessed GOG$_\text{fusion}$ &23.92& 44.64& 54.88& 62.32& 66.40\\
  
 \end{tabular}
 \end{table}
-\label{compMN5}
+
 
 %--------------------------------------------------
 \section{Parameters setting}
-In this experiment, there are a few parameters for the iteration computing including slack variable $\rho$, maximal iteration $T$, gradient step $\lambda$, the interclass and intraclass limitation factor $\alpha$ and the updating ratio $\beta$. Firstly the slack variable $\rho$ is initialized as 1 to ensure the minimum interclass distance is 1 larger than intraclass distance at least. The step size of gradient updating $\lambda$ is initialized as 0.01. When target value $f$ increases,  $\lambda$ is scaled by a factor 0.5, and  $\lambda$ is scaled by 1.01 when target value $f$ decreases. To judge if target value converges, the threshold $\beta$ is defined as the ratio target value change versus previous target value, that is, $\beta = \frac{(f_{t+1}-f_t)}{f_t}$. According many experiment trials, when it satisfies $\beta = 10^{-5}$, the target value converges and the iteration is stopped. The maximal iteration times $t$ is set to 100 since the target value $f$ will converge in around 15 iterations.  The last parameter for the iteration is $\alpha$, to know the best value for $\alpha$, we tried 11 different values ranges from 0 to 1 with a step of 0.1, and find that the rank 1 and rank 5 scores reach maxima at interval $[0.7,0.8]$. Then another ten trials with alpha ranging from $[0.7,0.8]$ with a step of 0.01. The best $\alpha$ value should have as large top rank scores as possible and at last we find that the optimal value for $\alpha$ is 0.76. A form of all parameters are shown in Form 7.
+In this experiment, there are a few parameters for the iteration computing including slack variable $\rho$, maximal iteration $T$, gradient step $\lambda$, the interclass and intraclass limitation factor $\alpha$ and the updating ratio $\beta$. Firstly the slack variable $\rho$ is initialized as 1 to ensure the minimum interclass distance is 1 larger than intraclass distance at least. The step size of gradient updating $\lambda$ is initialized as 0.01. When target value $f$ increases,  $\lambda$ is scaled by a factor 0.5, and  $\lambda$ is scaled by 1.01 when target value $f$ decreases. To judge if target value converges, the threshold $\beta$ is defined as the ratio target value change versus previous target value, that is, $\beta = \frac{(f_{t+1}-f_t)}{f_t}$. According many experiment trials, when it satisfies $\beta = 10^{-5}$, the target value converges and the iteration is stopped. The maximal iteration times $t$ is set to 100 since the target value $f$ will converge in around 15 iterations.  The last parameter for the iteration is $\alpha$, to know the best value for $\alpha$, we tried 11 different values ranges from 0 to 1 with a step of 0.1, and find that the rank 1 and rank 5 scores reach maxima at interval $[0.7,0.8]$, as shown in \ref{Rank1curve} and \ref{Rank5curve}. Then another ten trials are performed with alpha ranging from $[0.7,0.8]$ with a step of 0.01. The best $\alpha$ value should have as large top rank scores as possible and at last we find that the optimal value for $\alpha$ is 0.76. A form of all parameters are shown in Form 7.
 %-------------------------------------------------
 \begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha.eps}
 \vspace{-3em}
 \caption{Rank 1 scores with respect to $\alpha$ on VIPeR}
+\label{Rank1curve}
 \end{raggedleft}
 \end{figure}
 %-------------------------------------------------
@@ -192,6 +200,7 @@ In this experiment, there are a few parameters for the iteration computing inclu
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha.eps}
 \vspace{-3em}
 \caption{Rank 5 scores with respect to $\alpha$ on VIPeR}
+\label{Rank5curve}
 \end{raggedleft}
 \end{figure}
 %-------------------------------------------------
@@ -422,6 +431,6 @@ GOG$_\text{fusion}$+Proposed&23.92&44.64&54.88&62.32&66.40\\ %23.84%, 44.64%, 55
 \end{figure}
 
 \textbf{GRID} We can see that the rank 1 score of proposed metric are 0.24\% higher than XQDA and 0.88\% higher than NFST in terms of GOG$_\text{fusion}$, but XQDA outperforms proposed metric on rank 5, rank 10, rank 15 and rank 20 scores. Besides, proposed metric outperforms NFST on rank 5, rank 10, rank 15 scores.\\
-\indent In summary, the Re-ID performance is improved in VIPeR, CUHK01 dataset, and has almost the same performance with NFST and XQDA on prid\_450s dataset. Specifically, proposed metric learning has the best rank 1 score in GRID dataset and its performance is only second to XQDA. The proposed metric has superior performance for following reasons: (1) dimension reduction by KLFDA exploits the nonlinearity and the loss of discriminant information between classes are minimized. (2) the simplified relative distance limitation optimization helps to confine the Mahanalobis distance matrix $M$ to discriminate different classes.  
+\indent In summary, the Re-ID performance is improved in VIPeR, CUHK01 dataset, and has almost the same performance with NFST and XQDA on prid\_450s dataset. Specifically, proposed metric learning has the best rank 1 score in GRID dataset and its performance is only second to XQDA. The proposed metric has superior performance for following reasons: (1) dimension reduction by KLFDA exploits the nonlinearity and the loss of discriminant information between classes are minimized. (2) the simplified relative distance limitation optimization helps to confine the Mahanalobis distance matrix $\bm{M}$ to discriminate different classes.  
 %------------------------------------------------------------------------
 
