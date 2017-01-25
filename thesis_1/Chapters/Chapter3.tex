@@ -4,7 +4,7 @@ In person re-identification, it's very important to choose robust descriptor to 
 
 \section{Basic color and textural features}
 \subsection{Color histogram descriptors on different color space}
-Histogram descriptor extracts color statistics information of input images. A popular histogram extracting method is to divide input image into a few horizontal stripes and extract color histogram of each stripe, then they are concatenated to consist of histogram descriptor of the whole image. Color space selection has much influence on descriptor performance. HSV color space is very common in computer vision and image processing area for target detection and tracking. The HSV descriptor has better performance than RGB histogram descriptor since HSV color separates image intensity from color information. Thus HSV color space is more robust to illumination variation. An unsupervised CMC performance comparison among different color spaces on VIPeR dataset is given in figure \ref{CMCcolorspaces}. In this comparison camera a views are used as probe set and camera B views are used for gallery set. We can find that those color spaces separating intensity information outperform RGB color space and HSV outperforms all other color spaces.
+Histogram descriptor extracts color statistics information of input images. A popular histogram extracting method is to divide input image into a few horizontal stripes and extract color histogram of each stripe, then they are concatenated to consist of histogram descriptor of the whole image. Color space selection has much influence on descriptor performance. HSV color space is very common in computer vision and image processing area for target detection and tracking. The HSV descriptor has better performance than RGB histogram descriptor since HSV color separates image intensity from color information. Thus HSV color space is more robust to illumination variation. An unsupervised CMC performance comparison among different color spaces on VIPeR dataset is given in Figure \ref{CMCcolorspaces}. In this comparison camera a views are used as probe set and camera B views are used for gallery set. We can find that those color spaces separating intensity information outperform RGB color space and HSV outperforms all other color spaces.
 %-----------------------------------------------------------------------------
 
 \begin{figure}[H]
@@ -25,7 +25,7 @@ Histogram descriptor extracts color statistics information of input images. A po
 
 %-----------------------------------------------------------------------------
 
-\textbf{Analysis of histogram based descriptor} The performance of histogram descriptors suffers from ignoring the spatial information. Since it doesn't consider the relative distribution of color, images with same kind color patches but different distribution may have the same histogram descriptor. One example is shown in figure \ref{RGBbgr}.
+\textbf{Analysis of histogram based descriptor} The performance of histogram descriptors suffers from ignoring the spatial information. Since it doesn't consider the relative distribution of color, images with same kind color patches but different distribution may have the same histogram descriptor. One example is shown in Figure \ref{RGBbgr}.
 
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
@@ -117,7 +117,7 @@ S_y &= \left[ \begin{matrix}
 \end{aligned}
 \end{equation}
 
-Using different masks will result different performance. Besides, gaussian smoothing is often performed before gradient computing. It has been shown that using 1-D Sobel without gaussian smoothing has the best performance. A HOG feature demo is shown in figure \ref{fig:HOGdemo}.
+Using different masks will result different performance. Besides, gaussian smoothing is often performed before gradient computing. It has been shown that using 1-D Sobel without gaussian smoothing has the best performance. A HOG feature demo is shown in Figure \ref{fig:HOGdemo}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg}
@@ -128,13 +128,14 @@ Using different masks will result different performance. Besides, gaussian smoot
 
 
 \section{Influence of background segmentation on different basic descriptors}
-Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from sequential videos than a single frame. In \cite{SDALF} the author provides foreground mask for all images following the algorithm in \cite{STEL}.  Some of those segmented foreground are shown in figure [] and it's obvious that certain bogy parts like head and feet are lost. To compare those loss's impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in figure \ref{fig:SegHSV}, figure \ref{fig:SegLBP} and figure \ref{fig:SegHOG}. 
+Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from sequential videos than a single frame. In \cite{SDALF} the author provides foreground masks for all images following the algorithm in \cite{STEL}.  Some of those segmented foreground are shown in Figure \ref{VIPeRFGs} and it's obvious that certain bogy parts like head and feet are lost. To compare those loss's impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in Figure \ref{fig:SegHSV}, Figure \ref{fig:SegLBP} and Figure \ref{fig:SegHOG}. 
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg}
 \caption{Foreground segmentation of individuals from VIPeR }
+\label{VIPeRFGs}
 \vspace{0em}
 \end{figure} 
 
@@ -167,7 +168,7 @@ We can find that foreground segmentation decreases LBP and HOG's performance but
 
 \section{The hierarchical gaussian descriptor}
 
-The hierarchical gaussian descriptor is proposed by in  \cite{GOG}, this descriptor uses a two-level gaussian distribution to model an individual. This descriptor densely sample the image and model each hierarchical structure with gaussian distribution and has outperformed many other works. In this thesis, all input images are sized to $128\times 64$. Firstly it divides the image into 7 overlapping horizontal slides, each slide has size $32\times 64$ and slides are overlapping by $16$ pixels vertically.  In each slide, dense sampling square patches are made with size $s\times s$ pixels ($s$ = 5 in this thesis), and small patches overlaps with each other by $2$ pixels. So there is a  two-level structure in this image, small patches and slides. In a certain horizontal slide for each small patch, it's modelled by a multivariate gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
+The hierarchical gaussian descriptor is proposed by in  \cite{GOG}, this descriptor uses a two-level gaussian distribution to model an individual. This descriptor densely samples the image and model each hierarchical structure with gaussian distribution and has outperformed many other works. In this thesis, all input images are sized to $128\times 64$. Firstly it divides the image into 7 overlapping horizontal slides, each slide has size $32\times 64$ and slides are overlapping by $16$ pixels vertically.  In each slide, dense sampling square patches are made with size $s\times s$ pixels ($s$ = 5 in this thesis), and small patches overlaps with each other by $2$ pixels. So there is a  two-level structure in this image, small patches and slides. In a certain horizontal slide for each small patch, it's modelled by a multivariate gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
 \indent After the slide is modelled with $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$, the same transformation will be operated on $\bm{G}_r$ so that it's vectorized as a vector $\bm{v}$. At last all computed $\bm{v}$ are concatenated to consist of the descriptor of current image. 
 
 \subsection{Handling the background}
@@ -317,7 +318,7 @@ let $\bm{I}_{x, y}$ be the $d$ dimensional vector in $\bm{I}_F$, $\bm{C}(x, y)$ 
  \end{aligned}
 \end{equation}
 
-Then for any rectangule regions $R(x', y'; x'', y'')$, where (x', y') is the upper left coordinate and (x'', y'') is the lower right coordinate, the covariance matrix can be compute as 
+Then for any rectangule regions $R(x', y'; x'', y'')$, where $(x', y')$ is the upper left coordinate and $(x'', y'')$ is the lower right coordinate, the covariance matrix can be compute as 
 \begin{equation}
 \begin{aligned}
 \bm{C}_R(x', y'; x'', y'') = \frac{1}{n-1} [\bm{C}_{x'', y''} + \bm{C}_{x', y'} -  \bm{C}_{x'', y'}-  \bm{C}_{x', y''} \\

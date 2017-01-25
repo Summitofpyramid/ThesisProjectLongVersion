@@ -51,7 +51,7 @@ here $\bm{t}_i$ is the $i_{th}$ column of $\bm{T}$, and the optimization problem
 
 Fisher discriminant analysis tries to minimize the intraclass scatter matrix while maximize the interclass scatter matrix, and $\bm{T}$ is computed by the eigenvalue decomposition. $\bm{T}$ can be represented as the set of all the corresponding eigenvectors, as $ \bm{T} = (\bm{t}_1,\bm{t}_2,\cdots,\bm{t}_k)$.
 
-FDA has a form similar with signal and noise ratio, however, the FDA dimension reduction may have poor performance for it doesn't consider the locality of data. An example of this is the multimodality \cite{LFDA}. Multimodality is the case many clusters are formed in the same class. 
+FDA has a form similar with signal and noise ratio, however, the FDA dimension reduction may have poor performance for it doesn't consider the locality of data. An example of this is the multimodality \cite{KLFDA}. Multimodality is the case many clusters are formed in the same class. 
 \subsection{Locality preserving projection (LPP)}
 
 In \cite{LPP} locality preserving projection (LPP) is proposed to exploit data locality. An affinity matrix is created to record the affinity of sample $\bm{x}_i$ and $\bm{x}_j$,  typically the range of elements in $\bm{A}_{i,j}$ is $[0,1]$. There are many manners to define a $n \times n$ affinity matrix $\bm{A}$, usually two sample points with a smaller distance has a higher affinity value than those with bigger distance value. One of them is if  $\bm{x}_i$ is within k-nearest neighbours of $\bm{x}_j$ then $\bm{A}_{i,j} = 1$ otherwise  $\bm{A}_{i,j} = 0$.  
@@ -81,10 +81,10 @@ where $\gamma$ is corresponding eigenvalue of $\bm{\phi}$, and $\bm{L} = \bm{D} 
 
 %But the LPP dimension reduction is still not discriminant enough, 
 \subsection{Local fisher discriminant analysis (LFDA)}
-\indent LFDA \cite{LFDA} combines FDA and LPP and have better performance. The key in LFDA is it assigns weights to elements in $\bm{A}^{(w)}$ and $\bm{A}^{(b)}$, so that,
+\indent LFDA \cite{LFDA} combines FDA and LPP and has better performance. The key in LFDA is it assigns weights to elements in $\bm{A}^{(w)}$ and $\bm{A}^{(b)}$, so that,
 \begin{equation}
 \begin{aligned}
-\bm{S}^{(w)} &= \frac{1}{2}\sum _{i=1}^l\sum_{j:l_j = i} \bm{A}_{i,j}^w (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
+\bm{S}^{(w)} &= \frac{1}{2}\sum _{i=1}^l\sum_{j:y_j = i} \bm{A}_{i,j}^w (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
 \bm{S}^{(b)} &=  \frac{1}{2}\sum _{i=1}^l \bm{A}_{i,j}^b(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
 \end{aligned}
 \end{equation}
@@ -106,11 +106,10 @@ where
   \right. 
  \end{aligned}
 \end{equation}
-where $y_i$ is the class label of sample point $\bm{x}_i$. So the transformation matrix $T_LFDA$ can be computed by equation
+where $y_i$ is the class label of sample point $\bm{x}_i$. So the transformation matrix $T_{LFDA}$ can be computed by equation
 \begin{equation}\label{eigencompute1} 
 \bm{T}_{LFDA}  = \arg\min_{\bm{T}} (\frac{\bm{T}^T\bm{S}^{(b)}\bm{T}}{\bm{T}^T\bm{S}^{(w)}\bm{T}})
 \end{equation}
-
 Again this problem can be solved by eigenvalue decomposition by equation \ref{eigen1}. 
 
 
@@ -119,13 +118,13 @@ When applying the LFDA to original high dimensional descriptors, one problem is 
  
 \subsection{Kernel local fisher discriminant analysis(KLFDA)}
 
-KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $T$ can be computed by equation
+KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $\bm{T}$ can be computed by equation
 \begin{equation}
 \bm{T} = \arg \min \frac{\bm{T}^T\bm{S}^{(b)}_{\phi}\bm{T}}{\bm{T}^T\bm{S}^{(w)}_{\phi}\bm{T}}
 \end{equation}
 where $\bm{S}^{(b)}_{\phi}$ and $\bm{S}^{(w)}_{\phi}$ is the between class scatter and within class scatter in mapped feature space $\Phi$.
 
-Note that the transformation matrix $\bm{T} \in \Phi$, it's computationally expensive to explicitly compute the mapping function $\phi$ and perform LFDA in feature space $\Phi$ because the dimension of $\Phi$ may be infinite. Rather than explicitly computing, the mapping function $\phi$ can be implicit and the feature space $\Phi$ can be defined by the inner product of features in $\Phi$. Kernel trick [] is used here and a kernel function can be defined as the inner product of mapped vectors $\phi(\bm{x}_i)$ and $\phi(\bm{x}_j)$ by equation
+Note that the transformation matrix $\bm{T} \in \Phi$, it's computationally expensive to explicitly compute the mapping function $\phi$ and perform LFDA in feature space $\Phi$ because the dimension of $\Phi$ may be infinite. Rather than explicitly computing, the mapping function $\phi$ can be implicit and the feature space $\Phi$ can be defined by the inner product of features in $\Phi$. Kernel trick is used here and a kernel function can be defined as the inner product of mapped vectors $\phi(\bm{x}_i)$ and $\phi(\bm{x}_j)$ by equation
  \begin{equation}
  k(\bm{x}_i,\bm{x}_j) = <\phi(\bm{x}_i),\phi(\bm{x}_j)>,
  \end{equation}
@@ -146,7 +145,7 @@ and we have
 \bm{K}_{i,j} =  k(\bm{x}_i,\bm{x}_j) = <\phi(\bm{x}_i),\phi(\bm{x}_j)> =  \exp^{(-\gamma||\bm{x}_i-\bm{x}_j||^2)}
 \end{equation}
 
-In \cite{LFDAdr} the authors proposed fast computation of LFDA by replacing $\bm{S}^{(b)}$ with the local scatter mixture matrix $\bm{S}^{(m)}$defined by 
+In \cite{KLFDA} the authors proposed fast computation of LFDA by replacing $\bm{S}^{(b)}$ with the local scatter mixture matrix $\bm{S}^{(m)}$defined by 
 \begin{equation}
 \begin{aligned}
 \bm{S}^{(m)} &= \bm{S}^{(b)} + \bm{S}^{(w)}\\
@@ -161,7 +160,7 @@ and
 
 \noindent according to indentify(Fukunaga, 1990)
 \begin{equation}
-tr((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = tr((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m
+trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = tr((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m
 \end{equation}
 equation \ref{eigencompute1} is equal to 
 
@@ -172,7 +171,7 @@ and it can be transformed into a eigenvalue decomposition problem
 \begin{equation}\label{eigen2}
 \bm{S}^{(m)}\bm{t}_i  = \lambda \bm{S}^{(w)}\bm{t}_i
 \end{equation}
-Also with the replacement of $\bm{S}^{(m)}$, in \cite{LFDAdr} the author summarized that 
+Also with the replacement of $\bm{S}^{(m)}$, in \cite{KLFDA} the author summarized that 
 \begin{equation}
 \bm{S}^{(m)} = \bm{X}\bm{L}^{(m)}\bm{X}^T
 \end{equation}
@@ -193,7 +192,7 @@ and by the kernel trick, its represented as
 \begin{equation}
 \bm{K}\bm{L}^{(m)}\bm{K}\gamma_i  = \lambda \bm{K}\bm{L}^{(w)}\bm{K}\gamma_i
 \end{equation}
-One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in figures \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in figure \ref{KLFDAdemo2} and figure \ref{KLFDAdemo3}. It shows that for those clusters the gaussian kernel are better than linear kernel because the dimensionality reduced data are more separate when using gaussian kernel function.
+One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in Figures \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in Figure \ref{KLFDAdemo2} and Figure \ref{KLFDAdemo3}. It shows that for those clusters the gaussian kernel are better than linear kernel because the dimensionality reduced data are more separate when using gaussian kernel function.
 
 \begin{figure}[H]
 \centering
@@ -265,7 +264,7 @@ This process is repeated until certain condition is met, generally when gradient
 \vspace{0em}
 \end{figure} 
 
-\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are it's always downhill and it can avoid the saddle points. Besides, it's very efficient when initial value of $F(\bm{x})$ is further from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic \ref{fig:side:a}. In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in figure \ref{fig:side:b}. The third shortcoming is linear search in gradient descent might cause some problem.
+\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are it's always downhill and it can avoid the saddle points. Besides, it's very efficient when initial value of $F(\bm{x})$ is further from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic (an example is in Figure \ref{fig:side:a}). In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in Figure \ref{fig:side:b}. The third shortcoming is linear search in gradient descent might cause some problem.
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
 \centering
@@ -324,7 +323,7 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \end{aligned}
  \end{equation}
  
- The iteration process can be summarized as in table \ref{Gradientdemo}.
+ The iteration process can be summarized as in Table \ref{Gradientdemo}.
 % \begin{table}[H]
 % \caption{The optimization algorithm for metric learning}
 % \centering

@@ -1060,6 +1060,28 @@
   \field{year}{2015}
 \endentry
 
+\entry{KLFDA}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sugiyama}{S.}%
+     {Masashi}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {ACM}%
+  }
+  \strng{namehash}{SM1}
+  \strng{fullhash}{SM1}
+  \field{sortinit}{S}
+  \field{booktitle}{Proceedings of the 23rd international conference on Machine
+  learning}
+  \field{title}{{Local Fisher Discriminant Analysis for Supervised
+  Dimensionality Reduction}}
+  \field{month}{12}
+  \field{year}{2006}
+\endentry
+
 \entry{RegionCovariance}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%
