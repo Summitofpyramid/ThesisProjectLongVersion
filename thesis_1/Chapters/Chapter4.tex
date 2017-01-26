@@ -1,17 +1,21 @@
 \chapter{Dimension reduction and Mahanalobis distance learning}
 To deal with high dimensional descriptors, dimension reduction are firstly performed by kernel local fisher discriminant analysis (KLFDA). Then Mahanalobis distance metric learning based on limitations between interclass and intraclass distance are operated on dimension reduced data.
 \section{Kernel local fisher discriminant analysis}
-The extracted hierarchical gaussian descriptors have high dimension, it's intractable to learn a SPD matrix with such a high dimension. Dimension reduction is required to learn a subspace.
-Among those methods to reduce dimension, principal component analysis (PCA) is often used. However, PCA is an unsupervised dimension reduction and may have a low performance for those reasons, $(1)$, PCA is to maximize the variance of dimension reduced data, and as a unsupervised method it doesn't has a full consideration of the the relation of between and within classes, it is very likely that the descriptors of different classes can be mixed up after the dimension reduction; $(2)$ PCA may suffer from the small sample size problem. In some Re-ID datasets, there may be two or less images for each pedestrian in each viewpoint (like VIPeR), if the dimension of descriptor is much bigger than sample size, much information can be lost with PCA. In this thesis, the kernel local fisher discriminant analysis (KLFDA) is used to reduce dimension. 
+The extracted hierarchical gaussian descriptors have high dimension, it's intractable to learn a SPD matrix with such high dimension. Dimension reduction is required to learn a subspace.
+Among those methods to reduce dimension, principal component analysis (PCA) is often used. However, PCA is an unsupervised dimension reduction and may have low performance for those reasons. $(1)$, PCA is to maximize the variance of dimension reduced data, and as a unsupervised method it doesn't has a full consideration of the the relation of between and within classes. It is very likely that the descriptors of different classes can be mixed up after the dimension reduction; $(2)$ PCA may suffer from the small sample size problem. In some Re-ID datasets, there may be two or less images for each pedestrian in each viewpoint (like VIPeR), if the dimension of descriptor is much bigger than sample size, much information can be lost with PCA. In this thesis, the kernel local fisher discriminant analysis (KLFDA) is used to reduce dimension. 
 
 KLFDA is the kernel version of LFDA, and LFDA is a combination of Fisher discriminant analysis \cite{LFDA} and and the locality preserving projection \cite{LPP} and kernel method. A brief introduction of FDA, LPP and kernel method is introduced below.
 \subsection{Fisher discriminant analysis (FDA)}
 
-FDA is a supervised dimension reduction and its input contains the class labels. For a set of $d$-dimensional observations $\bm{x}_i$, where $i\in\{1,2,\cdots,n\}$, the label $l_i\in\{1,2,\cdots,l\}$. Two matrix are defined as the intraclass scatter matrix $\bm{S}^{(w)}$ and between class scatter matrix
+FDA is a supervised dimension reduction and its input contains the class labels. Given a set of $d$-dimensional observations $\bm{X} = (\bm{x}_1, \bm{x}_2,\cdots,\bm{x}_n)$, where $i\in\{1,2,\cdots,n\}$, the label $y_i\in\{1,2,\cdots,l\}$, for each sample descriptor $\bm{x}_i$, a linear transformation with transformation matrix $\bm{T}$ can be defined by equation
+\begin{equation}
+\bm{z}_i = \bm{T}^T\bm{x}_i
+\end{equation}
+$\bm{T}$ has dimension $d\times m$, $\bm{z}_i$ is the $m(m<d)$ dimensional vector. In FDA two matrices are defined as the intraclass scatter matrix $\bm{S}^{(w)}$ and between class scatter matrix
 $\bm{S}^{(b)}$, 
 \begin{equation}
 \begin{aligned}
-\bm{S}^{(w)} &= \mathop{\sum} _{i=1}^l\mathop{\sum}_{j:l_j = i} (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
+\bm{S}^{(w)} &= \mathop{\sum} _{i=1}^l\mathop{\sum}_{j:y_j = i} (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T \\
 \bm{S}^{(b)}  &= \mathop{\sum} _{i=1}^l n_i(\bm{\mu}_i - \bm{\mu})(\bm{\mu}_i - \bm{\mu})^T
 \end{aligned}
 \end{equation}
@@ -22,7 +26,6 @@ where the $\bm{\mu}_i$ is the mean of samples whose label is $i$, and $\bm{\mu}$
 \bm{\mu} &= \frac{1}{n} \sum \bm{x}_i
 \end{aligned}
 \end{equation}
-
 The Fisher Discriminant Analysis transform matrix $\bm{T}$ can be represented as 
 \begin{equation}
 \bm{T} = \arg\max \frac{\bm{T}^T\bm{S}^{(b)}\bm{T}}{\bm{T}^T\bm{S}^{(w)}\bm{T}}
@@ -35,19 +38,17 @@ Then the differential respect to $\bm{t}$ is
 \begin{equation}
 \frac{\partial L(\bm{t})}{\partial \bm{t}} = 2\bm{S}^{(b)}\bm{t} - 2\lambda \bm{S}^{(w)}\bm{t}
 \end{equation}
-
 let 
 \begin{equation}
 \frac{\partial L(\bm{t})}{\partial \bm{t}} = 0
 \end{equation}
-
 we can get 
 \begin{equation}\label{eigen1}
 \bm{S}^{(b)}\bm{t}_i  = \lambda \bm{S}^{(w)}\bm{t}_i
 \end{equation}
 
 
-here $\bm{t}_i$ is the $i_{th}$ column of $\bm{T}$, and the optimization problem is converted to a eigenvalue decomposition problem. 
+here $\bm{t}_i$ is the $i_{th}$ column of $\bm{T}$, and the optimization problem is converted to a eigenvalue decomposition problem. $\bm{T}$ is the set of eigenvectors of $\frac{\bm{S}^{(b)}}{\bm{S}^{(w)}}$.
 
 Fisher discriminant analysis tries to minimize the intraclass scatter matrix while maximize the interclass scatter matrix, and $\bm{T}$ is computed by the eigenvalue decomposition. $\bm{T}$ can be represented as the set of all the corresponding eigenvectors, as $ \bm{T} = (\bm{t}_1,\bm{t}_2,\cdots,\bm{t}_k)$.
 
@@ -110,7 +111,7 @@ where $y_i$ is the class label of sample point $\bm{x}_i$. So the transformation
 \begin{equation}\label{eigencompute1} 
 \bm{T}_{LFDA}  = \arg\min_{\bm{T}} (\frac{\bm{T}^T\bm{S}^{(b)}\bm{T}}{\bm{T}^T\bm{S}^{(w)}\bm{T}})
 \end{equation}
-Again this problem can be solved by eigenvalue decomposition by equation \ref{eigen1}. 
+Again this problem can be solved by eigenvalue decomposition by Equation \ref{eigen1}. 
 
 
 
@@ -162,7 +163,7 @@ and
 \begin{equation}
 trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = tr((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m
 \end{equation}
-equation \ref{eigencompute1} is equal to 
+Equation \ref{eigencompute1} is equal to 
 
 \begin{equation}
 \bm{T}_{LFDA}  = \arg\min_{\bm{T}} (\frac{\bm{T}^T\bm{S}^{(m)}\bm{T}}{\bm{T}^T\bm{S}^{(w)}\bm{T}})
@@ -180,11 +181,11 @@ where $\bm{L}^{(m)}  = \bm{D}^{(m)} - \bm{A}^{(m)}$, and $ \bm{D}^{i,i} = \sum_{
 \bm{S}^{(w)} = \bm{X}\bm{L}^{(w)}\bm{X}^T
 \end{equation}
 where $\bm{L}^{(w)}  = \bm{D}^{(w)} - \bm{A}^{(m)}$, and $ \bm{D}^{i,i} = \sum_{j=1}^n  \bm{A}_{i,j}^{(w)}$. 
-Therefore, equation \ref{eigen2} can be represented as
+Therefore, Equation \ref{eigen2} can be represented as
 \begin{equation}\label{equationS}
 \bm{X}\bm{L}^{(m)}\bm{X}^T \bm{t}_i= \lambda\bm{X}\bm{L}^{(w)}\bm{X}^T \bm{t}_i
 \end{equation}
-the eigen vector $\bm{t}_i$  can be represented as $\bm{t}_i = \bm{X}\bm{\gamma}$, vector $\bm{\gamma}_i \in R^n$, with this replacement, we left multiply $\bm{X}^T$ to equation \ref{equationS} to get 
+the eigen vector $\bm{t}_i$  can be represented as $\bm{t}_i = \bm{X}\bm{\gamma}$, vector $\bm{\gamma}_i \in R^n$, with this replacement, we left multiply $\bm{X}^T$ to Equation \ref{equationS} to get 
 \begin{equation}
 \bm{X}^T\bm{X}\bm{L}^{(m)}\bm{X}^T\bm{X}\gamma_i = \lambda\bm{X}^T\bm{X}\bm{L}^{(w)}\bm{X}^T \bm{X}\gamma_i
 \end{equation}
@@ -239,6 +240,7 @@ One example of using KLFDA to reduce dimension and classify the nonlinear data c
 \section{Mahalanobis distance}
 The Mahalanobis distance \cite{Mahadist} based metric learning has received much attention in similarity computing. The Mahanalobis distance of two observations $\bm{x} $ and $\bm{y}$ is defined as
 \begin{equation}
+\label{MahaDist}
 D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y}), 
 \end{equation}
 where $\bm{x}$ and $\bm{y} $ are $d\times1$ observation vectors, $\bm{M}$ is a semi-positive definite matrix. Since $\bm{M}$ is a SPD matrix, $\bm{M}$ can be decomposed as $\bm{M} = \bm{W}^T\bm{W}$, and Mahanalobis distance can also be written as 
@@ -296,26 +298,28 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \end{equation}
 
  
- To combine equations above, a ratio factor $\alpha$ is assigned to equation \eqref{term1} and \eqref{term2} so that the target function can be denoted as 
+ To combine equations above, a ratio factor $\alpha$ is assigned to Equation \eqref{term1} and \eqref{term2} so that the target function can be denoted as 
   \begin{equation}
+  \label{TargetFunc1}
   \begin{aligned}
  f(\bm{M}) = (1-\alpha)\sum_{\bm{x}_i,x_j,\bm{y}_i=y_j} D(\bm{x}_i,\bm{x}_j) + \\
   \alpha \sum_{\bm{x}_i,\bm{x}_j,y_i=y_j}\max\{{D(\bm{x}_i,\bm{x}_j)-\min_{y_i\ne y_k}{D(\bm{x}_i,\bm{x}_k)}+\rho,0}\}
  \end{aligned}
  \end{equation}
- In this way the problem is transformed to an optimization problem. Notice that equation 16 can be denoted as 
+ In this way the problem is transformed to an optimization problem. Notice that Equation \ref{MahaDist} can be denoted as 
  \begin{equation}
  D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y}) = trace(\bm{M}\bm{X}_{i,j})
  \end{equation}
- where $\bm{X}_{i,j} = \bm{x}_i*\bm{x}_j^T$, and $trace$ is to compute matrix trace. Therefore, equation 21 can be transformed as follow,
+ where $\bm{X}_{i,j} = \bm{x}_i*\bm{x}_j^T$, and $trace$ is to compute matrix trace. Therefore, Equation \ref{TargetFunc1} can be transformed as follow,
  \begin{equation}
+ \label{TargetFunc2}
  \begin{aligned}
  f(\bm{M}) = (1-\alpha)\sum_{y_i = y_j}trace(\bm{M}\bm{X}_{i,j}) \\
   + \alpha \sum_{y_i = y_j,y_i\ne y_k}\max\{trace(\bm{M}\bm{X}_{i,j}) - trace(\bm{M}\bm{X}_{i,k} )+ \rho,0\}
  \end{aligned}
  \end{equation}
  
- To minimize equation 23, the gradient descent method is used. The gradient respect to $\bm{M}$ is computed as
+ To minimize Equation \ref{TargetFunc2}, the gradient descent method is used. The gradient respect to $\bm{M}$ is computed as
  \begin{equation}
  \begin{aligned}
 \bm{G} =  \frac{\partial f}{\partial \bm{M}} = (1-\alpha) \sum_{y_i = y_j} \bm{X}_{i,j} 
@@ -370,7 +374,7 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \textbf{while}(not converge)\\
  \hspace{0.5cm} Update $t =  t + 1$;\\
  \hspace{0.5cm}  Find $\bm{x}_k$ for all sample points $\bm{x}_i$, where $y_i \ne y_k$;\\
- \hspace{0.5cm} Update gradient $\bm{G}_{t+1}$ with equation 12;\\
+ \hspace{0.5cm} Update gradient $\bm{G}_{t+1}$ with Equation 12;\\
  \hspace{0.5cm}  Update $\bm{M}$ with equation : $\bm{M}_{t+1} = \bm{M}_{t} - \lambda\bm{G}_t$;\\
  \hspace{0.5cm}  Project $\bm{M}_{t+1}$ to the positive semi-positive definite space; \\ 
 % \indent \indent by $\bm{M}_{t+1}= \bm{V}_{t+1}\bm{S}_{t+1}\bm{V}^T_{t+1}$;\\
@@ -385,7 +389,7 @@ In each iteration, to make sure the updated $\bm{M}$ is a SPD matrix, first a ei
 \begin{equation}\label{SPDproject}
 \bm{M} = \bm{V}\bm{\Lambda}\bm{V}^T
 \end{equation}
-here $\bm{\Lambda}$ is a diagonal matrix and its diagonal elements are eigenvalues. Then the negative eigenvalues in $\bm{V}$ are removed and the corresponding eigenvectors in $\bm{V}$ are also removed. Then $\bm{M}$ is restored by equation \eqref{SPDproject}.
+here $\bm{\Lambda}$ is a diagonal matrix and its diagonal elements are eigenvalues. Then the negative eigenvalues in $\bm{V}$ are removed and the corresponding eigenvectors in $\bm{V}$ are also removed. Then $\bm{M}$ is restored by Equation \eqref{SPDproject}.
 
  
  
