@@ -74,7 +74,7 @@ $O=\{O_i=(\bm{x}_i^p, \bm{x}_i^n)\}$ , $\bm{x}_i^p$, $\bm{x}_i^n$ are intraclass
 \begin{equation}
 \begin{aligned}
 \bm{x}_i^p &= |\bm{z} - \bm{z}'| \\
-\bm{x}_i^p &= |\bm{z} - \bm{z}''| 
+\bm{x}_i^n &= |\bm{z} - \bm{z}''| 
 \end{aligned}
 \end{equation}
 The distance function $f(\cdot)$ here is parameterized as Mahalanobis distance function
@@ -142,9 +142,26 @@ here $\bm{w}_i$ is the $i_{th}$ column in $\bm{W}$.
 It can be noticed that like many other metric learnings, XQDA and NFST evolve to matrix decomposition and eigenvalue selection problem. In this paper, those two metrics are used to compare with proposed metric. In \cite{GOG} it has been shown GOG + XQDA outperforms many other combinations including MetricEnsemble \cite{MetricEnsembles}, SCNCD \cite{SCNCD}, SemanticMethod \cite{SemanticMethod}, etc. In \cite{ NFST} it has been shown LOMO + NFST outperforms metrics including LMNN \cite{LMNN}, KCCA \cite{KCCA}, ITML \cite{ITML}, KLFDA\cite{KLFDA}, MFA \cite{KernelVersionMetrics}, KISSME \cite{KISSME}, SimilarityLearning \cite{SimilarityLearning}, SCNCD \cite{SCNCD}, Mid-level Filters \cite{MidlevelFilters} and Improved Deep \cite{ImprovedCNN}. Based on the result that XQDA and NFST outperform other metrics, in this thesis, XQDA and NFST are used to compare with proposed metric learning. 
 
 \section{Performance measuring}
-There are a few measures of Re-ID such as cumulative matching curve(CMC) and Receiver Operating Characteristic curve (ROC). For the closed set Re-ID problem, the mostly used is the cumulative matching curve (CMC). The CMC curve describes the probability of right match given a list of computed similarity score, and the first ranked ID is regarded as the matched individual. For the open-set Re-ID problem, Re-ID accuracy and FAR (false accept rate) are adopted. The Re-ID accuracy is the number of probe IDs that are correctly accepted, which is expresses as true positives (TP). The FAR is expresses as the mismatches (MM) and false positives (FP). The mismatches are those probe IDs that are incorrectly matched to the galley while in fact those probe IDs exist in the gallery. The false positive is those probe IDs incorrectly matched to the gallery while they don't exist in the gallery actually.
+There are a few measures of Re-ID such as cumulative matching curve(CMC), receiver operating characteristic curve (ROC) and synthetic recognition rate (SRR). Specifically, CMC is used as a 1:m re-identification system and ROC is used for 1:1 re-identification system. SRR curve indicates the probability that any of given fixed number of matches are correct.
 
-Specifically, CMC is used as a 1:m re-identification system and ROC is used for 1:1 reidentification system. In this thesis, the cumulative matching curve is used to measure Re-ID performance. The $CMC(k)$  stands for the probabilty that the right match is within the top k matches. Suppose a set of gallery $G = \{G_1,G_2,\cdots,G_m\}$ and a set of probe $P = \{P_1,P_2,\cdots,P_n\}$, for each identity $P_i$ there should be a right match in the gallery set. However, there could be identities that appear in gallery set but not in probe set. A $m\times n$ similarity matrix can be computed. Then for each probe identity $P_i$, a sorted list of gallery identities can be list as $S(P_i) = \{{G_{1},G_{2},\cdots,G_{m}}\}$ so that their similarity with $P_i$ descends. Suppose the right match of $P_i$ is at the position $k$ of $S(P_i)$, $k\le m$, then $G_i$ has a rank value of $k$. Therefore, the CMC can be calculated as 
+For the open-set Re-ID problem, The ROC \cite{PartbasedSTReid, MultiPersonREID} curve is adopted. ROC represents the relationship between Re-ID accuracy vs false accept rate (FAR). In ROC the x-axis is FAR and the y-axis is the accuracy. Re-ID accuracy and FAR are defined by equations
+\begin{equation}
+\begin{aligned}
+Accuracy &= \frac{TPs}{N_p}\\
+FAR &= \frac{MMs + FPs}{N_p}
+\end{aligned}
+\end{equation}
+The true positives (TPs) is the number of probe IDs that are correctly accepted. $N_p$ is the number of all positive probes. The FAR is expressed by the mismatches (MM), false positives (FPs) and N$_\text{p}$. MMs is those probe IDs that are incorrectly matched to the galley when in fact those probe IDs exist in the gallery. The FPs is number of those probe IDs incorrectly matched to the gallery when they don't exist in the gallery actually. 
+
+For the closed set Re-ID problem, the mostly used is the cumulative matching curve (CMC). Closed set Re-ID assumes that the probes are within gallery set and the performance is measured by ranking the gallery with respect to each probe. The CMC curve describes the probability of right match given a list of computed similarity score, and the first ranked ID is regarded as the matched individual.
+
+The proportion of uncertainty removed (PUR) is proposed in \cite{LFDA}. PUR measure the entropy difference between before ranking and after ranking. For a certain probe before ranking all those samples in gallery set has equal probability and the entropy is $\log(S)$. After ranking the entropy is $\sum M(r)\log(M(r))$. With normalization the PUR value is computed by equation
+\begin{equation}
+PUR = \frac{\log(S)-\sum M(r)\log(M(r))}{\log(S)}
+\end{equation}
+Where $S$ is the number of individuals in gallery set. The PUR value is 
+
+In this thesis, the CMC curve is used to measure Re-ID performance because most of datasets are tested under closed set Re-ID settings. In this metric the $CMC(k)$ stands for the probability that the right match is within the top k matches. Suppose a set of gallery $G = \{G_1,G_2,\cdots,G_m\}$ and a set of probe $P = \{P_1,P_2,\cdots,P_n\}$, for each identity $P_i$ there should be a right match in the gallery set. However, there could be identities that appear in gallery set but not in probe set. A $m\times n$ similarity matrix can be computed. Then for each probe identity $P_i$, a sorted list of gallery identities can be list as $S(P_i) = \{{G_{(1)},G_{(2)},\cdots,G_{(m)}}\}$ so that their similarity with $P_i$ descends. Suppose the right match of $P_i$ is at the position $k$ of $S(P_i)$, $k\le m$, then $G_i$ has a rank value of $k$. Therefore, the CMC can be calculated as 
 \begin{equation}
 CMC(k) = \frac{1}{n}(\#k_l\le k)
 \end{equation}
