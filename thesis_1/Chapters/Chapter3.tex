@@ -16,7 +16,6 @@ Histogram descriptor extracts color statistics information of input images. A po
 
 \begin{figure}
 \centering
-
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVIPeR.png}
 \caption{A CMC comparison of color histogram on different color spaces }
 \label{CMCcolorspaces}
@@ -43,7 +42,7 @@ Histogram descriptor extracts color statistics information of input images. A po
 \end{figure}
 
 
-\subsection{Local binary pattern(LBP)}
+\subsection{Local binary pattern (LBP)}
 Local binary pattern \cite{LBP1, LBP2} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \ref{LBPdemoshot} is an example of LBP. by thresholding neighbour pixel of center pixel (shown in Figure \ref{LBPtheory}), the pixels are transformed into a binary integer. There are many extended LBP like tLBP, VLBP, OCLBP. Besides, LBP is well known for its robustness to monotonic illumination variation.
 \begin{figure}[H]
 \centering
@@ -68,7 +67,7 @@ Local binary pattern \cite{LBP1, LBP2} extracts the texture information with eff
 \end{figure}
 
 
-\subsection{Histogram of oriented gradients(HOG)}
+\subsection{Histogram of oriented gradients (HOG)}
 The HOG \cite{HOG} descriptor also extracts textural information of images by gradient computing. A brief introduction about its gradient computation is presented here, more details can be referenced in \cite{HOG}. In HOG feature it computes the gradient of input intensity  image $I(x, y)$ by equations 
 
 \begin{equation}
