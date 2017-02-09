@@ -164,7 +164,7 @@ In this thesis, the CMC curve is used to measure Re-ID performance because most 
 \begin{equation}
 CMC(k) = \frac{1}{n}(\#k_l\le k)
 \end{equation}
-where $k_l$ is the list of rank values of $P = \{P_1,P_2,\cdots,P_n\}$, and $\#k_l\le k$ means the number of rank values that is smaller than k.  Therefore, CMC curve always ascends and stops at 1.  A perfect CMC curve is supposed to have a hight rank 1 score and approaches 1 as fast as possible.
+where $k_l$ is the list of rank values of $P = \{P_1,P_2,\cdots,P_n\}$, and $\#k_l\le k$ means the number of rank values that is smaller than k.  Therefore, CMC curve always ascends and converges at 1.  A perfect CMC curve is supposed to have a hight rank 1 score and approaches 1 as fast as possible.
 
 An example of CMC computing is as follow. Suppose the gallery size is $M=10$ and probe size is $N=15$. By computing the similarity and ranking them we have a rank score frequency table as
 \begin{table}[H]
