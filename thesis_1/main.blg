@@ -19,54 +19,53 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated field_info (elt_size=4) to 11394 items from 5000.
+Reallocated field_info (elt_size=4) to 11811 items from 5000.
 Database file #1: main-blx.bib
 Database file #2: citation.bib
 Warning--string name "june" is undefined
 --line 474 of file citation.bib
-Warning--I didn't find a database entry for "LFDAdr"
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 45 entries,
+You've used 49 entries,
             6047 wiz_defined-function locations,
-            1395 strings with 16125 characters,
-and the built_in function-call counts, 149267 in all, are:
-= -- 5036
-> -- 5745
-< -- 1519
-+ -- 1822
-- -- 2187
-* -- 12726
-:= -- 9354
+            1417 strings with 16853 characters,
+and the built_in function-call counts, 161981 in all, are:
+= -- 5485
+> -- 6181
+< -- 1633
++ -- 1952
+- -- 2351
+* -- 13798
+:= -- 10107
 add.period$ -- 0
-call.type$ -- 45
-change.case$ -- 541
+call.type$ -- 49
+change.case$ -- 593
 chr.to.int$ -- 274
-cite$ -- 88
-duplicate$ -- 16978
-empty$ -- 15261
-format.name$ -- 3649
-if$ -- 33144
+cite$ -- 96
+duplicate$ -- 18458
+empty$ -- 16613
+format.name$ -- 3957
+if$ -- 35995
 int.to.chr$ -- 0
-int.to.str$ -- 112
+int.to.str$ -- 122
 missing$ -- 0
-newline$ -- 1361
-num.names$ -- 1996
-pop$ -- 14492
+newline$ -- 1478
+num.names$ -- 2178
+pop$ -- 15792
 preamble$ -- 1
-purify$ -- 719
+purify$ -- 785
 quote$ -- 0
-skip$ -- 8421
+skip$ -- 9149
 stack$ -- 0
-substring$ -- 2413
-swap$ -- 5824
-text.length$ -- 1435
-text.prefix$ -- 48
+substring$ -- 2604
+swap$ -- 6320
+text.length$ -- 1545
+text.prefix$ -- 52
 top$ -- 1
-type$ -- 1698
+type$ -- 1850
 warning$ -- 0
-while$ -- 1062
+while$ -- 1134
 width$ -- 0
-write$ -- 1315
-(There were 2 warnings)
+write$ -- 1428
+(There was 1 warning)

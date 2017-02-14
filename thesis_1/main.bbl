@@ -81,6 +81,77 @@
   \field{year}{2011}
 \endentry
 
+\entry{OCLBP}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Barkan}{B.}%
+     {Oren}{O.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Weill}{W.}%
+     {Jonathan}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wolf}{W.}%
+     {Lior}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Aronowitz}{A.}%
+     {Hagai}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BO+1}
+  \strng{fullhash}{BOWJWLAH1}
+  \field{sortinit}{B}
+  \field{booktitle}{Proceedings of the IEEE International Conference on
+  Computer Vision}
+  \field{pages}{1960\bibrangedash 1967}
+  \field{title}{Fast high dimensional vector multiplication face recognition}
+  \field{year}{2013}
+\endentry
+
+\entry{AHPE}{article}{}
+  \name{author}{4}{}{%
+    {{}%
+     {Bazzani}{B.}%
+     {Loris}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Cristani}{C.}%
+     {Marco}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Perina}{P.}%
+     {Alessandro}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Murino}{M.}%
+     {Vittorio}{V.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{BL+1}
+  \strng{fullhash}{BLCMPAMV1}
+  \field{sortinit}{B}
+  \field{number}{7}
+  \field{pages}{898\bibrangedash 903}
+  \field{title}{Multiple-shot person re-identification by chromatic and
+  epitomic analyses}
+  \field{volume}{33}
+  \field{journaltitle}{Pattern Recognition Letters}
+  \field{year}{2012}
+\endentry
+
 \entry{REIDsurvey}{article}{}
   \name{author}{4}{}{%
     {{}%
@@ -1025,7 +1096,7 @@
   \field{pages}{1\bibrangedash 18}
   \field{title}{{Appearance Descriptors for Person Re-identification: a
   Comprehensive Review}}
-  \field{journaltitle}{arXiv preprint arXiv:1307.5748}
+  \field{journaltitle}{Computing Research Repository}
   \field{month}{07}
   \field{year}{2013}
 \endentry
@@ -1080,6 +1151,29 @@
   Dimensionality Reduction}}
   \field{month}{12}
   \field{year}{2006}
+\endentry
+
+\entry{tLBP}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Trefn{\`y}}{T.}%
+     {Jir{\'\i}}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Matas}{M.}%
+     {Jir{\'\i}}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TJMJ1}
+  \strng{fullhash}{TJMJ1}
+  \field{sortinit}{T}
+  \field{booktitle}{Computer Vision Winter Workshop}
+  \field{pages}{1\bibrangedash 7}
+  \field{title}{Extended set of local binary patterns for rapid object
+  detection}
+  \field{year}{2010}
 \endentry
 
 \entry{RegionCovariance}{inproceedings}{}
@@ -1341,6 +1435,34 @@
   Re-identification}}
   \field{month}{03}
   \field{year}{2016}
+\endentry
+
+\entry{VLBP}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Zhao}{Z.}%
+     {Guoying}{G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pietikainen}{P.}%
+     {Matti}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{ZGPM1}
+  \strng{fullhash}{ZGPM1}
+  \field{sortinit}{Z}
+  \field{number}{6}
+  \field{title}{Dynamic texture recognition using local binary patterns with an
+  application to facial expressions}
+  \field{volume}{29}
+  \field{journaltitle}{IEEE transactions on pattern analysis and machine
+  intelligence}
+  \field{year}{2007}
 \endentry
 
 \entry{MidlevelFilters}{inproceedings}{}
