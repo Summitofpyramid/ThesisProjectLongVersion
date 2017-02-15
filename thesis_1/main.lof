@@ -20,7 +20,7 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces A demo of HOG feature with a cell size of six pixels\relax }}{25}{figure.caption.59}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Foreground segmentation of individuals from VIPeR \relax }}{26}{figure.caption.61}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR\relax }}{27}{figure.caption.62}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces A CMC comparison of foreground segmentation on LBP feature tested on VIPeR \relax }}{27}{figure.caption.63}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces A CMC comparison of foreground segmentation on LBP feature tested on VIPeR \relax }}{28}{figure.caption.63}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces A CMC comparison of foreground segmentation on HOG feature tested on VIPeR\relax }}{28}{figure.caption.64}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Integral image\relax }}{33}{figure.caption.85}
 \addvspace {10\p@ }

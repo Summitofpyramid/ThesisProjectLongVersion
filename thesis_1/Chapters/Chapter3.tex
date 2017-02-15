@@ -1,4 +1,4 @@
-\chapter{Descriptors extraction and dimension reduction}
+\chapter{Extraction of Hierarchical Gaussian descriptors}
 In person re-identification, it is very important to choose robust descriptor to represent person. A good descriptor should be robust to variations of illumination, viewpoint, and camera color response. Most descriptors try to capture the color and texture information. In this chapter, we will first introduce some basic descriptors and compare their performance on VIPeR dataset, then a detailed introduction of a hierarchical descriptor will be presented in section 3.3 of this Chapter.
 
 
@@ -127,7 +127,7 @@ Using different masks will result different performance. Besides, gaussian smoot
 
 
 \section{Influence of background segmentation on different basic descriptors}
-Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from a sequential frames or video than a single frame. In \cite{SDALF} the author provides foreground masks for all images following the algorithm in \cite{STEL}.  Some of those segmented foregrounds are shown in Figure \ref{VIPeRFGs} and it's obvious that certain body parts like head and feet are lost. To compare those loss impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in Figure \ref{fig:SegHSV}, Figure \ref{fig:SegLBP} and Figure \ref{fig:SegHOG}. 
+Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from a sequential frames or video than a single frame. In \cite{SDALF} the author provides foreground masks for all images following the algorithm in \cite{STEL}. Authors in \cite{STEL} propose stel (structure element) component analysis to model spatial correlations in image class structure by using probabilistic index maps (PIMs). A structure element is an area of an image with the same assigned index $s(s=1,2,\cdots,n)$, $n$ is the total number of stels in an image. In PIMs the indices assignment can be denoted probabilistically as a map $q(s_{\bm{i}}^s=s)$ over an image, in this equation the location is $\bm{i} = (i,j)$, $q$ is the probability of pixel at $\bm{i}$ of the $t$-th image (suppose there are many images for each class) belonging to the $s$-th stel. The authors propose that pixels in a structure element of an image class follow a shared distribution which can be modelled with local measurements like pixel intensity value. The number of stels $n$ is set to 2 to achieve background and foreground segmentation. That is, pixels of foreground stel share a distribution while pixels of background stel sharing another distribution. Both the foreground and background stels are modelled by a mixture of $C$ Gaussians. Some of those segmented foregrounds are shown in Figure \ref{VIPeRFGs} and it's obvious that certain body parts like head and feet are lost. To compare those loss impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in Figure \ref{fig:SegHSV}, Figure \ref{fig:SegLBP} and Figure \ref{fig:SegHOG}. 
 
 
 \begin{figure}[H]
@@ -139,7 +139,7 @@ Many works try to minimize impact of background noise of pedestrians' image. It'
 \end{figure} 
 
 We can find that foreground segmentation decreases LBP and HOG's performance but increases HSV color histogram's performance on VIPeR dataset greatly. The reason for this is imperfect foreground segmentation causes body parts (like head and feet) loss and mask out many parts in torso and legs. Besides, in images of some individuals, a part of background scene is regarded as foreground. Since HSV color histogram doesn't handle spatial distribution but only color entropy, foreground segmentation improves its performance greatly. But since LBP and HOG handle texture for each sample patch, their performance suffer from those body parts loss and little black patches from background. What's more, we can infer that imperfect foreground segmentation will also decrease other textural feature's performance.
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png}
 \caption{A CMC comparison of foreground segmentation on HSV histogram descriptor tested on VIPeR}
@@ -147,7 +147,7 @@ We can find that foreground segmentation decreases LBP and HOG's performance but
 \vspace{-1em}
 \end{figure} 
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png}
 \caption{A CMC comparison of foreground segmentation on LBP feature tested on VIPeR }
@@ -155,7 +155,7 @@ We can find that foreground segmentation decreases LBP and HOG's performance but
 \vspace{-1em}
 \end{figure} 
 
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.jpg}
 \caption{A CMC comparison of foreground segmentation on HOG feature tested on VIPeR}
@@ -163,13 +163,11 @@ We can find that foreground segmentation decreases LBP and HOG's performance but
 \vspace{-1em}
 \end{figure} 
 
-
-
 \section{The hierarchical gaussian descriptor}
 
 The hierarchical gaussian descriptor is proposed by in  \cite{GOG}, this descriptor uses a two-level gaussian distribution to model an individual. This descriptor densely samples the image and models each hierarchical structure with gaussian distribution and to outperform many other works. In this thesis, all input images are sized to $128\times 64$. Firstly it divides the image into 7 overlapping horizontal slices, each slide has size $32\times 64$ and slides are overlapping by $16$ pixels vertically.  In each slide, densely sampled square patches have a size of $s\times s$ pixels ($s$ = 5 in this thesis), and small patches overlaps with each other by $2$ pixels. So there is a  two-level structure in this image, small patches and slides. The small patches are first modelled with a multivariate gaussian distribution, then with those small patch gaussian distributions, the slide containing those patches is modelled with another multivariate gaussian distribution.
 
-In a certain horizontal slide for each small patch, it's modelled by a multivariate gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
+In a certain horizontal slice for each small patch, it's modelled by a multivariate gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
 \indent After the slide is modelled with $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$, the same transformation will be operated on $\bm{G}_r$ so that it's vectorized as a vector $\bm{v}$. At last all computed $\bm{v}$ are concatenated to consist of the descriptor of current image. 
 
 \subsection{Handling the background}
@@ -345,9 +343,9 @@ nR = \frac{B}{R+G+B},
 \end{equation}
 since $nB$ can be calculated with $nR$ and $nG$, in this color space only the first two channel values are used to reduce redundancy. Therefore, for color space \{RGB, HSV, Lab, nRGB\}, the corresponding dimension of pixel feature is \{8, 8, 8, 7\}. After the matrix to vector transformation, the dimension of patch gaussian vector of each channel is \{45, 45, 45, 36\}. Again after the patch gaussian to region gaussian transformation, the dimension of each channel is \{1081, 1081, 1081, 703\}. Suppose there are 7 horizontal slides in each image, the dimension of concatenated descriptor of each channel is \{7567, 7567, 7567, 4921\}. If four color space are all used, the dimension is the sum of each channel as 27622. 
 
-Hierarchical gaussian descriptor has a few advantages compared with other descriptors. Firstly, it has a full consideration of color and texture information. The color information is adopted by adding color values of different color space to $\bm{f}_i$. Textural information is also adopted by those four $\bm{M}$ components in $\bm{f}_i$. Secondly, by Riemannian manifold based SPD mapping, it provides a solution to summarize many multi-variate gaussian functions. The parameters $\bm{\mu}$ and $\bm{\Sigma}$ can be fused into a SPD matrix. With later vectorization this SPD matrix is transformed to a vector. In this mapping process correlation of different components in components of $\bm{f}_i$ are fully taken into account, which leads to a dimension increasing from basic pixel feature vector $\bm{f}_i$ to patch gaussian vector $\bm{p}_j$. Thirdly, by a two-level gaussian model, this model guarantees to extract the overall statistical information of an image while not putting too much emphasis on local details. This helps to overcome the viewpoint variation. 
+Hierarchical gaussian descriptor has a few advantages compared with other descriptors. Firstly, it has a full consideration of color, texture and $y$ coordinate information. The color information is adopted by adding color values of different color space to $\bm{f}_i$. Textural information is also adopted by those four gradient components in $\bm{f}_i$. Secondly, by Riemannian manifold based SPD mapping, it provides a solution to summarize many multi-variate gaussian functions. The parameters $\bm{\mu}$ and $\bm{\Sigma}$ of a multi-variate gaussian function can be fused into a SPD matrix. With later vectorization this SPD matrix is transformed to a vector. In this mapping process correlation of different components in $\bm{f}_i$ are fully taken into account, which leads to a dimension increasing from basic pixel feature vector $\bm{f}_i$ to patch gaussian vector $\bm{p}_j$. Thirdly, by a two-level gaussian model, this model guarantees to extract the overall statistical information of an image while being robust to local details variation caused by factors like viewpoint changes and partial occlusion. 
 
-It is intractable to directly learn a Mahanalobis distance matrix from concatenated Hierarchical Gaussian descriptor. In next Chapter the KLFDA is applied to reduce the dimensionality of extracted descriptor from 27622 to $n-1$, where $n$ is the number of different classes. With this supervised nonlinear dimensionality reduction, discriminative information among different classes are preserved. At last a Mahanalobis matrix is learned on the dimension reduced descriptors by gradient descent method.
+It is intractable to directly learn a Mahanalobis distance matrix from concatenated Hierarchical Gaussian descriptor. In next Chapter KLFDA is applied to reduce the dimensionality of extracted descriptor from 27622 to $n-1$, where $n$ is the number of different classes. With this supervised nonlinear dimensionality reduction, discriminative information among different classes are preserved. At last a Mahanalobis matrix is learned on the dimension reduced descriptors by gradient descent method.
 
 
 
