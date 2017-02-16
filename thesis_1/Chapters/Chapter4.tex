@@ -118,7 +118,7 @@ Again this problem can be solved by eigenvalue decomposition by Equation \ref{ei
 
 When applying the LFDA to original high dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, LFDA has to solve the eigenvalue a matrix with dimension $d\times d$. In some descriptors the $d$ could be more than 20000 and thus the computation cost is intractable. 
  
-\subsection{Kernel local fisher discriminant analysis(KLFDA)}
+\subsection{Kernel local fisher discriminant analysis (KLFDA)}
 
 KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $\bm{T}$ can be computed by equation
 \begin{equation}
@@ -267,21 +267,21 @@ This process is repeated until certain condition is met, generally when gradient
 \vspace{0em}
 \end{figure} 
 
-\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are that it is always downhill and it can avoid the saddle points. Besides, it is very efficient when initial value of $F(\bm{x})$ is far from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic (an example is in Figure \ref{fig:side:a}). In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in Figure \ref{fig:side:b}. The third shortcoming is linear search in gradient descent might cause some problem.
-\begin{figure}[H]
-\begin{minipage}[t]{0.5\linewidth}
-\centering
-\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png}
-\caption{Function with multi local minimums}
-\label{fig:side:a}
-\end{minipage}%
-\begin{minipage}[t]{0.5\linewidth}
-\centering
-\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg}
-\caption{Zigzagging downhill valley}
-\label{fig:side:b}
-\end{minipage}
-\end{figure}
+\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are that it is always downhill and it can avoid the saddle points. Besides, it is very efficient when initial value of $F(\bm{x})$ is far from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic. In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum, one example is zigzag downhill case. The third shortcoming is linear search in gradient descent might cause some problem.
+%\begin{figure}[H]
+%\begin{minipage}[t]{0.5\linewidth}
+%\centering
+%\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/multiMinima.png}
+%\caption{Function with multi local minimums}
+%\label{fig:side:a}
+%\end{minipage}%
+%\begin{minipage}[t]{0.5\linewidth}
+%\centering
+%\includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/zigzag.jpg}
+%\caption{Zigzagging downhill valley}
+%\label{fig:side:b}
+%\end{minipage}
+%\end{figure}
 
  \section{Metric learning based on sample pairs distance comparison}
  Inspired by \cite{TDL}, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similar with \cite{PRDC}, this method is also based on similarity comparison. In \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare all possible positive and negative pairs, its computation complexity is quite expensive. To reduce the complexity, a simplified version is proposed as the top-push distance metric learning \cite{TDL}.  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahanalobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, $n$ is the number of all samples, the requirement is distance between positive pair should be at least 1 unit smaller than the minimum distance of all negative pair. This can be denoted as 
@@ -355,9 +355,13 @@ However, the equation above only penalizes the minimum interclass distance. Anot
 % \hline
 % \end{tabular} 
 % \end{table}
+In each iteration, to make sure the updated $\bm{M}$ is a SPD matrix, first a eigenvalue decomposition is performed on $\bm{M}$, and we have
+\begin{equation}\label{SPDproject}
+\bm{M} = \bm{V}\bm{\Lambda}\bm{V}^T
+\end{equation}
+here $\bm{\Lambda}$ is a diagonal matrix and its diagonal elements are eigenvalues. Then the negative eigenvalues in $\bm{V}$ are removed and the corresponding eigenvectors in $\bm{V}$ are also removed. Then $\bm{M}$ is restored by Equation \eqref{SPDproject}.
 
-\begin{table}[H] 
-
+\begin{table}[H]
  \centering
  \caption{Optimization algorithm of Mahanalobis distance matrix learning}
  \label{Gradientdemo}
@@ -385,13 +389,6 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \hline
  \end{tabular} 
  \end{table}
-
-In each iteration, to make sure the updated $\bm{M}$ is a SPD matrix, first a eigenvalue decomposition is performed on $\bm{M}$, and we have
-\begin{equation}\label{SPDproject}
-\bm{M} = \bm{V}\bm{\Lambda}\bm{V}^T
-\end{equation}
-here $\bm{\Lambda}$ is a diagonal matrix and its diagonal elements are eigenvalues. Then the negative eigenvalues in $\bm{V}$ are removed and the corresponding eigenvectors in $\bm{V}$ are also removed. Then $\bm{M}$ is restored by Equation \eqref{SPDproject}.
-
  
  
  

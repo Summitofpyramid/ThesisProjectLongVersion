@@ -127,7 +127,7 @@ Using different masks will result different performance. Besides, gaussian smoot
 
 
 \section{Influence of background segmentation on different basic descriptors}
-Many works try to minimize impact of background noise of pedestrians' image. It's easier to automatically segment foreground from a sequential frames or video than a single frame. In \cite{SDALF} the author provides foreground masks for all images following the algorithm in \cite{STEL}. Authors in \cite{STEL} propose stel (structure element) component analysis to model spatial correlations in image class structure by using probabilistic index maps (PIMs). A structure element is an area of an image with the same assigned index $s(s=1,2,\cdots,n)$, $n$ is the total number of stels in an image. In PIMs the indices assignment can be denoted probabilistically as a map $q(s_{\bm{i}}^t=s)$ over an image, in this equation the location is $\bm{i} = (i,j)$, $q$ is the probability of pixel at $\bm{i}$ of the $t$-th image (suppose there are many images for each class) belonging to the $s$-th stel. The authors propose that pixels in a structure element of an image class follow a shared distribution which can be modelled with local measurements like pixel intensity value. The number of stels $n$ is set to 2 to achieve background and foreground segmentation. That is, pixels of foreground stel share a distribution while pixels of background stel sharing another distribution. Both the foreground and background stels are modelled by a mixture of $C$ Gaussians. Some of those segmented foregrounds are shown in Figure \ref{VIPeRFGs} and it's obvious that certain body parts like head and feet are lost. To compare those loss impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in Figure \ref{fig:SegHSV}, Figure \ref{fig:SegLBP} and Figure \ref{fig:SegHOG}. 
+Many works try to minimize impact of background noise of pedestrians' image. it is easier to automatically segment foreground from a sequential frames or video than a single frame. In \cite{SDALF} the author provides foreground masks for all images following the algorithm in \cite{STEL}. Authors in \cite{STEL} propose stel (structure element) component analysis to model spatial correlations in image class structure by using probabilistic index maps (PIMs). A structure element is an area of an image with the same assigned index $s(s=1,2,\cdots,n)$, $n$ is the total number of stels in an image. In PIMs the indices assignment can be denoted probabilistically as a map $q(s_{\bm{i}}^t=s)$ over an image, in this equation the location is $\bm{i} = (i,j)$, $q$ is the probability of pixel at $\bm{i}$ of the $t$-th image (suppose there are many images for each class) belonging to the $s$-th stel. The authors propose that pixels in a structure element of an image class follow a shared distribution which can be modelled with local measurements like pixel intensity value. The number of stels $n$ is set to 2 to achieve background and foreground segmentation. That is, pixels of foreground stel share a distribution while pixels of background stel sharing another distribution. Both the foreground and background stels are modelled by a mixture of $C$ Gaussians. Some of those segmented foregrounds are shown in Figure \ref{VIPeRFGs} and it is obvious that certain body parts like head and feet are lost. To compare those loss impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in Figure \ref{fig:SegHSV}, Figure \ref{fig:SegLBP} and Figure \ref{fig:SegHOG}. 
 
 
 \begin{figure}[H]
@@ -167,8 +167,8 @@ We can find that foreground segmentation decreases LBP and HOG's performance but
 
 The hierarchical gaussian descriptor is proposed by in  \cite{GOG}, this descriptor uses a two-level gaussian distribution to model an individual. This descriptor densely samples the image and models each hierarchical structure with gaussian distribution and to outperform many other works. In this thesis, all input images are sized to $128\times 64$. Firstly it divides the image into 7 overlapping horizontal slices, each slide has size $32\times 64$ and slides are overlapping by $16$ pixels vertically.  In each slide, densely sampled square patches have a size of $s\times s$ pixels ($s$ = 5 in this thesis), and small patches overlaps with each other by $2$ pixels. So there is a  two-level structure in this image, small patches and slides. The small patches are first modelled with a multivariate gaussian distribution, then with those small patch gaussian distributions, the slide containing those patches is modelled with another multivariate gaussian distribution.
 
-In a certain horizontal slice for each small patch, it's modelled by a multivariate gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
-\indent After the slide is modelled with $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$, the same transformation will be operated on $\bm{G}_r$ so that it's vectorized as a vector $\bm{v}$. At last all computed $\bm{v}$ are concatenated to consist of the descriptor of current image. 
+In a certain horizontal slice for each small patch, it is modelled by a multivariate gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
+\indent After the slide is modelled with $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$, the same transformation will be operated on $\bm{G}_r$ so that it is vectorized as a vector $\bm{v}$. At last all computed $\bm{v}$ are concatenated to consist of the descriptor of current image. 
 
 \subsection{Handling the background}
 In the previous section the impact of background subtraction on different features' performance have been studied. We've concluded that imperfect foreground segmentation decreases textural feature's performance. Besides, in hierarchical gaussian descriptor there is no histogram-based feature computing. So in this thesis, when computing the pixel basic feature $\bm{f}_i$, the foreground segmentation is not adopted. But when modelling the region gaussian $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$ a weighted map is computed for each patch with equation
@@ -226,7 +226,7 @@ To estimate the parameters for this gaussian model based on sampled patches pixe
 %\end{aligned}
 \end{equation}
 
-where $n$ is the number of pixels in current patch. When the gaussian model is computed, the next step is to model all the patch gaussians. But it's a complex problem to directly model those multivariate gaussian functions. So some transformation will be operated on the estimated parameters $\bm{\mu}_p$ and $\bm{\Sigma}_p$.
+where $n$ is the number of pixels in current patch. When the gaussian model is computed, the next step is to model all the patch gaussians. But it is a complex problem to directly model those multivariate gaussian functions. So some transformation will be operated on the estimated parameters $\bm{\mu}_p$ and $\bm{\Sigma}_p$.
 
 
 %% --------------------------------------Riemannian manifold based SPD transformation
@@ -330,8 +330,8 @@ Then for any rectangule regions $R(x', y'; x'', y'')$, where $(x', y')$ is the u
 where $n$ is the number of feature vector in $F$, and $n = (x'' - x')(y'' - y')$. By creating the integral image the covariance of any rectangular area in $F$ can be computed in $O(d^2)$ time.
 
 When all patches in a region are computed, the same process is repeated to compute the region gaussian. 
-\subsection{Some variants of Hierarchical Gaussian descriptors}
-Hierarchical gaussian descriptor characterizes texture, color and $y$ coordinate of an image. The importance of those three characteristics is ordered as color values > gradient components > $y$ coordinate. A rank-1, rank-5, rank-10, and rank-20 comparison of three variants on VIPeR dataset are listed below. We can conclude that color values have the most influence on Re-ID accuracy. Based on this conclusion, in GOG$_\text{fusion}$ variants test the color values will remain unchanged and $y$ coordinate and M components will be replaced or removed to study performance. One GOG$_\text{fusion}$ variant is to replace the M components in $\bm{f}_i$ with LBP. 
+\subsection{Some variants of Hierarchical Gaussian descriptor}
+Hierarchical gaussian descriptor characterizes texture, color and $y$ coordinate of an image. The importance of those three characteristics is ordered as color values > gradient components > $y$ coordinate. A rank-1, rank-5, rank-10, and rank-20 comparison of three variants on VIPeR dataset are listed below. We can conclude that color values have the most influence on Re-ID accuracy. Based on this conclusion, in GOG$_\text{fusion}$ variants test the color values will remain unchanged and $y$ coordinate and M components will be replaced or removed. One GOG$_\text{fusion}$ variant is to replace the M components in $\bm{f}_i$ with LBP. 
 
 \begin{table}[H]
 \centering
@@ -342,16 +342,18 @@ Hierarchical gaussian descriptor characterizes texture, color and $y$ coordinate
 \hline
 GOG$_\text{fusion}$ Variants & 1 & 5 & 10 & 20 \\ 
 \hline
-GOG$_\text{fusion}$ without $y$ & 44.8&  76.2& 86.8& 93.2\\
+GOG$_\text{fusion}$ &47.97 &77.44 & 86.80& 93.70\\
 \hline
-GOG$_\text{fusion}$ without M & 41.1&70.5&81.1&90.3\\
+GOG$_\text{fusion}$ without $y$ & 44.80&  76.20& 86.80& 93.20\\
 \hline
-GOG$_\text{fusion}$ without color values & 8.4 &21.0&31.7& 45.5\\
+GOG$_\text{fusion}$ without M & 41.10&70.50&81.10&90.30\\
+\hline
+GOG$_\text{fusion}$ without color values & 8.40 &21.00&31.70& 45.50\\
 \hline
 \end{tabular}
 \end{table}
 
-Another variant is to combine superpixel segmentation with GOG$_\text{fusion}$. Superpixel algorithms cluster image pixels into perceptually atomic regions, which can be used to reduce redundancy and computation complexity. One successful superpixel algorithm is SLIC \cite{SLIC}. To combine superpixel segmentation and GOG$_\text{fusion}$, an image is first segmented by SLIC algorithm into many nonrigid groups (An example of SLIC segmentation is shown in Figure ). Each superpixel group is modelled with a multivariate gaussian function by summarizing basic feature $\bm{f}_i$ of pixels inside this group. With similar SPD mapping and vectorization every group can be summarized by a vector. At last the same process is repeated on those superpixels to get region gaussians. Compared with original hierarchical gaussian descriptor, the difference is overlapping square patch sampling in hierarchical gaussian are changed to nonrigid and non-overlapping superpixel sampling in the variant. Hopefully, superpixel segmentation can group pixels with similar property, which may decrease error caused by single gaussian modelling. 
+Another variant is to combine superpixel segmentation with GOG$_\text{fusion}$. Superpixel algorithms cluster image pixels into perceptually atomic regions, which can be used to reduce redundancy and computation complexity. One successful superpixel algorithm is SLIC \cite{SLIC}. To combine superpixel segmentation and GOG$_\text{fusion}$, each horizontal slice of an image is first segmented by SLIC algorithm into many nonrigid groups (An example of SLIC segmentation is shown in Figure \ref{SLICdemoCUHK}). Each superpixel group is modelled with a multivariate gaussian function by summarizing basic feature $\bm{f}_i$ of pixels inside this group. With similar SPD mapping and vectorization every group can be summarized by a vector. At last the same process is repeated on those superpixels to get region gaussians. Compared with original hierarchical gaussian descriptor, the difference is overlapping square patch sampling in hierarchical gaussian are changed to nonrigid and non-overlapping superpixel sampling in the variant. Hopefully, superpixel segmentation can group pixels with similar property, which may decrease error caused by single gaussian modelling. 
 
 \begin{figure}[H]
 \begin{raggedleft}
@@ -362,7 +364,29 @@ Another variant is to combine superpixel segmentation with GOG$_\text{fusion}$. 
 \end{raggedleft}
 \end{figure}
 
-Besides, gaussian mixture model based descriptor is also tested.
+Besides, gaussian mixture model (GMM) based descriptor is also tested. GMM models an image or a region with a mixture of gaussian distributions. But it is computationally expensive to compute similarity of GMMs. Also, it is extremely difficult to create a two-level hierarchical GMM model. Sparse represented Earth Mover's Distance (SR-EMD) \cite{novelEMD} is used here to measure similarity. All those variants' performance have been listed in Table \ref{VariantsComparison}. It can be concluded that GOG$_\text{fusion}$ has the best performance. GOG$_\text{fusion}$MreplacedByLBP suffers a large decrease because LBP components in $\bm{f}_i$ is less robust. GOG$_\text{fusion}$Superpixel might suffer from its non-overlapping superpixel patch sampling. GMM + SR-EMD model has worst performance because of two reasons: (1) This model is not trained; (2) A better similarity measurement is needed to for GMMs.
+\begin{table}[H]
+\centering
+\caption{A performance comparison between Gaussian of Gaussian descriptor and its variants on VIPeR dataset}
+\label{VariantsComparison}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+& \multicolumn{5}{|c|}{Rank(\%)}\\
+\hline
+Variant descriptors & 1&5&10&15&20\\
+\hline
+GOG$_\text{fusion}$+XQDA & 47.97& 77.44&86.80 &91.27 &93.70 \\ 
+\hline
+GOG$_\text{fusion}$MreplacedByLBP+XQDA & 40.70&72.53 &83.16 &88.45 &91.90 \\ %40.70%, 72.53%, 83.16%, 88.45%, 91.90%
+\hline
+GOG$_\text{fusion}$Superpixel+XQDA &42.72 &74.84 & 85.22&89.34& 92.25\\ %42.72%, 74.84%, 85.22%, 89.34%, 92.25%
+\hline
+GMM + SR-EMD(EMD-theta) &11.40 &21.50 &29.70 &37.00 &42.40 \\ %11.4% 21.5% 29.7% 37.0% 42.4%(theta = 0.5)
+\hline
+\end{tabular}
+\end{table}
+
+
 
 \subsection{Dimensionality and superiority analysis of Hierarchical Gaussian descriptor}
 It has been known that combination of descriptors of different color space can greatly improve re-ID performance. In this project, the hierarchical gaussian descriptor in RGB color space is the base descriptor. Descriptors in three more color space \{HSV, Lab, nRGB\} are extracted. The nRGB color space is calculated as 

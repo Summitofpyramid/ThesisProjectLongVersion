@@ -686,6 +686,39 @@
   \field{year}{2012}
 \endentry
 
+\entry{novelEMD}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Li}{L.}%
+     {Peihua}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wang}{W.}%
+     {Qilong}{Q.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zhang}{Z.}%
+     {Lei}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{LPWQZL1}
+  \strng{fullhash}{LPWQZL1}
+  \field{sortinit}{L}
+  \field{booktitle}{Proceedings of the IEEE International Conference on
+  Computer Vision}
+  \field{pages}{1689\bibrangedash 1696}
+  \field{title}{{A Novel Earth Mover's Distance Methodology for Image Matching
+  with Gaussian Mixture Models}}
+  \field{month}{12}
+  \field{year}{2013}
+\endentry
+
 \entry{LOMO}{inproceedings}{}
   \name{author}{4}{}{%
     {{}%
