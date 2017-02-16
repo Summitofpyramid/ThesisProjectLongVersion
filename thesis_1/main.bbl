@@ -16,6 +16,55 @@
   {}
 \endgroup
 
+\entry{SLIC}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Achanta}{A.}%
+     {Radhakrishna}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shaji}{S.}%
+     {Appu}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Smith}{S.}%
+     {Kevin}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Lucchi}{L.}%
+     {Aurelien}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fua}{F.}%
+     {Pascal}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {S{\"u}sstrunk}{S.}%
+     {Sabine}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{AR+1}
+  \strng{fullhash}{ARSASKLAFPSS1}
+  \field{sortinit}{A}
+  \field{number}{11}
+  \field{pages}{2274\bibrangedash 2282}
+  \field{title}{SLIC superpixels compared to state-of-the-art superpixel
+  methods}
+  \field{volume}{34}
+  \field{journaltitle}{IEEE transactions on pattern analysis and machine
+  intelligence}
+  \field{year}{2012}
+\endentry
+
 \entry{PSmodelRevisit}{inproceedings}{}
   \name{author}{3}{}{%
     {{}%

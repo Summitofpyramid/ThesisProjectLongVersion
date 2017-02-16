@@ -1,10 +1,10 @@
 \chapter{Dimension reduction and Mahanalobis distance learning}
-To deal with high dimensional descriptors, dimension reduction are firstly performed by kernel local fisher discriminant analysis (KLFDA). Then Mahanalobis distance metric learning based on limitations between interclass and intraclass distance are operated on dimension reduced data.
+To deal with high dimensional descriptors, dimension reduction are firstly performed by kernel local fisher discriminant analysis (KLFDA). Then Mahanalobis distance metric learning based on limitations between interclass and intraclass distance is applied on dimension reduced data.
 \section{Kernel local fisher discriminant analysis}
-The extracted hierarchical gaussian descriptors have high dimension, it's intractable to learn a SPD matrix with such high dimension. Dimension reduction is required to learn a subspace.
-Among those methods to reduce dimension, principal component analysis (PCA) is often used. However, PCA is an unsupervised dimension reduction and may have low performance for those reasons. $(1)$, PCA is to maximize the variance of dimension reduced data, and as a unsupervised method it doesn't has a full consideration of the the relation of between and within classes. It is very likely that the descriptors of different classes can be mixed up after the dimension reduction; $(2)$ PCA may suffer from the small sample size problem. In some Re-ID datasets, there may be two or less images for each pedestrian in each viewpoint (like VIPeR), if the dimension of descriptor is much bigger than sample size, much information can be lost with PCA. In this thesis, the kernel local fisher discriminant analysis (KLFDA) is used to reduce dimension. 
+The extracted hierarchical gaussian descriptors have high dimension, it is intractable to learn a SPD matrix with such high dimension. Dimension reduction is required to learn a subspace.
+Among those methods to reduce dimension, principal component analysis (PCA) is often used. However, PCA is an unsupervised dimension reduction and may have low performance for two reasons. $(1)$, PCA is to maximize the variance of dimension-reduced data, and as an unsupervised method it doesn't take into consideration the between and within classes' relations. It is very likely that the descriptors of different classes can be mixed up after dimension reduction; $(2)$ PCA may suffer from the small sample size problem. In some Re-ID datasets, there may be one or two images for each pedestrian in each viewpoint (like VIPeR), if the dimension of the descriptor is much bigger than sample size, much information can be lost with PCA. In this thesis, the kernel local fisher discriminant analysis (KLFDA) is used to reduce dimension. 
 
-KLFDA is the kernel version of LFDA, and LFDA is a combination of Fisher discriminant analysis \cite{LFDA} and and the locality preserving projection \cite{LPP} and kernel method. A brief introduction of FDA, LPP and kernel method is introduced below.
+KLFDA is the kernel version of LFDA, and LFDA is a combination of Fisher discriminant analysis \cite{LFDA}, the locality preserving projection \cite{LPP} and kernel method. A brief introduction of FDA, LPP and kernel method is given below.
 \subsection{Fisher discriminant analysis (FDA)}
 
 FDA is a supervised dimension reduction and its input contains the class labels. Given a set of $d$-dimensional observations $\bm{X} = (\bm{x}_1, \bm{x}_2,\cdots,\bm{x}_n)$, where $i\in\{1,2,\cdots,n\}$, the label $y_i\in\{1,2,\cdots,l\}$, for each sample descriptor $\bm{x}_i$, a linear transformation with transformation matrix $\bm{T}$ can be defined by equation
@@ -50,9 +50,10 @@ we can get
 
 here $\bm{t}_i$ is the $i_{th}$ column of $\bm{T}$, and the optimization problem is converted to a eigenvalue decomposition problem. $\bm{T}$ is the set of eigenvectors of $\frac{\bm{S}^{(b)}}{\bm{S}^{(w)}}$.
 
-Fisher discriminant analysis tries to minimize the intraclass scatter matrix while maximize the interclass scatter matrix, and $\bm{T}$ is computed by the eigenvalue decomposition. $\bm{T}$ can be represented as the set of all the corresponding eigenvectors, as $ \bm{T} = (\bm{t}_1,\bm{t}_2,\cdots,\bm{t}_k)$.
+Fisher discriminant analysis tries to minimize the intraclass scatter matrix while maximizing the interclass scatter matrix. $\bm{T}$ is computed by the eigenvalue decomposition. $\bm{T}$ can be represented as the set of all the corresponding eigenvectors, as $ \bm{T} = (\bm{t}_1,\bm{t}_2,\cdots,\bm{t}_k)$.
 
-FDA has a form similar with signal and noise ratio, however, the FDA dimension reduction may have poor performance for it doesn't consider the locality of data. An example of this is the multimodality \cite{KLFDA}. Multimodality is the case many clusters are formed in the same class. 
+FDA has a form similar to signal and noise ratio, however, the FDA dimension reduction may have poor performance because it doesn't consider the locality of data. An example of this is the multimodality \cite{KLFDA}. Multimodality is when many clusters are formed in the same class. 
+
 \subsection{Locality preserving projection (LPP)}
 
 In \cite{LPP} locality preserving projection (LPP) is proposed to exploit data locality. An affinity matrix is created to record the affinity of sample $\bm{x}_i$ and $\bm{x}_j$,  typically the range of elements in $\bm{A}_{i,j}$ is $[0,1]$. There are many manners to define a $n \times n$ affinity matrix $\bm{A}$, usually two sample points with a smaller distance has a higher affinity value than those with bigger distance value. One of them is if  $\bm{x}_i$ is within k-nearest neighbours of $\bm{x}_j$ then $\bm{A}_{i,j} = 1$ otherwise  $\bm{A}_{i,j} = 0$.  
@@ -125,7 +126,7 @@ KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduct
 \end{equation}
 where $\bm{S}^{(b)}_{\phi}$ and $\bm{S}^{(w)}_{\phi}$ is the between class scatter and within class scatter in mapped feature space $\Phi$.
 
-Note that the transformation matrix $\bm{T} \in \Phi$, it's computationally expensive to explicitly compute the mapping function $\phi$ and perform LFDA in feature space $\Phi$ because the dimension of $\Phi$ may be infinite. Rather than explicitly computing, the mapping function $\phi$ can be implicit and the feature space $\Phi$ can be defined by the inner product of features in $\Phi$. Kernel trick is used here and a kernel function can be defined as the inner product of mapped vectors $\phi(\bm{x}_i)$ and $\phi(\bm{x}_j)$ by equation
+Note that the transformation matrix $\bm{T} \in \Phi$, it is computationally expensive to explicitly compute the mapping function $\phi$ and perform LFDA in feature space $\Phi$ because the dimension of $\Phi$ may be infinite. Rather than explicitly computing, the mapping function $\phi$ can be implicit and the feature space $\Phi$ can be defined by the inner product of features in $\Phi$. Kernel trick is used here and a kernel function can be defined as the inner product of mapped vectors $\phi(\bm{x}_i)$ and $\phi(\bm{x}_j)$ by equation
  \begin{equation}
  k(\bm{x}_i,\bm{x}_j) = <\phi(\bm{x}_i),\phi(\bm{x}_j)>,
  \end{equation}
@@ -159,9 +160,9 @@ and
 \bm{A}_{i,j}^{(m)} = \bm{A}_{i,j}^{(w)}  + \bm{A}_{i,j}^{(w)}
 \end{equation}
 
-\noindent according to indentify(Fukunaga, 1990)
+\noindent according to indentify (Fukunaga, 1990)
 \begin{equation}
-trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = tr((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m
+trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m
 \end{equation}
 Equation \ref{eigencompute1} is equal to 
 
@@ -266,7 +267,7 @@ This process is repeated until certain condition is met, generally when gradient
 \vspace{0em}
 \end{figure} 
 
-\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are it's always downhill and it can avoid the saddle points. Besides, it's very efficient when initial value of $F(\bm{x})$ is further from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic (an example is in Figure \ref{fig:side:a}). In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in Figure \ref{fig:side:b}. The third shortcoming is linear search in gradient descent might cause some problem.
+\textbf{Analysis of steepest gradient descent method} The advantages of gradient descent are that it is always downhill and it can avoid the saddle points. Besides, it is very efficient when initial value of $F(\bm{x})$ is far from minimum. However, there are a few shortcomings of gradient descent method. The first one is the convergence value of gradient descent might be the local minima of $F(\bm{x})$ if $F(\bm{x})$ is not monotonic (an example is in Figure \ref{fig:side:a}). In this case the convergence value will depend on the initial value of $\bm{x}$. Another shortcoming is the converging speed goes very slow when approaching the minimum. One example of slow approaching speed is the zigzag approaching case in Figure \ref{fig:side:b}. The third shortcoming is linear search in gradient descent might cause some problem.
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
 \centering
@@ -283,7 +284,7 @@ This process is repeated until certain condition is met, generally when gradient
 \end{figure}
 
  \section{Metric learning based on sample pairs distance comparison}
- Inspired by \cite{TDL}, in this paper, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similar with \cite{PRDC}, this method is also based on similarity comparison. The difference is in \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare all possible positive and negative pairs, its computation complexity is quite expensive. To decrease complexity, a simplified version is proposed as the top-push distance metric learning \cite{TDL}.  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahanalobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, $n$ is the number of all samples, the requirement is distance between positive pair should be at least 1 unit smaller than the minimum distance of all negative pair. This can be denoted as 
+ Inspired by \cite{TDL}, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similar with \cite{PRDC}, this method is also based on similarity comparison. In \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare all possible positive and negative pairs, its computation complexity is quite expensive. To reduce the complexity, a simplified version is proposed as the top-push distance metric learning \cite{TDL}.  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahanalobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, $n$ is the number of all samples, the requirement is distance between positive pair should be at least 1 unit smaller than the minimum distance of all negative pair. This can be denoted as 
  \begin{equation}
  D(\bm{x}_i,\bm{x}_j) + \rho < \min D(\bm{x}_i,\bm{x}_k), y_i = y_j, y_i\ne y_k.
  \end{equation}
@@ -310,7 +311,7 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \begin{equation}
  D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y}) = trace(\bm{M}\bm{X}_{i,j})
  \end{equation}
- where $\bm{X}_{i,j} = \bm{x}_i*\bm{x}_j^T$, and $trace$ is to compute matrix trace. Therefore, Equation \ref{TargetFunc1} can be transformed as follow,
+ where $\bm{X}_{i,j} = \bm{x}_i*\bm{x}_j^T$, and $trace$ is to compute the matrix trace. Therefore, Equation \ref{TargetFunc1} can be transformed as follow,
  \begin{equation}
  \label{TargetFunc2}
  \begin{aligned}
