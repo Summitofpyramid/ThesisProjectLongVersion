@@ -144,16 +144,16 @@ It can be noticed that like many other metric learnings, XQDA and NFST evolve to
 \section{Performance measuring}
 There are a few measures of Re-ID such as cumulative matching curve(CMC), receiver operating characteristic curve (ROC) and synthetic recognition rate (SRR). Specifically, CMC is used as a 1:m re-identification system and ROC is used for 1:1 re-identification system. SRR curve indicates the probability that any of given fixed number of matches is correct.
 
-For the open-set Re-ID problem, The ROC \cite{PartbasedSTReid, MultiPersonREID} curve is adopted. ROC represents the relationship between Re-ID accuracy vs false accept rate (FAR). In ROC the x-axis is FAR and the y-axis is the accuracy. Re-ID accuracy and FAR are defined by equations
+For the open-set Re-ID problem, the ROC \cite{PartbasedSTReid, MultiPersonREID} curve is adopted. ROC represents the relationship between Re-ID accuracy vs false accept rate (FAR). In ROC the x-axis is FAR and the y-axis is the accuracy. Re-ID accuracy and FAR are defined by equations
 \begin{equation}
 \begin{aligned}
 Accuracy = \frac{TPs}{N_p}\\
 FAR = \frac{MMs + FPs}{N_p}
 \end{aligned}
 \end{equation}
-The true positives (TPs) is the number of probe IDs that are correctly accepted. $N_p$ is the number of all positive probes. The FAR is expressed by the mismatches (MM), false positives (FPs) and N$_\text{p}$. MMs is those probe IDs that are incorrectly matched to the galley when in fact those probe IDs exist in the gallery. The FPs is number of those probe IDs incorrectly matched to the gallery when they don't exist in the gallery actually. 
+the true positives (TPs) is the number of probe IDs that are correctly accepted. $N_p$ is the number of all positive probes. The FAR is expressed by the mismatches (MM), false positives (FPs) and N$_\text{p}$. MMs is those probe IDs that are incorrectly matched to the galley when in fact those probe IDs exist in the gallery. The FPs is number of those probe IDs incorrectly matched to the gallery when they don't exist in the gallery actually. 
 
-For the closed set Re-ID problem, the mostly used is the cumulative matching curve (CMC). Closed set Re-ID assumes that the probes are within gallery set and the performance is measured by ranking the gallery with respect to each probe. The CMC curve describes the probability of right match given a list of computed similarity score, and the first ranked ID is regarded as the matched individual.
+For the closed set Re-ID problem, the mostly used is the cumulative matching curve (CMC). Closed set Re-ID assumes that the probes are contained in gallery set and the performance is measured by ranking the gallery with respect to each probe. The CMC curve describes the probability of right match given a list of computed similarity score, and the first ranked ID is regarded as the matched individual.
 
 The proportion of uncertainty removed (PUR) is proposed in \cite{LFDA}. PUR measure the entropy difference between before ranking and after ranking. For a certain probe before ranking all those samples in gallery set has equal probability and the entropy is $\log(S)$, $S$ is the number of observations in gallery set. After ranking the entropy is $\sum M(r)\log(M(r))$, $M(r)$ is the probability that the right match is within the top $r$ ranked observations. With normalization the PUR value is computed by equation
 \begin{equation}
