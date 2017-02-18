@@ -53,7 +53,7 @@ Local binary pattern \cite{LBP1, LBP2} extracts the texture information with eff
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}
 \begin{minipage}[t]{0.5\linewidth}
 \centering
 \includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg}
@@ -178,7 +178,7 @@ N(x;\mu_0,\sigma_0) = \frac{1}{\sigma_0\sqrt{2\pi}} \exp^{\frac{(x - \mu_0)^2}{\
 and here $\mu_0 = \frac{W_0}{2}, \sigma_0 = \frac{W_0}{4}$, $W_0$ is the number of patches in horizontal direction.
 \subsection{Single pixel modelling}
 
-In this hierarchical model, it is very important to have a full representation for every single pixel. To fully characterize single pixel, a $d$ dimensional vector is used to represent it. In this vector, there could be any predefined properties like coordinates, color values, texture and filter response. Suppose the original image is in RGB color space, the gaussian of gaussian descriptor uses a 8-dimensional vector $\bm{f}_i$, and 
+In this hierarchical model, it is very important to have a full representation for every single pixel. To fully characterize single pixel, a $d$-dimensional vector is used to represent it. In this vector, there could be any predefined properties like coordinates, color values, texture and filter response. Suppose the original image is in RGB color space, the gaussian of gaussian descriptor uses a 8-dimensional vector $\bm{f}_i$, and 
 $\bm{f}_i = (y,M_0,M_{90},M_{180},M_{270},R,G,B)$.
 The y component is the y coordinate of pixel, and $M_{\{{\theta}\in{0^o,90^o,180^o,270^o}\}}$ is the quantized gradient information in 4 directions. The last three components are the color values of the specified color space.
 
@@ -233,7 +233,7 @@ where $n$ is the number of pixels in current patch. When the gaussian model is c
 \subsection{Riemannian manifold based SPD transformation}
 
 As described before this hierarchical gaussian descriptor is a stochastic feature, so operations like computing mean and covariance need to be operated on previous summarized gaussian distributions. Mean and covariance operation in Euclidean space can not be directly finished on previous estimated gaussian functions. A transformation is needed to make stochastic summarization feasible on patch gaussian function.
-In fact, the multivariate gaussian model is a Riemannian manifold and can be embedded into a semi-positive definite matrix (SPD) space. The gaussian function is mapped into a vector space by Equation \ref{SPDmapping}. A $d$ dimensional multivariate gaussian function can be mapped into a $d+1$ dimensional $SPD_+$ space. According to \cite{MultiVarGau}, the mapping can be denoted as 
+In fact, the multivariate gaussian model is a Riemannian manifold and can be embedded into a semi-positive definite matrix (SPD) space. The gaussian function is mapped into a vector space by Equation \ref{SPDmapping}. A $d$-dimensional multivariate gaussian function can be mapped into a $d+1$-dimensional $SPD_+$ space. According to \cite{MultiVarGau}, the mapping can be denoted as 
 \begin{equation}\label{SPDmapping}
 G(\bm{x}_i;\bm{\mu}_i,\bm{\Sigma}_i) \sim \bm{P}_i  = |\bm{\Sigma}_i|^{1/(d+1)} \left[ \begin{matrix}
 \bm{\Sigma}_i + \bm{\mu}_i\bm{\mu}^T & \bm{\mu}_i \\
@@ -243,7 +243,7 @@ G(\bm{x}_i;\bm{\mu}_i,\bm{\Sigma}_i) \sim \bm{P}_i  = |\bm{\Sigma}_i|^{1/(d+1)} 
 \end{equation}
 The covariance matrix $\bm{\Sigma}_i$ can be singular for small number of pixels within the patch, to avoid this problem a regular factor $\lambda$ is added to $\bm{\Sigma}_i$ so that $\bm{\Sigma}_i = \bm{\Sigma}_i + \lambda\bm{I}$. 
 
-After this mapping, the $n+1$ dimensional SPD matrix needs to be transformed into a vector. The matrix logarithm is used to transform it to tangent space. A $d+1$ dimensional SPD matrix can be mapped as a $d*(d+3)/2+1$ vector, which can be denoted as $SPD_i^+ \sim \bm{p}_i = vec(log(\bm{P}_i))$. Since $\bm{P}_i$ is a positive symmetric matrix, it can be compressed by half, i.e only the upper triangular elements are preserved. To ensure its norm-1 remains the same after compression, the magnitude of off-diagonal elements in $\bm{P}_i$ are timed by $\sqrt2$.  Let $\bm{Q}=\log{\bm{P}_i}$, we have
+After this mapping, the $n+1$-dimensional SPD matrix needs to be transformed into a vector. The matrix logarithm is used to transform it to tangent space. A $d+1$-dimensional SPD matrix can be mapped as a $d*(d+3)/2+1$ vector, which can be denoted as $SPD_i^+ \sim \bm{p}_i = vec(log(\bm{P}_i))$. Since $\bm{P}_i$ is a positive symmetric matrix, it can be compressed by half, i.e only the upper triangular elements are preserved. To ensure its norm-1 remains the same after compression, the magnitude of off-diagonal elements in $\bm{P}_i$ are timed by $\sqrt2$.  Let $\bm{Q}=\log{\bm{P}_i}$, we have
 \begin{equation}\label{vectorize}
 %\begin{aligned}
  \bm{p}_i = [\bm{Q}_{1,1},\sqrt2\bm{Q}_{1,2},\sqrt2\bm{Q}_{1,3},\cdots,\sqrt2\bm{Q}_{1,d+1},
@@ -298,7 +298,7 @@ S(x', y') = \sum_{x<x', y <y'} I(x, y),
 \vspace{0em}
 \end{figure} 
 By using integral image any rectangular region sum can be computed in constant time. \\
-\indent To compute the covariance matrix of a certain rectangle area in a $W\times H\times d$ dimensional feature tensor $F$, suppose $\bm{I}_F$ is the $W\times H\times d$ tensor of integral images of $F$, we have 
+\indent To compute the covariance matrix of a certain rectangle area in a $W\times H\times d$-dimensionalal feature tensor $F$, suppose $\bm{I}_F$ is the $W\times H\times d$ tensor of integral images of $F$, we have 
 \begin{equation}
  \bm{I}_F(x', y', i) = \sum_{x < x', y < y'}F(x, y ,i), i = 1 \dots d
 \end{equation} 
@@ -306,7 +306,7 @@ and suppose the $\bm{C}(x', y', i, j)$ is the $W\times H\times d\times d$ tensor
 \begin{equation}
 \bm{C}(x', y', i, j) = \sum_{x<x', y<y'} F(x, y, i)F(x, y, j), i, j = 1 \dots d.
 \end{equation}
-let $\bm{I}_{x, y}$ be the $d$ dimensional vector in $\bm{I}_F$, $\bm{C}(x, y)$ be the $d\times d$ dimensional matrix in $\bm{C}$, 
+let $\bm{I}_{x, y}$ be the $d$-dimensional vector in $\bm{I}_F$, $\bm{C}(x, y)$ be the $d\times d$-dimensional matrix in $\bm{C}$, 
 \begin{equation}
 \begin{aligned}
 \bm{I}_{x, y} = [ \bm{I}_F(x', y', 1) \dots  \bm{I}_F(x', y', d)]^T \\
@@ -331,7 +331,7 @@ where $n$ is the number of feature vector in $F$, and $n = (x'' - x')(y'' - y')$
 
 When all patches in a region are computed, the same process is repeated to compute the region gaussian. 
 \subsection{Some variants of Hierarchical Gaussian descriptor}
-Hierarchical gaussian descriptor characterizes texture, color and $y$ coordinate of an image. The importance of those three characteristics is ordered as color values > gradient components > $y$ coordinate. A rank-1, rank-5, rank-10, and rank-20 comparison of three variants on VIPeR dataset are listed below. We can conclude that color values have the most influence on Re-ID accuracy. Based on this conclusion, in GOG$_\text{fusion}$ variants test the color values will remain unchanged and $y$ coordinate and M components will be replaced or removed. One GOG$_\text{fusion}$ variant is to replace the M components in $\bm{f}_i$ with LBP. 
+In hierarchical gaussian descriptor the basic pixel feature $\bm{f}_i$ characterizes texture, color and $y$ coordinate of an image. The importance of those three characteristics is ordered as color values > gradient components > $y$ coordinate. A rank-1, rank-5, rank-10, and rank-20 comparison of three GOG$_\text{fusion}$ variants on VIPeR dataset are listed below. We can conclude that color values have the most influence on Re-ID accuracy. Based on this conclusion, In GOG$_\text{fusion}$ variants studied the color values will remain unchanged and $y$ coordinate and M components will be replaced or removed. In one GOG$_\text{fusion}$ variant we replace the M components in $\bm{f}_i$ with LBP. 
 
 \begin{table}[H]
 \centering
@@ -364,7 +364,7 @@ Another variant is to combine superpixel segmentation with GOG$_\text{fusion}$. 
 \end{raggedleft}
 \end{figure}
 
-Besides, gaussian mixture model (GMM) based descriptor is also tested. GMM models an image or a region with a mixture of gaussian distributions. But it is computationally expensive to compute similarity of GMMs. Also, it is extremely difficult to create a two-level hierarchical GMM model. Sparse represented Earth Mover's Distance (SR-EMD) \cite{novelEMD} is used here to measure similarity. All those variants' performance have been listed in Table \ref{VariantsComparison}. It can be concluded that GOG$_\text{fusion}$ has the best performance. GOG$_\text{fusion}$MreplacedByLBP suffers a large decrease because LBP components in $\bm{f}_i$ is less robust. GOG$_\text{fusion}$Superpixel might suffer from its non-overlapping superpixel patch sampling. GMM + SR-EMD model has worst performance because of two reasons: (1) This model is not trained; (2) A better similarity measurement is needed to for GMMs.
+Besides, gaussian mixture model (GMM) based descriptor is also tested. GMM models an image or a region with a mixture of gaussian distributions. But it is computationally expensive to compute similarity of GMMs. Also, it is extremely difficult to create a two-level hierarchical GMM model. Sparse represented Earth Mover's Distance (SR-EMD) \cite{novelEMD} is used here to measure similarity. All those variants' performance have been listed in Table \ref{VariantsComparison}. It can be concluded that GOG$_\text{fusion}$ has the best performance. GOG$_\text{fusion}$MreplacedByLBP's performance decreases heavily because LBP components in $\bm{f}_i$ is less robust. GOG$_\text{fusion}$Superpixel might suffer from its non-overlapping superpixel patch sampling. GMM + SR-EMD model has worst performance because of two reasons: (1) This model is not trained; (2) A better similarity measurement is needed to for GMMs.
 \begin{table}[H]
 \centering
 \caption{A performance comparison between Gaussian of Gaussian descriptor and its variants on VIPeR dataset}
