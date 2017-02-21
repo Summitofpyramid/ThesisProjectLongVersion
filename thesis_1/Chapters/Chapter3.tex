@@ -1,16 +1,16 @@
-\chapter{Extraction of Hierarchical Gaussian descriptors}
-In person re-identification, it is very important to choose robust descriptor to represent person. A good descriptor should be robust to variations of illumination, viewpoint, and camera color response. Most descriptors try to capture the color and texture information. In this chapter, we will first introduce some basic descriptors and compare their performance on VIPeR dataset, then a detailed introduction of a hierarchical descriptor will be presented in section 3.3 of this Chapter.
+\chapter{Extraction of hierarchical Gaussian descriptors}
+In person re-identification, it is very important to choose a robust descriptor to represent person. A good descriptor should be robust to variations of illumination, viewpoint, and camera color response. Most descriptors try to capture the color and texture information. In this chapter, we will first introduce some basic descriptors and compare their performance on the VIPeR dataset, then a detailed introduction of the hierarchical descriptor will be presented in section 3.3 of this chapter.
 
 
 \section{Basic color and textural features}
 \subsection{Color histogram descriptors on different color space}
-Histogram descriptor extracts color statistics information of input images. A popular histogram extracting method is to divide input image into a few horizontal stripes and extract color histogram of each stripe, then they are concatenated to produce a histogram descriptor of the whole image. Color space selection has much influence on descriptor performance. HSV color space is commonly used in computer vision and image processing for target detection and tracking. The HSV descriptor has better performance than RGB histogram descriptor since HSV color separates image intensity from color information. Thus HSV color space is more robust to illumination variation. An unsupervised CMC performance comparison among different color spaces on VIPeR dataset is given in Figure \ref{CMCcolorspaces}. In this comparison camera A views are used as probe set and camera B views are used for gallery set. We can find that those color spaces separating intensity information outperform RGB color space by a large margin.
+Histogram descriptors extract color statistics information of input images. A popular histogram extracting method is to divide input image into a few horizontal stripes and extract color histograms of each stripe, which are then concatenated to produce a histogram descriptor of the whole image. Color space selection heavily influences descriptor performance. HSV color space is commonly used in computer vision and image processing for target detection and tracking. The HSV descriptor has better performance than the RGB histogram descriptor since HSV color separates image intensity from color information. Thus, HSV color space is more robust to illumination variation. An unsupervised CMC performance comparison among different color spaces on the VIPeR dataset is given in Figure \ref{CMCcolorspaces}. In this comparison, camera A views are used as the probe set and camera B views are used for the gallery set. We can find that those color spaces separating intensity information outperform RGB color space by a large margin.
 %-----------------------------------------------------------------------------
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg}
-\caption{RGB and HSV visual comparison, the first row is RGB and second row is HSV for same views }
+\caption{RGB and HSV visual comparison; the first row is RGB and second row is HSV for the same views }
 \vspace{0em}
 \end{figure} 
 
@@ -24,7 +24,7 @@ Histogram descriptor extracts color statistics information of input images. A po
 
 %-----------------------------------------------------------------------------
 
-\textbf{Shortcoming of histogram based descriptor} The performance of histogram descriptors suffers from ignoring the spatial information. Since it doesn't consider the relative distribution of color patches. Images with same kind color patches but different distribution may have the same histogram descriptor. One example is shown in Figure \ref{RGBbgr}.
+\textbf{Shortcoming of histogram-based descriptor} The performance of histogram descriptors suffers from ignoring the spatial information since it doesn't consider the relative distribution of color patches. Images with the same kind color patches but different distribution may have the same histogram descriptor. One example is shown in Figure \ref{RGBbgr}.
 
 \begin{figure}[H]
 \begin{minipage}[t]{0.5\linewidth}
@@ -37,17 +37,17 @@ Histogram descriptor extracts color statistics information of input images. A po
 \includegraphics[width=2.2in]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg}
 %\caption{GBR patch}
 \end{minipage}
-\caption{A comparison of two patches with same entropy but different color distribution}
+\caption{A comparison of two patches with the same entropy but different color distribution}
 \label{RGBbgr}
 \end{figure}
 
 
 \subsection{Local binary pattern (LBP)}
-Local binary pattern \cite{LBP1, LBP2} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \ref{LBPdemoshot} is an example of LBP. by thresholding neighbour pixel of center pixel (shown in Figure \ref{LBPtheory}), the pixels are transformed into a binary integer. There are many extended LBPs like tLBP \cite{tLBP}, VLBP \cite{VLBP}, OCLBP \cite{OCLBP}. Besides, LBP is well known for its robustness to monotonic illumination variation.
+Local binary pattern \cite{LBP1, LBP2} extracts the texture information with efficient computing and has been used on people detection and recognitions. Figure \ref{LBPdemoshot} is an example of LBP. By thresholding the neighbour pixels of the center pixel (shown in Figure \ref{LBPtheory}), the pixels are transformed into a binary integer. There are many extended LBPs like tLBP \cite{tLBP}, VLBP \cite{VLBP} and OCLBP \cite{OCLBP}. Besides, LBP is well known for its robustness to monotonic illumination variation.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png}
-\caption{LBP: by thresholding the neighbour pixels the pixels are transformed into a binary number }
+\caption{LBP: by thresholding the neighbour pixels, the pixels are transformed into a binary number }
 \label{LBPtheory}
 \vspace{0em}
 \end{figure}
@@ -68,15 +68,15 @@ Local binary pattern \cite{LBP1, LBP2} extracts the texture information with eff
 
 
 \subsection{Histogram of oriented gradients (HOG)}
-The HOG \cite{HOG} descriptor also extracts textural information of images by gradient computing. A brief introduction about its gradient computation is presented here, more details can be found in \cite{HOG}. HOG feature computes the gradient of input intensity  image $I(x, y)$ by equations 
+The HOG \cite{HOG} descriptor also extracts textural information of images by gradient computing. A brief introduction about its gradient computation is presented here, and more details can be found in \cite{HOG}. The HOG feature computes the gradient of input intensity  image $I(x, y)$ by equations 
 
 \begin{equation}
 \begin{aligned}
 I_x = \frac{\partial I}{\partial x},\\
-I_y = \frac{\partial I}{\partial y},
+I_y = \frac{\partial I}{\partial y}.
 \end{aligned}
 \end{equation}
-the gradient can be computed fast by some discrete derivative masks below, like 1-D Sobel masks:
+The gradient can be computed quickly by some discrete derivative masks below, like 1-D Sobel masks:
 \begin{equation}
 \begin{aligned}
 Centered: M_{c} &= [-1, 0, 1]\\
@@ -114,20 +114,20 @@ S_y &= \left[ \begin{matrix}
 \end{matrix}
 \right]
 \end{aligned}
-\end{equation}
+\end{equation}.
 
-Using different masks will lead to different performance. Besides, gaussian smoothing is often performed before gradient computing. It has been shown that using 1-D Sobel without gaussian smoothing has the best performance. A HOG feature demo is shown in Figure \ref{fig:HOGdemo}.
+Using different masks will lead to different performance. Furthermore, Gaussian smoothing is often performed before gradient computing. It has been shown that using 1-D Sobel without Gaussian smoothing has the best performance. A HOG feature demo is shown in Figure \ref{fig:HOGdemo}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg}
-\caption{A demo of HOG feature with a cell size of six pixels}
+\caption{A demo of the HOG feature with a cell size of six pixels}
 \label{fig:HOGdemo} 
 \vspace{0em}
 \end{figure}
 
 
 \section{Influence of background segmentation on different basic descriptors}
-Many works try to minimize impact of background noise of pedestrians' image. it is easier to automatically segment foreground from a sequential frames or video than a single frame. In \cite{SDALF} the author provides foreground masks for all images following the algorithm in \cite{STEL}. Authors in \cite{STEL} propose stel (structure element) component analysis to model spatial correlations in image class structure by using probabilistic index maps (PIMs). A structure element is an area of an image with the same assigned index $s(s=1,2,\cdots,n)$, $n$ is the total number of stels in an image. In PIMs the indices assignment can be denoted probabilistically as a map $q(s_{\bm{i}}^t=s)$ over an image, in this equation the location is $\bm{i} = (i,j)$, $q$ is the probability of pixel at $\bm{i}$ of the $t$-th image (suppose there are many images for each class) belonging to the $s$-th stel. The authors propose that pixels in a structure element of an image class follow a shared distribution which can be modelled with local measurements like pixel intensity value. The number of stels $n$ is set to 2 to achieve background and foreground segmentation. That is, pixels of foreground stel share a distribution while pixels of background stel sharing another distribution. Both the foreground and background stels are modelled by a mixture of $C$ Gaussians. Some of those segmented foregrounds are shown in Figure \ref{VIPeRFGs} and it is obvious that certain body parts like head and feet are lost. To compare those loss impact on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG descriptor is given in Figure \ref{fig:SegHSV}, Figure \ref{fig:SegLBP} and Figure \ref{fig:SegHOG}. 
+Many works try to minimize the impact of background noise of pedestrians' images. It is easier to automatically segment the foreground from sequential frames or video than a single frame. In \cite{SDALF}, the author provides foreground masks for all images following the algorithm in \cite{STEL}. Authors in \cite{STEL} propose structure element (stel) component analysis to model spatial correlations in image class structure by using probabilistic index maps (PIMs). A structure element is an area of an image with the same assigned index $s(s=1,2,\cdots,n)$, where $n$ is the total number of stels in an image. In PIMs, the indices assignment can be denoted probabilistically as a map $q(s_{\bm{i}}^t=s)$ over an image. In this equation, the location is $\bm{i} = (i,j)$, and $q$ is the probability of pixel at $\bm{i}$ of the $t$-th image (suppose there are many images for each class) belonging to the $s$-th stel. The authors propose that pixels in a structure element of an image class follow a shared distribution which can be modelled with local measurements like pixel intensity value. The number of stels $n$ is set to 2 to achieve background and foreground segmentation. That is, pixels of foreground stel share a distribution, while pixels of background stel share another distribution. Both the foreground and background stels are modelled by a mixture of $C$ Gaussians. Some of those segmented foregrounds are shown in Figure \ref{VIPeRFGs}, and it is obvious that certain body parts, like head and feet, are lost. To compare the impact of loss on color and textural descriptors, a comparison of foreground segmentation on HSV color histogram descriptors, LBP and HOG is given in Figure \ref{fig:SegHSV}, Figure \ref{fig:SegLBP} and Figure \ref{fig:SegHOG}. 
 
 
 \begin{figure}[H]
@@ -138,7 +138,7 @@ Many works try to minimize impact of background noise of pedestrians' image. it 
 \vspace{0em}
 \end{figure} 
 
-We can find that foreground segmentation decreases LBP and HOG's performance but increases HSV color histogram's performance on VIPeR dataset greatly. The reason for this is imperfect foreground segmentation causes body parts (like head and feet) loss and masks out many parts in torso and legs. Besides, in images of some individuals, a part of background scene is regarded as foreground. Since HSV color histogram doesn't handle spatial distribution but only color entropy, foreground segmentation improves its performance greatly. But since LBP and HOG handle texture for each sample patch, their performance suffer from those body parts loss and little black patches from background. What's more, we can infer that imperfect foreground segmentation will also decrease other textural feature's performance.
+We can find that foreground segmentation decreases the LBP and the HOG's performance but increases the HSV color histogram's performance on the VIPeR dataset greatly. The reason for this is that imperfect foreground segmentation causes body parts (like the head and the feet) to be lost and masks out many parts in torso and legs. Besides, in images of some individuals, part of the background scene is regarded as foreground. Since HSV color histogram doesn't handle spatial distribution but only color entropy, foreground segmentation improves its performance greatly. But since LBP and HOG handle texture for each sample patch, their performances suffer from those body parts loss and little black patches from the background. What's more, we can infer that imperfect foreground segmentation will also decrease other textural features' performances.
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png}
@@ -163,58 +163,58 @@ We can find that foreground segmentation decreases LBP and HOG's performance but
 \vspace{-1em}
 \end{figure} 
 
-\section{The hierarchical gaussian descriptor}
+\section{The hierarchical Gaussian descriptor}
 
-The hierarchical gaussian descriptor is proposed by in  \cite{GOG}, this descriptor uses a two-level gaussian distribution to model an individual. This descriptor densely samples the image and models each hierarchical structure with gaussian distribution and to outperform many other works. In this thesis, all input images are sized to $128\times 64$. Firstly it divides the image into 7 overlapping horizontal slices, each slide has size $32\times 64$ and slides are overlapping by $16$ pixels vertically.  In each slide, densely sampled square patches have a size of $s\times s$ pixels ($s$ = 5 in this thesis), and small patches overlaps with each other by $2$ pixels. So there is a  two-level structure in this image, small patches and slides. The small patches are first modelled with a multivariate gaussian distribution, then with those small patch gaussian distributions, the slide containing those patches is modelled with another multivariate gaussian distribution.
+The hierarchical Gaussian descriptor is proposed by in  \cite{GOG}. This descriptor uses a two-level Gaussian distribution to model an individual. This descriptor densely samples the image and models each hierarchical structure with Gaussian distribution and to outperform many other works. In this thesis, all input images are sized to $128\times 64$. First, the image is divided into 7 overlapping horizontal slices. Each slide has a size of $32\times 64$ and slides are overlapping by $16$ pixels vertically.  In each slide, densely sampled square patches have a size of $s\times s$ pixels ($s$ = 5 in this thesis), and small patches overlap each other by $2$ pixels. So there is a  two-level structure in this image, small patches and slides. The small patches are first modelled with a multivariate Gaussian distribution. Then the slide with those small patch Gaussian distributions is modelled with another multivariate Gaussian distribution.
 
-In a certain horizontal slice for each small patch, it is modelled by a multivariate gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
-\indent After the slide is modelled with $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$, the same transformation will be operated on $\bm{G}_r$ so that it is vectorized as a vector $\bm{v}$. At last all computed $\bm{v}$ are concatenated to consist of the descriptor of current image. 
+A certain horizontal slice for each small patch is modelled by a multivariate Gaussian distribution $G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p)$, and $G_p$ can be transformed to a vector $\bm{p}$ by SPD mapping. Again, when all small patches are modelled and vectorized, the same process is repeated. Each slide is characterized by a multivariate Gaussian distribution $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$.\\
+\indent After the slide is modelled with $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$, the same transformation will be operated on $\bm{G}_r$ so that it is vectorized as a vector $\bm{v}$. At last, all computed $\bm{v}$ are concatenated to consist of the descriptor of the current image. 
 
 \subsection{Handling the background}
-In the previous section the impact of background subtraction on different features' performance have been studied. We've concluded that imperfect foreground segmentation decreases textural feature's performance. Besides, in hierarchical gaussian descriptor there is no histogram-based feature computing. So in this thesis, when computing the pixel basic feature $\bm{f}_i$, the foreground segmentation is not adopted. But when modelling the region gaussian $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$ a weighted map is computed for each patch with equation
+In the previous section, the impact of background subtraction on different features' performances have been studied. We've concluded that imperfect foreground segmentation decreases textural feature's performance. Besides, in the hierarchical Gaussian descriptor, there is no histogram-based feature computing. So in this thesis, when computing the pixel basic feature $\bm{f}_i$, the foreground segmentation is not adopted. But when modelling the region Gaussian $\bm{G}_r(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r)$, a weighted map is computed for each patch with equation
 \begin{equation} 
-N(x;\mu_0,\sigma_0) = \frac{1}{\sigma_0\sqrt{2\pi}} \exp^{\frac{(x - \mu_0)^2}{\sigma_0^2}}
+N(x;\mu_0,\sigma_0) = \frac{1}{\sigma_0\sqrt{2\pi}} \exp^{\frac{(x - \mu_0)^2}{\sigma_0^2}},
 \end{equation}
 and here $\mu_0 = \frac{W_0}{2}, \sigma_0 = \frac{W_0}{4}$, $W_0$ is the number of patches in horizontal direction.
 \subsection{Single pixel modelling}
 
-In this hierarchical model, it is very important to have a full representation for every single pixel. To fully characterize single pixel, a $d$-dimensional vector is used to represent it. In this vector, there could be any predefined properties like coordinates, color values, texture and filter response. Suppose the original image is in RGB color space, the gaussian of gaussian descriptor uses a 8-dimensional vector $\bm{f}_i$, and 
+In this hierarchical model, it is very important to have a full representation for every single pixel. To fully characterize single pixel, a $d$-dimensional vector is used to represent it. In this vector, there could be any predefined properties like coordinates, color values, texture and filter response. Suppose the original image is in RGB color space, the Gaussian of Gaussian descriptor uses an 8-dimensional vector $\bm{f}_i$, and 
 $\bm{f}_i = (y,M_0,M_{90},M_{180},M_{270},R,G,B)$.
 The y component is the y coordinate of pixel, and $M_{\{{\theta}\in{0^o,90^o,180^o,270^o}\}}$ is the quantized gradient information in 4 directions. The last three components are the color values of the specified color space.
 
-In all the benchmark dataset, all the images are cropped with a bounding box, and the pedestrian in an image can be at left or right of center, while in the vertical direction the head and feet of pedestrian is very close the image edge. For each pixel, the y coordinate is more correlated than x coordinate, so only y coordinate is chosen for pixel modelling. 
+In all the benchmark datasets, all the images are cropped with a bounding box, and the pedestrian in an image can be at left or right of center, while in the vertical direction the head and feet of the pedestrian are very close the image edge. For each pixel, the y coordinate is more correlated than the x coordinate, so only the y coordinate is chosen for pixel modelling. 
 
-Then the $M$ is to characterize the texture with the gradient histogram. Different $M$ values is the magnitude of gradient in every direction. 
-Firstly the gradient in x and y direction are computed by two gradient filters $\rm{h}_x$ and $\rm{h}_y$, and we have 
+The $M$ is to characterize the texture with the gradient histogram. Different $M$ values are the magnitudes of the gradient in every direction. 
+First, the gradients in x and y direction are computed by two gradient filters $\rm{h}_x$ and $\rm{h}_y$, and we have 
 \begin{equation}
 \begin{aligned}
 h_x &= [-1, 0, 1]\\
-h_y &= -h_x'
+h_y &= -h_x'.
 \end{aligned}
 \end{equation}
 
-Then by convolving those two filters with the intensity image $I$, the horizontal and vertical gradient $I_x, I_y$ can be computed, so the orientation and magnitude can be computed by following equations:
+Then, by convolving those two filters with the intensity image $I$, the horizontal and vertical gradient $I_x, I_y$ can be computed, so the orientation and magnitude can be computed by the following equations:
 \begin{equation}
 \begin{aligned}
 O(i,j) &= (\arctan(\frac{I_y(i,j)}{I_x(i,j)}+\pi)*180 /{\pi} \\
-M(i,j) &= \sqrt{(I_x(i,j)^2 + I_y(i,j))^2}
+M(i,j) &= \sqrt{(I_x(i,j)^2 + I_y(i,j))^2}.
 \end{aligned}
 \end{equation}
 
-The orientation are quantized into four bins by a soft voting algorithm \cite{AutoRela}. For each pixel its corresponding gradient orientation is decided by its nearest bin's direction. To make the descriptor to focus on the gradient components with high values, the gradient and orientation are multiplied as follow,
+The orientations are quantized into four bins by a soft voting algorithm \cite{AutoRela}. For each pixel, its corresponding gradient orientation is decided by its nearest bin's direction. To make the descriptor focus on the gradient components with high values, the gradient and orientation are multiplied as follow:
 \begin{equation}
-M_{\theta} = MO_{\theta},
+M_{\theta} = MO_{\theta}.
 \end{equation}
 
 %For every gradient magnitude value with its orientation , the corresponding weights of all predefined directions are computed, and the direction with the biggest weight is chosen as the quantized direction for this pixel.
 
-To model the patch with a multi-variate gaussian distribution, we have to estimate its mean value and the covariance matrix. A multi-variate gaussian model has the form
+To model the patch with a multivariate Gaussian distribution, we have to estimate its mean value and the covariance matrix. A multivariate Gaussian model has the form
 \begin{equation}
-G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p) = \frac{\exp^{(\frac{1}{2}(\bm{f}_i-\bm{\mu}_p)^T\bm{\Sigma_p}^{-1}(\bm{f}_i-\bm{\mu}_p))}}{(2\pi)^{d/2}|{\bm{\Sigma}_p|}} 
+G_p(\bm{f}_i;\bm{\mu}_p,\bm{\Sigma}_p) = \frac{\exp^{(\frac{1}{2}(\bm{f}_i-\bm{\mu}_p)^T\bm{\Sigma_p}^{-1}(\bm{f}_i-\bm{\mu}_p))}}{(2\pi)^{d/2}|{\bm{\Sigma}_p|}}, 
 \end{equation}
-where $\bm {\mu}_p$ is the estimated mean value, and $\bm {\Sigma}_p $ is the estimated covariance matrix of current small patch. 
+where $\bm {\mu}_p$ is the estimated mean value, and $\bm {\Sigma}_p $ is the estimated covariance matrix of the current small patch. 
 
-To estimate the parameters for this gaussian model based on sampled patches pixel features, the maximal likelihood estimate(MLE) is used. According MLE algorithm, we have the following estimated parameters
+To estimate the parameters for this Gaussian model based on basic pixel features, the maximal likelihood estimate (MLE) is used. According the MLE algorithm, we have the following estimated parameters:
 \begin{equation}
 %\begin{aligned}
 \bm{\mu}_p = \frac{1}{n}\sum_{i = 1}^n \bm{f}_i,
@@ -225,40 +225,38 @@ To estimate the parameters for this gaussian model based on sampled patches pixe
 \bm{\Sigma}_p = \frac{1}{n-1} \sum_{i = 1}^n(\bm{f}_i-\bm{\mu})(\bm{f}_i-\bm{\mu})^T,
 %\end{aligned}
 \end{equation}
-
-where $n$ is the number of pixels in current patch. When the gaussian model is computed, the next step is to model all the patch gaussians. But it is a complex problem to directly model those multivariate gaussian functions. So some transformation will be operated on the estimated parameters $\bm{\mu}_p$ and $\bm{\Sigma}_p$.
+where $n$ is the number of pixels in the current patch. When the Gaussian model is computed, the next step is to model all the patch Gaussians. But it is a complex problem to directly model those multivariate Gaussian functions. So some transformation will be operated on the estimated parameters $\bm{\mu}_p$ and $\bm{\Sigma}_p$.
 
 
 %% --------------------------------------Riemannian manifold based SPD transformation
 \subsection{Riemannian manifold based SPD transformation}
 
-As described before this hierarchical gaussian descriptor is a stochastic feature, so operations like computing mean and covariance need to be operated on previous summarized gaussian distributions. Mean and covariance operation in Euclidean space can not be directly finished on previous estimated gaussian functions. A transformation is needed to make stochastic summarization feasible on patch gaussian function.
-In fact, the multivariate gaussian model is a Riemannian manifold and can be embedded into a semi-positive definite matrix (SPD) space. The gaussian function is mapped into a vector space by Equation \ref{SPDmapping}. A $d$-dimensional multivariate gaussian function can be mapped into a $d+1$-dimensional $SPD_+$ space. According to \cite{MultiVarGau}, the mapping can be denoted as 
+As described before, this hierarchical Gaussian descriptor is a stochastic feature, so operations like computing mean and covariance need to be operated on previous summarized Gaussian distributions. Mean and covariance operation in Euclidean space cannot be directly finished on previous estimated Gaussian functions. A transformation is needed to make stochastic summarization feasible on patch Gaussian function.
+In fact, the multivariate Gaussian model is a Riemannian manifold and can be embedded into a semi-positive definite matrix (SPD) space. The Gaussian function is mapped into a vector space by Equation \ref{SPDmapping}. A $d$-dimensional multivariate Gaussian function can be mapped into a $d+1$-dimensional $SPD_+$ space. According to \cite{MultiVarGau}, the mapping can be denoted as 
 \begin{equation}\label{SPDmapping}
 G(\bm{x}_i;\bm{\mu}_i,\bm{\Sigma}_i) \sim \bm{P}_i  = |\bm{\Sigma}_i|^{1/(d+1)} \left[ \begin{matrix}
 \bm{\Sigma}_i + \bm{\mu}_i\bm{\mu}^T & \bm{\mu}_i \\
 \bm{\mu}_i^T & 1
 \end{matrix}
-\right]
+\right].
 \end{equation}
-The covariance matrix $\bm{\Sigma}_i$ can be singular for small number of pixels within the patch, to avoid this problem a regular factor $\lambda$ is added to $\bm{\Sigma}_i$ so that $\bm{\Sigma}_i = \bm{\Sigma}_i + \lambda\bm{I}$. 
+The covariance matrix $\bm{\Sigma}_i$ can be singular due to the small number of pixels within the patch. To avoid this problem, a regular factor $\lambda$ is added to $\bm{\Sigma}_i$ so that $\bm{\Sigma}_i = \bm{\Sigma}_i + \lambda\bm{I}$. 
 
-After this mapping, the $n+1$-dimensional SPD matrix needs to be transformed into a vector. The matrix logarithm is used to transform it to tangent space. A $d+1$-dimensional SPD matrix can be mapped as a $d*(d+3)/2+1$ vector, which can be denoted as $SPD_i^+ \sim \bm{p}_i = vec(log(\bm{P}_i))$. Since $\bm{P}_i$ is a positive symmetric matrix, it can be compressed by half, i.e only the upper triangular elements are preserved. To ensure its norm-1 remains the same after compression, the magnitude of off-diagonal elements in $\bm{P}_i$ are timed by $\sqrt2$.  Let $\bm{Q}=\log{\bm{P}_i}$, we have
+After this mapping, the $n+1$-dimensional SPD matrix needs to be transformed into a vector. The matrix logarithm is used to transform it to tangent space. A $d+1$-dimensional SPD matrix can be mapped as a $d*(d+3)/2+1$ vector, which can be denoted as $SPD_i^+ \sim \bm{p}_i = vec(log(\bm{P}_i))$. Since $\bm{P}_i$ is a positive symmetric matrix, it can be compressed by half, i.e., only the upper triangular elements are preserved. To ensure its norm-1 remains the same after compression, the magnitude of off-diagonal elements in $\bm{P}_i$ are timed by $\sqrt2$.  Let $\bm{Q}=\log{\bm{P}_i}$, we have
 \begin{equation}\label{vectorize}
 %\begin{aligned}
  \bm{p}_i = [\bm{Q}_{1,1},\sqrt2\bm{Q}_{1,2},\sqrt2\bm{Q}_{1,3},\cdots,\sqrt2\bm{Q}_{1,d+1},
  \end{equation}
  \begin{equation}
- \bm{Q}_{2,2},\sqrt2\bm{Q}_{2,3,},\cdots,\sqrt2\bm{Q}_{2,d+1,},\cdots,\bm{Q}_{d+1,d+1,}]
+ \bm{Q}_{2,2},\sqrt2\bm{Q}_{2,3,},\cdots,\sqrt2\bm{Q}_{2,d+1,},\cdots,\bm{Q}_{d+1,d+1,}].
 %\end{aligned}
 \end{equation}
 
-
-Again we model the slide with a multivariate gaussian distribution $\bm{G}_r$ by equation
+Again, we model the slide with a multivariate Gaussian distribution $\bm{G}_r$ by the equation
 \begin{equation}
-G_p(\bm{p}_j;\bm{\mu}_r,\bm{\Sigma}_r) = \frac{\exp^{(\frac{1}{2}(\bm{p}_j-\bm{\mu}_r)^T\bm{\Sigma_r}^{-1}(\bm{p}_j-\bm{\mu}_r))}}{(2\pi)^{d/2}|{\bm{\Sigma}_r|}} 
+G_p(\bm{p}_j;\bm{\mu}_r,\bm{\Sigma}_r) = \frac{\exp^{(\frac{1}{2}(\bm{p}_j-\bm{\mu}_r)^T\bm{\Sigma_r}^{-1}(\bm{p}_j-\bm{\mu}_r))}}{(2\pi)^{d/2}|{\bm{\Sigma}_r|}}.
 \end{equation}
-we have known that all patches inside this slide been represented as vector $\bm{p}_j$, thus the mean $\bm{\mu}_r$ and covariance matrix ${\bm{\Sigma}}_r$ of $\bm{G}_r$ can be computed by MLE with equations
+We have known that all patches inside this slide are represented as vector $\bm{p}_j$, thus the mean $\bm{\mu}_r$ and covariance matrix ${\bm{\Sigma}}_r$ of $\bm{G}_r$ can be computed by the MLE with the equations
 \begin{equation}
 %\begin{aligned}
 \bm{\mu}_r = \frac{1}{m}\sum_{j = 1}^m \bm{p}_j,
@@ -269,26 +267,26 @@ we have known that all patches inside this slide been represented as vector $\bm
 \bm{\Sigma}_r = \frac{1}{m -1} \sum_{j = 1}^m(\bm{p}_j-\bm{\mu}_r)(\bm{p}_j-\bm{\mu}_r)^T,
 %\end{aligned}
 \end{equation}
-m is the total number pf patches inside current slide. Again $\bm{\mu}_r$ and $\bm{\Sigma}_r$ are mapped to a SPD space by equation
+where m is the total number pf patches inside the current slide. Again, $\bm{\mu}_r$ and $\bm{\Sigma}_r$ are mapped to an SPD space by the following equation
 \begin{equation}
 G(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r) \sim \bm{P}_r  = |\bm{\Sigma}_r|^{1/(d+1)} \left[ \begin{matrix}
 \bm{\Sigma}_r + \bm{\mu}_r\bm{\mu}_r^T & \bm{\mu}_r \\
 \bm{\mu}_r^T & 1
-\end{matrix}
+\end{matrix},
 \right]
 \end{equation}
 and $\bm{P}_r$ is vectorized by Equation \ref{vectorize}.
 
-When all horizontal slides' descriptor computed they are concatenated to form the descriptor for the whole image.
+When the descriptors of all horizontal slides are computed they are concatenated to form the descriptor for the whole image.
 
 
 
 %%Integral image for fast computing
 \subsection{Integral image for fast region covariance computation}
 
-To compute estimated parameters for all those overlapping small patches, the time complexity of computing one by one each patch is high because there are many repeating computations. To compute the estimated covariance matrix \bm{$\Sigma}$ for every small patch with size of $W\times H$, the integral image is used to reduce time complexity. The integral image \cite{RegionCovariance} is a intermediate representation to fast compute rectangle area sum in an image. Each pixel value in integral image is the sum of all the pixels inside the rectangle bounded by current pixel and the upper left pixel. That is, the integral image S(x, y) for image I(x, y) is 
+To compute estimated parameters for all those overlapping small patches, the time complexity of computing each patch one by one is high because there are many repeating computations. To compute the estimated covariance matrix \bm{$\Sigma}$ for every small patch with a size of $W\times H$, the integral image is used to reduce time complexity. The integral image \cite{RegionCovariance} is an intermediate representation used to quickly compute the rectangle area sum in an image. Each pixel value in the integral image is the sum of all the pixels inside the rectangle bounded by the current pixel and the upper left pixel. That is, the integral image S(x, y) for image I(x, y) is 
 \begin{equation}
-S(x', y') = \sum_{x<x', y <y'} I(x, y),
+S(x', y') = \sum_{x<x', y <y'} I(x, y).
 \end{equation}
 
 \begin{figure}[H]
@@ -297,16 +295,16 @@ S(x', y') = \sum_{x<x', y <y'} I(x, y),
 \caption{Integral image}
 \vspace{0em}
 \end{figure} 
-By using integral image any rectangular region sum can be computed in constant time. \\
-\indent To compute the covariance matrix of a certain rectangle area in a $W\times H\times d$-dimensionalal feature tensor $F$, suppose $\bm{I}_F$ is the $W\times H\times d$ tensor of integral images of $F$, we have 
+By using the integral image, any rectangular region sum can be computed in constant time. \\
+\indent Suppose $\bm{I}_F$ is a $W\times H\times d$ feature tensor of integral images of $F$, to compute the covariance matrix of a certain rectangle area in $F$, we have the equation:
 \begin{equation}
- \bm{I}_F(x', y', i) = \sum_{x < x', y < y'}F(x, y ,i), i = 1 \dots d
+ \bm{I}_F(x', y', i) = \sum_{x < x', y < y'}F(x, y ,i), i = 1 \dots d,
 \end{equation} 
-and suppose the $\bm{C}(x', y', i, j)$ is the $W\times H\times d\times d$ tensor of second order integral images, we have
+Suppose the $\bm{C}(x', y', i, j)$ is the $W\times H\times d\times d$ tensor of second order integral images, and we use the following equation:
 \begin{equation}
 \bm{C}(x', y', i, j) = \sum_{x<x', y<y'} F(x, y, i)F(x, y, j), i, j = 1 \dots d.
 \end{equation}
-let $\bm{I}_{x, y}$ be the $d$-dimensional vector in $\bm{I}_F$, $\bm{C}(x, y)$ be the $d\times d$-dimensional matrix in $\bm{C}$, 
+Let $\bm{I}_{x, y}$ be the $d$-dimensional vector in $\bm{I}_F$, and $\bm{C}(x, y)$ be the $d\times d$-dimensional matrix in $\bm{C}$, 
 \begin{equation}
 \begin{aligned}
 \bm{I}_{x, y} = [ \bm{I}_F(x', y', 1) \dots  \bm{I}_F(x', y', d)]^T \\
@@ -316,22 +314,22 @@ let $\bm{I}_{x, y}$ be the $d$-dimensional vector in $\bm{I}_F$, $\bm{C}(x, y)$ 
  			     & \ddots &			        \\
 \bm{C}(x, y, d, 1)   & \cdots &\bm{C}(x, y, d, d)
  
- \end{matrix} \right ]
+ \end{matrix} \right ].
  \end{aligned}
 \end{equation}
 
-Then for any rectangule regions $R(x', y'; x'', y'')$, where $(x', y')$ is the upper left coordinate and $(x'', y'')$ is the lower right coordinate, the covariance matrix can be compute as 
+Then for any rectangule regions $R(x', y'; x'', y'')$, where $(x', y')$ is the upper left coordinate and $(x'', y'')$ is the lower right coordinate, the covariance matrix can be computed as 
 \begin{equation}
 \begin{aligned}
 \bm{C}_R(x', y'; x'', y'') = \frac{1}{n-1} [\bm{C}_{x'', y''} + \bm{C}_{x', y'} -  \bm{C}_{x'', y'}-  \bm{C}_{x', y''} \\
 -\frac{1}{n}(\bm{I}_{x'', y''} + \bm{I}_{x'', y''} - \bm{I}_{x', y''} - \bm{I}_{x'', y'})(\bm{I}_{x'', y''} + \bm{I}_{x'', y''} - \bm{I}_{x', y''} - \bm{I}_{x'', y'})^T]
 \end{aligned}
 \end{equation}
-where $n$ is the number of feature vector in $F$, and $n = (x'' - x')(y'' - y')$. By creating the integral image the covariance of any rectangular area in $F$ can be computed in $O(d^2)$ time.
+where $n$ is the number of feature vector in $F$, and $n = (x'' - x')(y'' - y')$. By creating the integral image, the covariance of any rectangular area in $F$ can be computed in $O(d^2)$ time.
 
-When all patches in a region are computed, the same process is repeated to compute the region gaussian. 
+When all patches in a region are computed, the same process is repeated to compute the region Gaussian. 
 \subsection{Some variants of Hierarchical Gaussian descriptor}
-In hierarchical gaussian descriptor the basic pixel feature $\bm{f}_i$ characterizes texture, color and $y$ coordinate of an image. The importance of those three characteristics is ordered as color values > gradient components > $y$ coordinate. A rank-1, rank-5, rank-10, and rank-20 comparison of three GOG$_\text{fusion}$ variants on VIPeR dataset are listed below. We can conclude that color values have the most influence on Re-ID accuracy. Based on this conclusion, in GOG$_\text{fusion}$ variants studied the color values will remain unchanged and $y$ coordinate and M components will be replaced or removed. In one GOG$_\text{fusion}$ variant we replace the M components in $\bm{f}_i$ with LBP. 
+In the hierarchical Gaussian descriptor, the basic pixel feature $\bm{f}_i$ characterizes texture, color and the $y$ coordinate of an image. The importance of those three characteristics is ordered as color values > gradient components > $y$ coordinate. A rank-1, rank-5, rank-10, and rank-20 comparison of three GOG$_\text{fusion}$ variants on the VIPeR dataset are listed below. We can conclude that color values have the most influence on Re-ID accuracy. Based on this conclusion, in GOG$_\text{fusion}$ variants studied, the color values will remain unchanged and the $y$ coordinate and M components will be replaced or removed. In one GOG$_\text{fusion}$ variant, we replace the M components in $\bm{f}_i$ with LBP. 
 
 \begin{table}[H]
 \centering
@@ -353,7 +351,7 @@ GOG$_\text{fusion}$ without color values & 8.40 &21.00&31.70& 45.50\\
 \end{tabular}
 \end{table}
 
-Another variant is to combine superpixel segmentation with GOG$_\text{fusion}$. Superpixel algorithms cluster image pixels into perceptually atomic regions, which can be used to reduce redundancy and computation complexity. One successful superpixel algorithm is SLIC \cite{SLIC}. To combine superpixel segmentation and GOG$_\text{fusion}$, each horizontal slice of an image is first segmented by SLIC algorithm into many nonrigid groups (An example of SLIC segmentation is shown in Figure \ref{SLICdemoCUHK}). Each superpixel group is modelled with a multivariate gaussian function by summarizing basic feature $\bm{f}_i$ of pixels inside this group. With similar SPD mapping and vectorization every group can be summarized by a vector. At last the same process is repeated on those superpixels to get region gaussians. Compared with original hierarchical gaussian descriptor, the difference is overlapping square patch sampling in hierarchical gaussian are changed to nonrigid and non-overlapping superpixel sampling in the variant. Hopefully, superpixel segmentation can group pixels with similar property, which may decrease error caused by single gaussian modelling. 
+Another variant is to combine superpixel segmentation with GOG$_\text{fusion}$. Superpixel algorithms cluster image pixels into perceptually atomic regions, which can be used to reduce redundancy and computation complexity. One successful superpixel algorithm is Simple Linear Iterative Clustering (SLIC) \cite{SLIC}. To combine superpixel segmentation and GOG$_\text{fusion}$, each horizontal slice of an image is first segmented by the SLIC algorithm into many nonrigid groups. An example of SLIC segmentation is shown in Figure \ref{SLICdemoCUHK}. Each superpixel group is modelled with a multivariate Gaussian function by summarizing the basic feature $\bm{f}_i$ of pixels inside this group. With similar SPD mapping and vectorization, every group can be summarized by a vector. At last, the same process is repeated on those superpixels to get region Gaussians. Compared with the original hierarchical Gaussian descriptor, overlapping square patch sampling in the hierarchical Gaussian is changed to nonrigid and non-overlapping superpixel sampling in the variant. Hopefully, superpixel segmentation can group pixels with similar properties, which may decrease errors caused by single Gaussian modelling. 
 
 \begin{figure}[H]
 \begin{raggedleft}
@@ -364,10 +362,10 @@ Another variant is to combine superpixel segmentation with GOG$_\text{fusion}$. 
 \end{raggedleft}
 \end{figure}
 
-Besides, gaussian mixture model (GMM) based descriptor is also tested. GMM models an image or a region with a mixture of gaussian distributions. But it is computationally expensive to compute similarity of GMMs. Also, it is extremely difficult to create a two-level hierarchical GMM model. Sparse represented Earth Mover's Distance (SR-EMD) \cite{novelEMD} is used here to measure similarity. All those variants' performance have been listed in Table \ref{VariantsComparison}. It can be concluded that GOG$_\text{fusion}$ has the best performance. GOG$_\text{fusion}$MreplacedByLBP's performance decreases heavily because LBP components in $\bm{f}_i$ is less robust. GOG$_\text{fusion}$Superpixel might suffer from its non-overlapping superpixel patch sampling. GMM + SR-EMD model has worst performance because of two reasons: (1) This model is not trained; (2) A better similarity measurement is needed to for GMMs.
+Besides, a Gaussian mixture model (GMM) based descriptor is also tested. GMM models an image or a region with a mixture of Gaussian distributions. But it is computationally expensive to compute the similarity of GMMs. Also, it is extremely difficult to create a two-level hierarchical GMM model. A sparse representation based Earth Mover's Distance (SR-EMD) \cite{novelEMD} is used here to measure similarity. Performances of those variants have been listed in Table \ref{VariantsComparison}. It can be concluded that GOG$_\text{fusion}$ has the best performance. GOG$_\text{fusion}$MreplacedByLBP's performance decreases heavily because LBP components in $\bm{f}_i$ are less robust. GOG$_\text{fusion}$Superpixel might suffer from its non-overlapping superpixel patch sampling. The GMM + SR-EMD model has the worst performance for two reasons: (1) This model is not trained; (2) A better similarity measurement is needed to for GMMs.
 \begin{table}[H]
 \centering
-\caption{A performance comparison between Gaussian of Gaussian descriptor and its variants on VIPeR dataset}
+\caption{A performance comparison between Gaussian of Gaussian descriptor and its variants on the VIPeR dataset}
 \label{VariantsComparison}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
@@ -388,27 +386,27 @@ GMM + SR-EMD(EMD-theta) &11.40 &21.50 &29.70 &37.00 &42.40 \\ %11.4% 21.5% 29.7%
 
 
 
-\subsection{Dimensionality and superiority analysis of Hierarchical Gaussian descriptor}
-It has been known that combination of descriptors of different color space can greatly improve re-ID performance. In this project, the hierarchical gaussian descriptor in RGB color space is the base descriptor. Descriptors in three more color space \{HSV, Lab, nRGB\} are extracted. The nRGB color space is calculated as 
+\subsection{Dimensionality and superiority analysis of hierarchical Gaussian descriptor}
+It has been known that the combination of descriptors of different color spaces can greatly improve re-ID performance. In this project, the hierarchical Gaussian descriptor in RGB color space is the base descriptor. Descriptors in three more color spaces \{HSV, Lab, nRGB\} are extracted. The nRGB color space is calculated as 
 \begin{equation}
 \begin{aligned}
 nR = \frac{R}{R+G+B},\\
 nG = \frac{G}{R+G+B},\\
-nR = \frac{B}{R+G+B}, 
+nR = \frac{B}{R+G+B}.
 \end{aligned}
 \end{equation}
-since $nB$ can be calculated with $nR$ and $nG$, in this color space only the first two channel values are used to reduce redundancy. Therefore, for color spaces \{RGB, HSV, Lab, nRnG\}, the corresponding dimension of pixel feature is \{8, 8, 8, 7\}. After the matrix to vector transformation, the dimension of patch gaussian vector of each channel is \{45, 45, 45, 36\}. Again after the patch gaussian to region gaussian transformation, the dimension of each channel is \{1081, 1081, 1081, 703\}. Suppose there are 7 horizontal slides in each image, the dimension of concatenated descriptor of each channel is \{7567, 7567, 7567, 4921\}. If four color space are all used, the dimension is the sum of each channel as 27622. 
+Since $nB$ can be calculated with $nR$ and $nG$, in this color space only the first two channel values are used to reduce redundancy. Therefore, for color spaces \{RGB, HSV, Lab, nRnG\}, the corresponding dimension of the pixel feature is \{8, 8, 8, 7\}. After the matrix to vector transformation, the dimension of the patch Gaussian vector of each channel is \{45, 45, 45, 36\}. Again, after the patch Gaussian to region Gaussian transformation, the dimension of each channel is \{1081, 1081, 1081, 703\}. Suppose there are 7 horizontal slides in each image; the dimension of concatenated descriptor of each channel would be \{7567, 7567, 7567, 4921\}. If 4 color spaces are all used, the dimension is the sum of each channel as 27622. 
 
-Hierarchical gaussian descriptor has a few advantages compared with other descriptors. Firstly, it has a full consideration of color, texture and $y$ coordinate information. The color information is adopted by adding color values of different color space to $\bm{f}_i$. Textural information is also adopted by those four gradient components in $\bm{f}_i$. Secondly, by Riemannian manifold based SPD mapping, it provides a solution to summarize many multi-variate gaussian functions. The parameters $\bm{\mu}$ and $\bm{\Sigma}$ of a multi-variate gaussian function can be fused into a SPD matrix. With later vectorization this SPD matrix is transformed to a vector. In this mapping process correlation of different components in $\bm{f}_i$ are fully taken into account, which leads to a dimension increasing from basic pixel feature vector $\bm{f}_i$ to patch gaussian vector $\bm{p}_j$. Thirdly, by a two-level gaussian model, this model guarantees to extract the overall statistical information of an image while being robust to local details variation caused by factors like viewpoint changes and partial occlusion. 
+The Hierarchical Gaussian descriptor has a few advantages compared with other descriptors. First, it has a full consideration of color, texture and $y$ coordinate information. The color information is adopted by adding color values of different color space to $\bm{f}_i$. Textural information is also adopted by those four gradient components in $\bm{f}_i$. Second, by Riemannian manifold based SPD mapping, it provides a solution to summarize many multivariate Gaussian functions. The parameters $\bm{\mu}$ and $\bm{\Sigma}$ of a multivariate Gaussian function can be fused into an SPD matrix. With later vectorization, this SPD matrix is transformed to a vector. In this mapping process, correlation of different components in $\bm{f}_i$ are fully taken into account, which leads to a dimension increasing from basic pixel feature vector $\bm{f}_i$ to patch Gaussian vector $\bm{p}_j$. Third, by a two-level Gaussian model, this model guarantees to extract the overall statistical information of an image while being robust to local details variation caused by factors like viewpoint changes and partial occlusion. 
 
-It is intractable to directly learn a Mahanalobis distance matrix from concatenated Hierarchical Gaussian descriptor. In next Chapter KLFDA is applied to reduce the dimensionality of extracted descriptor from 27622 to $n-1$, where $n$ is the number of different classes. With this supervised nonlinear dimensionality reduction, discriminative information among different classes are preserved. At last a Mahanalobis matrix is learned on the dimension reduced descriptors by gradient descent method.
-
-
+It is intractable to directly learn a Mahalanobis distance matrix from the high-dimensional concatenated Hierarchical Gaussian descriptor. In next chapter, KLFDA is applied to reduce the dimensionality of the extracted descriptor from 27622 to $n-1$, where $n$ is the number of different classes. With this supervised nonlinear dimensionality reduction, discriminative information among different classes is preserved. At last, a Mahalanobis matrix is learned on the dimension-reduced descriptors by the gradient descent method.
 
 
-%\section{Kernel fisher discriminant analysis}
-%The extracted hierarchical gaussian descriptors have high dimension, it's intractable to learn a SPD matrix with such a high dimension. Dimension reduction is required to learn a subspace.
-%Among those methods to reduce dimension, principal component analysis (PCA) is often used. However, PCA is an unsupervised dimension reduction and may have a low performance for those reasons, $(1)$, PCA is to maximize the variance of dimension reduced data, and as a unsupervised method it doesn't has a full consideration of the the relation of between and within classes, it is very likely that the descriptors of different classes can be mixed up after the dimension reduction; $(2)$ PCA may suffer from the small sample size problem. In some Re-ID datasets, there may be two or less images for each pedestrian in each viewpoint (like VIPeR), if the dimension of descriptor is much bigger than sample size, much information can be lost with PCA. In this thesis, the kernel local fisher discriminant analysis (KLFDA) is used to reduce dimension. 
+
+
+%\section{Kernel Fisher discriminant analysis}
+%The extracted hierarchical Gaussian descriptors have high dimension, it's intractable to learn a SPD matrix with such a high dimension. Dimension reduction is required to learn a subspace.
+%Among those methods to reduce dimension, principal component analysis (PCA) is often used. However, PCA is an unsupervised dimension reduction and may have a low performance for those reasons, $(1)$, PCA is to maximize the variance of dimension reduced data, and as a unsupervised method it doesn't has a full consideration of the the relation of between and within classes, it is very likely that the descriptors of different classes can be mixed up after the dimension reduction; $(2)$ PCA may suffer from the small sample size problem. In some Re-ID datasets, there may be two or less images for each pedestrian in each viewpoint (like VIPeR), if the dimension of descriptor is much bigger than sample size, much information can be lost with PCA. In this thesis, the kernel local Fisher discriminant analysis (KLFDA) is used to reduce dimension. 
 %\subsection{Fisher discriminant analysis (FDA)}
 %KLFDA is the kernel version of LFDA, and LFDA is a combination of Fisher discriminant analysis[ ] and and the locality preserving projection in [LPP ] and kernel method. A brief introduction of FDA, LPP and kernel method is introduced below.
 %
@@ -480,7 +478,7 @@ It is intractable to directly learn a Mahanalobis distance matrix from concatena
 %\end{equation}
 %where $\gamma$ is corresponding eigenvalue of $\bm{\phi}$, and $L = D - A$.\\
 %%But the LPP dimension reduction is still not discriminant enough, 
-%\subsection{Local fisher discriminant analysis}
+%\subsection{Local Fisher discriminant analysis}
 %\indent LFDA \cite{LFDA} combines FDA and LPP and have better performance. The key in LFDA is it assigns weights to elements in $\bm{A}^{(w)}$ and $\bm{A}^{(b)}$, so that,
 %\begin{equation}
 %\begin{aligned}
@@ -517,7 +515,7 @@ It is intractable to directly learn a Mahanalobis distance matrix from concatena
 %
 %When applying the LFDA to original high dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, LFDA has to solve the eigenvalue a matrix with dimension $d\times d$. In some descriptors the $d$ could be more than 20000 and thus the computation cost is intractable. 
 % 
-%\subsection{Kernel local fisher discriminant analysis(KLFDA)}
+%\subsection{Kernel local Fisher discriminant analysis(KLFDA)}
 %
 %KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods including PCA, LDA and LFDA are linear dimensionality reduction methods. However, when descriptors data are non-linear in feature space, its hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$, again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $T$ can be computed by equation
 %\begin{equation}
@@ -595,7 +593,7 @@ It is intractable to directly learn a Mahanalobis distance matrix from concatena
 %\begin{equation}
 %\bm{K}\bm{L}^{(m)}\bm{K}\gamma_i  = \lambda \bm{K}\bm{L}^{(w)}\bm{K}\gamma_i
 %\end{equation}
-%One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in figure \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in figure \ref{KLFDAdemo2} and figure \ref{KLFDAdemo3}. It shows that for those clusters the gaussian kernel are better than linear kernel because the dimensional reduced data are more separate when using gaussian kernel function.
+%One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in figure \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2-D plane, by KLFDA dimension reduction its 1-D dimension reduced data distribution are shown in figure \ref{KLFDAdemo2} and figure \ref{KLFDAdemo3}. It shows that for those clusters the Gaussian kernel are better than linear kernel because the dimensional reduced data are more separate when using Gaussian kernel function.
 %
 %\begin{figure}[H]
 %\centering
@@ -608,7 +606,7 @@ It is intractable to directly learn a Mahanalobis distance matrix from concatena
 %\begin{figure}[H]
 %\centering
 %\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg}
-%\caption{1-D distribution of dimension reduced data  with gaussian kernel}
+%\caption{1-D distribution of dimension reduced data  with Gaussian kernel}
 %\vspace{-1em}
 %\end{figure} 
 %\label{KLFDAdemo2}

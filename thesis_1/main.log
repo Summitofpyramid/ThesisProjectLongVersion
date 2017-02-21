@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 FEB 2017 00:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 FEB 2017 17:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1759,8 +1759,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 [4
 
 ]
-Overfull \hbox (4.19551pt too wide) in paragraph at lines 31--31
- [][] [][][]\T1/ptm/m/n/12 Dimensionality and su-pe-ri-or-ity anal-y-sis of Hi-
+Overfull \hbox (1.53156pt too wide) in paragraph at lines 31--31
+ [][] [][][]\T1/ptm/m/n/12 Dimensionality and su-pe-ri-or-ity anal-y-sis of hi-
 er-ar-chi-cal Gaus- 
  []
 
@@ -1769,6 +1769,12 @@ er-ar-chi-cal Gaus-
 \openout5 = `main.toc'.
 
  [5] (./main.lof
+Overfull \hbox (0.7762pt too wide) in paragraph at lines 18--18
+ [][] [][][]\T1/ptm/m/n/12 LBP: by thresh-old-ing the neigh-bour pix-els, the p
+ix-els are trans-formed 
+ []
+
+
 Overfull \hbox (6.2822pt too wide) in paragraph at lines 23--23
  [][] [][][]\T1/ptm/m/n/12 A CMC com-par-i-son of fore-ground seg-men-ta-tion o
 n LBP fea-ture tested 
@@ -1941,14 +1947,14 @@ Chapter 2.
 
 
 ] [11] [12] [13] [14] [15] [16] [17] [18] [19]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CMCexplanation.jpg, id=731, 1
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CMCexplanation.jpg, id=732, 1
 124.2pt x 843.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CMCexplanation.jpg Graph
 ic file (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CMCexplanation.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CMCex
-planation.jpg used on input line 185.
+planation.jpg used on input line 187.
 (pdftex.def)             Requested size: 404.02908pt x 303.01915pt.
 
 [20]) [21 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CMCexplanation.jpg>
@@ -1960,7 +1966,7 @@ Chapter 3.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg, id=746, 2009.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg, id=747, 2009.
 5075pt x 983.675pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg Graphic f
 ile (type jpg)
@@ -1977,7 +1983,7 @@ GBHSV.jpg used on input line 12.
 
 ]
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVIPeR.p
-ng, id=751, 709.6914pt x 518.8986pt>
+ng, id=752, 709.6914pt x 518.8986pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVI
 PeR.png Graphic file (type png)
 
@@ -1988,7 +1994,7 @@ rentColorspaceCMCVIPeR.png used on input line 19.
 (pdftex.def)             Requested size: 404.02908pt x 295.41106pt.
  [23 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/DifferentColorspaceCMCVI
 PeR.png> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CompRGBHSV.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg, id=759, 1124.2pt x 8
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg, id=760, 1124.2pt x 8
 43.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg Graphic file (ty
 pe jpg)
@@ -1997,7 +2003,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.j
 pg used on input line 32.
 (pdftex.def)             Requested size: 158.99377pt x 119.23668pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg, id=760, 1124.2pt x 8
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg, id=761, 1124.2pt x 8
 43.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.jpg Graphic file (ty
 pe jpg)
@@ -2006,7 +2012,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GBR.j
 pg used on input line 37.
 (pdftex.def)             Requested size: 158.99377pt x 119.23668pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png, id=768, 193.1023
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png, id=769, 193.1023
 9pt x 44.35619pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPdemo.png Graphic file
  (type png)
@@ -2016,7 +2022,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/LBPde
 mo.png used on input line 49.
 (pdftex.def)             Requested size: 323.22449pt x 74.24847pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg, id=769, 602.25p
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg, id=770, 602.25p
 t x 602.25pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg Graphic fil
 e (type jpg)
@@ -2026,7 +2032,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Thesh
 ot1.jpg used on input line 59.
 (pdftex.def)             Requested size: 158.99377pt x 158.98897pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg, id=770, 600.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg, id=771, 600.
 2425pt x 600.2425pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg Graphic 
 file (type jpg)
@@ -2038,7 +2044,7 @@ otLBP1.jpg used on input line 63.
  [24 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/RGB.jpg> </Users/Johnson
 Johnson/Downloads/thesis_1/Figures/GBR.jpg> </Users/JohnsonJohnson/Downloads/th
 esis_1/Figures/LBPdemo.png>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg, id=786, 1
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg, id=787, 1
 541.76pt x 1140.26pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg Graph
 ic file (type jpg)
@@ -2051,7 +2057,7 @@ atureDemo.jpg used on input line 122.
 [25 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Theshot1.jpg> </Users/Joh
 nsonJohnson/Downloads/thesis_1/Figures/TheshotLBP1.jpg>] [26 </Users/JohnsonJoh
 nson/Downloads/thesis_1/Figures/HOGfeatureDemo.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg, id=807, 109
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg, id=808, 109
 0.0725pt x 315.1775pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/FGdemo2VIPeR.jpg Graphic
  file (type jpg)
@@ -2062,7 +2068,7 @@ o2VIPeR.jpg used on input line 135.
 (pdftex.def)             Requested size: 404.02908pt x 116.81583pt.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png, 
-id=808, 578.16pt x 433.62pt>
+id=809, 578.16pt x 433.62pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.
 png Graphic file (type png)
 
@@ -2073,7 +2079,7 @@ _FG_HSV_comparison.png used on input line 144.
 (pdftex.def)             Requested size: 404.02908pt x 303.02246pt.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison.png
-, id=809, 578.16pt x 433.62pt>
+, id=810, 578.16pt x 433.62pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegCompariso
 n.png Graphic file (type png)
 
@@ -2084,7 +2090,7 @@ _LBP_FGSegComparison.png used on input line 152.
 (pdftex.def)             Requested size: 404.02908pt x 303.02246pt.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.jpg, i
-d=810, 1425.325pt x 1126.2075pt>
+d=811, 1425.325pt x 1126.2075pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcomparison.j
 pg Graphic file (type jpg)
 
@@ -2098,30 +2104,30 @@ _HOG_FGcomparison.jpg used on input line 160.
 ng> </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_LBP_FGSegComparison
 .png>] [29 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_HOG_FGcompar
 ison.jpg>] [30] [31] [32]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png, id=860, 40
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png, id=861, 40
 1.24907pt x 137.01187pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png Graphi
 c file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Integ
-ralImage.png used on input line 296.
+ralImage.png used on input line 294.
 (pdftex.def)             Requested size: 404.02908pt x 137.97113pt.
 
 [33] [34 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/IntegralImage.png>]
 [35]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/SLICdemo.pdf, id=887, 211.791
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/SLICdemo.pdf, id=888, 211.791
 24pt x 150.5625pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/SLICdemo.pdf Graphic fil
 e (type pdf)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/SLICdemo.pdf>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/SLICd
-emo.pdf used on input line 360.
+emo.pdf used on input line 358.
 (pdftex.def)             Requested size: 404.02908pt x 287.23647pt.
  [36 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/SLICdemo.pdf>]
-Overfull \hbox (14.54553pt too wide) in paragraph at lines 391--391
-[]\T1/ptm/b/n/14.4 Dimensionality and su-pe-ri-or-ity anal-y-sis of Hi-er-ar-ch
+Overfull \hbox (11.34879pt too wide) in paragraph at lines 389--389
+[]\T1/ptm/b/n/14.4 Dimensionality and su-pe-ri-or-ity anal-y-sis of hi-er-ar-ch
 i-cal Gaus-
  []
 
@@ -2146,52 +2152,46 @@ cmm/m/it/12 ; \OML/cmm/b/it/12 x[]\OML/cmm/m/it/12 ; []  ; \OML/cmm/b/it/12 x[]
 
 
 ] [40] [41] [42] [43] [44]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg, id=995, 2374.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg, id=997, 2374.
 8725pt x 1411.2725pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg Graphic f
 ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo1.jpg used on input line 198.
+demo1.jpg used on input line 197.
 (pdftex.def)             Requested size: 404.02908pt x 240.08542pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg, id=996, 1124.
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg, id=998, 1124.
 2pt x 843.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg Graphic f
 ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo2.jpg used on input line 207.
+demo2.jpg used on input line 206.
 (pdftex.def)             Requested size: 404.02908pt x 303.01915pt.
  [45 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo1.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg, id=1006, 1124
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg, id=1008, 1124
 .2pt x 843.15pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg Graphic f
 ile (type jpg)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDA
-demo3.jpg used on input line 216.
+demo3.jpg used on input line 215.
 (pdftex.def)             Requested size: 404.02908pt x 303.01915pt.
  [46 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo2.jpg> </Users/
 JohnsonJohnson/Downloads/thesis_1/Figures/KLFDAdemo3.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png, id=1013,
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png, id=1015,
  483.8075pt x 530.98375pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png Grap
 hic file (type png)
 
 <use /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png>
 Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradi
-entdescent.png used on input line 262.
+entdescent.png used on input line 261.
 (pdftex.def)             Requested size: 161.60916pt x 177.36414pt.
-
-Overfull \hbox (5.0517pt too wide) in paragraph at lines 258--266
-\T1/ptm/m/n/12 This pro-cess is re-peated un-til cer-tain con-di-tion is met, g
-en-er-ally when gra-di-ent $\OMS/cmsy/m/n/12 jj\OML/cmm/b/it/12 G\OMS/cmsy/m/n/
-12 jj ^^T
- []
 
 [47] [48 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png 
 (PNG copy)>] [49]) [50]
@@ -2200,7 +2200,7 @@ en-er-ally when gra-di-ent $\OMS/cmsy/m/n/12 jj\OML/cmm/b/it/12 G\OMS/cmsy/m/n/
  (./Chapters/Chapter5.tex
 Chapter 5.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg, id=1054, 
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg, id=1056, 
 1614.03pt x 349.305pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg Graph
 ic file (type jpg)
@@ -2210,7 +2210,7 @@ Package pdftex.def Info: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKi
 magesdemo.jpg used on input line 11.
 (pdftex.def)             Requested size: 404.02908pt x 87.43796pt.
 
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg, id=1055, 
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg, id=1057, 
 1557.82pt x 463.7325pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg Graph
 ic file (type jpg)
@@ -2231,7 +2231,7 @@ rded from two dif-fer-ent, static surveil-
 
 
  </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg>]
-</Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg, id=1062, 
+</Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg, id=1064, 
 1411.2725pt x 315.1775pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRIDimagesdemo.jpg Graph
 ic file (type jpg)
@@ -2271,7 +2271,7 @@ son/Downloads/thesis_1/Figures/Rank1scoresAlpha.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-converte
-d-to.pdf, id=1084, 1267.73625pt x 655.44875pt>
+d-to.pdf, id=1086, 1267.73625pt x 655.44875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank1scoresAlpha-eps-con
 verted-to.pdf Graphic file (type pdf)
 
@@ -2295,7 +2295,7 @@ son/Downloads/thesis_1/Figures/Rank5scoresAlpha.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-converte
-d-to.pdf, id=1085, 1267.73625pt x 655.44875pt>
+d-to.pdf, id=1087, 1267.73625pt x 655.44875pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/Rank5scoresAlpha-eps-con
 verted-to.pdf Graphic file (type pdf)
 
@@ -2327,7 +2327,7 @@ ds/thesis_1/Figures/VIPeR.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.pdf, i
-d=1126, 1251.67625pt x 654.445pt>
+d=1128, 1251.67625pt x 654.445pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR-eps-converted-to.p
 df Graphic file (type pdf)
 
@@ -2351,7 +2351,7 @@ ds/thesis_1/Figures/CUHK1.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.pdf, i
-d=1127, 1251.67625pt x 654.445pt>
+d=1129, 1251.67625pt x 654.445pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1-eps-converted-to.p
 df Graphic file (type pdf)
 
@@ -2377,7 +2377,7 @@ loads/thesis_1/Figures/prid2011.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-to.pdf
-, id=1140, 1251.67625pt x 650.43pt>
+, id=1142, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -2403,7 +2403,7 @@ loads/thesis_1/Figures/prid450s.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-to.pdf
-, id=1153, 1251.67625pt x 650.43pt>
+, id=1155, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -2429,7 +2429,7 @@ s/thesis_1/Figures/GRID.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 </Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pdf, id
-=1166, 1251.67625pt x 650.43pt>
+=1168, 1251.67625pt x 650.43pt>
 File: /Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID-eps-converted-to.pd
 f Graphic file (type pdf)
 
@@ -2498,17 +2498,24 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 326.
 (./Chapters/Chapter6.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 326.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 326.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 668A2F3F101F8B3182A96DAE14E48E9E;10606.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 88BD62AE0B2D99F073C3E37A24218A45;10606
+(rerunfilecheck)             After:  09186777FEC5090283480C59D707ABEC;10606.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30839 strings out of 493089
- 626740 string characters out of 6134842
- 751785 words of memory out of 5000000
- 33619 multiletter control sequences out of 15000+600000
+ 30841 strings out of 493089
+ 626770 string characters out of 6134842
+ 751899 words of memory out of 5000000
+ 33620 multiletter control sequences out of 15000+600000
  83208 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,20n,83p,10377b,2553s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2535,10 +2542,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf
 s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ur
 w/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on main.pdf (79 pages, 3187945 bytes).
+Output written on main.pdf (79 pages, 3190061 bytes).
 PDF statistics:
- 1364 PDF objects out of 1440 (max. 8388607)
- 1147 compressed objects within 12 object streams
- 315 named destinations out of 1000 (max. 500000)
+ 1366 PDF objects out of 1440 (max. 8388607)
+ 1149 compressed objects within 12 object streams
+ 316 named destinations out of 1000 (max. 500000)
  568 words of extra memory for PDF output out of 10000 (max. 10000000)
 
