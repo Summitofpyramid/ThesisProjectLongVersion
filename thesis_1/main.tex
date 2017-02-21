@@ -96,7 +96,7 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Person re-identification based on kernel local fisher discriminant analysis and Mahanalobis distance learning} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\thesistitle{Person Re-identification Based on Kernel Local Fisher Discriminant Analysis and Mahalanobis Distance Learning} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 %\supervisor{Robert \textsc{Laganiere}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \supervisor{Robert Laganiere} 
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
@@ -210,7 +210,7 @@ headsepline, % Uncomment to get a line under the header
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 
-Person re-identification (Re-ID) has become an intense research area in recent years. The main goal of this topic is to recognize and match individuals over time at the same or different locations. This task is challenging for the variation of illumination, viewpoints, pedestrians' appearance and partial occlusion. Previous works mainly focus on finding robust features and metric learning. It's noticed that many metric learning methods convert the Re-ID problem to a matrix decomposition problem by fisher discriminant analysis (FDA). Besides, Mahanalobis based metric learning is a popular method to measure similarity. However, since directly extracted descriptors usually have high dimensionality, it's intractable to learn a high-dimensional semi-positive definite (SPD) matrix. Dimensionality reduction are used to project high-dimensional descriptors to lower-dimensional space while preserving those discriminative information. In this paper the kernel fisher discriminant analysis (KLFDA) \cite{KLFDA} is used to reduce dimensionality given that kernelization method can greatly improve Re-ID performance for nonlinearity. Then a SPD matrix is learned on lower-dimensional descriptors based on the limitation that the within class distance is at least one unit smaller than the minimum inter class distance. This method turns to have excellent performance compared with other advanced metric learning.
+Person re-identification (Re-ID) has become an intense research area in recent years. The main goal of this topic is to recognize and match individuals over time at the same or different locations. This task is challenging due to the variation of illumination, viewpoints, pedestrians' appearance and partial occlusion. Previous works mainly focus on finding robust features and metric learning. Many metric learning methods convert the Re-ID problem to a matrix decomposition problem by Fisher discriminant analysis (FDA). Mahalanobis based metric learning is a popular method to measure similarity; however, since directly extracted descriptors usually have high dimensionality, it's intractable to learn a high-dimensional semi-positive definite (SPD) matrix. Dimensionality reduction is used to project high-dimensional descriptors to a lower-dimensional space while preserving those discriminative information. In this paper, the kernel Fisher discriminant analysis (KLFDA) \cite{KLFDA} is used to reduce dimensionality given that kernelization method can greatly improve Re-ID performance for nonlinearity. Then an SPD matrix is learned on lower-dimensional descriptors based on the limitation that the within-class distance is at least one unit smaller than the minimum interclass distance. This method is proved to have excellent performance compared with other advanced metric learning.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -219,11 +219,11 @@ Person re-identification (Re-ID) has become an intense research area in recent y
 
 \begin{acknowledgements}
 \addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-Firstly, I would like to express my sincere gratitude to my supervisor Professor Robert Laganiere for the continuous support of my master study and research and for his immense knowledge, patience and enlightenment. His guidance helped me in all the time of research and writing of this thesis. Besides, I would also like to thank Professor Jiying Zhao and Professor Andy Adler for being my thesis examiners.
+First, I would like to express my sincere gratitude to my supervisor, Professor Robert Laganiere, for the continuous support of my master study and research and for his immense knowledge, patience and enlightenment. His guidance helped me throughout my research and writing of this thesis. I would also like to thank Professor Jiying Zhao and Professor Andy Adler for being my thesis examiners.
 
-My sincere thanks also goes to my friends Di Pang, Dongfeng Gu, Xuelu Wang, Binhao Wang, Muye Jiang and other members in VIVA lab, for all the fun we have had in the last two years, and for your kind help and encouragement. I would also like to thank Lu Sun and Andres Solis Montero, the PhD candidates in the VIVA lab for giving me suggestions and tips in image segmentation, and thank Yong Wang, the post doctoral fellow in our lab for his kind suggestions to revise paper and encouragement. 
+My sincere thanks also goes to my friends, Di Pang, Dongfeng Gu, Xuelu Wang, Binhao Wang, Muye Jiang and other members of the VIVA lab, for all the fun we have had in the last two years, and for your kind help and encouragement. I would like to thank Lu Sun and Andres Solis Montero, the PhD candidates in the VIVA lab, for giving me suggestions and tips in image segmentation. I would also like to thank Yong Wang, the post doctoral fellow in our lab, for his kind revision suggestions and encouragement. 
 
-Last but not the least, I would like to thank my parents and sister for supporting me throughout the study in Canada and writing this thesis.
+Last but not the least, I would like to thank my parents and sister for supporting me throughout the study in Canada and the writing of this thesis.
 %The acknowledgments and the people to thank go here, don't forget to include your project advisor\ldots
 \end{acknowledgements}
 
