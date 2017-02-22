@@ -1,5 +1,5 @@
 \chapter{Extraction of hierarchical Gaussian descriptors}
-In person re-identification, it is very important to choose a robust descriptor to represent person. A good descriptor should be robust to variations of illumination, viewpoint, and camera color response. Most descriptors try to capture the color and texture information. In this chapter, we will first introduce some basic descriptors and compare their performance on the VIPeR dataset, then a detailed introduction of the hierarchical descriptor will be presented in section 3.3 of this chapter.
+In person re-identification, it is very important to choose a robust descriptor to represent a person. A good descriptor should be robust to variations of illumination, viewpoint, and camera color response. Most descriptors try to capture the color and texture information. In this chapter, we will first introduce some basic descriptors and compare their performance on the VIPeR dataset. Then a detailed introduction of the hierarchical descriptor will be presented in section 3.3 of this chapter.
 
 
 \section{Basic color and textural features}
@@ -79,26 +79,26 @@ I_y = \frac{\partial I}{\partial y}.
 The gradient can be computed quickly by some discrete derivative masks below, like 1-D Sobel masks:
 \begin{equation}
 \begin{aligned}
-Centered: M_{c} &= [-1, 0, 1]\\
-Uncentered: M_{uc}& = [-1, 1]
+Centered: M_{c} &= [-1, 0, 1],\\
+Uncentered: M_{uc}& = [-1, 1].
 \end{aligned}
 \end{equation}
-or 2-D Sobel masks:
+Or 2-D Sobel masks:
 \begin{equation}
 \begin{aligned}
 D_x = \left[ \begin{matrix}
 0 & 1 \\
 -1& 0
 \end{matrix}
-\right]\\
+\right],\\
 D_y = \left[ \begin{matrix}
 -1 & 0 \\
 0& 1
 \end{matrix}
-\right]
+\right].
 \end{aligned}
 \end{equation}
-or $3\times 3$ Sobel masks:
+Or $3\times 3$ Sobel masks:
 \begin{equation}
 \begin{aligned}
 S_x &= \left[ \begin{matrix}
@@ -106,13 +106,13 @@ S_x &= \left[ \begin{matrix}
 -2& 0 & 2\\
 -1 &0 & 1 
 \end{matrix}
-\right]\\
+\right],\\
 S_y &= \left[ \begin{matrix}
 1 & 2 &1 \\
 0& 0 & 0\\
 -1 & -2 &-1
 \end{matrix}
-\right]
+\right].
 \end{aligned}
 \end{equation}.
 
@@ -138,7 +138,7 @@ Many works try to minimize the impact of background noise of pedestrians' images
 \vspace{0em}
 \end{figure} 
 
-We can find that foreground segmentation decreases the LBP and the HOG's performance but increases the HSV color histogram's performance on the VIPeR dataset greatly. The reason for this is that imperfect foreground segmentation causes body parts (like the head and the feet) to be lost and masks out many parts in torso and legs. Besides, in images of some individuals, part of the background scene is regarded as foreground. Since HSV color histogram doesn't handle spatial distribution but only color entropy, foreground segmentation improves its performance greatly. But since LBP and HOG handle texture for each sample patch, their performances suffer from those body parts loss and little black patches from the background. What's more, we can infer that imperfect foreground segmentation will also decrease other textural features' performances.
+We can find that foreground segmentation decreases the LBP and the HOG's performance but increases the HSV color histogram's performance on the VIPeR dataset greatly. The reason for this is that imperfect foreground segmentation causes body parts (like the head and the feet) to be lost and masks out many parts in the torso and legs. Besides, in images of some individuals, part of the background scene is regarded as foreground. Since HSV color histogram doesn't handle spatial distribution but only color entropy, foreground segmentation improves its performance greatly. But since LBP and HOG handle texture for each sample patch, their performances suffer from those body parts loss and little black patches from the background. What's more, we can infer that imperfect foreground segmentation will also decrease other textural features' performances.
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR_FG_HSV_comparison.png}
@@ -175,7 +175,7 @@ In the previous section, the impact of background subtraction on different featu
 \begin{equation} 
 N(x;\mu_0,\sigma_0) = \frac{1}{\sigma_0\sqrt{2\pi}} \exp^{\frac{(x - \mu_0)^2}{\sigma_0^2}},
 \end{equation}
-and here $\mu_0 = \frac{W_0}{2}, \sigma_0 = \frac{W_0}{4}$, $W_0$ is the number of patches in horizontal direction.
+here $\mu_0 = \frac{W_0}{2}, \sigma_0 = \frac{W_0}{4}$, $W_0$ is the number of patches in horizontal direction.
 \subsection{Single pixel modelling}
 
 In this hierarchical model, it is very important to have a full representation for every single pixel. To fully characterize single pixel, a $d$-dimensional vector is used to represent it. In this vector, there could be any predefined properties like coordinates, color values, texture and filter response. Suppose the original image is in RGB color space, the Gaussian of Gaussian descriptor uses an 8-dimensional vector $\bm{f}_i$, and 
@@ -188,7 +188,7 @@ The $M$ is to characterize the texture with the gradient histogram. Different $M
 First, the gradients in x and y direction are computed by two gradient filters $\rm{h}_x$ and $\rm{h}_y$, and we have 
 \begin{equation}
 \begin{aligned}
-h_x &= [-1, 0, 1]\\
+h_x &= [-1, 0, 1],\\
 h_y &= -h_x'.
 \end{aligned}
 \end{equation}
@@ -196,12 +196,12 @@ h_y &= -h_x'.
 Then, by convolving those two filters with the intensity image $I$, the horizontal and vertical gradient $I_x, I_y$ can be computed, so the orientation and magnitude can be computed by the following equations:
 \begin{equation}
 \begin{aligned}
-O(i,j) &= (\arctan(\frac{I_y(i,j)}{I_x(i,j)}+\pi)*180 /{\pi} \\
+O(i,j) &= (\arctan(\frac{I_y(i,j)}{I_x(i,j)}+\pi)*180 /{\pi}, \\
 M(i,j) &= \sqrt{(I_x(i,j)^2 + I_y(i,j))^2}.
 \end{aligned}
 \end{equation}
 
-The orientations are quantized into four bins by a soft voting algorithm \cite{AutoRela}. For each pixel, its corresponding gradient orientation is decided by its nearest bin's direction. To make the descriptor focus on the gradient components with high values, the gradient and orientation are multiplied as follow:
+The orientations are quantized into four bins by a soft voting algorithm \cite{AutoRela}. For each pixel, its corresponding gradient orientation is decided by its nearest bin's direction. To make the descriptor focus on the gradient components with high values, the gradient and orientation are multiplied as follows:
 \begin{equation}
 M_{\theta} = MO_{\theta}.
 \end{equation}
@@ -272,8 +272,8 @@ where m is the total number pf patches inside the current slide. Again, $\bm{\mu
 G(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r) \sim \bm{P}_r  = |\bm{\Sigma}_r|^{1/(d+1)} \left[ \begin{matrix}
 \bm{\Sigma}_r + \bm{\mu}_r\bm{\mu}_r^T & \bm{\mu}_r \\
 \bm{\mu}_r^T & 1
-\end{matrix},
-\right]
+\end{matrix}
+\right],
 \end{equation}
 and $\bm{P}_r$ is vectorized by Equation \ref{vectorize}.
 
@@ -307,7 +307,7 @@ Suppose the $\bm{C}(x', y', i, j)$ is the $W\times H\times d\times d$ tensor of 
 Let $\bm{I}_{x, y}$ be the $d$-dimensional vector in $\bm{I}_F$, and $\bm{C}(x, y)$ be the $d\times d$-dimensional matrix in $\bm{C}$, 
 \begin{equation}
 \begin{aligned}
-\bm{I}_{x, y} = [ \bm{I}_F(x', y', 1) \dots  \bm{I}_F(x', y', d)]^T \\
+\bm{I}_{x, y} = [ \bm{I}_F(x', y', 1) \dots  \bm{I}_F(x', y', d)]^T, \\
  \bm{C}_{x, y} = \left [
  \begin{matrix} 
  \bm{C}(x, y, i, 1)  &\cdots & \bm{C}(x, y, 1, d)\\
@@ -322,7 +322,7 @@ Then for any rectangule regions $R(x', y'; x'', y'')$, where $(x', y')$ is the u
 \begin{equation}
 \begin{aligned}
 \bm{C}_R(x', y'; x'', y'') = \frac{1}{n-1} [\bm{C}_{x'', y''} + \bm{C}_{x', y'} -  \bm{C}_{x'', y'}-  \bm{C}_{x', y''} \\
--\frac{1}{n}(\bm{I}_{x'', y''} + \bm{I}_{x'', y''} - \bm{I}_{x', y''} - \bm{I}_{x'', y'})(\bm{I}_{x'', y''} + \bm{I}_{x'', y''} - \bm{I}_{x', y''} - \bm{I}_{x'', y'})^T]
+-\frac{1}{n}(\bm{I}_{x'', y''} + \bm{I}_{x'', y''} - \bm{I}_{x', y''} - \bm{I}_{x'', y'})(\bm{I}_{x'', y''} + \bm{I}_{x'', y''} - \bm{I}_{x', y''} - \bm{I}_{x'', y'})^T],
 \end{aligned}
 \end{equation}
 where $n$ is the number of feature vector in $F$, and $n = (x'' - x')(y'' - y')$. By creating the integral image, the covariance of any rectangular area in $F$ can be computed in $O(d^2)$ time.
@@ -399,7 +399,7 @@ Since $nB$ can be calculated with $nR$ and $nG$, in this color space only the fi
 
 The Hierarchical Gaussian descriptor has a few advantages compared with other descriptors. First, it has a full consideration of color, texture and $y$ coordinate information. The color information is adopted by adding color values of different color space to $\bm{f}_i$. Textural information is also adopted by those four gradient components in $\bm{f}_i$. Second, by Riemannian manifold based SPD mapping, it provides a solution to summarize many multivariate Gaussian functions. The parameters $\bm{\mu}$ and $\bm{\Sigma}$ of a multivariate Gaussian function can be fused into an SPD matrix. With later vectorization, this SPD matrix is transformed to a vector. In this mapping process, correlation of different components in $\bm{f}_i$ are fully taken into account, which leads to a dimension increasing from basic pixel feature vector $\bm{f}_i$ to patch Gaussian vector $\bm{p}_j$. Third, by a two-level Gaussian model, this model guarantees to extract the overall statistical information of an image while being robust to local details variation caused by factors like viewpoint changes and partial occlusion. 
 
-It is intractable to directly learn a Mahalanobis distance matrix from the high-dimensional concatenated Hierarchical Gaussian descriptor. In next chapter, KLFDA is applied to reduce the dimensionality of the extracted descriptor from 27622 to $n-1$, where $n$ is the number of different classes. With this supervised nonlinear dimensionality reduction, discriminative information among different classes is preserved. At last, a Mahalanobis matrix is learned on the dimension-reduced descriptors by the gradient descent method.
+It is intractable to directly learn a Mahalanobis distance matrix from the high-dimensional concatenated Hierarchical Gaussian descriptor. In the next chapter, KLFDA is applied to reduce the dimensionality of the extracted descriptor from 27622 to $n-1$, where $n$ is the number of different classes. With this supervised nonlinear dimensionality reduction, discriminative information among different classes is preserved. At last, a Mahalanobis matrix is learned on the dimension-reduced descriptors by the gradient descent method.
 
 
 

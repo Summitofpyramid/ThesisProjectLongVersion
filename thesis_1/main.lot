@@ -3,7 +3,7 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces A CMC example of gallery size is $M=10$ and probe size is $N=12$\relax }}{20}{table.caption.43}
+\contentsline {table}{\numberline {2.1}{\ignorespaces A CMC example of gallery size is $M=10$ and probe size is $N=12$\relax }}{21}{table.caption.43}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces A rank score comparison of GOG$_\text {fusion}$ Variants\relax }}{35}{table.caption.91}
 \contentsline {table}{\numberline {3.2}{\ignorespaces A performance comparison between Gaussian of Gaussian descriptor and its variants on the VIPeR dataset\relax }}{37}{table.caption.93}

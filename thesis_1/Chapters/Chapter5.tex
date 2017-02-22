@@ -3,9 +3,9 @@
 
 \section{Datasets and evaluation settings}
 
-\noindent \textbf{VIPeR} dataset is the most used dataset in person re-identification. In this dataset there are 632 different individuals and for each person there are two outdoor images from different viewpoints. All the images are scaled into $48\times128$. In this experiment the we randomly select 316 individuals from cam A and cam B as the training set, the rest images in cam A are used as probe images and those in cam B as gallery images. This process is repeated 10 times to reduce error.\\
+\noindent \textbf{VIPeR} dataset is the most widely used dataset in person re-identification. In this dataset, there are 632 different individuals, and for each person, there are two outdoor images from different viewpoints. All the images are scaled into $48\times128$. In this experiment, we randomly select 316 individuals from cam A and cam B as the training set. The rest of the images in cam A are used as probe images, and those in cam B are used as gallery images. This process is repeated 10 times to reduce error.\\
 %\textbf{ETHZ dataset} Three video sequences are contained in this dataset. In ETHZ there are respectively 83,35,28 persons in each sequences. All those images are outdoor and the camera is moving with the pedestrian. Images are in different sizes and may needed to resized. All those images of a certain person is shot with the same moving camera. In this paper, for each person two random images are selected as the training pair and another two random images are selected as the gallery and probe image.\\
-\textbf{CUHK1} dataset contains 971 identities from two disjoint camera views. The cameras are static in each pair of view and images are listed in the same order. For each individual, there are two images in each view. All images are scaled into $60\times160$. In this paper, we randomly select 485 image pairs as training data and the rest person pairs are used for test data. 
+\textbf{CUHK1} dataset contains 971 identities from two disjointed camera views. The cameras are static in each view, and images are listed in the same order. For each individual, there are two images in each view. All images are scaled into $60\times160$. In this paper, we randomly select 485 image pairs as training data, and the remaining pairs are used for test data. 
 \begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHKimagesdemo.jpg}
@@ -13,7 +13,7 @@
 \caption{Pedestrians in prid\_450 dataset}
 \end{raggedleft}
 \end{figure}
-\textbf{Prid\_2011} dataset consists of images extracted from multiple person trajectories recorded from two different, static surveillance cameras. Images from these cameras contain a viewpoint change and a stark difference in illumination, background and camera characteristics. Camera view A shows 385 persons, camera view B shows 749 persons. The first 200 persons appear in both camera views, The remaining persons in each camera view complete the gallery set of the corresponding view. Hence, a typical evaluation consists of searching the 200 first persons of one camera view in all persons of the other view. This means that there are two possible evaluation procedures, either the probe set is drawn from view A and the gallery set is drawn from view B. In this paper, we randomly select 100 persons that appeared in both camera views as training pairs, and the remaining 100 persons of the 200 person pairs from camera A is used as probe set while the 649 remaining persons from camera B are used for gallery images.\\
+\noindent\textbf{Prid\_2011} dataset consists of images extracted from multiple person trajectories recorded from two different, static surveillance cameras. Images from these cameras contain a viewpoint change and a stark difference in illumination, background and camera characteristics. Camera view A shows 385 persons, and camera view B shows 749 persons. The first 200 persons appear in both camera views. The remaining persons in each camera view complete the set of the corresponding view. In this paper, we randomly select 100 persons that appeared in both camera views as training pairs, and the remaining 100 persons of the 200 person pairs from camera A are used as the probe set while the 649 remaining persons from camera B are used for the gallery set.\\
 %\begin{figure}[H]
 %\begin{raggedleft}
 %\includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Multishots.eps}
@@ -22,7 +22,7 @@
 %\end{raggedleft}
 %\end{figure}
 %\label{Prid\_2011 pedestrians}
-\textbf{Prid\_450s} dataset contains 450 image pairs recorded from two different, static surveillance cameras. Additionally, the dataset also provides an automatically generated, motion based foreground/background segmentation as well as a manual segmentation of parts of a person. The images are stored in two folders that represent the two camera views. Besides the original images , the folders also contain binary masks obtained from motion segmentation, and manually segmented masks. In this test, we randomly select 225 persons from each of two camera views as the training set, and the remaining persons are left as gallery and probe images. 
+\textbf{Prid\_450s} dataset contains 450 image pairs recorded from two different, static surveillance cameras. Additionally, the dataset also provides an automatically generated, motion-based foreground/background segmentation as well as a manual segmentation of parts of a person. The images are stored in two folders that represent the two camera views. Besides the original images, the folders also contain binary masks obtained from motion segmentation, and manually segmented masks. In this test, we randomly select 225 persons from each of two camera views as the training set, and the remaining persons are left as the gallery and probe images. 
 \begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Prid450sImages.jpg}
@@ -30,8 +30,7 @@
 \caption{Pedestrians in prid\_450s dataset}
 \end{raggedleft}
 \end{figure}
-
-\textbf{GRID} There are two camera views in this dataset. Folder probe contains 250 probe images captured in one view (file names starts from 0001  to 0250). Folder gallery contains 250 true match images of the probes (file names starts from 0001  to 0250). Besides, in gallery folder there are a total of 775 additional images that do not belong to any of the probes (file name starts with 0000). These extra images should be treated as a fixed portion in the testing set during cross validation. In this paper, we randomly select 125 persons from those 250 persons appeared in both camera views as training pairs, and the remaining persons in probe folder is used as probe images while  the remaining 125 persons and those 775 additional persons from gallery folder are used as gallery images. A brief summarization of test settings is in Table \ref{Settings}.
+\noindent\textbf{GRID} has two camera views. The probe folder contains 250 probe images captured in one view (file names starts from 0001  to 0250). The gallery folder contains 250 true match images of the probes (file names starts from 0001  to 0250). Furthermore, in the gallery folder, there are a total of 775 additional images that do not belong to any of the probes (file name starts with 0000). These extra images should be treated as a fixed portion in the testing set during cross validation. In this paper, we randomly select 125 persons from those 250 persons who appeared in both camera views as training pairs, and the remaining persons in the probe folder are used as probe images while  the remaining 125 persons and those 775 additional persons from the gallery folder are used as gallery images. A brief summarization of test settings of all those datasets mentioned is listed in Table \ref{Settings}.
 
 \begin{figure}[H]
 \begin{raggedleft}
@@ -64,7 +63,7 @@ GRID&125&125&900&250&1025\\
 \end{table}
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{The influence of mean removal and $L_2$ normalization}
-In \cite{GOG}, mean removal and $L_2$  normalization is found to improve performance by $5.1\%$. The reason for this is mean removal and normalization can reduce the impact of extremas of descriptors. When testing proposed metric learning, we find the mean removal can slightly improve performance. A comparison between performance of original descriptors and preprocessed descriptors is shown in Tables \ref{table:compMN1}, \ref{table:compMN2}, \ref{compMN3}, \ref{compMN4}, \ref{compMN5}, all those datasets are tested by proposed metric. The original GOG means no mean removal and normalization. It shows that the mean removal and normalization has a slight improvement around 0.5\% on the performance on all five datasets. Since preprocessing are required to test XQDA, the mean removal and normalization are applied on descriptors in this experiment. 
+In \cite{GOG}, mean removal and $L_2$  normalization is found to improve performance by $5.1\%$. The reason for this is that mean removal and normalization can reduce the impact of extremas of descriptors. When testing proposed metric learning, we find that mean removal can slightly improve performance. A comparison between performances of original descriptors and preprocessed descriptors is shown in Tables \ref{table:compMN1}, \ref{table:compMN2}, \ref{compMN3}, \ref{compMN4} and \ref{compMN5}, and all those datasets are tested by proposed metric. The original GOG means no mean removal and normalization. It shows that the mean removal and normalization has a slight improvement of around 0.5\% on the performance on all five datasets. Since preprocessing is required to test XQDA, the mean removal and normalization are applied on descriptors in this experiment. 
 
 \begin{table}[H]
 \centering
@@ -184,7 +183,7 @@ Preprocessed GOG$_\text{fusion}$ &23.92& 44.64& 54.88& 62.32& 66.40\\
 
 %--------------------------------------------------
 \section{Parameters setting}
-In this experiment, there are a few parameters for the iteration computing including slack variable $\rho$, maximal iteration $T$, gradient step $\lambda$, the interclass and intraclass limitation factor $\alpha$ and the updating ratio $\beta$. Firstly the slack variable $\rho$ is initialized as 1 to ensure the minimum interclass distance is 1 larger than intraclass distance at least. The step size of gradient updating $\lambda$ is initialized as 0.01. When target value $f$ increases,  $\lambda$ is scaled by a factor 0.5, and  $\lambda$ is scaled by 1.01 when target value $f$ decreases. To judge if target value converges, the threshold $\beta$ is defined as the ratio target value change versus previous target value, that is, $\beta = \frac{(f_{t+1}-f_t)}{f_t}$. According many experiment trials, when it satisfies $\beta = 10^{-5}$, the target value converges and the iteration is stopped. The maximal iteration times $t$ is set to 100 since the target value $f$ will converge in around 15 iterations.  The last parameter for the iteration is $\alpha$, to know the best value for $\alpha$, we tried 11 different values ranges from 0 to 1 with a step of 0.1, and find that the rank 1 and rank 5 scores reach maxima at interval $[0.7,0.8]$, as shown in \ref{Rank1curve} and \ref{Rank5curve}. Then another ten trials are performed with alpha ranging from $[0.7,0.8]$ with a step of 0.01. The best $\alpha$ value should have as large top rank scores as possible and at last we find that the optimal value for $\alpha$ is 0.76. A form of all parameters are shown in Table \ref{ParametersSetting}.
+In this experiment, there are a few parameters for the iteration computing, including slack variable $\rho$, maximal iteration $T$, gradient step $\lambda$, the interclass and intraclass limitation factor $\alpha$ and the updating ratio $\beta$. First, the slack variable $\rho$ is initialized as 1 to ensure the minimum interclass distance is 1 larger than intraclass distance at least. The step size of gradient updating $\lambda$ is initialized as 0.01. When target value $f$ increases,  $\lambda$ is scaled by a factor of 0.5, and  $\lambda$ is scaled by 1.01 when target value $f$ decreases. To judge if target value converges, the threshold $\beta$ is defined as the ratio target value change versus previous target value, that is, $\beta = \frac{(f_{t+1}-f_t)}{f_t}$. According to many experiment trials, when it satisfies $\beta = 10^{-5}$, the target value converges and the iteration is stopped. The maximal iteration times $t$ is set to 100 since the target value $f$ will converge in around 15 iterations.  The last parameter for the iteration is $\alpha$. To know the best value for $\alpha$, we tried 11 different values ranges from 0 to 1 with a step of 0.1. We found that the rank 1 and rank 5 scores reach maxima at interval $[0.7,0.8]$, as shown in \ref{Rank1curve} and \ref{Rank5curve}. Then another ten trials were performed with alpha ranging from $[0.7,0.8]$ with a step of 0.01. The best $\alpha$ value should have largest top-ranking scores possible and at last we found that the optimal value for $\alpha$ is 0.76. A form of all parameters is shown in Table \ref{ParametersSetting}.
 %-------------------------------------------------
 \begin{figure}[H]
 \begin{raggedleft}
@@ -219,14 +218,13 @@ Values &0.76&$10^{-5}$&0.01&100&1\\
 \end{table}
 
 
-\textbf{Performance measuring} The cumulative matching curve is used to measure the descriptor performance. The score means the probability that the right match is within the top $n$ samples. A better CMC curve is expected to have a high rank-1 value and reaches 1 as fast as possible.
+\textbf{Performance measuring} The cumulative matching curve is used to measure the descriptor performance. The score means the probability that the right match is within the top $n$ samples. A better CMC is expected to have a high rank-1 value and reaches 1 as fast as possible.
 %\section{XQDA and NFST}
 
 
 \section{Results and experiment analysis}
-In this paper, we compare proposed metric with other state-of-the-art metrics including NFST \cite{NFST}, XQDA \cite{LOMO}. NFST is a metric which learn a null space for descriptors so that the the same class descriptors will be projected to  
-a single point to minimize within class scatter matrix while different classes are projected to different points. This metric is a good solution to small sample problems in person re-identification. XQDA is quite similar with many other metrics, which learns a projection matrix $W$ and then a Mahanalobis SPD matrix $\bm{M}$ is learned in the subspace. Those two metric are proved to have state-of-the-art performance with many other methods. The GOG$_\text{rgb}$ in all forms stands for the hierarchical gaussian descriptor in RGB color space while GOG$_\text{fusion}$ stands for the descriptor concatenated by four different color spaces \{RGB, Lab, HSV, nRnG\}.\\
-\textbf{VIPeR} A comparison form is given in Table 3. Some of recent results are also included in this form. We can find that the rank scores are better than those of NFST and XQDA in terms of both GOG$_\text{rgb}$ and GOG$_\text{fusion}$. More specifically, the rank 1, rank 5, rank 10, rank 15 and rank 20 scores of proposed metric learning are 0.76\%, 0.92\%, 1.39\%, 1.08\%, 1.52\% higher than those of GOG$_\text{rgb}$ + XQDA, and the rank 1, rank 5, rank 10, rank 15 and rank 20 GOG$_\text{fusion}$ scores of proposed metric learning are 0.35\%, -0.54\%, 0.98\%, 0.66\%, 0.79\% higher than GOG$_\text{fusion}$ + XQDA respectively. Also we can see that the proposed metric learning has a better performance than NFST. \newline 
+In this paper, we compare proposed metric with other state-of-the-art metrics including NFST \cite{NFST} and XQDA \cite{LOMO}. NFST is a metric which enables us to learn a null space for descriptors so that the the same class descriptors will be projected to a single point to minimize within-class scatter matrix while different classes are projected to different points. This metric is a good solution to small sample problems in person re-identification. XQDA is quite similar to many other metrics, which learns a projection matrix $W$, and then a Mahalanobis SPD matrix $\bm{M}$ is learned in the subspace. These two metrics are proven to have state-of-the-art performance with many other methods. The GOG$_\text{rgb}$ in all forms stands for the hierarchical Gaussian descriptor in RGB color space, while GOG$_\text{fusion}$ stands for the descriptor concatenated by four different color spaces \{RGB, Lab, HSV, nRnG\}.\\
+\textbf{VIPeR} A comparison form is given in Table 3. Some of recent results are also included in this form. We can find that the rank scores are better than those of NFST and XQDA in terms of both GOG$_\text{rgb}$ and GOG$_\text{fusion}$. More specifically, the rank 1, rank 5, rank 10, rank 15 and rank 20 scores of proposed metric learning are 0.76\%, 0.92\%, 1.39\%, 1.08\%, 1.52\% higher than those of GOG$_\text{rgb}$ + XQDA. The rank 1, rank 5, rank 10, rank 15 and rank 20 GOG$_\text{fusion}$ scores of proposed metric learning are 0.35\%, -0.54\%, 0.98\%, 0.66\%, 0.79\% higher than GOG$_\text{fusion}$ + XQDA respectively. Also, we can see that proposed metric learning has a better performance than NFST. \newline 
 %-----------------------------------------------------------------------VIPeR
 \begin{table}[H]
 \caption{Performance of different metrics on VIPeR}
@@ -258,13 +256,13 @@ GOG$_\text{fusion}$+Proposed&48.32&76.90&87.78&91.93&94.49\\ %48.16%, 76.65%, 87
 %--------------------------------------------------------------
 \end{tabular}
 \end{table}
-\textbf{CUHK1} We can find that the rank 1, rank5, rank 10, rank 15, rank 20 score of GOG$_\text{rgb}$ combined with proposed metric are 5.4\%, 4.18\%,3.31\%,2.16\%,1.46\% higher than XQDA, and 0.31\%,1.22\%,1.34\%,1.17\%, 1.11\% than NFST.  Also the  rank 1, rank5, rank 10, rank 15, rank 20 score of GOG$_\text{fusion}$ combined with proposed metric are 4.57\%, 2.64\%, 0.70\%, 1.33\%, 0.83\% higher than GOG$_\text{fusion}$ combined with XQDA, and 0.41\%, 0.83\%, 0.88\%, 1.09\%, 1.14\% than GOG$_\text{fusion}$ combined with NFST.  
+\textbf{CUHK1} We can find that the rank 1, rank 5, rank 10, rank 15 and rank 20 scores of GOG$_\text{rgb}$ combined with proposed metric are 5.4\%, 4.18\%, 3.31\%, 2.16\% and 1.46\% higher than XQDA, and 0.31\%, 1.22\%, 1.34\%, 1.17\% and 1.11\% higher than NFST.  Also, the  rank 1, rank 5, rank 10, rank 15 and rank 20 scores of GOG$_\text{fusion}$ combined with the proposed metric are 4.57\%, 2.64\%, 0.70\%, 1.33\% and 0.83\% higher than GOG$_\text{fusion}$ combined with XQDA, and 0.41\%, 0.83\%, 0.88\%, 1.09\% and 1.14\% than GOG$_\text{fusion}$ combined with NFST.  
 
 \begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/VIPeR.eps}
 \vspace{-3em}
-\caption{CMC curves on VIPeR comparing different metric learning}
+\caption{CMCs on VIPeR comparing different metric learning}
 \end{raggedleft}
 \end{figure}
 %-------------------------------
@@ -304,7 +302,7 @@ GOG$_\text{fusion}$+Proposed&56.67&84.49& 90.51& 93.31&94.84\\
 %\begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/CUHK1.eps}
 \vspace{-3em}
-\caption{CMC curves on CUHK1 comparing different metric learning}
+\caption{CMCs on CUHK1 comparing different metric learning}
 %\end{raggedleft}
 \end{figure}
 
@@ -341,13 +339,13 @@ GOG$_\text{fusion}$+Proposed&32.30&57.40&66.30&73.40&78.00\\ %32.20%, 57.50%, 66
 \end{tabular}\newline
 \end{table}
 
-\textbf{Prid\_2011}  The  rank 1, rank5, rank 10, rank 15, rank 20 score of GOG$_\text{fusion}$  combined with proposed metric are 6.1\%, 3.9\%, 4.5\%, 2.2\% and 1.3\% lower than GOG$_\text{fusion}$ combined with XQDA. The performance of NFST is slightly better than proposed metric. Also in terms of GOG$_\text{rgb}$ XQDA and NFST has better performance than the proposed one. So in this dataset the proposed metric has worse performance than XQDA and NFST.
+\textbf{Prid\_2011}  The  rank 1, rank 5, rank 10, rank 15 and rank 20 scores of GOG$_\text{fusion}$  combined with proposed metric are 6.1\%, 3.9\%, 4.5\%, 2.2\% and 1.3\% lower than GOG$_\text{fusion}$ combined with XQDA. The performance of NFST is slightly better than proposed metric. Also, in terms of GOG$_\text{rgb}$, XQDA and NFST have better performance than the proposed one. So in this dataset, the proposed metric has worse performance than XQDA and NFST.
 
 \begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid2011.eps}
 \vspace{-3em}
-\caption{CMC curves on prid\_2011 comparing different metric learning}
+\caption{CMCs on prid\_2011 comparing different metric learning}
 \end{raggedleft}
 \end{figure}
 
@@ -381,13 +379,13 @@ GOG$_\text{fusion}$+Proposed&62.80&86.58&92.36&95.29& 96.89\\ % 62.62%, 86.44%, 
 
 \end{tabular}
 \end{table}
-\textbf{Prid\_450s} In this dataset, we can find the rank 1 score of XQDA and NFST is higher than proposed metric, but they have almost the same rank 5, rank 10, rank 15, and rank 20 scores with respect to both kinds of descriptors.  
+\textbf{Prid\_450s} In this dataset, we can find that the rank 1 score of XQDA and NFST is higher than the proposed metric, but those three metrics have almost the same rank 5, rank 10, rank 15, and rank 20 scores with respect to both kinds of descriptors.  
 
 \begin{figure}[H]
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/prid450s.eps}
 \vspace{-3em}
-\caption{CMC curves on prid\_450s comparing different metric learning}
+\caption{CMCs on prid\_450s comparing different metric learning}
 \end{raggedleft}
 \end{figure}
 
@@ -426,11 +424,11 @@ GOG$_\text{fusion}$+Proposed&23.92&44.64&54.88&62.32&66.40\\ %23.84%, 44.64%, 55
 \begin{raggedleft}
 \includegraphics[width=1\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/GRID.eps}
 \vspace{-3em}
-\caption{CMC curves on GRID comparing different metric learning}
+\caption{CMCs on GRID comparing different metric learning}
 \end{raggedleft}
 \end{figure}
 
-\textbf{GRID} We can see that the rank 1 score of proposed metric are 0.24\% higher than XQDA and 0.88\% higher than NFST in terms of GOG$_\text{fusion}$, but XQDA outperforms proposed metric on rank 5, rank 10, rank 15 and rank 20 scores. Besides, proposed metric outperforms NFST on rank 5, rank 10, rank 15 scores.\\
-\indent In summary, the Re-ID performance is improved in VIPeR, CUHK01 dataset, and has almost the same performance with NFST and XQDA on prid\_450s dataset. Specifically, proposed metric learning has the best rank 1 score in GRID dataset and its performance is only second to XQDA. The proposed metric has superior performance for following reasons: (1) dimension reduction by KLFDA exploits the nonlinearity and the loss of discriminant information between classes are minimized. (2) the simplified relative distance limitation optimization helps to confine the Mahanalobis distance matrix $\bm{M}$ to discriminate different classes.  
+\textbf{GRID} We can see that the rank 1 score of proposed metric is 0.24\% higher than XQDA and 0.88\% higher than NFST in terms of GOG$_\text{fusion}$, but XQDA outperforms proposed metric on rank 5, rank 10, rank 15 and rank 20 scores. Besides, proposed metric outperforms NFST on rank 5, rank 10 and rank 15 scores.\\
+\indent In summary, the Re-ID accuracy is improved in VIPeR and CUHK1 datasets, and has almost the same performance with NFST and XQDA in the prid\_450s dataset. Specifically, the proposed metric learning has the best rank 1 score in the GRID dataset and its performance is only second to XQDA. The proposed metric has superior performance for the following reasons: (1) dimension reduction by KLFDA exploits the nonlinearity, and the loss of discriminant information between classes is minimized; (2) the simplified relative distance limitation optimization helps to confine the Mahalanobis distance matrix $\bm{M}$ to discriminate different classes.  
 %------------------------------------------------------------------------
 

@@ -113,17 +113,17 @@ Again, this problem can be solved by eigenvalue decomposition with Equation \ref
 
 
 
-When applying the LFDA to original high-dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, then LFDA has to solve the eigenvalues of a matrix with dimension $d\times d$. In some descriptors, $d$ could be more than 20000 and the computation cost is intractable. 
+When applying the LFDA to original high-dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, then LFDA has to solve the eigenvalues of a matrix with a dimension $d\times d$. In some descriptors, $d$ could be more than 20000 and the computation cost is intractable. 
  
 \subsection{Kernel local Fisher discriminant analysis (KLFDA)}
 
-KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods, including PCA, LDA and LFDA, are linear dimensionality reduction methods. However, when descriptor data is non-linear in feature space, it's hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher-dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$. Again the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $\bm{T}$ can be computed by the equation
+KLFDA  \cite{KLFDA} is the nonlinear version of LFDA. Most dimensionality reduction methods, including PCA, LDA and LFDA, are linear dimensionality reduction methods. However, when descriptor data is non-linear in feature space, it's hard to capture its between-class discriminant information with linear reduction methods. One alternative method is to nonlinearly map input descriptors $\bm{x}_i$ to higher-dimensional feature space $\Phi$ by a function $\phi(\bm{x}_i)$. Again, the LFDA is performed in feature space $\Phi$. Thus the transformation matrix $\bm{T}$ can be computed by the equation
 \begin{equation}
 \bm{T} = \arg \min \frac{\bm{T}^T\bm{S}^{(b)}_{\phi}\bm{T}}{\bm{T}^T\bm{S}^{(w)}_{\phi}\bm{T}},
 \end{equation}
 where $\bm{S}^{(b)}_{\phi}$ and $\bm{S}^{(w)}_{\phi}$ is the between-class scatter and within-class scatter in mapped feature space $\Phi$.
 
-Note that with the transformation matrix $\bm{T} \in \Phi$, it is computationally expensive to explicitly compute the mapping function $\phi$ and perform LFDA in feature space $\Phi$ because the dimension of $\Phi$ may be infinite. Rather than explicitly computing, the mapping function $\phi$ can be implicit, and the feature space $\Phi$ can be defined by the inner product of features in $\Phi$. The kernel trick is used here and a kernel function can be defined as the inner product of mapped vectors $\phi(\bm{x}_i)$ and $\phi(\bm{x}_j)$ by the equation
+Note that with the transformation matrix $\bm{T} \in \Phi$, it is computationally expensive to explicitly compute the mapping function $\phi$ and perform LFDA in feature space $\Phi$ because the dimension of $\Phi$ may be infinite. Rather than explicitly computing, the mapping function $\phi$ can be implicit, and the feature space $\Phi$ can be defined by the inner product of features in $\Phi$. The kernel trick is used here, and a kernel function can be defined as the inner product of mapped vectors $\phi(\bm{x}_i)$ and $\phi(\bm{x}_j)$ by the equation
  \begin{equation}
  k(\bm{x}_i,\bm{x}_j) = <\phi(\bm{x}_i),\phi(\bm{x}_j)>,
  \end{equation}
@@ -146,8 +146,8 @@ and we have
 In \cite{KLFDA}, the authors proposed fast computation of LFDA by replacing $\bm{S}^{(b)}$ with the local scatter mixture matrix $\bm{S}^{(m)}$defined by 
 \begin{equation}
 \begin{aligned}
-\bm{S}^{(m)} &= \bm{S}^{(b)} + \bm{S}^{(w)}\\
-\bm{S}^{(m)} &= \frac{1}{2} \sum_{i,j = 1} \bm{A}_{i,j}^{(m)} (\bm{x}_i - \bm{x}_j)(\bm{x}_i - \bm{x}_j)^T
+\bm{S}^{(m)} &= \bm{S}^{(b)} + \bm{S}^{(w)},\\
+\bm{S}^{(m)} &= \frac{1}{2} \sum_{i,j = 1} \bm{A}_{i,j}^{(m)} (\bm{x}_i - \bm{x}_j)(\bm{x}_i - \bm{x}_j)^T,
 \end{aligned}
 \end{equation}
 and 
@@ -158,7 +158,7 @@ and
 
 \noindent According to the identity (cf. (Fukunaga, 1990))
 \begin{equation}
-trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m,
+trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(m)}\bm{T}) = trace((\bm{T}^T\bm{S}^{(w)}\bm{T})^{(-1)}(\bm{T}^T\bm{S}^{(b)}\bm{T}) + m.
 \end{equation}
 Equation \ref{eigencompute1} is equal to 
 
@@ -190,7 +190,7 @@ and with the kernel trick, it's represented as
 \begin{equation}
 \bm{K}\bm{L}^{(m)}\bm{K}\gamma_i  = \lambda \bm{K}\bm{L}^{(w)}\bm{K}\gamma_i.
 \end{equation}
-One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in Figures \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2D plane, and by KLFDA dimension reduction their 1D dimension-reduced data distribution are shown in Figure \ref{KLFDAdemo2} and Figure \ref{KLFDAdemo3}. We can conclude that for those clusters the Gaussian kernel are better than linear kernel because the dimensionality reduced data are more separate when using Gaussian kernel function.
+One example of using KLFDA to reduce dimension and classify the nonlinear data clusters can be shown in Figures \ref{KLFDAdemo1}, \ref{KLFDAdemo2} and \ref{KLFDAdemo3}. Three classes with five clusters are distributed on a 2D plane, and by KLFDA dimension reduction their 1D dimension-reduced data distribution are shown in Figure \ref{KLFDAdemo2} and Figure \ref{KLFDAdemo3}. We can conclude that for those clusters the Gaussian kernel is better than the linear kernel because the dimension-reduced data is more separate when using Gaussian kernel function.
 
 \begin{figure}[H]
 \centering
@@ -280,7 +280,7 @@ This process is repeated until a certain condition is met, generally when gradie
 %\end{figure}
 
  \section{Metric learning based on sample pairs distance comparison}
- Inspired by \cite{TDL}, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also, the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similarly, the method in \cite{PRDC} is also based on similarity comparison. In \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare all possible positive and negative pairs, its computation complexity is quite expensive. To reduce the complexity, a simplified version is proposed as the top-push distance metric learning \cite{TDL}.  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahalanobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, where $n$ is the number of all the samples, the requirement is that the distance between positive pairs should be at least 1 unit smaller than the minimum distance of all negative pairs. This can be denoted as 
+ Inspired by \cite{TDL}, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also, the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similarly, the method in \cite{PRDC} is also based on similarity comparison. In \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare all possible positive and negative pairs, its computation complexity is quite expensive. To reduce the complexity, a simplified version is proposed as the top-push distance metric learning \cite{TDL}.  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahalanobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, where $n$ is the number of all the samples, the requirement is that the maximum distance among all positive pairs should be at least one unit smaller than the minimum distance of all negative pairs. This can be denoted as 
  \begin{equation}
  D(\bm{x}_i,\bm{x}_j) + \rho < \min D(\bm{x}_i,\bm{x}_k), y_i = y_j, y_i\ne y_k,
  \end{equation}
@@ -307,7 +307,7 @@ However, the equation above only penalizes the minimum interclass distance. Anot
  \begin{equation}
  D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y}) = trace(\bm{M}\bm{X}_{i,j}),
  \end{equation}
- where $\bm{X}_{i,j} = \bm{x}_i*\bm{x}_j^T$, and $trace$ is to compute the matrix trace. Therefore, Equation \ref{TargetFunc1} can be transformed as follow:
+ where $\bm{X}_{i,j} = \bm{x}_i*\bm{x}_j^T$, and $trace$ is to compute the matrix trace. Therefore, Equation \ref{TargetFunc1} can be transformed as follows:
  \begin{equation}
  \label{TargetFunc2}
  \begin{aligned}

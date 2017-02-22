@@ -46,7 +46,7 @@
 \contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.180}
 \contentsline {section}{\numberline {6.1}Contributions}{63}{section.181}
 \contentsline {section}{\numberline {6.2}Future work}{64}{section.182}
-\contentsline {subsection}{\numberline {6.2.1}Improve Hierarchical Gaussian descriptor}{64}{subsection.183}
+\contentsline {subsection}{\numberline {6.2.1}Improve the hierarchical Gaussian descriptor}{64}{subsection.183}
 \contentsline {subsection}{\numberline {6.2.2}Influence of video-based foreground segmentation}{64}{subsection.184}
 \contentsline {subsection}{\numberline {6.2.3}Computational cost of gradient descent method}{64}{subsection.185}
 \contentsline {chapter}{Bibliography}{65}{chapter*.186}
