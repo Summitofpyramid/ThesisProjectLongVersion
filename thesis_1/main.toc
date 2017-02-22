@@ -40,7 +40,7 @@
 \contentsline {section}{\numberline {4.4}Metric learning based on sample pairs distance comparison}{48}{section.143}
 \contentsline {chapter}{\numberline {5}Experiment settings}{51}{chapter.153}
 \contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{51}{section.154}
-\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{53}{section.159}
+\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{54}{section.159}
 \contentsline {section}{\numberline {5.3}Parameters setting}{55}{section.165}
 \contentsline {section}{\numberline {5.4}Results and experiment analysis}{57}{section.169}
 \contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.180}

@@ -7,11 +7,11 @@ Among those methods to reduce dimension, principal component analysis (PCA) is o
 KLFDA is the kernel version of LFDA, and LFDA is a combination of the Fisher discriminant analysis \cite{LFDA}, the locality preserving projection \cite{LPP} and the kernel method. A brief introduction of the FDA, LPP and kernel method is given below.
 \subsection{Fisher discriminant analysis (FDA)}
 
-FDA is a supervised dimension reduction, and its input contains the class labels. Given a set of $d$-dimensional observations $\bm{X} = (\bm{x}_1, \bm{x}_2,\cdots,\bm{x}_n)$, where $i\in\{1,2,\cdots,n\}$, the label $y_i\in\{1,2,\cdots,l\}$, for each sample descriptor $\bm{x}_i$, a linear transformation with transformation matrix $\bm{T}$ can be defined by the equation
+FDA is a supervised dimension reduction, and its input contains the class labels. Given a set of $d$-dimensional observations $\bm{X} = (\bm{x}_1, \bm{x}_2,\cdots,\bm{x}_i,\cdots,\bm{x}_n)$, where $i\in\{1,2,\cdots,n\}$, the label $y_i\in\{1,2,\cdots,l\}$, for each sample descriptor $\bm{x}_i$, a linear transformation with transformation matrix $\bm{T}$ can be defined by the equation
 \begin{equation}
 \bm{z}_i = \bm{T}^T\bm{x}_i.
 \end{equation}
-$\bm{T}$ has a dimension $d\times m$, and $\bm{z}_i$ is the $m(m<d)$ dimensional vector. In FDA, two matrices are defined as the within-class scatter matrix $\bm{S}^{(w)}$ and between-class scatter matrix $\bm{S}^{(b)}$, 
+$\bm{T}$ has a dimension of $d\times m$, and $\bm{z}_i$ is the $m(m<d)$ -dimensional vector. In FDA, two matrices are defined as the within-class scatter matrix $\bm{S}^{(w)}$ and between-class scatter matrix $\bm{S}^{(b)}$, 
 \begin{equation}
 \begin{aligned}
 \bm{S}^{(w)} &= \mathop{\sum} _{i=1}^l\mathop{\sum}_{j:y_j = i} (\bm{x}_j - \bm{\mu}_i)(\bm{x}_j - \bm{\mu}_i)^T,\\
@@ -113,7 +113,7 @@ Again, this problem can be solved by eigenvalue decomposition with Equation \ref
 
 
 
-When applying the LFDA to original high-dimensional descriptors, one problem is the computation cost. Suppose the vector data has a dimension of $d$, then LFDA has to solve the eigenvalues of a matrix with a dimension $d\times d$. In some descriptors, $d$ could be more than 20000 and the computation cost is intractable. 
+When applying the LFDA to original high-dimensional descriptors, one problem is the computational cost. Suppose the vector data has a dimension of $d$, then LFDA has to solve the eigenvalues of a matrix with a dimension $d\times d$. In some descriptors, $d$ could be more than 20000 and the computation cost is intractable. 
  
 \subsection{Kernel local Fisher discriminant analysis (KLFDA)}
 
@@ -240,7 +240,7 @@ Mahalanobis distance \cite{Mahadist} based metric learning has received much att
 \label{MahaDist}
 D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{M}(\bm{x} - \bm{y}), 
 \end{equation}
-where $\bm{x}$ and $\bm{y} $ are $d\times1$ observation vectors, and $\bm{M}$ is a semi-positive definite matrix. Since $\bm{M}$ is an SPD matrix, $\bm{M}$ can be decomposed as $\bm{M} = \bm{W}^T\bm{W}$, and the Mahalanobis distance can also be written as 
+where $\bm{x}$ and $\bm{y} $ are $d\times1$-dimensional observation vectors, and $\bm{M}$ is a semi-positive definite matrix. Since $\bm{M}$ is an SPD matrix, $\bm{M}$ can be decomposed as $\bm{M} = \bm{W}^T\bm{W}$, and the Mahalanobis distance can also be written as 
 \begin{equation}
 D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{W}^T\bm{W}(\bm{x} - \bm{y})= ||\bm{W}(\bm{x} - \bm{y})||.
 \end{equation}
