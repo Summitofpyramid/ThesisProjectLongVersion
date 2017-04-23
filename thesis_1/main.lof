@@ -33,11 +33,11 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Pedestrians in prid\_450 dataset\relax }}{52}{figure.caption.155}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Pedestrians in prid\_450s dataset\relax }}{53}{figure.caption.156}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Pedestrians in GRID dataset\relax }}{53}{figure.caption.157}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{56}{figure.caption.166}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{57}{figure.caption.167}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces CMCs on VIPeR comparing different metric learning\relax }}{59}{figure.caption.171}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces CMCs on CUHK1 comparing different metric learning\relax }}{59}{figure.caption.173}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces CMCs on prid\_2011 comparing different metric learning\relax }}{60}{figure.caption.175}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces CMCs on prid\_450s comparing different metric learning\relax }}{61}{figure.caption.177}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces CMCs on GRID comparing different metric learning\relax }}{62}{figure.caption.179}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{57}{figure.caption.167}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{57}{figure.caption.168}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces CMCs on VIPeR comparing different metric learning\relax }}{59}{figure.caption.172}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces CMCs on CUHK1 comparing different metric learning\relax }}{60}{figure.caption.174}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces CMCs on prid\_2011 comparing different metric learning\relax }}{61}{figure.caption.176}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces CMCs on prid\_450s comparing different metric learning\relax }}{62}{figure.caption.178}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces CMCs on GRID comparing different metric learning\relax }}{62}{figure.caption.180}
 \addvspace {10\p@ }

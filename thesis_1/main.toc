@@ -40,13 +40,14 @@
 \contentsline {section}{\numberline {4.4}Metric learning based on sample pairs distance comparison}{48}{section.143}
 \contentsline {chapter}{\numberline {5}Experiment settings}{51}{chapter.153}
 \contentsline {section}{\numberline {5.1}Datasets and evaluation settings}{52}{section.154}
-\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{54}{section.159}
-\contentsline {section}{\numberline {5.3}Parameters setting}{56}{section.165}
-\contentsline {section}{\numberline {5.4}Results and experiment analysis}{57}{section.169}
-\contentsline {chapter}{\numberline {6}Conclusion}{64}{chapter.180}
-\contentsline {section}{\numberline {6.1}Contributions}{64}{section.181}
-\contentsline {section}{\numberline {6.2}Future work}{65}{section.182}
-\contentsline {subsection}{\numberline {6.2.1}Improve the hierarchical Gaussian descriptor}{65}{subsection.183}
-\contentsline {subsection}{\numberline {6.2.2}Influence of video-based foreground segmentation}{65}{subsection.184}
-\contentsline {subsection}{\numberline {6.2.3}Computational cost of gradient descent method}{65}{subsection.185}
-\contentsline {chapter}{Bibliography}{66}{chapter*.186}
+\contentsline {section}{\numberline {5.2}The influence of mean removal and $L_2$ normalization}{54}{section.160}
+\contentsline {section}{\numberline {5.3}Parameters setting}{56}{section.166}
+\contentsline {section}{\numberline {5.4}Results and experiment analysis}{58}{section.170}
+\contentsline {section}{\numberline {5.5}The Image size and time cost}{63}{section.181}
+\contentsline {chapter}{\numberline {6}Conclusion}{64}{chapter.182}
+\contentsline {section}{\numberline {6.1}Contributions}{64}{section.183}
+\contentsline {section}{\numberline {6.2}Future work}{65}{section.184}
+\contentsline {subsection}{\numberline {6.2.1}Improve the hierarchical Gaussian descriptor}{65}{subsection.185}
+\contentsline {subsection}{\numberline {6.2.2}Influence of video-based foreground segmentation}{65}{subsection.186}
+\contentsline {subsection}{\numberline {6.2.3}Computational cost of gradient descent method}{65}{subsection.187}
+\contentsline {chapter}{Bibliography}{66}{chapter*.188}

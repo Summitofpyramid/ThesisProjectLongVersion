@@ -64,6 +64,20 @@ GRID&125&125&900&250&1025\\
 \end{tabular}\\ 
 \end{table}
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{table}[H]
+\centering
+\caption{Original image size of pedestrians from different datasets}
+\label{Image size of datasets}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+Datasets & VIPeR & CUHK1&Prid\_2011 &Prid\_450s&GRID\\
+\hline
+Image size &48*128&60*160 &64*128 &variant &variant \\
+\hline
+\end{tabular}\\
+\end{table}
+
+
 \section{The influence of mean removal and $L_2$ normalization}
 In \cite{GOG}, mean removal and $L_2$  normalization is found to improve performance by $5.1\%$. The reason for this is that mean removal and normalization can reduce the impact of extremas of descriptors. When testing proposed metric learning, we find that mean removal can slightly improve performance. A comparison between performances of original descriptors and preprocessed descriptors is shown in Tables \ref{table:compMN1}, \ref{table:compMN2}, \ref{compMN3}, \ref{compMN4} and \ref{compMN5}, and all those datasets are tested by proposed metric. The original GOG means no mean removal and normalization. It shows that the mean removal and normalization has a slight improvement of around 0.5\% on the performance on all five datasets. Since preprocessing is required to test XQDA, the mean removal and normalization are applied on descriptors in this experiment. 
 
@@ -73,9 +87,9 @@ In \cite{GOG}, mean removal and $L_2$  normalization is found to improve perform
 \label{table:compMN1}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
- & \multicolumn{5}{|c|}{Rank(\%)} \\
+ & \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
  \hline
-Terms  &1 &5 & 10 &15& 20\\
+Terms  &R=1 &R=5 &R=10 &R=15&R=20\\
 \hline
 Original GOG &43.01&74.91& 84.87& 89.81& 93.32 \\
 \hline
@@ -97,9 +111,9 @@ Preprocessed GOG$_\text{fusion}$ &48.32&76.90&87.78&91.93& 94.49\\
 \label{table:compMN2}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
- & \multicolumn{5}{|c|}{Rank(\%)} \\
+ & \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
  \hline
-Terms  &1 &5 & 10 &15& 20\\
+Terms  &R=1 &R=5 &R=10 &R=15&R=20\\
 \hline
 Original GOG$_\text{rgb}$&56.11&83.77&90.10& 92.65&94.28 \\
 \hline
@@ -120,9 +134,9 @@ Preprocessed GOG$_\text{fusion}$ &56.67&84.49& 90.51& 93.31&94.84\\
 \label{compMN3}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
- & \multicolumn{5}{|c|}{Rank(\%)} \\
+ & \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
  \hline
-Terms  &1 &5 & 10 &15& 20\\
+Terms  &R=1 &R=5 &R=10 &R=15&R=20\\
 \hline
 Original GOG$_\text{rgb}$&24.80& 52.10& 63.20& 69.90& 72.90\\
 \hline
@@ -143,9 +157,9 @@ Preprocessed GOG$_\text{fusion}$ &32.30& 57.40& 66.30& 73.40& 78.00\\
 \label{compMN4}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
- & \multicolumn{5}{|c|}{Rank(\%)} \\
+ & \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
  \hline
-Terms  &1 &5 & 10 &15& 20\\
+Terms  &R=1 &R=5 &R=10 &R=15&R=20\\
 \hline
 Original GOG$_\text{rgb}$&60.93& 84.31& 91.29& 94.00& 96.18\\
 \hline
@@ -166,9 +180,9 @@ Preprocessed GOG$_\text{fusion}$ &62.80& 86.58& 92.36& 95.29& 96.89\\
 \label{compMN5}
 \begin{tabular}{|l|c|c|c|c|c|}
 \hline
- & \multicolumn{5}{|c|}{Rank(\%)} \\
+ & \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
  \hline
-Terms  &1 &5 & 10 &15& 20\\
+Terms  &R=1 &R=5 &R=10 &R=15&R=20\\
 \hline
 Original GOG$_\text{rgb}$&22.96& 41.92& 51.68& 58.72& 64.64\\
 \hline
@@ -233,9 +247,9 @@ In this paper, we compare proposed metric with other state-of-the-art metrics in
 \centering
  \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-& \multicolumn{5}{|c|}{Rank(\%)} \\
+& \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
 \hline
-Methods& 1 & 5 &10& 15&20\\
+Methods& R=1 & R=5 &R=10& R=15&R=20\\
 \hline
 GOG$_\text{rgb}$+NFST& 43.23&73.16 &83.64 & 89.59&92.88\\  
 \hline
@@ -275,7 +289,7 @@ GOG$_\text{fusion}$+Proposed&48.32&76.90&87.78&91.93&94.49\\ %48.16%, 76.65%, 87
 \centering
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-& \multicolumn{5}{|c|}{Rank(\%)} \\
+& \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
 \hline
 Methods& 1 & 5 &10&15& 20\\
 \hline
@@ -316,9 +330,9 @@ GOG$_\text{fusion}$+Proposed&56.67&84.49& 90.51& 93.31&94.84\\
 \caption{Performance of different metrics on prid\_2011}
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-& \multicolumn{5}{|c|}{Rank(\%)} \\
+& \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
 \hline
-Methods& 1 & 5 &10& 15&20\\
+Methods& R=1 & R=5 &R=10& R=15&R=20\\
 \hline
 GOG$_\text{rgb}$+NFST&26.60 &53.80& 62.90&71.30&75.40 \\ 
 \hline
@@ -357,9 +371,9 @@ GOG$_\text{fusion}$+Proposed&32.30&57.40&66.30&73.40&78.00\\ %32.20%, 57.50%, 66
 \centering
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-& \multicolumn{5}{|c|}{Rank(\%)} \\
+& \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
 \hline
-Methods& 1 & 5 &10& 15&20\\
+Methods& R=1 & R=5 &R=10& R=15&R=20\\
 \hline
 GOG$_\text{rgb}$+NFST& 61.96&84.98 &90.53& 94.09&96.09 \\  %61.96%, 84.98%, 90.53%, 94.09%, 96.09%
 \hline
@@ -397,9 +411,9 @@ GOG$_\text{fusion}$+Proposed&62.80&86.58&92.36&95.29& 96.89\\ % 62.62%, 86.44%, 
 \centering
 \begin{tabular}{|l|c|c|c|c|c|c|}
 \hline
-& \multicolumn{5}{|c|}{Rank(\%)} \\
+& \multicolumn{5}{|c|}{Re-ID matching accuracy at rank R(\%)} \\
 \hline
-Methods& 1 & 5 &10& 15&20\\
+Methods& R=1 & R=5 &R=10& R=15&R=20\\
 \hline
 GOG$_\text{rgb}$+NFST& 21.84&41.28 &50.96& 57.44&62.88 \\ 
 \hline
@@ -433,4 +447,11 @@ GOG$_\text{fusion}$+Proposed&23.92&44.64&54.88&62.32&66.40\\ %23.84%, 44.64%, 55
 \textbf{GRID} We can see that the rank 1 score of proposed metric is 0.24\% higher than XQDA and 0.88\% higher than NFST in terms of GOG$_\text{fusion}$, but XQDA outperforms proposed metric on rank 5, rank 10, rank 15 and rank 20 scores. Besides, proposed metric outperforms NFST on rank 5, rank 10 and rank 15 scores.\\
 \indent In summary, our proposed metric improved the Re-ID accuracy in VIPeR and CUHK1 datasets, and has almost the same performance with NFST and XQDA in the prid\_450s dataset. Specifically, the proposed metric learning has the best rank 1 score in the GRID dataset and its performance is only second to XQDA. The proposed metric has superior performance for the following reasons: (1) dimension reduction by KLFDA exploits the nonlinearity, and the loss of discriminant information between classes is minimized; (2) the simplified relative distance limitation optimization helps to confine the Mahalanobis distance matrix $\bm{M}$ to discriminate different classes.  
 %------------------------------------------------------------------------
+
+\section{The Image size and time cost}
+The image size of different datasets are different. A brief introduction of image size of those datasets used is given in Table \ref{Image size of datasets}. All those images have already been well cropped which only contain the area inside the person bounding box. Before extracting descriptors, all those images must be resized to 48*128. 
+
+ The training time increases when the dataset size increases. For the CUHK1 dataset which has most training pairs, it takes half an hour to train the metric on a desktop PC with a 16GB RAM, Intel i5 processor. For datasets with fewer training pairs like Prid\_2011 and GRID, it takes no more than five minutes.
+ 
+With resized images, the Re-ID can be performed in real-time on the same PC. Compared with XQDA and NFST, this method requires extra time to train the metric. However, after training the Re-ID can be performed instantaneously upon the new pedestrian is inputted. The accuracy of proposed method is at least the same or better than XQDA and NFST on tested datasets.
 
