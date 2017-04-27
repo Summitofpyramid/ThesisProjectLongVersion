@@ -247,15 +247,19 @@ D(\bm{x},\bm{y}) = (\bm{x} - \bm{y})^T\bm{W}^T\bm{W}(\bm{x} - \bm{y})= ||\bm{W}(
  Therefore, Mahalanobis distance can be regarded as a variant of Euclidean distance.
  
  \section{Gradient descent optimization}
- Given a multivariate function $F(\bm{x})$, where $\bm{x}$ is a $d$-dimensional vector, if $f(\bm{x})$ is continuous and differentiable in the neighbour of point $\bm{x}$ for all $\bm{x}$, then $f(\bm{x})$ decreases fastest toward the direction of the negative gradient of $F(\bm{x})$. To compute the minimum of $F(\bm{x})$, an iterative method can be used by updating $F$ with respect to $\bm{x}$. If the updating step $\lambda$ is small enough, by updating $\bm{x}$ with 
+ Given a multivariate function $F(\bm{x})$, where $\bm{x}$ is a $d$-dimensional vector, if $F(\bm{x})$ is continuous and differentiable in the neighbour of point $\bm{x}$ for all $\bm{x}$, then $F(\bm{x})$ decreases fastest toward the direction of the negative gradient of $F(\bm{x})$. To compute the minimum of $F(\bm{x})$, an iterative method can be used by updating $F$ with respect to $\bm{x}$. If the updating step $\lambda$ is small enough, by updating $\bm{x}$ with 
  \begin{equation}
- \bm{x}_{t+1} = \bm{x}_{t} - \lambda \bm{G},
+ \bm{x}_{t+1} = \bm{x}_{t} - \lambda \bm{G}_t,
+ \end{equation}
+where 
+ \begin{equation}
+ \bm{G}_t = \frac{\partial F(\bm{x})}{\partial \bm{x}_t},
  \end{equation}
 we have 
   \begin{equation}
- F(\bm{x}_{t+1}) \ge F(\bm{x}_t).
+ F(\bm{x}_{t}) \ge F(\bm{x}_t+1).
   \end{equation}
-This process is repeated until a certain condition is met, generally when gradient $||\bm{G}|| \le \eta$, and $\eta$ is a very small positive integer. 
+$\bm{x}_t$ is updated by the gradient $\bm{G}$, this iterative process is repeated until a certain condition is met, generally when gradient $||\bm{G}|| \le \eta$, and $\eta$ is a very small positive integer. 
 \begin{figure}
 \centering
 \includegraphics[width=0.4\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/Gradientdescent.png}
@@ -280,7 +284,7 @@ This process is repeated until a certain condition is met, generally when gradie
 %\end{figure}
 
  \section{Metric learning based on sample pairs distance comparison}
- Inspired by \cite{TDL}, a similar metric learning based on iteration computation is used. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also, the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similarly, the method in \cite{PRDC} is also based on similarity comparison. In \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare all possible positive and negative pairs, its computation complexity is quite expensive. To reduce the complexity, a simplified version is proposed as the top-push distance metric learning \cite{TDL}.  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahalanobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, where $n$ is the number of all the samples, the requirement is that the maximum distance among all positive pairs should be at least one unit smaller than the minimum distance of all negative pairs. This can be denoted as 
+Inspired by the top-push video-based distance metric  learning in \cite{TDL}, a similar metric learning based on iteration computation is used in this thesis. For a  sample descriptor $\bm{x}_i$,  its positive pairwise set is defined as $\{\bm{x}_i,\bm{x}_j\}$, where class ID $y_i = y_j$. Also, the negative pairwise set can be defined as $\{\bm{x}_i,\bm{x}_j\}$, where $y_i \ne y_j$. Similarly, the method in \cite{PRDC} is also based on similarity comparison. In \cite{PRDC}, for all possible positive and negative pairs, the distance between positive pairs must be smaller than the distance between negative pairs. Since it has to compare all possible positive and negative pairs, its computation complexity is quite expensive. To reduce the complexity, a simplified version is proposed as the top-push distance metric learning \cite{TDL}.  Since re-identification is a problem of ranking, it is desired that the rank-1 descriptor should be the right match. Given a Mahalanobis matrix $\bm{M}$, for samples $\bm{x}_i, i = 1,2,3,\cdots,n$, where $n$ is the number of all the samples, the requirement is that the maximum distance among all positive pairs should be at least one unit smaller than the minimum distance of all negative pairs. This can be denoted as 
  \begin{equation}
  D(\bm{x}_i,\bm{x}_j) + \rho < \min D(\bm{x}_i,\bm{x}_k), y_i = y_j, y_i\ne y_k,
  \end{equation}

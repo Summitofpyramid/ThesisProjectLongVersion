@@ -12,7 +12,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces A CMC plot of gallery size is $M=10$ and probe size is $N=12$\relax }}{21}{figure.caption.44}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.2}{\ignorespaces A CMC comparison of color histogram on different color spaces \relax }}{23}{figure.caption.49}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A CMC comparison of color histogram on different color spaces\relax }}{23}{figure.caption.49}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces RGB and HSV visual comparison; the first row is RGB and second row is HSV for the same views \relax }}{23}{figure.caption.48}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces A comparison of two patches with the same entropy but different color distribution\relax }}{24}{figure.caption.50}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces LBP: by thresholding the neighbour pixels, the pixels are transformed into a binary number \relax }}{24}{figure.caption.52}
@@ -28,16 +28,16 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Example of five clusters that belong to three classes\relax }}{45}{figure.caption.133}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 1D distribution of dimension-reduced data with Gaussian kernel\relax }}{46}{figure.caption.134}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces 1D distribution of dimension-reduced data with linear kernel\relax }}{46}{figure.caption.135}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Steepest gradient descent\relax }}{48}{figure.caption.142}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Steepest gradient descent\relax }}{48}{figure.caption.143}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pedestrians in prid\_450 dataset\relax }}{52}{figure.caption.155}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Pedestrians in prid\_450s dataset\relax }}{53}{figure.caption.156}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Pedestrians in GRID dataset\relax }}{53}{figure.caption.157}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{57}{figure.caption.167}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{57}{figure.caption.168}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces CMCs on VIPeR comparing different metric learning\relax }}{59}{figure.caption.172}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces CMCs on CUHK1 comparing different metric learning\relax }}{60}{figure.caption.174}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces CMCs on prid\_2011 comparing different metric learning\relax }}{61}{figure.caption.176}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces CMCs on prid\_450s comparing different metric learning\relax }}{62}{figure.caption.178}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces CMCs on GRID comparing different metric learning\relax }}{62}{figure.caption.180}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Pedestrians in prid\_450 dataset\relax }}{52}{figure.caption.156}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Pedestrians in prid\_450s dataset\relax }}{53}{figure.caption.157}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Pedestrians in GRID dataset\relax }}{53}{figure.caption.158}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Rank 1 scores with respect to $\alpha $ on VIPeR\relax }}{57}{figure.caption.168}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Rank 5 scores with respect to $\alpha $ on VIPeR\relax }}{57}{figure.caption.169}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces CMCs on VIPeR comparing different metric learning\relax }}{59}{figure.caption.173}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces CMCs on CUHK1 comparing different metric learning\relax }}{60}{figure.caption.175}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces CMCs on prid\_2011 comparing different metric learning\relax }}{61}{figure.caption.177}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces CMCs on prid\_450s comparing different metric learning\relax }}{62}{figure.caption.179}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces CMCs on GRID comparing different metric learning\relax }}{62}{figure.caption.181}
 \addvspace {10\p@ }
