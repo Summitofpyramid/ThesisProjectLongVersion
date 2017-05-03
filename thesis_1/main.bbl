@@ -1414,6 +1414,29 @@
   \field{year}{2014}
 \endentry
 
+\entry{MetricLearningSurvey}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Yang}{Y.}%
+     {Liu}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jin}{J.}%
+     {Rong}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YLJR1}
+  \strng{fullhash}{YLJR1}
+  \field{sortinit}{Y}
+  \field{number}{2}
+  \field{title}{Distance metric learning: A comprehensive survey}
+  \field{volume}{2}
+  \field{journaltitle}{Michigan State Universiy}
+  \field{year}{2006}
+\endentry
+
 \entry{SCNCD}{inproceedings}{}
   \name{author}{6}{}{%
     {{}%

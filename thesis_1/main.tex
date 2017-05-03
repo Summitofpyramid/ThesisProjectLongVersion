@@ -107,10 +107,10 @@ headsepline, % Uncomment to get a line under the header
 
 \subject{Electrical Engineering and Computer Science} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
 \keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
-\university{\href{http://www.university.com}{University of Ottawa}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
-\department{\href{http://department.university.com}{School of Electrical Engineering and Computer Science}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
-\group{\href{http://researchgroup.university.com}{VIVA lab}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
-\faculty{\href{http://faculty.university.com}{Faculty of Engineering}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+\university{\href{}{University of Ottawa}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{\href{}{School of Electrical Engineering and Computer Science}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\group{\href{}{VIVA lab}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{\href{}{Faculty of Engineering}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
@@ -142,28 +142,39 @@ headsepline, % Uncomment to get a line under the header
 \begin{minipage}[t]{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
-\href{http://www.johnsmith.com}{\authorname} % Author name - remove the \href bracket to remove the link
+\href{}{\authorname} % Author name - remove the \href bracket to remove the link
 \end{flushleft}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
-\href{http://www.jamessmith.com}{\supname} % Supervisor name - remove the \href bracket to remove the link  
+\href{}{\supname} % Supervisor name - remove the \href bracket to remove the link  
 \end{flushright}
 \end{minipage}\\[3cm]
  
-\vfill
+%\vfill
 
-\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+\large \textit{A thesis submitted to the Faculty of Graduate and Postdoctoral Studies in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
 \textit{in the}\\[0.4cm]
 \groupname\\\deptname\\[2cm] % Research group name and department name
- 
-\vfill
 
-{\large \today}\\[4cm] % Date
-%\includegraphics{Logo} % University/department logo - uncomment to place it
+
+%\begin{figure}[H]
+%\includegraphics[width=0.5\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/UOlogo.jpg}
+%\vspace{-2em}
+%\end{figure}
  
+%\vfill
+
+%{\large \today}\\[4cm] % Date
+
+\includegraphics[width=0.5\linewidth]{/Users/JohnsonJohnson/Downloads/thesis_1/Figures/UOlogo.jpg} % University/department logo - uncomment to place it
+ 
+{\large April, 2017}\\[4cm] % Date
+
+
 \vfill
+\copyright{Qiangsen He, Ottawa, Canada, 2017}
 \end{center}
 \end{titlepage}
 
@@ -210,7 +221,7 @@ headsepline, % Uncomment to get a line under the header
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
 
-Person re-identification (Re-ID) has become an intense research area in recent years. The main goal of this topic is to recognize and match individuals over time at the same or different locations. This task is challenging due to the variation of illumination, viewpoints, pedestrians' appearance and partial occlusion. Previous works mainly focus on finding robust features and metric learning. Many metric learning methods convert the Re-ID problem to a matrix decomposition problem by Fisher discriminant analysis (FDA). Mahalanobis based metric learning is a popular method to measure similarity; however, since directly extracted descriptors usually have high dimensionality, it's intractable to learn a high-dimensional semi-positive definite (SPD) matrix. Dimensionality reduction is used to project high-dimensional descriptors to a lower-dimensional space while preserving those discriminative information. In this paper, the kernel Fisher discriminant analysis (KLFDA) \cite{KLFDA} is used to reduce dimensionality given that kernelization method can greatly improve Re-ID performance for nonlinearity. Inspired by \cite{TDL}, an SPD matrix is then learned on lower-dimensional descriptors based on the limitation that the maximum intraclass distance is at least one unit smaller than the minimum interclass distance. This method is proved to have excellent performance compared with other advanced metric learning.
+Person re-identification (Re-ID) has become an intense research area in recent years. The main goal of this topic is to recognize and match individuals over time at the same or different locations. This task is challenging due to the variation of illumination, viewpoints, pedestrians' appearance and partial occlusion. Previous works mainly focus on finding robust features and metric learning. Many metric learning methods convert the Re-ID problem to a matrix decomposition problem by Fisher discriminant analysis (FDA). Mahalanobis distance metric learning is a popular method to measure similarity; however, since directly extracted descriptors usually have high dimensionality, it's intractable to learn a high-dimensional semi-positive definite (SPD) matrix. Dimensionality reduction is used to project high-dimensional descriptors to a lower-dimensional space while preserving those discriminative information. In this paper, the kernel Fisher discriminant analysis (KLFDA) \cite{KLFDA} is used to reduce dimensionality given that kernelization method can greatly improve Re-ID performance for nonlinearity. Inspired by \cite{TDL}, an SPD matrix is then learned on lower-dimensional descriptors based on the limitation that the maximum intraclass distance is at least one unit smaller than the minimum interclass distance. This method is proved to have excellent performance compared with other advanced metric learning.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
