@@ -234,7 +234,7 @@ where $n$ is the number of pixels in the current patch. When the Gaussian model 
 As described before, this hierarchical Gaussian descriptor is a stochastic feature, so operations like computing mean and covariance need to be operated on previous summarized Gaussian distributions. Mean and covariance operation in Euclidean space cannot be directly finished on previous estimated Gaussian functions. A transformation is needed to make stochastic summarization feasible on patch Gaussian function.
 In fact, the multivariate Gaussian model is a Riemannian manifold and can be embedded into a semi-positive definite matrix (SPD) space. The Gaussian function is mapped into a vector space by Equation \ref{SPDmapping}. A $d$-dimensional multivariate Gaussian function can be mapped into a $d+1$-dimensional $SPD_+$ space. According to \cite{MultiVarGau}, the mapping can be denoted as 
 \begin{equation}\label{SPDmapping}
-G(\bm{x}_i;\bm{\mu}_i,\bm{\Sigma}_i) \sim \bm{P}_i  = |\bm{\Sigma}_i|^{1/(d+1)} \left[ \begin{matrix}
+G(\bm{x}_i;\bm{\mu}_i,\bm{\Sigma}_i) \sim \bm{P}_i  = |\bm{\Sigma}_i|^{-\frac{1}{(d+1)}} \left[ \begin{matrix}
 \bm{\Sigma}_i + \bm{\mu}_i\bm{\mu}^T & \bm{\mu}_i \\
 \bm{\mu}_i^T & 1
 \end{matrix}
@@ -269,7 +269,7 @@ We have known that all patches inside this slide are represented as vector $\bm{
 \end{equation}
 where m is the total number pf patches inside the current slide. Again, $\bm{\mu}_r$ and $\bm{\Sigma}_r$ are mapped to an SPD space by the following equation
 \begin{equation}
-G(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r) \sim \bm{P}_r  = |\bm{\Sigma}_r|^{1/(d+1)} \left[ \begin{matrix}
+G(\bm{p};\bm{\mu}_r,\bm{\Sigma}_r) \sim \bm{P}_r  = |\bm{\Sigma}_r|^{-\frac{1}{(d+1)}} \left[ \begin{matrix}
 \bm{\Sigma}_r + \bm{\mu}_r\bm{\mu}_r^T & \bm{\mu}_r \\
 \bm{\mu}_r^T & 1
 \end{matrix}
